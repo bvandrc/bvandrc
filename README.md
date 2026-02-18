@@ -122,16 +122,23 @@
       <td align="center">
         <strong><a href="https://bvandercar-vt.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>
         <br/>
-        <em>A map overlaying every bike ride I've done over the past few years.</em>&nbsp;<a href="https://github.com/bvandercar-vt/bike-ride-mapper">[repo]</a>
+        A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandercar-vt/bike-ride-mapper">[repo]</a>
         <!-- <br/>
         <img src="./project-images/bike-ride-mapper.png" height=150 alt="Bike Ride Mapper Screenshot"><br/> -->
+      </td>
+    </tr>
+     <tr>
+      <td align="center">
+        <strong><a href="https://task-rankr.replit.app/guest">TaskRankr</a></strong>
+        <br/>
+        A fancy task tracking and prioritizing todo list app. My latest project and first heavily AI-assisted project I have done, putting careful review, code cleanup, and refactoring into largely AI-generated code, by way of creating, modifying, and reviewing PRs for each feature.&nbsp;<a href="https://github.com/bvandercar-vt/TaskRankr">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>
         <br/>
-        <em>My side hobby. All custom React components and CSS, using the SoundCloud API.</em>&nbsp;<a href="https://github.com/bvandercar-vt/specialingredientbass.com">[repo]</a>
+        My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandercar-vt/specialingredientbass.com">[repo]</a>
         <!-- <br/>
         <img src="./project-images/dj-website.png" height=150 alt="DJ Website Screenshot"><br/> -->
       </td>
@@ -140,7 +147,7 @@
       <td align="center">
         <strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>
         <br/>
-        <em>Retail website for a friend using a CMS and custom React components.</em>&nbsp;<a href="https://github.com/bvandercar-vt/womanhoodofwubz.com">[repo]</a>
+        Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandercar-vt/womanhoodofwubz.com">[repo]</a>
         <!-- <br/>
         <img src="./project-images/womanhood-of-wubz.png" height=100 alt="Retail Website Screenshot"><br/> -->
       </td>
@@ -152,14 +159,14 @@
       <td align="center">
         <strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>
         <br/>
-        <em>Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.</em>
+        Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.
       </td>
     </tr>
     <tr>
       <td align="center">
         <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>
         <br/>
-        <em>Provide custom rules to sort nested glob results. Useful for test configuration.</em>
+        Provide custom rules to sort nested glob results. Useful for test configuration.
       </td>
     </tr>
     <tr>
@@ -169,14 +176,14 @@
       <td align="center">
         <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>
         <br/>
-        <em>Various Python tools for the Serato DJ software</em>&nbsp;&nbsp;<a href="https://github.com/bvandercar-vt/serato-tools">[repo]</a>
+        Various Python tools for the Serato DJ software&nbsp;&nbsp;<a href="https://github.com/bvandercar-vt/serato-tools">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>
         <br/>
-        <em>USB Export tool for the Serato DJ software</em>
+        USB Export tool for the Serato DJ software
       </td>
     </tr>
   </tbody>
