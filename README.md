@@ -121,9 +121,9 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://bvandercar-vt.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>
+        <strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>
         <br/>
-        A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandercar-vt/bike-ride-mapper">[repo]</a>
+        A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
         <!-- <br/>
         <img src="./project-images/bike-ride-mapper.png" height=150 alt="Bike Ride Mapper Screenshot"><br/> -->
       </td>
@@ -132,14 +132,14 @@
       <td align="center">
         <strong><a href="https://task-rankr.replit.app/guest">TaskRankr</a></strong>
         <br/>
-        A fancy task tracking and prioritizing todo list app. My latest project and first heavily AI-assisted project I have done, putting careful review, code cleanup, and refactoring into largely AI-generated code, by way of creating, modifying, and reviewing PRs for each feature.&nbsp;<a href="https://github.com/bvandercar-vt/TaskRankr">[repo]</a>
+        A fancy task tracking and prioritizing todo list app. My latest project and first heavily AI-assisted project I have done, putting careful review, code cleanup, and refactoring into largely AI-generated code, by way of creating, modifying, and reviewing PRs for each feature.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>
         <br/>
-        My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandercar-vt/specialingredientbass.com">[repo]</a>
+        My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
         <!-- <br/>
         <img src="./project-images/dj-website.png" height=150 alt="DJ Website Screenshot"><br/> -->
       </td>
@@ -148,7 +148,7 @@
       <td align="center">
         <strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>
         <br/>
-        Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandercar-vt/womanhoodofwubz.com">[repo]</a>
+        Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
         <!-- <br/>
         <img src="./project-images/womanhood-of-wubz.png" height=100 alt="Retail Website Screenshot"><br/> -->
       </td>
@@ -177,7 +177,7 @@
       <td align="center">
         <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>
         <br/>
-        Various Python tools for the Serato DJ software&nbsp;&nbsp;<a href="https://github.com/bvandercar-vt/serato-tools">[repo]</a>
+        Various Python tools for the Serato DJ software&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
       </td>
     </tr>
     <tr>
@@ -196,12 +196,12 @@
 <img src="./github-overall-stats.svg" alt="Overall Stats"><br/>
 
 <!-- https://github.com/DenverCoder1/github-readme-streak-stats -->
-<!-- ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=bvandercar-vt&theme=merko&background=00000000&exclude_days=true&hide_border=false&hide_current_streak=true&hide_longest_streak=true) -->
+<!-- ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=bvandrc&theme=merko&background=00000000&exclude_days=true&hide_border=false&hide_current_streak=true&hide_longest_streak=true) -->
 
-<!-- https://github.com/bvandercar-vt/github-repository-contribution-stats -->
+<!-- https://github.com/bvandrc/github-repository-contribution-stats -->
 <img src="./github-contribution-stats.svg" alt="Repo Contributions"><br/>
 
-<!--  ![Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bvandercar-vt&theme=github_dark) -->
+<!--  ![Contribution Graph](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=bvandrc&theme=github_dark) -->
 
 <!-- https://github.com/lowlighter/metrics -->
 <!-- TODO: see why this has higher numbers, and contribute fixes to the other repos -->
