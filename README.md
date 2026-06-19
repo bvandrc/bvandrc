@@ -130,7 +130,7 @@
     </tr>
      <tr>
       <td align="center">
-        <strong><a href="https://task-rankr.replit.app/guest">TaskRankr</a></strong>
+        <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>
         <br/>
         A fancy task tracking and prioritizing todo list app. My latest project and first heavily AI-assisted project I have done, putting careful review, code cleanup, and refactoring into largely AI-generated code, by way of creating, modifying, and reviewing PRs for each feature.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
       </td>
