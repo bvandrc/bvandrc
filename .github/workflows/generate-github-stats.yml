@@ -8,17 +8,17 @@ on:
       overall_stats:
         description: 'Run Overall Stats generator'
         required: false
-        default: 'true'
+        default: true
         type: boolean
       contribution_stats:
         description: 'Run Contribution Stats generator'
         required: false
-        default: 'true'
+        default: true
         type: boolean
       metrics:
         description: 'Run Metrics generator'
         required: false
-        default: 'true'
+        default: true
         type: boolean
   push:
     branches: [main]
