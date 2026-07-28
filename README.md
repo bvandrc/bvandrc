@@ -171,6 +171,13 @@
       </td>
     </tr>
     <tr>
+      <td align="center">
+        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>
+        <br/>
+        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list.
+      </td>
+    </tr>
+    <tr>
       <td align="center"><h3>🌔🌔&nbsp;&nbsp;&nbsp; Python Packages &nbsp;&nbsp;&nbsp;🌖🌖</h3></td>
     </tr>
     <tr>
