@@ -178,23 +178,6 @@
       </td>
     </tr>
     <tr>
-      <td align="center"><h3>🌔🌔&nbsp;&nbsp;&nbsp; Python Packages &nbsp;&nbsp;&nbsp;🌖🌖</h3></td>
-    </tr>
-    <tr>
-      <td align="center">
-        <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>
-        <br/>
-        Various Python tools for the Serato DJ software&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
-        <strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>
-        <br/>
-        USB Export tool for the Serato DJ software
-      </td>
-    </tr>
-    <tr>
       <td align="center"><h3>⚙️⚙️&nbsp;&nbsp;&nbsp; GitHub Actions &nbsp;&nbsp;&nbsp;⚙️⚙️</h3></td>
     </tr>
     <tr>
@@ -209,6 +192,23 @@
         <strong><a href="https://github.com/bvandrc/lint-package-json">lint-package-json</a></strong>
         <br/>
         Reusable GitHub Action that enforces a canonical package.json key order via npm-package-json-lint.
+      </td>
+    </tr>
+    <tr>
+      <td align="center"><h3>🌔🌔&nbsp;&nbsp;&nbsp; Python Packages &nbsp;&nbsp;&nbsp;🌖🌖</h3></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>
+        <br/>
+        Various Python tools for the Serato DJ software&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>
+        <br/>
+        USB Export tool for the Serato DJ software
       </td>
     </tr>
   </tbody>
