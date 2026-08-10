@@ -182,9 +182,9 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://github.com/bvandrc/detect-deploy">detect-deploy</a></strong>
+        <strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>
         <br/>
-        Polls a URL until its content changes, to detect when a deploy has actually gone live — for hosts where deploys are decoupled from the git push that triggers CI.
+        Polls a URL until its content changes, to detect when a deploy has actually gone live — for hosts where deploys are decoupled from the git push that triggers CI.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
       </td>
     </tr>
     <tr>
