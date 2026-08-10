@@ -165,16 +165,33 @@
     </tr>
     <tr>
       <td align="center">
+        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>
+        <br/>
+        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list.
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
         <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>
         <br/>
         Provide custom rules to sort nested glob results. Useful for test configuration.
       </td>
     </tr>
     <tr>
+      <td align="center"><h3>⚙️⚙️&nbsp;&nbsp;&nbsp; GitHub Actions &nbsp;&nbsp;&nbsp;⚙️⚙️</h3></td>
+    </tr>
+    <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>
+        <strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>
         <br/>
-        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list.
+        Polls a URL until its content changes, to detect when a deploy has actually gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>
+        <br/>
+        Lints every package.json in a repo against a shared npm-package-json-lint rule set.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
       </td>
     </tr>
     <tr>
