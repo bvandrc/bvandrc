@@ -189,9 +189,9 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://github.com/marketplace/actions/check-package-json-key-order">lint-package-json</a></strong>
+        <strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>
         <br/>
-        Reusable GitHub Action that enforces a canonical package.json key order via npm-package-json-lint.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
+        Lints every package.json in a repo against a shared npm-package-json-lint rule set — canonical key order, required fields, name and version formats, and alphabetized dependencies — with per-rule overrides.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
       </td>
     </tr>
     <tr>
