@@ -204,6 +204,13 @@
         Polls a URL until its content changes, to detect when a deploy has actually gone live — for hosts where deploys are decoupled from the git push that triggers CI.
       </td>
     </tr>
+    <tr>
+      <td align="center">
+        <strong><a href="https://github.com/bvandrc/lint-package-json">lint-package-json</a></strong>
+        <br/>
+        Reusable GitHub Action that enforces a canonical package.json key order via npm-package-json-lint.
+      </td>
+    </tr>
   </tbody>
 </table>
 
