@@ -165,16 +165,16 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>
+        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>
         <br/>
-        Provide custom rules to sort nested glob results. Useful for test configuration.
+        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list.
       </td>
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>
+        <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>
         <br/>
-        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list.
+        Provide custom rules to sort nested glob results. Useful for test configuration.
       </td>
     </tr>
     <tr>
@@ -184,14 +184,14 @@
       <td align="center">
         <strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>
         <br/>
-        Polls a URL until its content changes, to detect when a deploy has actually gone live — for hosts where deploys are decoupled from the git push that triggers CI.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
+        Polls a URL until its content changes, to detect when a deploy has actually gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>
         <br/>
-        Lints every package.json in a repo against a shared npm-package-json-lint rule set — canonical key order, required fields, name and version formats, and alphabetized dependencies — with per-rule overrides.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
+        Lints every package.json in a repo against a shared npm-package-json-lint rule set.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
       </td>
     </tr>
     <tr>
