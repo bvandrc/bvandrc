@@ -172,6 +172,13 @@
     </tr>
     <tr>
       <td align="center">
+        <strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>
+        <br/>
+        Write a document as JSX (React syntax), style it with Tailwind, and render it to a page-exact PDF and HTML — with a live-preview dev server.
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
         <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>
         <br/>
         Provide custom rules to sort nested glob results. Useful for test configuration.
