@@ -119,7 +119,7 @@
     <tr>
       <td align="center">
         <h3>⚛️⚛️&nbsp;&nbsp;&nbsp; React Websites &nbsp;&nbsp;&nbsp;⚛️⚛️</h3>
-        <strong>Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.</strong>
+        <em><strong>Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.</strong></em>
       </td>
     </tr>
     <tr>
