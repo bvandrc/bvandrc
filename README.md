@@ -128,7 +128,7 @@
         <br/>
         My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed and refactored.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
         <br/>
-        <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="450" alt="TaskRankr task list showing nested subtasks and priority, ease, enjoyment, and time ratings on each task"><br/>
+        <a href="https://taskrankr.com/guest"><img src="./project-screenshots/resized/screenshot-taskrankr.png" width="450" alt="TaskRankr — task list showing nested subtasks and priority, ease, enjoyment, and time ratings on each task"></a><br/>
       </td>
     </tr>
     <tr>
@@ -137,7 +137,7 @@
         <br/>
         A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
         <br/>
-        <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="450" alt="Map of Denver traced with every bike route ridden, totalling 138 routes and 1112 miles"><br/>
+        <a href="https://bvandrc.github.io/bike-ride-mapper/"><img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="450" alt="Bike Ride Tracker — map of Denver traced with every bike route ridden, totalling 138 routes and 1112 miles"></a><br/>
       </td>
     </tr>
     <tr>
@@ -146,7 +146,7 @@
         <br/>
         My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
         <br/>
-        <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="450" alt="Special Ingredient Bass Mixes homepage with mixes grouped into genre columns, each with an inline SoundCloud player"><br/>
+        <a href="https://specialingredientbass.com/"><img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="450" alt="Special Ingredient Bass Mixes — homepage with mixes grouped into genre columns, each with an inline SoundCloud player"></a><br/>
       </td>
     </tr>
     <tr>
@@ -155,7 +155,7 @@
         <br/>
         Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
         <br/>
-        <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="450" alt="Womanhood of Wubz storefront with a SoundCloud mix player above a grid of custom bucket hats"><br/>
+        <a href="https://womanhoodofwubz.neocities.org/"><img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="450" alt="Womanhood of Wubz — storefront with a SoundCloud mix player above a grid of custom bucket hats"></a><br/>
       </td>
     </tr>
     <tr>
