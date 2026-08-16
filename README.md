@@ -126,7 +126,7 @@
       <td align="center">
         <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>
         <br/>
-        My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed, refactored, and covered by E2E, accessibility, and Lighthouse tests.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
+        My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed and refactored.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
         <br/>
         <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="450" alt="TaskRankr task list showing nested subtasks and priority, ease, enjoyment, and time ratings on each task"><br/>
       </td>
