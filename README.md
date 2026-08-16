@@ -112,7 +112,7 @@
   </tr>
 </table>
 
-## 💎&nbsp; Owned Projects &nbsp;💎
+## 💎&nbsp; Projects &nbsp;💎
 
 <table>
   <tbody>
