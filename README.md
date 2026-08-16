@@ -124,7 +124,7 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/61DAFB" height="15" alt="React">
+        <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React">
         <br/>
         My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed and refactored.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
         <br/>
@@ -133,7 +133,7 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/61DAFB" height="15" alt="React">
+        <strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React">
         <br/>
         A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
         <br/>
@@ -142,7 +142,7 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/61DAFB" height="15" alt="React">
+        <strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React">
         <br/>
         My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
         <br/>
@@ -151,7 +151,7 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/61DAFB" height="15" alt="React">
+        <strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React">
         <br/>
         Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
         <br/>
@@ -163,14 +163,14 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/CB3837" height="15" alt="npm">
+        <strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm">
         <br/>
         Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.
       </td>
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/CB3837" height="15" alt="npm">
+        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm">
         <br/>
         Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list.
       </td>
@@ -191,7 +191,7 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/CB3837" height="15" alt="npm">
+        <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm">
         <br/>
         Provide custom rules to sort nested glob results. Useful for test configuration.
       </td>
@@ -201,21 +201,21 @@
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/CB3837" height="15" alt="npm">
+        <strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm">
         <br/>
         Write a document as JSX (React syntax), style it with Tailwind, and render it to a page-exact PDF and HTML — with a live-preview dev server.
       </td>
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/FFD43B" height="15" alt="Python">
+        <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python">
         <br/>
         Various Python tools for the Serato DJ software&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/FFD43B" height="15" alt="Python">
+        <strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python">
         <br/>
         USB Export tool for the Serato DJ software
       </td>
