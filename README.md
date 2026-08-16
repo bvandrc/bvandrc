@@ -117,7 +117,10 @@
 <table>
   <tbody>
     <tr>
-      <td align="center"><h3>⚛️⚛️&nbsp;&nbsp;&nbsp; React Websites &nbsp;&nbsp;&nbsp;⚛️⚛️</h3></td>
+      <td align="center">
+        <h3>⚛️⚛️&nbsp;&nbsp;&nbsp; React Websites &nbsp;&nbsp;&nbsp;⚛️⚛️</h3>
+        <em>Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.</em>
+      </td>
     </tr>
     <tr>
       <td align="center">
