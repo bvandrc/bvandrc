@@ -121,18 +121,20 @@
     </tr>
     <tr>
       <td align="center">
+        <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>
+        <br/>
+        My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed, refactored, and covered by E2E, accessibility, and Lighthouse tests.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
+        <br/>
+        <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="450" alt="TaskRankr task list showing nested subtasks and priority, ease, enjoyment, and time ratings on each task"><br/>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
         <strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>
         <br/>
         A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
-        <!-- <br/>
-        <img src="./project-images/bike-ride-mapper.png" height=150 alt="Bike Ride Mapper Screenshot"><br/> -->
-      </td>
-    </tr>
-     <tr>
-      <td align="center">
-        <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>
         <br/>
-        A fancy task tracking and prioritizing todo list app. My latest project and first heavily AI-assisted project I have done, putting careful review, code cleanup, and refactoring into largely AI-generated code, by way of creating, modifying, and reviewing PRs for each feature.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
+        <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="450" alt="Map of Denver traced with every bike route ridden, totalling 138 routes and 1112 miles"><br/>
       </td>
     </tr>
     <tr>
@@ -140,8 +142,8 @@
         <strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>
         <br/>
         My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
-        <!-- <br/>
-        <img src="./project-images/dj-website.png" height=150 alt="DJ Website Screenshot"><br/> -->
+        <br/>
+        <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="450" alt="Special Ingredient Bass Mixes homepage with mixes grouped into genre columns, each with an inline SoundCloud player"><br/>
       </td>
     </tr>
     <tr>
@@ -149,8 +151,8 @@
         <strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>
         <br/>
         Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
-        <!-- <br/>
-        <img src="./project-images/womanhood-of-wubz.png" height=100 alt="Retail Website Screenshot"><br/> -->
+        <br/>
+        <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="450" alt="Womanhood of Wubz storefront with a SoundCloud mix player above a grid of custom bucket hats"><br/>
       </td>
     </tr>
     <tr>
