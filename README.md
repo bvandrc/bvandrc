@@ -3,11 +3,11 @@
 <div align="center">
 
 <p>
-  Software test engineer and React developer in Denver.
+  Software test engineer, React developer, TypeScript connoisseur.
   <br />
-  8 years in test engineering, 5 in software QA, 4 building React.
+  9 years writing code, 8 in test, 5 in software QA, 4 building React.
   <br />
-  I build React web apps and publish TypeScript tools to test them, plus the occasional Python or Arduino project.
+  I build React apps, publish testing and CI packages to npm, and write Python tools for my music library.
   <br />
   Most of what's here started as something I needed and couldn't find.
 </p>
@@ -216,7 +216,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list. Ships a Playwright fixture as well.
+        Run Lighthouse audits with threshold checks, report writing, a readable terminal recommendation list, and a Playwright fixture.
       </td>
     </tr>
     <tr>
