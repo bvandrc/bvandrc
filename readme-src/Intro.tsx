@@ -1,10 +1,18 @@
-/*
- * The GitHub bio is a profile setting, not part of this repo — set it manually at
- * https://github.com/settings/profile (160 char limit). Recorded here so its
- * wording stays next to the intro it should match:
+/**
+ * @fileoverview general intro/summary. Includes comment for GitHub bio that is manually
+ * set as well, for version control reasons.
+ */
+
+
+/**
+ * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
+ * but here for version control: 
  *
- *   Software test engineer and React developer in Denver. I build React web apps
- *   and publish TypeScript tools to test them.
+ * Prev: Software test engineer and developer experienced in Typescript / JS, React, Python,
+ * Node.js, and various testing frameworks.
+
+ * New: Software test engineer and React developer in Denver. I build React web apps and publish
+ * TypeScript tools to test them.
  */
 
 const INTRO_LINES = [
