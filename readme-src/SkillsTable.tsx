@@ -29,11 +29,8 @@ export const SkillsTable = () => (
               {row.lines.map((line, li) => (
                 <>
                   {li > 0 && <br />}
-                  {line.map((b, bi) => (
-                    <>
-                      {bi > 0 && ' '}
-                      <Shield b={b} />
-                    </>
+                  {line.map((b) => (
+                    <Shield b={b} />
                   ))}
                 </>
               ))}

@@ -4,7 +4,7 @@
   },
   "scripts": {
     "format": "prettier --write .",
-    "build:readme": "tsx readme-src/build.tsx && prettier --write README.md"
+    "build:readme": "tsx readme-src/build.tsx"
   },
   "devDependencies": {
     "@types/node": "^26.2.0",
