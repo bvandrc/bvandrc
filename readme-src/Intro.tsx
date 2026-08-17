@@ -5,19 +5,16 @@
 
 /**
  * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
- * but here for version control: 
+ * but here for version control:
  *
- * Prev: Software test engineer and developer experienced in Typescript / JS, React, Python,
- * Node.js, and various testing frameworks.
-
- * New: Software test engineer and React developer in Denver. I build React web apps and publish
- * TypeScript tools to test them.
+ * Software test engineer, React developer, TypeScript connoisseur. I build React apps,
+ * write Python tools, and publish npm packages for testing and CI.
  */
 
 const INTRO_LINES = [
-  'Software test engineer and React developer in Denver.',
-  '8 years in test engineering, 5 in software QA, 4 building React.',
-  'I build React web apps and publish TypeScript tools to test them, plus the occasional Python or Arduino project.',
+  'Software test engineer, React developer, TypeScript connoisseur.',
+  '9 years writing code, 8 in test, 5 in software QA, 4 building React.',
+  'I build React apps, publish testing and CI packages to npm, and write Python tools for my music library.',
   "Most of what's here started as something I needed and couldn't find.",
 ]
 
