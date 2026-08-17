@@ -36,7 +36,8 @@ type Project = {
   /** static counts for repos shields.io can't see (private) */
   counts?: { commits: number; prs: number }
   blurb: ComponentChildren
-  screenshot?: { src: string; alt: string }
+  /** screenshot path; its alt text is derived from the project name */
+  screenshot?: string
 }
 
 type ProjectSection = {
@@ -113,7 +114,11 @@ const ProjectRow = ({ p }: { p: Project }) => {
           <>
             <br />
             <a href={p.href}>
-              <img src={p.screenshot.src} width="450" alt={p.screenshot.alt} />
+              <img
+                src={p.screenshot}
+                width="450"
+                alt={`${p.name} — screenshot preview`}
+              />
             </a>
             <br />
           </>
@@ -170,10 +175,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="TaskRankr" />
           </>
         ),
-        screenshot: {
-          src: './project-screenshots/resized/screenshot-taskrankr.png',
-          alt: 'TaskRankr — screenshot preview',
-        },
+        screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
       },
       {
         name: 'Bike Ride Tracker',
@@ -186,10 +188,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="bike-ride-mapper" />
           </>
         ),
-        screenshot: {
-          src: './project-screenshots/resized/screenshot-bike-ride-mapper.png',
-          alt: 'Bike Ride Tracker — screenshot preview',
-        },
+        screenshot: './project-screenshots/resized/screenshot-bike-ride-mapper.png',
       },
       {
         name: 'DJ Website',
@@ -203,10 +202,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="specialingredientbass.com" />
           </>
         ),
-        screenshot: {
-          src: './project-screenshots/resized/screenshot-specialingredientbass.png',
-          alt: 'Special Ingredient Bass Mixes — screenshot preview',
-        },
+        screenshot: './project-screenshots/resized/screenshot-specialingredientbass.png',
       },
       {
         name: 'Retail Website',
@@ -219,10 +215,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="womanhoodofwubz.com" />
           </>
         ),
-        screenshot: {
-          src: './project-screenshots/resized/screenshot-womanhoodofwubz.png',
-          alt: 'Womanhood of Wubz — screenshot preview',
-        },
+        screenshot: './project-screenshots/resized/screenshot-womanhoodofwubz.png',
       },
     ],
   },
