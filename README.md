@@ -2,6 +2,16 @@
 
 <div align="center">
 
+<p>
+  Software test engineer and React developer in Denver.
+  <br />
+  8 years in test engineering, 5 in software QA, 4 building React.
+  <br />
+  I build React web apps and publish TypeScript tools to test them, plus the occasional Python or Arduino project.
+  <br />
+  Most of what's here started as something I needed and couldn't find.
+</p>
+
 ## 🌟&nbsp; Skills &nbsp;🌟
 
 <table>

@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { render } from 'preact-render-to-string/jsx'
 
 import { BeyondCode } from './BeyondCode'
+import { Intro } from './Intro'
 import { ProjectsTable } from './ProjectsTable'
 import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
@@ -12,11 +13,14 @@ const PREACT_RENDER_ARGS = { pretty: '  ', jsx: false }
 
 const skillsTable = render(<SkillsTable />, {}, PREACT_RENDER_ARGS)
 const projectsTable = render(<ProjectsTable />, {}, PREACT_RENDER_ARGS)
+const intro = render(<Intro />, {}, PREACT_RENDER_ARGS)
 const beyondCode = render(<BeyondCode />, {}, PREACT_RENDER_ARGS)
 
 const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`pnpm build\` -->
 
 <div align="center">
+
+${intro}
 
 ${SectionHeader('🌟', 'Skills')}
 
