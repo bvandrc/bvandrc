@@ -3,7 +3,6 @@
  * set as well, for version control reasons.
  */
 
-
 /**
  * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
  * but here for version control: 
