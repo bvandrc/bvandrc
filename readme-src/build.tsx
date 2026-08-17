@@ -1,13 +1,15 @@
 import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { render } from 'preact-render-to-string'
+import { render } from 'preact-render-to-string/jsx'
 import { SectionHeader } from './components'
 import { ProjectsTable } from './ProjectsTable'
 import { SkillsTable } from './SkillsTable'
 
-const skills = render(<SkillsTable />)
-const projects = render(<ProjectsTable />)
+const PRETTY = { pretty: '  ', jsx: false }
+
+const skills = render(<SkillsTable />, {}, PRETTY)
+const projects = render(<ProjectsTable />, {}, PRETTY)
 
 const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`npm run build:readme\` -->
 
