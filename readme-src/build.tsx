@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 import { render } from 'preact-render-to-string/jsx'
 
 import { BeyondCode } from './BeyondCode'
-import { BIO_COMMENT, Intro } from './Intro'
+import { Intro } from './Intro'
 import { ProjectsTable } from './ProjectsTable'
 import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
@@ -19,8 +19,6 @@ const beyondCode = render(<BeyondCode />, {}, PREACT_RENDER_ARGS)
 const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`pnpm build\` -->
 
 <div align="center">
-
-${BIO_COMMENT}
 
 ${intro}
 

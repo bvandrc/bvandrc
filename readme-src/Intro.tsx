@@ -1,15 +1,11 @@
-const GITHUB_BIO =
-  'Software test engineer and React developer in Denver. I build React web apps and publish TypeScript tools to test them.'
-
-/**
- * Records the GitHub bio, which is a profile setting rather than part of this
- * repo, so its wording lives alongside the intro it should match.
+/*
+ * The GitHub bio is a profile setting, not part of this repo — set it manually at
+ * https://github.com/settings/profile (160 char limit). Recorded here so its
+ * wording stays next to the intro it should match:
  *
- * Preact has no comment node, so this is a plain string rather than JSX.
+ *   Software test engineer and React developer in Denver. I build React web apps
+ *   and publish TypeScript tools to test them.
  */
-export const BIO_COMMENT = `<!-- GitHub bio (set manually at https://github.com/settings/profile, 160 char limit):
-${GITHUB_BIO}
--->`
 
 const INTRO_LINES = [
   'Software test engineer and React developer in Denver.',
