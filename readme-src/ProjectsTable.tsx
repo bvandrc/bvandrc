@@ -124,7 +124,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         blurb: (
           <>
             Run Lighthouse audits with threshold checks, report writing, a
-            readable terminal recommendation list, and Playwright integration.
+            readable terminal recommendation list, and a Playwright fixture.
           </>
         ),
       },
