@@ -216,7 +216,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list. Ships a Playwright fixture so a test can audit whatever page it's on.
+        Run Lighthouse audits with threshold checks, report writing, and a readable terminal recommendation list. Ships a Playwright fixture as well.
       </td>
     </tr>
     <tr>
