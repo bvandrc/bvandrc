@@ -58,8 +58,11 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 // whitespace-normalizing tools
 const output = md
   .replaceAll('\u00A0', '&nbsp;')
-  // keep consecutive floated images flush — the pretty-printer's newlines
-  // between them would otherwise render as a gap between the badges
-  .replace(/ \/>\n\s*(<img align=")/g, ' />$1')
+  // the pretty-printer's newlines around inline content render as extra
+  // spaces — join nbsp separator lines and <strong> tags to their content so
+  // title lines render with main's exact spacing
+  .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
+  .replace(/<strong>\n\s*/g, '<strong>')
+  .replace(/\n\s*<\/strong>/g, '</strong>')
 writeFileSync(join(root, 'README.md'), output)
 console.log('README.md generated')

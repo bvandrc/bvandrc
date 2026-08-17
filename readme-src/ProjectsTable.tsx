@@ -239,28 +239,22 @@ const PROJECT_SECTIONS: ProjectSection[] = [
 
 const ProjectRow = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
-  const hasCounts = Boolean(p.repo || p.counts)
   return (
     <tr>
       <td align="center">
-        {/* invisible left counterweight so the centered title stays on the card's centerline */}
+        {/* invisible spacer mirrors the icon so the title stays centered on its own text */}
+        <img src="./assets/spacer.png" width="15" height="15" alt="" />
+        &nbsp;&nbsp;&nbsp;
+        <strong>
+          <a href={p.href}>{p.name}</a>
+        </strong>
+        &nbsp;&nbsp;&nbsp;
         <img
-          align="left"
-          src="./assets/spacer.png"
-          width={hasCounts ? '130' : '19'}
-          height="18"
-          alt=""
-        />
-        <img
-          align="right"
           src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
           height="15"
           alt={icon.title}
           title={icon.title}
         />
-        <strong>
-          <a href={p.href}>{p.name}</a>
-        </strong>
         <br />
         {p.blurb}
         {p.screenshot && (
