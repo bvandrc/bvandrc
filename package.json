@@ -1,16 +1,35 @@
 {
-  "dependencies": {
-    "prettier": "^3"
+  "name": "bvandrc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GitHub profile README, generated from Preact TSX components",
+  "keywords": [
+    "github-profile",
+    "readme"
+  ],
+  "homepage": "https://github.com/bvandrc",
+  "bugs": {
+    "url": "https://github.com/bvandrc/bvandrc/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvandrc/bvandrc.git"
+  },
+  "author": "Blake Vandercar",
+  "license": "ISC",
+  "type": "module",
   "scripts": {
-    "format": "prettier --write .",
-    "build:readme": "tsx readme-src/build.tsx"
+    "build:readme": "tsx readme-src/build.tsx",
+    "check": "npx biome check . && npm run ts:check",
+    "format": "npx biome check . --fix",
+    "ts:check": "tsc"
   },
   "devDependencies": {
-    "@types/node": "^26.2.0",
-    "preact": "^10.29.8",
-    "preact-render-to-string": "^6.7.0",
-    "tsx": "^4.23.12",
-    "typescript": "^7.0.2"
+    "@biomejs/biome": "^2",
+    "@types/node": "^26",
+    "preact": "^10",
+    "preact-render-to-string": "^6.7",
+    "tsx": "^4",
+    "typescript": "^7"
   }
 }

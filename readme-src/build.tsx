@@ -2,6 +2,7 @@ import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { render } from 'preact-render-to-string/jsx'
+
 import { SectionHeader } from './components'
 import { ProjectsTable } from './ProjectsTable'
 import { SkillsTable } from './SkillsTable'

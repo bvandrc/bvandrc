@@ -1,4 +1,5 @@
 import type { ComponentChildren } from 'preact'
+
 import { ICON_GRAY, SectionTitle } from './components'
 
 const BADGE_BG = '2f363d'
@@ -11,10 +12,10 @@ const octicon = (path: string) => {
 
 // GitHub octicons (git-commit-16, git-pull-request-16), tinted to match the project icons
 const COMMIT_LOGO = octicon(
-  '<path d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/>',
+  '<path d="M11.93 8.5a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 0 1 0-1.5h3.32a4.002 4.002 0 0 1 7.86 0h3.32a.75.75 0 0 1 0 1.5Zm-1.43-.75a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0Z"/>'
 )
 const PR_LOGO = octicon(
-  '<path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"/>',
+  '<path d="M1.5 3.25a2.25 2.25 0 1 1 3 2.122v5.256a2.251 2.251 0 1 1-1.5 0V5.372A2.25 2.25 0 0 1 1.5 3.25Zm5.677-.177L9.573.677A.25.25 0 0 1 10 .854V2.5h1A2.5 2.5 0 0 1 13.5 5v5.628a2.251 2.251 0 1 1-1.5 0V5a1 1 0 0 0-1-1h-1v1.646a.25.25 0 0 1-.427.177L7.177 3.427a.25.25 0 0 1 0-.354ZM3.75 2.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm0 9.5a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Zm8.25.75a.75.75 0 1 0 1.5 0 .75.75 0 0 0-1.5 0Z"/>'
 )
 
 type ProjectType = 'react' | 'npm' | 'github' | 'python' | 'arduino'
@@ -53,33 +54,44 @@ const RepoLink = ({ repo }: { repo: string }) => (
   </>
 )
 
-const CommitBadge = ({ repo, counts }: Pick<Project, 'repo' | 'counts'>) => (
-  <img
-    align="right"
-    src={
-      repo
-        ? `https://img.shields.io/github/commit-activity/t/bvandrc/${repo}?style=flat-square&label=&logo=${COMMIT_LOGO}&color=${BADGE_BG}`
-        : `https://img.shields.io/badge/${counts!.commits}-${BADGE_BG}?style=flat-square&logo=${COMMIT_LOGO}`
+const badgeSrcs = ({ repo, counts }: Pick<Project, 'repo' | 'counts'>) => {
+  if (repo) {
+    return {
+      commits: `https://img.shields.io/github/commit-activity/t/bvandrc/${repo}?style=flat-square&label=&logo=${COMMIT_LOGO}&color=${BADGE_BG}`,
+      prs: `https://img.shields.io/github/issues-search?query=repo%3Abvandrc%2F${repo}%20is%3Apr&style=flat-square&label=&logo=${PR_LOGO}&color=${BADGE_BG}`,
     }
-    height="18"
-    alt="commit count"
-    title="Commits"
-  />
-)
+  }
+  if (counts) {
+    return {
+      commits: `https://img.shields.io/badge/${counts.commits}-${BADGE_BG}?style=flat-square&logo=${COMMIT_LOGO}`,
+      prs: `https://img.shields.io/badge/${counts.prs}-${BADGE_BG}?style=flat-square&logo=${PR_LOGO}`,
+    }
+  }
+  return null
+}
 
-const PrBadge = ({ repo, counts }: Pick<Project, 'repo' | 'counts'>) => (
-  <img
-    align="right"
-    src={
-      repo
-        ? `https://img.shields.io/github/issues-search?query=repo%3Abvandrc%2F${repo}%20is%3Apr&style=flat-square&label=&logo=${PR_LOGO}&color=${BADGE_BG}`
-        : `https://img.shields.io/badge/${counts!.prs}-${BADGE_BG}?style=flat-square&logo=${PR_LOGO}`
-    }
-    height="18"
-    alt="PR count"
-    title="Pull Requests"
-  />
-)
+const CountBadges = ({ p }: { p: Project }) => {
+  const srcs = badgeSrcs(p)
+  if (!srcs) return null
+  return (
+    <>
+      <img
+        align="right"
+        src={srcs.prs}
+        height="18"
+        alt="PR count"
+        title="Pull Requests"
+      />
+      <img
+        align="right"
+        src={srcs.commits}
+        height="18"
+        alt="commit count"
+        title="Commits"
+      />
+    </>
+  )
+}
 
 const ProjectRow = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
@@ -96,8 +108,7 @@ const ProjectRow = ({ p }: { p: Project }) => {
           alt=""
         />
         {/* right floats stack right-to-left: first in source renders outermost */}
-        {hasCounts && <PrBadge repo={p.repo} counts={p.counts} />}
-        {hasCounts && <CommitBadge repo={p.repo} counts={p.counts} />}
+        <CountBadges p={p} />
         <img
           align="right"
           src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
@@ -188,7 +199,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="bike-ride-mapper" />
           </>
         ),
-        screenshot: './project-screenshots/resized/screenshot-bike-ride-mapper.png',
+        screenshot:
+          './project-screenshots/resized/screenshot-bike-ride-mapper.png',
       },
       {
         name: 'DJ Website',
@@ -202,7 +214,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="specialingredientbass.com" />
           </>
         ),
-        screenshot: './project-screenshots/resized/screenshot-specialingredientbass.png',
+        screenshot:
+          './project-screenshots/resized/screenshot-specialingredientbass.png',
       },
       {
         name: 'Retail Website',
@@ -215,7 +228,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             <RepoLink repo="womanhoodofwubz.com" />
           </>
         ),
-        screenshot: './project-screenshots/resized/screenshot-womanhoodofwubz.png',
+        screenshot:
+          './project-screenshots/resized/screenshot-womanhoodofwubz.png',
       },
     ],
   },

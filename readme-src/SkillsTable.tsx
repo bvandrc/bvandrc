@@ -1,4 +1,5 @@
 import type { ComponentChildren } from 'preact'
+
 import { SectionTitle } from './components'
 
 type SkillBadge = { alt: string; path: string }
