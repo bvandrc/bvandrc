@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  schedule:
+    - cron: '0 5 * * 1' # Mondays, 05:00 UTC
+  workflow_dispatch: # Allows manual triggering
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint & Type Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Lint package.json
+        uses: bvandrc/lint-package-json@v2
+
+      - name: Lint & Type Check
+        run: pnpm check
+
+  generate-readme:
+    name: Generate README
+    runs-on: ubuntu-latest
+    # PRs from forks can't be pushed to
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build README
+        run: pnpm build
+        env:
+          # authenticates the commit/PR count fetches baked into badge alt text
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit regenerated README
+        uses: stefanzweifel/git-auto-commit-action@v6
+        with:
+          commit_message: 'chore: regenerate README.md'
+          file_pattern: README.md
