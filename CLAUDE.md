@@ -1,6 +1,6 @@
 ## Project
 
-GitHub profile README (the `bvandrc/bvandrc` special repo). `README.md` is **generated** — never edit it directly. The source is `readme-src/`: Preact TSX rendered to sanitizer-safe HTML by `npm run build:readme`.
+GitHub profile README (the `bvandrc/bvandrc` special repo). `README.md` is **generated** — never edit it directly. The source is `readme-src/`: Preact TSX rendered to sanitizer-safe HTML by `pnpm build:readme`.
 
 - **Stack**: TypeScript + Preact (`preact-render-to-string`), run with `tsx`. Biome for lint/format.
 - **Layout**: `readme-src/ProjectsTable.tsx` and `readme-src/SkillsTable.tsx` each contain a table component plus its section data; `components.tsx` holds the shared pieces; `build.tsx` assembles the sections and writes `README.md`.
@@ -17,9 +17,10 @@ Conventions live outside this file, synced from https://github.com/bvandrc/bvand
 
 ## Commands
 
-- `npm run build:readme` — regenerate README.md from `readme-src/`. Run after every `readme-src/` change and commit the result.
-- `npm run format` — Biome check/fix. `npm run check` — the full gate: Biome plus `tsc`. Run before every commit; it's what CI runs.
+- `pnpm build:readme` — regenerate README.md from `readme-src/`. Run after every `readme-src/` change and commit the result.
+- `pnpm format` — Biome check/fix. `pnpm check` — the full gate: Biome plus `tsc`. Run before every commit; it's what CI runs.
 
 ## Conventions
 
+- **Package manager**: pnpm. `npm install` writes a competing `package-lock.json` that CI ignores.
 - **Convention files**: `conventions/` is synced from https://github.com/bvandrc/bvandrc-conventions and overwritten on every sync. Edit a rule upstream, never in that directory.
