@@ -12,7 +12,7 @@ const PRETTY = { pretty: '  ', jsx: false }
 const skills = render(<SkillsTable />, {}, PRETTY)
 const projects = render(<ProjectsTable />, {}, PRETTY)
 
-const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`npm run build:readme\` -->
+const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`pnpm build:readme\` -->
 
 <div align="center">
 

@@ -1,4 +1,4 @@
-<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run `npm run build:readme` -->
+<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run `pnpm build:readme` -->
 
 <div align="center">
 
