@@ -5,6 +5,8 @@ on:
     branches:
       - main
   pull_request:
+  schedule:
+    - cron: '0 5 * * 1' # Mondays, 05:00 UTC
   workflow_dispatch: # Allows manual triggering
 
 concurrency:

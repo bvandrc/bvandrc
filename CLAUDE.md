@@ -4,8 +4,8 @@ GitHub profile README (the `bvandrc/bvandrc` special repo). `README.md` is **gen
 
 - **Stack**: TypeScript + Preact (`preact-render-to-string`), run with `tsx`. Biome for lint/format.
 - **Layout**: `readme-src/ProjectsTable.tsx`, `SkillsTable.tsx`, and `BeyondCode.tsx` each contain a section component plus its data; `SectionHeadings.tsx`, `constants.ts`, and `utils.ts` hold the shared pieces; `build.tsx` assembles the sections and writes `README.md`.
-- **GitHub README constraints**: GitHub strips CSS, `style`, and `class` from README HTML — layout uses sanitizer-allowed attributes only (`align`, `width`, `height`, `colspan`).
-- **Workflows**: `ci.yml` is the lint gate and also regenerates + commits README.md (PRs,weekly cron, manual dispatch). `sync-conventions.yml` pulls `conventions/` from the shared conventions repo.
+- **GitHub README constraints**: GitHub strips CSS, `style`, and `class` from README HTML — layout uses sanitizer-allowed attributes only (`align`, `width`, `height`, `colspan`). The commit/PR count badge is a shields.io image (octicon embedded as a base64 data URI) whose numbers are baked in at build time — set `repo` to fetch them from the GitHub API, or `counts` to hardcode them for repos the API can't see.
+- **Workflows**: `ci.yml` is the lint gate and also regenerates + commits README.md (PRs, weekly cron, manual dispatch); the build fetches each repo's commit/PR counts from the GitHub API into the badges' alt text, degrading to generic alts offline. `generate-github-stats.yml` refreshes the stats SVGs daily (don't hand-edit `github-*.svg`); `sync-conventions.yml` pulls `conventions/` from the shared conventions repo.
 
 ## Code conventions
 

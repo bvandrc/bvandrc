@@ -1,16 +1,18 @@
 import type { ComponentChildren } from 'preact'
 
+import {
+  CountBadge,
+  type CountBadgeProps,
+  loadRepoCounts,
+  resolveCounts,
+} from './CountBadge'
 import { ICON_GRAY, type ProjectType, TYPE_ICONS } from './constants'
 import { SectionTitle } from './SectionHeadings'
 
-type Project = {
+type Project = CountBadgeProps & {
   name: string
   href: string
   type: ProjectType
-  /** GitHub repo name under bvandrc — enables live commit/PR count badges */
-  repo?: string
-  /** static counts for repos the GitHub API can't see (private) */
-  counts?: { commits: number; prs: number }
   blurb: ComponentChildren
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
@@ -237,24 +239,40 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
+await loadRepoCounts(
+  PROJECT_SECTIONS.flatMap((s) => s.projects).flatMap((p) =>
+    p.repo ? [p.repo] : []
+  )
+)
+
 const ProjectRow = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
+  const hasBadge = Boolean(resolveCounts(p))
   return (
     <tr>
       <td align="center">
-        {/* invisible spacer mirrors the icon so the title stays centered on its own text */}
-        <img src="./assets/spacer.png" width="15" height="15" alt="" />
-        &nbsp;&nbsp;&nbsp;
-        <strong>
-          <a href={p.href}>{p.name}</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;
+        {/* invisible left counterweight so the centered title stays on the
+            card's centerline — the badge width is an estimate of the icon plus
+            the badge plus GitHub's 20px padding on each right-aligned image */}
         <img
+          align="left"
+          src="./assets/spacer.png"
+          width={hasBadge ? '110' : '19'}
+          height="18"
+          alt=""
+        />
+        {/* right floats stack right-to-left: first in source renders outermost */}
+        <CountBadge repo={p.repo} counts={p.counts} />
+        <img
+          align="right"
           src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
           height="15"
           alt={icon.title}
           title={icon.title}
         />
+        <strong>
+          <a href={p.href}>{p.name}</a>
+        </strong>
         <br />
         {p.blurb}
         {p.screenshot && (
