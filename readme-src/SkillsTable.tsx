@@ -151,6 +151,12 @@ const SKILL_SECTIONS: SkillSection[] = [
               logoColor: '058a5e',
             },
             {
+              alt: 'Playwright',
+              path: '-Playwright-%232EAD33',
+              logo: 'playwright',
+              logoColor: 'white',
+            },
+            {
               alt: 'Selenium',
               path: '-selenium-%43B02A',
               logo: 'selenium',
@@ -190,19 +196,6 @@ const SKILL_SECTIONS: SkillSection[] = [
           ],
         ],
       },
-      {
-        label: 'API',
-        lines: [
-          [
-            {
-              alt: 'Postman',
-              path: 'Postman-FF6C37',
-              logo: 'postman',
-              logoColor: 'white',
-            },
-          ],
-        ],
-      },
     ],
   },
   {
@@ -226,21 +219,9 @@ const SKILL_SECTIONS: SkillSection[] = [
               logoColor: 'white',
             },
             {
-              alt: 'ChatGPT',
-              path: 'chatGPT-74aa9c',
-              logo: 'openai',
-              logoColor: 'white',
-            },
-            {
               alt: 'Cursor',
               path: 'Cursor-%23000000',
               logo: 'Cursor',
-              logoColor: 'white',
-            },
-            {
-              alt: 'Replit',
-              path: 'Replit-DD1200',
-              logo: 'Replit',
               logoColor: 'white',
             },
           ],
