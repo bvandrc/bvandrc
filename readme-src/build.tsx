@@ -2,6 +2,7 @@ import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { render } from 'preact-render-to-string'
+import { SectionHeader } from './components'
 import { ProjectsTable } from './ProjectsTable'
 import { SkillsTable } from './SkillsTable'
 
@@ -12,15 +13,15 @@ const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and r
 
 <div align="center">
 
-## 🌟&nbsp; Skills &nbsp;🌟
+${SectionHeader('🌟', 'Skills')}
 
 ${skills}
 
-## 💎&nbsp; Projects &nbsp;💎
+${SectionHeader('💎', 'Projects')}
 
 ${projects}
 
-## 📈&nbsp; Stats &nbsp;📈
+${SectionHeader('📈', 'Stats')}
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 
@@ -41,7 +42,7 @@ ${projects}
 
 <!-- [![StackOverflow Stats](https://github-readme-stackoverflow.vercel.app/?userID=11149305&layout=compact&theme=dark)](https://stackoverflow.com/users/11149305/bvandercar) -->
 
-## 🎉&nbsp; Beyond Code &nbsp;🎉
+${SectionHeader('🎉', 'Beyond Code')}
 
 When I'm not coding, you'll find me:
 
