@@ -57,5 +57,8 @@ When I'm not coding, you'll find me:
 `
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-writeFileSync(join(root, 'README.md'), md)
+// the renderer emits raw U+00A0 for JSX &nbsp; entities — write them back as
+// explicit entities so the spacing is visible in source and immune to
+// whitespace-normalizing tools
+writeFileSync(join(root, 'README.md'), md.replaceAll('\u00A0', '&nbsp;'))
 console.log('README.md generated')
