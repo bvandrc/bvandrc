@@ -2,6 +2,15 @@
 
 <div align="center">
 
+<!-- GitHub bio (set manually at https://github.com/settings/profile, 160 char limit):
+Software test engineer and React developer in Denver. I build React web apps and publish TypeScript tools to test them.
+-->
+
+Software test engineer and React developer in Denver.<br/>
+8 years in test engineering, 5 in software QA, 4 building React.<br/>
+I build React web apps and publish TypeScript tools to test them, plus the occasional Python or Arduino project.<br/>
+Most of what's here started as something I needed and couldn't find.
+
 ## 🌟&nbsp; Skills &nbsp;🌟
 
 <table>
