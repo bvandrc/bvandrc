@@ -1,4 +1,4 @@
-import { type ProjectSection, RepoLink } from './components'
+import { type ProjectSection, RepoLink } from './ProjectsTable'
 
 export const PROJECT_SECTIONS: ProjectSection[] = [
   {

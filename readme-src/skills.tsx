@@ -1,4 +1,4 @@
-import type { SkillSection } from './components'
+import type { SkillSection } from './SkillsTable'
 
 // Badge paths are the shields.io static-badge path + params (https://img.shields.io/badge/<path>)
 // Badges link: https://github.com/Ileriayo/markdown-badges
