@@ -16,17 +16,18 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&amp;logo=typescript&amp;logoColor=white" alt="TypeScript" />
-       
+
       <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=%2361DAFB" alt="React" />
-       
+
       <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&amp;logo=javascript&amp;logoColor=%23F7DF1E" alt="JavaScript" />
       <br />
       <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&amp;logo=html5&amp;logoColor=white" alt="HTML5" />
-       
+
       <img src="https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&amp;logo=css&amp;logoColor=white" alt="CSS" />
-       
+
       <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&amp;logo=python&amp;logoColor=ffdd54" alt="Python" />
     </td>
+
   </tr>
   <tr>
     <td align="right">
@@ -34,13 +35,14 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&amp;logo=nodedotjs&amp;logoColor=white" alt="Node.js" />
-       
+
       <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&amp;logo=vite&amp;logoColor=white" alt="Vite" />
-       
+
       <img src="https://img.shields.io/badge/biome-%2360A5FA.svg?style=for-the-badge&amp;logo=biome&amp;logoColor=white" alt="Biome" />
-       
+
       <img src="https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&amp;logo=eslint&amp;logoColor=white" alt="ESLint" />
     </td>
+
   </tr>
   <tr>
     <td align="right">
@@ -48,11 +50,12 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&amp;logo=zod&amp;logoColor=white" alt="Zod" />
-       
+
       <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white" alt="TailwindCSS" />
-       
+
       <img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&amp;logo=jquery&amp;logoColor=white" alt="JQuery" />
     </td>
+
   </tr>
   <tr>
     <td align="right">
@@ -73,11 +76,12 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&amp;logo=cypress&amp;logoColor=058a5e" alt="Cypress" />
-       
+
       <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&amp;logo=selenium&amp;logoColor=white" alt="Selenium" />
-       
+
       <img src="https://img.shields.io/badge/Puppeteer-%2340B5A4.svg?style=for-the-badge&amp;logo=Puppeteer&amp;logoColor=black" alt="Puppeteer" />
     </td>
+
   </tr>
   <tr>
     <td align="right">
@@ -85,11 +89,12 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/-Vitest-252529?style=for-the-badge&amp;logo=vitest&amp;logoColor=FCC72B" alt="Vitest" />
-       
+
       <img src="https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&amp;logo=jest&amp;logoColor=white" alt="Jest" />
-       
+
       <img src="https://img.shields.io/badge/-TestingLibrary-%23E33332?style=for-the-badge&amp;logo=testing-library&amp;logoColor=white" alt="Testing Library" />
     </td>
+
   </tr>
   <tr>
     <td align="right">
@@ -110,15 +115,16 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&amp;logo=claude&amp;logoColor=white" alt="Claude" />
-       
+
       <img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&amp;logo=github-copilot&amp;logoColor=white" alt="GitHub Copilot" />
-       
+
       <img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&amp;logo=openai&amp;logoColor=white" alt="ChatGPT" />
-       
+
       <img src="https://img.shields.io/badge/Cursor-%23000000?style=for-the-badge&amp;logo=Cursor&amp;logoColor=white" alt="Cursor" />
-       
+
       <img src="https://img.shields.io/badge/Replit-DD1200?style=for-the-badge&amp;logo=Replit&amp;logoColor=white" alt="Replit" />
     </td>
+
   </tr>
   <tr>
     <td align="right">
@@ -138,9 +144,10 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&amp;logo=jira&amp;logoColor=white" alt="Jira" />
-       
+
       <img src="https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&amp;logo=confluence&amp;logoColor=white" alt="Confluence" />
     </td>
+
   </tr>
   <tr>
     <td colspan="2" align="center">
