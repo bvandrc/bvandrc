@@ -220,6 +220,23 @@
         USB Export tool for the Serato DJ software
       </td>
     </tr>
+    <tr>
+      <td align="center"><h3>💡💡&nbsp;&nbsp;&nbsp; Other Projects &nbsp;&nbsp;&nbsp;💡💡</h3></td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt="">&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python">
+        <br/>
+        Python program that uses the Spotify and SoundCloud APIs to organize my music and DJ library. <em>(private repo)</em>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt="">&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino/8B949E" height="15" alt="Arduino">
+        <br/>
+        The code that runs my festival totem—an LED-lit sign controlled on the fly with dials, buttons, and a tap-sensitive accelerometer.
+      </td>
+    </tr>
   </tbody>
 </table>
 
