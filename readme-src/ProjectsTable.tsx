@@ -19,19 +19,12 @@ const PR_LOGO = octicon(
 
 export type ProjectType = 'react' | 'npm' | 'github' | 'python' | 'arduino'
 
-const TYPE_ICONS: Record<
-  ProjectType,
-  { slug: string; alt: string; title: string }
-> = {
-  react: { slug: 'react', alt: 'React', title: 'React' },
-  npm: { slug: 'npm', alt: 'npm', title: 'npm (Typescript)' },
-  github: {
-    slug: 'github',
-    alt: 'GitHub Marketplace',
-    title: 'GitHub Marketplace',
-  },
-  python: { slug: 'python', alt: 'Python', title: 'Python' },
-  arduino: { slug: 'arduino', alt: 'Arduino', title: 'Arduino' },
+const TYPE_ICONS: Record<ProjectType, { slug: string; title: string }> = {
+  react: { slug: 'react', title: 'React' },
+  npm: { slug: 'npm', title: 'npm (Typescript)' },
+  github: { slug: 'github', title: 'GitHub Marketplace' },
+  python: { slug: 'python', title: 'Python' },
+  arduino: { slug: 'arduino', title: 'Arduino' },
 }
 
 export type Project = {
@@ -108,7 +101,7 @@ const ProjectRow = ({ p }: { p: Project }) => {
           align="right"
           src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
           height="15"
-          alt={icon.alt}
+          alt={icon.title}
           title={icon.title}
         />
         <strong>
