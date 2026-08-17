@@ -1,11 +1,11 @@
 import type { ComponentChildren } from 'preact'
 import { SectionTitle } from './components'
 
-export type SkillBadge = { alt: string; path: string }
+type SkillBadge = { alt: string; path: string }
 
-export type SkillRow = { label: ComponentChildren; lines: SkillBadge[][] }
+type SkillRow = { label: ComponentChildren; lines: SkillBadge[][] }
 
-export type SkillSection = { emoji: string; title: string; rows: SkillRow[] }
+type SkillSection = { emoji: string; title: string; rows: SkillRow[] }
 
 const Shield = ({ b }: { b: SkillBadge }) => (
   <img src={`https://img.shields.io/badge/${b.path}`} alt={b.alt} />
@@ -47,7 +47,7 @@ export const SkillsTable = () => (
 
 // Badge paths are the shields.io static-badge path + params (https://img.shields.io/badge/<path>)
 // Badges link: https://github.com/Ileriayo/markdown-badges
-export const SKILL_SECTIONS: SkillSection[] = [
+const SKILL_SECTIONS: SkillSection[] = [
   {
     emoji: '🖥️🖥️',
     title: 'Core Development',
