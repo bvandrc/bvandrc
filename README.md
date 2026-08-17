@@ -74,6 +74,7 @@
     </td>
     <td align="center">
       <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&amp;logo=cypress&amp;logoColor=058a5e" alt="Cypress" />
+      <img src="https://img.shields.io/badge/-Playwright-%232EAD33?style=for-the-badge&amp;logo=playwright&amp;logoColor=white" alt="Playwright" />
       <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&amp;logo=selenium&amp;logoColor=white" alt="Selenium" />
       <img src="https://img.shields.io/badge/Puppeteer-%2340B5A4.svg?style=for-the-badge&amp;logo=Puppeteer&amp;logoColor=black" alt="Puppeteer" />
     </td>
@@ -89,14 +90,6 @@
     </td>
   </tr>
   <tr>
-    <td align="right">
-      <em>API</em>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&amp;logo=postman&amp;logoColor=white" alt="Postman" />
-    </td>
-  </tr>
-  <tr>
     <td colspan="2" align="center">
       <h3>🛠️🛠️&nbsp;&nbsp;&nbsp;&nbsp;Tools&nbsp;&nbsp;&nbsp;&nbsp;🛠️🛠️</h3>
     </td>
@@ -108,9 +101,7 @@
     <td align="center">
       <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&amp;logo=claude&amp;logoColor=white" alt="Claude" />
       <img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&amp;logo=github-copilot&amp;logoColor=white" alt="GitHub Copilot" />
-      <img src="https://img.shields.io/badge/chatGPT-74aa9c?style=for-the-badge&amp;logo=openai&amp;logoColor=white" alt="ChatGPT" />
       <img src="https://img.shields.io/badge/Cursor-%23000000?style=for-the-badge&amp;logo=Cursor&amp;logoColor=white" alt="Cursor" />
-      <img src="https://img.shields.io/badge/Replit-DD1200?style=for-the-badge&amp;logo=Replit&amp;logoColor=white" alt="Replit" />
     </td>
   </tr>
   <tr>
