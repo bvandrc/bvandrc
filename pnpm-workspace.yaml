@@ -1,0 +1,4 @@
+allowBuilds:
+  # deny esbuild's postinstall — its binary comes from platform optional deps;
+  # without an entry here, pnpm 11 fails install with ERR_PNPM_IGNORED_BUILDS
+  esbuild: false
