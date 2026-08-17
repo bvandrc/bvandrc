@@ -123,9 +123,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'lighthouse-audit-utils',
         blurb: (
           <>
-            Run Lighthouse audits with threshold checks, report writing, and a
-            readable terminal recommendation list. Ships a Playwright fixture as
-            well.
+            Run Lighthouse audits with threshold checks, report writing, a
+            readable terminal recommendation list, and Playwright integration.
           </>
         ),
       },
