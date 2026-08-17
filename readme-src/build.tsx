@@ -4,11 +4,9 @@ import { fileURLToPath } from 'node:url'
 import { render } from 'preact-render-to-string'
 import { ProjectsTable } from './ProjectsTable'
 import { SkillsTable } from './SkillsTable'
-import { PROJECT_SECTIONS } from './projects'
-import { SKILL_SECTIONS } from './skills'
 
-const skills = render(<SkillsTable sections={SKILL_SECTIONS} />)
-const projects = render(<ProjectsTable sections={PROJECT_SECTIONS} />)
+const skills = render(<SkillsTable />)
+const projects = render(<ProjectsTable />)
 
 const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`npm run build:readme\` -->
 
