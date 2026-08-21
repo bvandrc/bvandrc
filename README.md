@@ -154,7 +154,10 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/370%20%C2%B7%20264-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="370 commits · 264 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>
         <br />
         My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed and refactored.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
         <br />
@@ -166,7 +169,10 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/75%20%C2%B7%2022-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="75 commits · 22 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>
         <br />
         A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
         <br />
@@ -178,7 +184,10 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/78%20%C2%B7%2033-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="78 commits · 33 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>
         <br />
         My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
         <br />
@@ -190,7 +199,10 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/36%20%C2%B7%2025-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="36 commits · 25 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
+        <strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>
         <br />
         Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
         <br />
@@ -207,35 +219,50 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/11%20%C2%B7%207-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="11 commits · 7 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>
         <br />
         Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/14%20%C2%B7%209-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="14 commits · 9 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>
         <br />
         Run Lighthouse audits with threshold checks, report writing, a readable terminal recommendation list, and a Playwright fixture.
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/8%20%C2%B7%2012-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="8 commits · 12 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
+        <strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>
         <br />
         GitHub Action that polls a URL until its content changes, to detect when a deploy has actually gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/2%20%C2%B7%201-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="2 commits · 1 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
+        <strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>
         <br />
         GitHub Action that lints every package.json in a repo against a shared npm-package-json-lint rule set.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/14%20%C2%B7%207-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="14 commits · 7 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>
         <br />
         Provide custom rules to sort nested glob results. Useful for test configuration.
       </td>
@@ -247,21 +274,29 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/7%20%C2%B7%208-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="7 commits · 8 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>
         <br />
         Write a document as JSX (React syntax), style it with Tailwind, and render it to a page-exact PDF and HTML — with a live-preview dev server.
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/302%20%C2%B7%208-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="302 commits · 8 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
+        <strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>
         <br />
         Various Python tools for the Serato DJ software&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
+        <img align="left" src="./assets/spacer.png" width="19" height="18" alt />
+        <img align="right" src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
+        <strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>
         <br />
         USB Export tool for the Serato DJ software
       </td>
@@ -273,7 +308,10 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/547%20%C2%B7%200-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="547 commits · 0 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
+        <strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>
         <br />
         Python program that uses the Spotify and SoundCloud APIs to organize my music and DJ library. 
         <em>(private repo)</em>
@@ -281,7 +319,10 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino/8B949E" height="15" alt="Arduino" title="Arduino" />
+        <img align="left" src="./assets/spacer.png" width="110" height="18" alt />
+        <img align="right" src="https://img.shields.io/badge/35%20%C2%B7%205-2f363d?style=flat-square&amp;logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0iIzhCOTQ5RSI%2BPHBhdGggZD0iTTExLjkzIDguNWE0LjAwMiA0LjAwMiAwIDAgMS03Ljg2IDBILjc1YS43NS43NSAwIDAgMSAwLTEuNWgzLjMyYTQuMDAyIDQuMDAyIDAgMCAxIDcuODYgMGgzLjMyYS43NS43NSAwIDAgMSAwIDEuNVptLTEuNDMtLjc1YTIuNSAyLjUgMCAxIDAtNSAwIDIuNSAyLjUgMCAwIDAgNSAwWiI%2BPC9wYXRoPjwvc3ZnPg%3D%3D" height="18" alt="35 commits · 5 PRs" title="commits and PRs" />
+        <img align="right" src="https://cdn.simpleicons.org/arduino/8B949E" height="15" alt="Arduino" title="Arduino" />
+        <strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>
         <br />
         The code that runs my festival totem—an LED-lit sign controlled on the fly with dials, buttons, and a tap-sensitive accelerometer.
       </td>

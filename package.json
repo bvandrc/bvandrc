@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^2",
+    "@primer/octicons": "^19",
     "@types/node": "^26",
     "preact": "^10",
     "preact-render-to-string": "^6.7",

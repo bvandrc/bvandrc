@@ -11,6 +11,9 @@ importers:
       '@biomejs/biome':
         specifier: ^2
         version: 2.5.8
+      '@primer/octicons':
+        specifier: ^19
+        version: 19.33.0
       '@types/node':
         specifier: ^26
         version: 26.2.0
@@ -242,6 +245,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@primer/octicons@19.33.0':
+    resolution: {integrity: sha512-kYrlutFnNVWDgckjQwOv9kXiFIPjTD/N+DIx6qzMBAk82nGTE85UKSvFvbt/RUhviNEoCjFoEr4fn5EAbkkUzQ==}
+
   '@types/node@26.2.0':
     resolution: {integrity: sha512-5IviulTZeRNp2vAJ514cc/HUlY5nZ9fCbq9DMyC52BrhFZACo3nI0R7qBxhQmo/d27NFe96ur/b7Wwxklda+kg==}
 
@@ -374,6 +380,10 @@ packages:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
+
+  object-assign@4.1.1:
+    resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
+    engines: {node: '>=0.10.0'}
 
   preact-render-to-string@6.7.0:
     resolution: {integrity: sha512-Z4WR8fmLMRpdYqJ9i7vrlXSsSrxVJydwrkEXHapexfARbWfGb7vGcnvNQnIzN0cXciMVOlz/XLoiMCi9gUsy9Q==}
@@ -516,6 +526,10 @@ snapshots:
   '@esbuild/win32-x64@0.28.2':
     optional: true
 
+  '@primer/octicons@19.33.0':
+    dependencies:
+      object-assign: 4.1.1
+
   '@types/node@26.2.0':
     dependencies:
       undici-types: 8.3.0
@@ -611,6 +625,8 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  object-assign@4.1.1: {}
 
   preact-render-to-string@6.7.0(preact@10.29.8):
     dependencies:

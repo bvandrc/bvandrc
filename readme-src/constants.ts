@@ -1,5 +1,10 @@
+import { octiconLogo } from './utils'
+
 export const ICON_GRAY = '8B949E'
 export const BADGE_BG = '2f363d'
+
+// GitHub octicon tinted to match the project icons, as a shields.io logo data URI
+export const COMMIT_LOGO = octiconLogo('git-commit', ICON_GRAY)
 
 export type ProjectType = 'react' | 'npm' | 'github' | 'python' | 'arduino'
 
