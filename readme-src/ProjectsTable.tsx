@@ -155,6 +155,20 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         ),
       },
       {
+        name: 'pr-diff-line-count',
+        href: 'https://github.com/marketplace/actions/pr-diff-line-count',
+        type: 'github',
+        repo: 'pr-diff-line-count',
+        blurb: (
+          <>
+            GitHub Action that recounts a PR's diff with cloc, so comments and
+            blank lines don't inflate the total, and splits it into source,
+            tests, generated, docs, and config.
+            <RepoLink repo="pr-diff-line-count" />
+          </>
+        ),
+      },
+      {
         name: 'glob-sort',
         href: 'https://www.npmjs.com/package/glob-sort',
         type: 'npm',
