@@ -235,6 +235,13 @@
     </tr>
     <tr>
       <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/pr-diff-line-count">pr-diff-line-count</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
+        <br />
+        GitHub Action that recounts a PR's diff with cloc, so comments and blank lines don't inflate the total, and splits it into source, tests, generated, docs, and config.&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count">[repo]</a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
         Provide custom rules to sort nested glob results. Useful for test configuration.
