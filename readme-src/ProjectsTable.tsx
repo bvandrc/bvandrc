@@ -104,19 +104,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
     title: 'Testing & CI Tooling',
     projects: [
       {
-        name: 'react-component-test-suite',
-        href: 'https://www.npmjs.com/package/react-component-test-suite',
-        type: 'npm',
-        repo: 'react-component-test-suite',
-        blurb: (
-          <>
-            Create custom React component test suites for Vitest or Jest that
-            automatically give the name of the React component to the title of
-            the test suite.
-          </>
-        ),
-      },
-      {
         name: 'lighthouse-audit-utils',
         href: 'https://www.npmjs.com/package/lighthouse-audit-utils',
         type: 'npm',
@@ -125,6 +112,20 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             Run Lighthouse audits with threshold checks, report writing, a
             readable terminal recommendation list, and a Playwright fixture.
+          </>
+        ),
+      },
+      {
+        name: 'pr-diff-line-count',
+        href: 'https://github.com/marketplace/actions/pr-diff-line-count',
+        type: 'github',
+        repo: 'pr-diff-line-count',
+        blurb: (
+          <>
+            GitHub Action that recounts a PR's diff with cloc, so comments and
+            blank lines don't inflate the total, and splits it into source,
+            tests, generated, docs, and config.
+            <RepoLink repo="pr-diff-line-count" />
           </>
         ),
       },
@@ -142,6 +143,19 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         ),
       },
       {
+        name: 'react-component-test-suite',
+        href: 'https://www.npmjs.com/package/react-component-test-suite',
+        type: 'npm',
+        repo: 'react-component-test-suite',
+        blurb: (
+          <>
+            Create custom React component test suites for Vitest or Jest that
+            automatically give the name of the React component to the title of
+            the test suite.
+          </>
+        ),
+      },
+      {
         name: 'lint-package-json',
         href: 'https://github.com/marketplace/actions/package-json-lint',
         type: 'github',
@@ -151,20 +165,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             GitHub Action that lints every package.json in a repo against a
             shared npm-package-json-lint rule set.
             <RepoLink repo="lint-package-json" />
-          </>
-        ),
-      },
-      {
-        name: 'pr-diff-line-count',
-        href: 'https://github.com/marketplace/actions/pr-diff-line-count',
-        type: 'github',
-        repo: 'pr-diff-line-count',
-        blurb: (
-          <>
-            GitHub Action that recounts a PR's diff with cloc, so comments and
-            blank lines don't inflate the total, and splits it into source,
-            tests, generated, docs, and config.
-            <RepoLink repo="pr-diff-line-count" />
           </>
         ),
       },
