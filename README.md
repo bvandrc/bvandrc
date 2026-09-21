@@ -207,13 +207,6 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
-        <br />
-        Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.
-      </td>
-    </tr>
-    <tr>
-      <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
         Run Lighthouse audits with threshold checks, report writing, a readable terminal recommendation list, and a Playwright fixture.
@@ -221,9 +214,23 @@
     </tr>
     <tr>
       <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/pr-diff-line-count">pr-diff-line-count</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
+        <br />
+        GitHub Action that recounts a PR's diff with cloc, so comments and blank lines don't inflate the total, and splits it into source, tests, generated, docs, and config.&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count">[repo]</a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
         <br />
         GitHub Action that polls a URL until its content changes, to detect when a deploy has actually gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <br />
+        Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.
       </td>
     </tr>
     <tr>
