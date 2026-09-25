@@ -277,7 +277,7 @@ const ProjectRow = ({ p }: { p: Project }) => {
             <a href={p.href}>
               <img
                 src={p.screenshot}
-                width="350"
+                width="400"
                 alt={`${p.name} — screenshot preview`}
               />
             </a>
