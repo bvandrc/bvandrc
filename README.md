@@ -159,7 +159,7 @@
         My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed and refactored.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
         <br />
         <a href="https://taskrankr.com/guest">
-          <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="450" alt="TaskRankr — screenshot preview" />
+          <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="400" alt="TaskRankr — screenshot preview" />
         </a>
         <br />
       </td>
@@ -171,7 +171,7 @@
         A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
         <br />
         <a href="https://bvandrc.github.io/bike-ride-mapper/">
-          <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="450" alt="Bike Ride Tracker — screenshot preview" />
+          <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="400" alt="Bike Ride Tracker — screenshot preview" />
         </a>
         <br />
       </td>
@@ -183,7 +183,7 @@
         My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
         <br />
         <a href="https://specialingredientbass.com/">
-          <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="450" alt="DJ Website — screenshot preview" />
+          <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="400" alt="DJ Website — screenshot preview" />
         </a>
         <br />
       </td>
@@ -195,7 +195,7 @@
         Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
         <br />
         <a href="https://womanhoodofwubz.neocities.org/">
-          <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="450" alt="Retail Website — screenshot preview" />
+          <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="400" alt="Retail Website — screenshot preview" />
         </a>
         <br />
       </td>
