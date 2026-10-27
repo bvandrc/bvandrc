@@ -290,7 +290,8 @@ const ProjectRow = ({ p }: { p: Project }) => {
 }
 
 export const ProjectsTable = () => (
-  <table>
+  // Markdown has no column alignment or image sizes, so the table stays HTML.
+  <table data-markdown="html">
     <tbody>
       {PROJECT_SECTIONS.map((s) => (
         <>

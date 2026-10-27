@@ -2,3 +2,5 @@ allowBuilds:
   # deny esbuild's postinstall — its binary comes from platform optional deps;
   # without an entry here, pnpm 11 fails install with ERR_PNPM_IGNORED_BUILDS
   esbuild: false
+  # temporary: installed from git until 1.6.0 is on npm, which builds it via `prepare`
+  "tsx-to-pdf@https://codeload.github.com/bvandrc/tsx-to-pdf/tar.gz/5bab41cecc872a2b085c6bb65bce092649123aad": true
