@@ -20,8 +20,8 @@
   "type": "module",
   "scripts": {
     "build": "tsx readme-src/build.tsx",
-    "check": "npx biome check . && pnpm ts:check",
-    "format": "npx biome check . --fix",
+    "check": "biome check . && pnpm ts:check",
+    "format": "biome check . --fix",
     "ts:check": "tsc"
   },
   "devDependencies": {
