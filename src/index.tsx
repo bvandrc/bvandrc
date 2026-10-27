@@ -1,7 +1,5 @@
-import { writeFileSync } from 'node:fs'
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
-import { render } from 'preact-render-to-string/jsx'
+import type { VNode } from 'preact'
+import { render as renderBase } from 'preact-render-to-string/jsx'
 
 import { BeyondCode } from './BeyondCode'
 import { Intro } from './Intro'
@@ -9,26 +7,21 @@ import { ProjectsTable } from './ProjectsTable'
 import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
 
-const PREACT_RENDER_ARGS = { pretty: '  ', jsx: false }
+const render = (node: VNode) =>
+  renderBase(node, {}, { pretty: '  ', jsx: false })
 
-const skillsTable = render(<SkillsTable />, {}, PREACT_RENDER_ARGS)
-const projectsTable = render(<ProjectsTable />, {}, PREACT_RENDER_ARGS)
-const intro = render(<Intro />, {}, PREACT_RENDER_ARGS)
-const beyondCode = render(<BeyondCode />, {}, PREACT_RENDER_ARGS)
+/** The README's markdown, with each component rendered to HTML. */
+export const readmeContent = `<div align="center">
 
-const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`pnpm build\` -->
-
-<div align="center">
-
-${intro}
+${render(<Intro />)}
 
 ${SectionHeader('🌟', 'Skills')}
 
-${skillsTable}
+${render(<SkillsTable />)}
 
 ${SectionHeader('💎', 'Projects')}
 
-${projectsTable}
+${render(<ProjectsTable />)}
 
 ${SectionHeader('📈', 'Stats')}
 
@@ -51,22 +44,7 @@ ${SectionHeader('📈', 'Stats')}
 
 ${SectionHeader('🎉', 'Beyond Code')}
 
-${beyondCode}
+${render(<BeyondCode />)}
 
 </div>
 `
-
-const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-// the renderer emits raw U+00A0 for JSX &nbsp; entities — write them back as
-// explicit entities so the spacing is visible in source and immune to
-// whitespace-normalizing tools
-const output = md
-  .replaceAll('\u00A0', '&nbsp;')
-  // the pretty-printer's newlines around inline content render as extra
-  // spaces — join nbsp separator lines and <strong> tags to their content so
-  // title lines render with main's exact spacing
-  .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
-  .replace(/<strong>\n\s*/g, '<strong>')
-  .replace(/\n\s*<\/strong>/g, '</strong>')
-writeFileSync(join(root, 'README.md'), output)
-console.log('README.md generated')
