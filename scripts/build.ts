@@ -2,9 +2,9 @@ import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { readmeContent } from '../readme-src/readme-content'
+import { readmeContent } from '../src/readme-content'
 
-const md = `<!-- GENERATED FILE — do not edit directly. Edit readme-src/ and run \`pnpm build\` -->
+const md = `<!-- GENERATED FILE — do not edit directly. Edit src/ and run \`pnpm build\` -->
 
 ${readmeContent}`
 

@@ -4,7 +4,7 @@
   "overrides": [
     {
       // filename intentionally describes the module's theme rather than matching a single export
-      "includes": ["readme-src/SectionHeadings.tsx"],
+      "includes": ["src/SectionHeadings.tsx"],
       "linter": {
         "rules": { "style": { "useFilenamingConvention": "off" } }
       }
