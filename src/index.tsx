@@ -1,8 +1,7 @@
 import type { VNode } from 'preact'
 import { render as renderBase } from 'preact-render-to-string/jsx'
 
-import { BeyondCode } from './BeyondCode'
-import { Intro } from './Intro'
+import { Lines } from './Lines'
 import { ProjectsTable } from './ProjectsTable'
 import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
@@ -13,7 +12,26 @@ const render = (node: VNode) =>
 /** The README's markdown, with each component rendered to HTML. */
 export const readmeContent = `<div align="center">
 
-${render(<Intro />)}
+${render(
+  // INTRO
+  <p>
+    <Lines
+      lines={[
+        'Software test engineer, React developer, TypeScript connoisseur.',
+        '9 years writing code, 8 in test, 5 in software QA, 4 building React.',
+        'I build React apps, publish testing and CI packages to npm, and write Python tools for my music library.',
+        "Most of what's here started as something I needed and couldn't find.",
+      ]}
+    />
+  </p>
+  /**
+   * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
+   * but here for version control:
+   *
+   * Software test engineer, React developer, TypeScript connoisseur. I build React apps,
+   * write Python tools, and publish npm packages for testing and CI.
+   */
+)}
 
 ${SectionHeader('🌟', 'Skills')}
 
@@ -44,7 +62,24 @@ ${SectionHeader('📈', 'Stats')}
 
 ${SectionHeader('🎉', 'Beyond Code')}
 
-${render(<BeyondCode />)}
+${render(
+  // BEYOND CODE
+  <>
+    <p>When I'm not coding, you'll find me:</p>
+    <p>
+      <Lines
+        lines={[
+          '🎧 DJing 🎧',
+          '🚴 Bike Riding to explore Denver 🚴',
+          '⛷️ Hitting the slopes with friends ⛷️',
+          '✈️ Exploring my neighborhood, Colorado, and the world! ✈️',
+          '🎬 Checking out good movies 🎬',
+          '🎵 Catching live music 🎵',
+        ]}
+      />
+    </p>
+  </>
+)}
 
 </div>
 `
