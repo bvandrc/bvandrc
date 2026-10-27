@@ -1,5 +1,5 @@
 import type { VNode } from 'preact'
-import { render } from 'preact-render-to-string/jsx'
+import { render as renderBase } from 'preact-render-to-string/jsx'
 
 import { BeyondCode } from './BeyondCode'
 import { Intro } from './Intro'
@@ -7,21 +7,21 @@ import { ProjectsTable } from './ProjectsTable'
 import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
 
-const renderHtml = (node: VNode) =>
-  render(node, {}, { pretty: '  ', jsx: false })
+const render = (node: VNode) =>
+  renderBase(node, {}, { pretty: '  ', jsx: false })
 
 /** The README's markdown, with each component rendered to HTML. */
 export const readmeContent = `<div align="center">
 
-${renderHtml(<Intro />)}
+${render(<Intro />)}
 
 ${SectionHeader('🌟', 'Skills')}
 
-${renderHtml(<SkillsTable />)}
+${render(<SkillsTable />)}
 
 ${SectionHeader('💎', 'Projects')}
 
-${renderHtml(<ProjectsTable />)}
+${render(<ProjectsTable />)}
 
 ${SectionHeader('📈', 'Stats')}
 
@@ -44,7 +44,7 @@ ${SectionHeader('📈', 'Stats')}
 
 ${SectionHeader('🎉', 'Beyond Code')}
 
-${renderHtml(<BeyondCode />)}
+${render(<BeyondCode />)}
 
 </div>
 `
