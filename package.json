@@ -19,7 +19,7 @@
   "license": "ISC",
   "type": "module",
   "scripts": {
-    "build": "tsx scripts/build.ts",
+    "build": "tsx-to-pdf build --no-pdf --md",
     "check": "biome check . && pnpm ts:check",
     "format": "biome check . --fix",
     "ts:check": "tsc"
@@ -28,8 +28,7 @@
     "@biomejs/biome": "^2",
     "@types/node": "^26",
     "preact": "^10",
-    "preact-render-to-string": "^6.7",
-    "tsx": "^4",
+    "tsx-to-pdf": "github:bvandrc/tsx-to-pdf#5bab41cecc872a2b085c6bb65bce092649123aad",
     "typescript": "^7"
   }
 }

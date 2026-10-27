@@ -1,1 +1,3 @@
 node_modules
+# tsx-to-pdf's HTML preview of the README; only README.md is committed
+/html/

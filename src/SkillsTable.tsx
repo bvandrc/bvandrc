@@ -297,7 +297,8 @@ const Shield = ({ b }: { b: SkillBadge }) => (
 )
 
 export const SkillsTable = () => (
-  <table>
+  // Markdown has no column spans or alignment, so the table stays HTML.
+  <table data-markdown="html">
     {SKILL_SECTIONS.map((s) => (
       <>
         <tr>
@@ -313,7 +314,13 @@ export const SkillsTable = () => (
             <td align="center">
               <Lines
                 lines={row.lines.map((line) =>
-                  line.map((b) => <Shield b={b} />)
+                  line.map((b, bi) => (
+                    <>
+                      {/* a gap between badges, rather than letting them touch */}
+                      {bi > 0 && ' '}
+                      <Shield b={b} />
+                    </>
+                  ))
                 )}
               />
             </td>
