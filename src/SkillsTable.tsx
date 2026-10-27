@@ -2,6 +2,7 @@
 // Badge paths are the shields.io static-badge path + params (https://img.shields.io/badge/<path>)
 import type { ComponentChildren } from 'preact'
 
+import { Lines } from './Lines'
 import { SectionTitle } from './SectionHeadings'
 
 type SkillBadge = {
@@ -310,14 +311,11 @@ export const SkillsTable = () => (
               <em>{row.label}</em>
             </td>
             <td align="center">
-              {row.lines.map((line, li) => (
-                <>
-                  {li > 0 && <br />}
-                  {line.map((b) => (
-                    <Shield b={b} />
-                  ))}
-                </>
-              ))}
+              <Lines
+                lines={row.lines.map((line) =>
+                  line.map((b) => <Shield b={b} />)
+                )}
+              />
             </td>
           </tr>
         ))}
