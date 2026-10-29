@@ -156,7 +156,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
         <br />
-        My most substantial project: I tried over 30 to-do apps and none managed tasks the way I wanted, so I built one. Advanced ranking, filtering, customization, nested subtasks with per-level rules, and cross-task dependencies. Fully offline-capable, with server sync across devices. Shipped across 250+ PRs, each carefully reviewed and refactored.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
+        My flagship: an offline-first, cross-device-synced task manager with advanced ranking, nesting, and dependencies. 250+ reviewed PRs.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
         <br />
         <a href="https://taskrankr.com/guest">
           <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="400" alt="TaskRankr — screenshot preview" />
@@ -168,7 +168,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
         <br />
-        A map overlaying every bike ride I've done over the past few years.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
+        Interactive map of years of my GPS ride data.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
         <br />
         <a href="https://bvandrc.github.io/bike-ride-mapper/">
           <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="400" alt="Bike Ride Tracker — screenshot preview" />
@@ -180,7 +180,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
         <br />
-        My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
+        Custom React components on the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
         <br />
         <a href="https://specialingredientbass.com/">
           <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="400" alt="DJ Website — screenshot preview" />
@@ -192,7 +192,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="15" alt="React" title="React" />
         <br />
-        Retail website for a friend using a CMS and custom React components.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
+        CMS-driven storefront with custom React components, built for a friend.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
         <br />
         <a href="https://womanhoodofwubz.neocities.org/">
           <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="400" alt="Retail Website — screenshot preview" />
@@ -209,42 +209,42 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Run Lighthouse audits with threshold checks, report writing, a readable terminal recommendation list, and a Playwright fixture.
+        Lighthouse performance gating for CI, with a Playwright fixture.
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/pr-diff-line-count">pr-diff-line-count</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
         <br />
-        GitHub Action that recounts a PR's diff with cloc, so comments and blank lines don't inflate the total, and splits it into source, tests, generated, docs, and config.&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count">[repo]</a>
+        Accurate PR size metrics via cloc, split by source, tests, docs, and config.&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
         <br />
-        GitHub Action that polls a URL until its content changes, to detect when a deploy has actually gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
+        Detects when a deploy has actually gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Create custom React component test suites for Vitest or Jest that automatically give the name of the React component to the title of the test suite.
+        Auto-titled React component test suites for Vitest and Jest.
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="15" alt="GitHub Action" title="GitHub Action" />
         <br />
-        GitHub Action that lints every package.json in a repo against a shared npm-package-json-lint rule set.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
+        Shared package.json lint rules enforced across repos.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Provide custom rules to sort nested glob results. Useful for test configuration.
+        Rule-based glob ordering for test configs.
       </td>
     </tr>
     <tr>
@@ -256,21 +256,35 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Write a document as JSX (React syntax), style it with Tailwind, and render it to a page-exact PDF and HTML — with a live-preview dev server.
+        JSX + Tailwind to page-exact PDF, with a live-preview dev server.
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/persistent-logger">persistent-logger</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <br />
+        Crash-resilient browser diagnostics logging, with optional React hooks.
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/@bvandrc/react-ui-hooks">react-ui-hooks</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
+        <br />
+        Generic React hooks for common UI behavior.
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
         <br />
-        Various Python tools for the Serato DJ software&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
+        Parses and rewrites Serato DJ's binary metadata, crates, and library database.&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
       </td>
     </tr>
     <tr>
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
         <br />
-        USB Export tool for the Serato DJ software
+        Fast, deduplicated USB export for Serato DJ.
       </td>
     </tr>
     <tr>
@@ -282,7 +296,8 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
         <br />
-        Python program that uses the Spotify and SoundCloud APIs to organize my music and DJ library. 
+        Spotify and SoundCloud API automation for my DJ library.
+         
         <em>(private repo)</em>
       </td>
     </tr>
@@ -290,7 +305,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino/8B949E" height="15" alt="Arduino" title="Arduino" />
         <br />
-        The code that runs my festival totem—an LED-lit sign controlled on the fly with dials, buttons, and a tap-sensitive accelerometer.
+        Firmware for my LED festival totem, driven by dials, buttons, and an accelerometer.
       </td>
     </tr>
   </tbody>
