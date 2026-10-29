@@ -43,12 +43,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'TaskRankr',
         blurb: (
           <>
-            My most substantial project: I tried over 30 to-do apps and none
-            managed tasks the way I wanted, so I built one. Advanced ranking,
-            filtering, customization, nested subtasks with per-level rules, and
-            cross-task dependencies. Fully offline-capable, with server sync
-            across devices. Shipped across 250+ PRs, each carefully reviewed and
-            refactored.
+            My flagship: an offline-first, cross-device-synced task manager with
+            advanced ranking, nesting, and dependencies. 250+ reviewed PRs.
             <RepoLink repo="TaskRankr" />
           </>
         ),
@@ -61,7 +57,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'bike-ride-mapper',
         blurb: (
           <>
-            A map overlaying every bike ride I've done over the past few years.
+            Interactive map of years of my GPS ride data.
             <RepoLink repo="bike-ride-mapper" />
           </>
         ),
@@ -75,8 +71,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'specialingredientbass.com',
         blurb: (
           <>
-            My side hobby. All custom React components, using the SoundCloud
-            API.
+            Custom React components on the SoundCloud API.
             <RepoLink repo="specialingredientbass.com" />
           </>
         ),
@@ -90,7 +85,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'womanhoodofwubz.com',
         blurb: (
           <>
-            Retail website for a friend using a CMS and custom React components.
+            CMS-driven storefront with custom React components, built for a
+            friend.
             <RepoLink repo="womanhoodofwubz.com" />
           </>
         ),
@@ -109,10 +105,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         type: 'npm',
         repo: 'lighthouse-audit-utils',
         blurb: (
-          <>
-            Run Lighthouse audits with threshold checks, report writing, a
-            readable terminal recommendation list, and a Playwright fixture.
-          </>
+          <>Lighthouse performance gating for CI, with a Playwright fixture.</>
         ),
       },
       {
@@ -122,9 +115,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'pr-diff-line-count',
         blurb: (
           <>
-            GitHub Action that recounts a PR's diff with cloc, so comments and
-            blank lines don't inflate the total, and splits it into source,
-            tests, generated, docs, and config.
+            Accurate PR size metrics via cloc, split by source, tests, docs, and
+            config.
             <RepoLink repo="pr-diff-line-count" />
           </>
         ),
@@ -136,8 +128,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'detect-deploy',
         blurb: (
           <>
-            GitHub Action that polls a URL until its content changes, to detect
-            when a deploy has actually gone live.
+            Detects when a deploy has actually gone live.
             <RepoLink repo="detect-deploy" />
           </>
         ),
@@ -148,11 +139,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         type: 'npm',
         repo: 'react-component-test-suite',
         blurb: (
-          <>
-            Create custom React component test suites for Vitest or Jest that
-            automatically give the name of the React component to the title of
-            the test suite.
-          </>
+          <>Auto-titled React component test suites for Vitest and Jest.</>
         ),
       },
       {
@@ -162,8 +149,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'lint-package-json',
         blurb: (
           <>
-            GitHub Action that lints every package.json in a repo against a
-            shared npm-package-json-lint rule set.
+            Shared package.json lint rules enforced across repos.
             <RepoLink repo="lint-package-json" />
           </>
         ),
@@ -173,12 +159,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/glob-sort',
         type: 'npm',
         repo: 'glob-sort',
-        blurb: (
-          <>
-            Provide custom rules to sort nested glob results. Useful for test
-            configuration.
-          </>
-        ),
+        blurb: <>Rule-based glob ordering for test configs.</>,
       },
     ],
   },
@@ -192,11 +173,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         type: 'npm',
         repo: 'tsx-to-pdf',
         blurb: (
-          <>
-            Write a document as JSX (React syntax), style it with Tailwind, and
-            render it to a page-exact PDF and HTML — with a live-preview dev
-            server.
-          </>
+          <>JSX + Tailwind to page-exact PDF, with a live-preview dev server.</>
         ),
       },
       {
@@ -206,7 +183,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'serato-tools',
         blurb: (
           <>
-            Various Python tools for the Serato DJ software
+            Parses and rewrites Serato DJ's binary metadata, crates, and library
+            database.
             <RepoLink repo="serato-tools" />
           </>
         ),
@@ -215,7 +193,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'serato-usb-export',
         href: 'https://pypi.org/project/serato-usb-export/',
         type: 'python',
-        blurb: <>USB Export tool for the Serato DJ software</>,
+        blurb: <>Fast, deduplicated USB export for Serato DJ.</>,
       },
     ],
   },
@@ -230,8 +208,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         counts: { commits: 547, prs: 0 },
         blurb: (
           <>
-            Python program that uses the Spotify and SoundCloud APIs to organize
-            my music and DJ library. <em>(private repo)</em>
+            Spotify and SoundCloud API automation for my DJ library.{' '}
+            <em>(private repo)</em>
           </>
         ),
       },
@@ -242,8 +220,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'arduino-totem',
         blurb: (
           <>
-            The code that runs my festival totem—an LED-lit sign controlled on
-            the fly with dials, buttons, and a tap-sensitive accelerometer.
+            Firmware for my LED festival totem, driven by dials, buttons, and an
+            accelerometer.
           </>
         ),
       },
