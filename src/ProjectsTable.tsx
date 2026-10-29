@@ -177,6 +177,25 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         ),
       },
       {
+        name: 'persistent-logger',
+        href: 'https://www.npmjs.com/package/persistent-logger',
+        type: 'npm',
+        repo: 'persistent-logger',
+        blurb: (
+          <>
+            Crash-resilient browser diagnostics logging, with optional React
+            hooks.
+          </>
+        ),
+      },
+      {
+        name: 'react-ui-hooks',
+        href: 'https://www.npmjs.com/package/@bvandrc/react-ui-hooks',
+        type: 'npm',
+        repo: 'react-ui-hooks',
+        blurb: <>Generic React hooks for common UI behavior.</>,
+      },
+      {
         name: 'serato-tools',
         href: 'https://pypi.org/project/serato-tools/',
         type: 'python',
