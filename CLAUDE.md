@@ -11,9 +11,9 @@ GitHub profile README (the `bvandrc/bvandrc` special repo). `README.md` is **gen
 
 Conventions live outside this file, synced from https://github.com/bvandrc/bvandrc-conventions — follow all of them:
 
-@conventions/typescript.md — language-level TypeScript/JavaScript rules
-@conventions/react.md — component and JSX rules (the components here are Preact, same rules apply)
-@conventions/all.md — practice for every repo: branches, formatting, markdown, PR reviews
+- @conventions/typescript.md — language-level TypeScript/JavaScript rules
+- @conventions/react.md — component and JSX rules (the components here are Preact, same rules apply)
+- @conventions/all.md — practice for every repo: branches, formatting, writing, PR reviews
 
 ## Commands
 
