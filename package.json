@@ -25,7 +25,7 @@
     "ts:check": "tsc"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2",
+    "@biomejs/biome": "^2.6",
     "@types/node": "^26",
     "preact": "^10",
     "preact-render-to-string": "^6.7",
