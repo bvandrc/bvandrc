@@ -216,12 +216,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/@bvandrc/react-toolkit',
         type: 'npm',
         repo: 'react-toolkit',
-        blurb: (
-          <>
-            Generic React hooks and helpers for browser UI behavior, with Vitest
-            test support.
-          </>
-        ),
+        blurb: <>Generic React hooks and helpers for browser UI behavior.</>,
       },
       {
         name: 'serato-tools',

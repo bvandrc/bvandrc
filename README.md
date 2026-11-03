@@ -270,7 +270,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/@bvandrc/react-toolkit">react-toolkit</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Generic React hooks and helpers for browser UI behavior, with Vitest test support.
+        Generic React hooks and helpers for browser UI behavior.
       </td>
     </tr>
     <tr>
