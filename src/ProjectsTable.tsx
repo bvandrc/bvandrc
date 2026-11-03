@@ -212,11 +212,11 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         ),
       },
       {
-        name: 'react-ui-hooks',
-        href: 'https://www.npmjs.com/package/@bvandrc/react-ui-hooks',
+        name: 'react-toolkit',
+        href: 'https://www.npmjs.com/package/@bvandrc/react-toolkit',
         type: 'npm',
-        repo: 'react-ui-hooks',
-        blurb: <>Generic React hooks for common UI behavior.</>,
+        repo: 'react-toolkit',
+        blurb: <>Generic React hooks and helpers for browser UI behavior.</>,
       },
       {
         name: 'serato-tools',
