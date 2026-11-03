@@ -263,7 +263,7 @@
       <td align="center">
         <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/persistent-logger">persistent-logger</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
         <br />
-        Crash-resilient browser diagnostics logging, with optional React hooks.
+        Crash-resilient, localStorage-backed browser diagnostics logging, with optional React hooks.
       </td>
     </tr>
     <tr>

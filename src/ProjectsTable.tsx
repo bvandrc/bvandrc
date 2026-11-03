@@ -206,8 +206,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'persistent-logger',
         blurb: (
           <>
-            Crash-resilient browser diagnostics logging, with optional React
-            hooks.
+            Crash-resilient, localStorage-backed browser diagnostics logging,
+            with optional React hooks.
           </>
         ),
       },
