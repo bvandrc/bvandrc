@@ -16,7 +16,14 @@
 
 ## 💎&nbsp; Projects &nbsp;💎
 
-<h3>⚛️⚛️&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;⚛️⚛️</h3>
+<p>
+  <a href="#react-websites">⚛️&nbsp;React Websites</a>
+   · 
+  <a href="#testing-ci-tooling">🧪&nbsp;Testing &amp; CI Tooling</a> · 
+  <a href="#other-packages">📦&nbsp;Other Packages</a> · 
+  <a href="#other-projects">💡&nbsp;Other Projects</a>
+</p>
+<h3 id="react-websites">⚛️⚛️&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;⚛️⚛️</h3>
 <p>
   <em>
     <strong>Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.</strong>
@@ -58,7 +65,7 @@
     <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="385" alt="Retail Website — screenshot preview" />
   </a>
 </p>
-<h3>🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
+<h3 id="testing-ci-tooling">🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
 <p>
   <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
@@ -89,7 +96,7 @@
   <br />
   Rule-based ordering of nested glob results for test configs.
 </p>
-<h3>📦📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦📦</h3>
+<h3 id="other-packages">📦📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦📦</h3>
 <p>
   <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="15" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
@@ -115,7 +122,7 @@
   <br />
   Fast, deduplicated USB export tool for Serato DJ.
 </p>
-<h3>💡💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡💡</h3>
+<h3 id="other-projects">💡💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡💡</h3>
 <p>
   <img src="./assets/spacer.png" width="15" height="15" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="15" alt="Python" title="Python" />
   <br />
