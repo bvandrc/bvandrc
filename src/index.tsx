@@ -2,7 +2,7 @@ import type { VNode } from 'preact'
 import { render as renderBase } from 'preact-render-to-string/jsx'
 
 import { Lines } from './Lines'
-import { ProjectsTable } from './ProjectsTable'
+import { Projects } from './Projects'
 import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
 
@@ -36,7 +36,7 @@ ${render(
 
 ${SectionHeader('💎', 'Projects')}
 
-${render(<ProjectsTable />)}
+${render(<Projects />)}
 
 ${SectionHeader('🌟', 'Skills')}
 

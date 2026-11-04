@@ -8,6 +8,8 @@ declare module 'preact' {
        * so this is the only way to float images there.
        */
       align?: 'left' | 'right'
+      /** Deprecated HTML margin attribute — the only way to space images in a GitHub README. */
+      vspace?: number | string
     }
   }
 }
