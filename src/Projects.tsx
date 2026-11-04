@@ -260,64 +260,55 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
-const ProjectRow = ({ p }: { p: Project }) => {
+const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
   return (
-    <tr>
-      <td align="center">
-        {/* invisible spacer mirrors the icon so the title stays centered on its own text */}
-        <img src="./assets/spacer.png" width="15" height="15" alt="" />
-        &nbsp;&nbsp;&nbsp;
-        <strong>
-          <a href={p.href}>{p.name}</a>
-        </strong>
-        &nbsp;&nbsp;&nbsp;
-        <img
-          src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
-          height="15"
-          alt={icon.title}
-          title={icon.title}
-        />
-        <br />
-        {p.blurb}
-        {p.screenshot && (
-          <>
-            <br />
-            <a href={p.href}>
-              <img
-                src={p.screenshot}
-                width="400"
-                alt={`${p.name} — screenshot preview`}
-              />
-            </a>
-            <br />
-          </>
-        )}
-      </td>
-    </tr>
+    <p>
+      {/* invisible spacer mirrors the icon so the title stays centered on its own text */}
+      <img src="./assets/spacer.png" width="15" height="15" alt="" />
+      &nbsp;&nbsp;&nbsp;
+      <strong>
+        <a href={p.href}>{p.name}</a>
+      </strong>
+      &nbsp;&nbsp;&nbsp;
+      <img
+        src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
+        height="15"
+        alt={icon.title}
+        title={icon.title}
+      />
+      <br />
+      {p.blurb}
+      {p.screenshot && (
+        <>
+          <br />
+          <a href={p.href}>
+            <img
+              src={p.screenshot}
+              width="385"
+              alt={`${p.name} — screenshot preview`}
+            />
+          </a>
+        </>
+      )}
+    </p>
   )
 }
 
-export const ProjectsTable = () => (
-  <table>
-    <tbody>
-      {PROJECT_SECTIONS.map((s) => (
-        <>
-          <tr>
-            <td align="center">
-              <SectionTitle emoji={s.emoji} title={s.title} />
-              {s.intro && (
-                <em>
-                  <strong>{s.intro}</strong>
-                </em>
-              )}
-            </td>
-          </tr>
-          {s.projects.map((p) => (
-            <ProjectRow p={p} />
-          ))}
-        </>
+/** Every project section, laid out as centered paragraphs (relies on the README's centered wrapper). */
+export const Projects = () =>
+  PROJECT_SECTIONS.map((s) => (
+    <>
+      <SectionTitle emoji={s.emoji} title={s.title} />
+      {s.intro && (
+        <p>
+          <em>
+            <strong>{s.intro}</strong>
+          </em>
+        </p>
+      )}
+      {s.projects.map((p) => (
+        <ProjectEntry p={p} />
       ))}
-    </tbody>
-  </table>
-)
+    </>
+  ))
