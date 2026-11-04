@@ -261,12 +261,20 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
+/** Height of the type icon after each project name; its centering spacer matches it. */
+const TYPE_ICON_SIZE = 12
+
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
   return (
     <p>
       {/* invisible spacer mirrors the icon so the title stays centered on its own text */}
-      <img src="./assets/spacer.png" width="15" height="15" alt="" />
+      <img
+        src="./assets/spacer.png"
+        width={TYPE_ICON_SIZE}
+        height={TYPE_ICON_SIZE}
+        alt=""
+      />
       &nbsp;&nbsp;&nbsp;
       <strong>
         <a href={p.href}>{p.name}</a>
@@ -274,7 +282,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       &nbsp;&nbsp;&nbsp;
       <img
         src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
-        height="15"
+        height={TYPE_ICON_SIZE}
         alt={icon.title}
         title={icon.title}
       />
