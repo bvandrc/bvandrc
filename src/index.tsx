@@ -34,13 +34,13 @@ ${render(
    */
 )}
 
-${SectionHeader('🌟', 'Skills')}
-
-${render(<SkillsTable />)}
-
 ${SectionHeader('💎', 'Projects')}
 
 ${render(<ProjectsTable />)}
+
+${SectionHeader('🌟', 'Skills')}
+
+${render(<SkillsTable />)}
 
 ${SectionHeader('📈', 'Stats')}
 
