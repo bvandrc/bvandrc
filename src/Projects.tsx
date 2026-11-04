@@ -285,7 +285,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           <a href={p.href}>
             <img
               src={p.screenshot}
-              width="400"
+              width="385"
               alt={`${p.name} — screenshot preview`}
             />
           </a>

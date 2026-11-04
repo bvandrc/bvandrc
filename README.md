@@ -28,7 +28,7 @@
   My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
   <br />
   <a href="https://taskrankr.com/guest">
-    <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="400" alt="TaskRankr — screenshot preview" />
+    <img src="./project-screenshots/resized/screenshot-taskrankr.png" width="385" alt="TaskRankr — screenshot preview" />
   </a>
 </p>
 <p>
@@ -37,7 +37,7 @@
   Interactive map of years of my GPS bike ride data.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
   <br />
   <a href="https://bvandrc.github.io/bike-ride-mapper/">
-    <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="400" alt="Bike Ride Tracker — screenshot preview" />
+    <img src="./project-screenshots/resized/screenshot-bike-ride-mapper.png" width="385" alt="Bike Ride Tracker — screenshot preview" />
   </a>
 </p>
 <p>
@@ -46,7 +46,7 @@
   My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
   <br />
   <a href="https://specialingredientbass.com/">
-    <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="400" alt="DJ Website — screenshot preview" />
+    <img src="./project-screenshots/resized/screenshot-specialingredientbass.png" width="385" alt="DJ Website — screenshot preview" />
   </a>
 </p>
 <p>
@@ -55,7 +55,7 @@
   CMS-driven storefront with custom React components, built for a friend.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
   <br />
   <a href="https://womanhoodofwubz.neocities.org/">
-    <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="400" alt="Retail Website — screenshot preview" />
+    <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="385" alt="Retail Website — screenshot preview" />
   </a>
 </p>
 <h3>🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
