@@ -61,7 +61,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'bike-ride-mapper',
         blurb: (
           <>
-            A map overlaying every bike ride I've done over the past few years.
+            Interactive map of years of my GPS bike ride data.
             <RepoLink repo="bike-ride-mapper" />
           </>
         ),
@@ -90,7 +90,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'womanhoodofwubz.com',
         blurb: (
           <>
-            Retail website for a friend using a CMS and custom React components.
+            CMS-driven storefront with custom React components, built for a
+            friend.
             <RepoLink repo="womanhoodofwubz.com" />
           </>
         ),
@@ -110,8 +111,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'lighthouse-audit-utils',
         blurb: (
           <>
-            Run Lighthouse audits with threshold checks, report writing, a
-            readable terminal recommendation list, and a Playwright fixture.
+            Run Lighthouse audits with threshold checks, readable
+            recommendations, report output, and a Playwright fixture.
           </>
         ),
       },
@@ -122,9 +123,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'pr-diff-line-count',
         blurb: (
           <>
-            GitHub Action that recounts a PR's diff with cloc, so comments and
-            blank lines don't inflate the total, and splits it into source,
-            tests, generated, docs, and config.
+            GitHub Action for accurate PR diff line counts via cloc, split by
+            source, tests, docs, and config.
             <RepoLink repo="pr-diff-line-count" />
           </>
         ),
@@ -136,8 +136,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'detect-deploy',
         blurb: (
           <>
-            GitHub Action that polls a URL until its content changes, to detect
-            when a deploy has actually gone live.
+            GitHub Action that polls a URL to detect when a deploy has gone
+            live.
             <RepoLink repo="detect-deploy" />
           </>
         ),
@@ -149,9 +149,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'react-component-test-suite',
         blurb: (
           <>
-            Create custom React component test suites for Vitest or Jest that
-            automatically give the name of the React component to the title of
-            the test suite.
+            Auto-title Vitest and Jest suites from the React component's name.
           </>
         ),
       },
@@ -162,8 +160,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'lint-package-json',
         blurb: (
           <>
-            GitHub Action that lints every package.json in a repo against a
-            shared npm-package-json-lint rule set.
+            GitHub Action that enforces shared package.json lint rules across
+            repos.
             <RepoLink repo="lint-package-json" />
           </>
         ),
@@ -174,10 +172,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         type: 'npm',
         repo: 'glob-sort',
         blurb: (
-          <>
-            Provide custom rules to sort nested glob results. Useful for test
-            configuration.
-          </>
+          <>Rule-based ordering of nested glob results for test configs.</>
         ),
       },
     ],
@@ -192,11 +187,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         type: 'npm',
         repo: 'tsx-to-pdf',
         blurb: (
-          <>
-            Write a document as JSX (React syntax), style it with Tailwind, and
-            render it to a page-exact PDF and HTML — with a live-preview dev
-            server.
-          </>
+          <>JSX + Tailwind to page-exact PDF, with a live-preview dev server.</>
         ),
       },
       {
@@ -225,7 +216,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'serato-tools',
         blurb: (
           <>
-            Various Python tools for the Serato DJ software
+            Python tools for reading and modifying Serato DJ's tracks, hot cues,
+            waveforms, metadata, crates, and library database.
             <RepoLink repo="serato-tools" />
           </>
         ),
@@ -234,7 +226,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'serato-usb-export',
         href: 'https://pypi.org/project/serato-usb-export/',
         type: 'python',
-        blurb: <>USB Export tool for the Serato DJ software</>,
+        blurb: <>Fast, deduplicated USB export tool for Serato DJ.</>,
       },
     ],
   },
@@ -249,8 +241,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         counts: { commits: 547, prs: 0 },
         blurb: (
           <>
-            Python program that uses the Spotify and SoundCloud APIs to organize
-            my music and DJ library. <em>(private repo)</em>
+            Python automation for my 11k+ track DJ library utilizing the Spotify
+            and SoundCloud APIs. <em>(private repo)</em>
           </>
         ),
       },
@@ -261,8 +253,8 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'arduino-totem',
         blurb: (
           <>
-            The code that runs my festival totem—an LED-lit sign controlled on
-            the fly with dials, buttons, and a tap-sensitive accelerometer.
+            Firmware for my LED festival totem, controlled by dials, buttons,
+            and an accelerometer.
           </>
         ),
       },
