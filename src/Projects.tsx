@@ -262,7 +262,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
 ]
 
 /** Height of the type icon after each project name; its centering spacer matches it. */
-const TYPE_ICON_SIZE = 12
+const TYPE_ICON_SIZE = 13
 
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
