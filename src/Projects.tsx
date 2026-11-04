@@ -1,3 +1,4 @@
+import { kebabCase } from 'es-toolkit'
 import type { ComponentChildren } from 'preact'
 
 import { ICON_GRAY, type ProjectType, TYPE_ICONS } from './constants'
@@ -31,7 +32,7 @@ const RepoLink = ({ repo }: { repo: string }) => (
 
 const PROJECT_SECTIONS: ProjectSection[] = [
   {
-    emoji: '⚛️⚛️',
+    emoji: '⚛️',
     title: 'React Websites',
     intro:
       'Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.',
@@ -99,7 +100,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
     ],
   },
   {
-    emoji: '🧪🧪',
+    emoji: '🧪',
     title: 'Testing & CI Tooling',
     projects: [
       {
@@ -176,7 +177,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
     ],
   },
   {
-    emoji: '📦📦',
+    emoji: '📦',
     title: 'Other Packages',
     projects: [
       {
@@ -229,7 +230,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
     ],
   },
   {
-    emoji: '💡💡',
+    emoji: '💡',
     title: 'Other Projects',
     projects: [
       {
@@ -296,19 +297,34 @@ const ProjectEntry = ({ p }: { p: Project }) => {
 }
 
 /** Every project section, laid out as centered paragraphs (relies on the README's centered wrapper). */
-export const Projects = () =>
-  PROJECT_SECTIONS.map((s) => (
-    <>
-      <SectionTitle emoji={s.emoji} title={s.title} />
-      {s.intro && (
-        <p>
-          <em>
-            <strong>{s.intro}</strong>
-          </em>
-        </p>
-      )}
-      {s.projects.map((p) => (
-        <ProjectEntry p={p} />
+export const Projects = () => (
+  <>
+    {/* contents line: jump links to each section's anchor */}
+    <p>
+      {PROJECT_SECTIONS.map((s, i) => (
+        <>
+          {i > 0 && ' · '}
+          <a href={`#${kebabCase(s.title)}`}>
+            {s.emoji}&nbsp;{s.title}
+          </a>
+        </>
       ))}
-    </>
-  ))
+    </p>
+    {PROJECT_SECTIONS.map((s) => (
+      <>
+        {/* GitHub doesn't add anchors to raw HTML headings, so the contents line targets this id */}
+        <SectionTitle id={kebabCase(s.title)} emoji={s.emoji} title={s.title} />
+        {s.intro && (
+          <p>
+            <em>
+              <strong>{s.intro}</strong>
+            </em>
+          </p>
+        )}
+        {s.projects.map((p) => (
+          <ProjectEntry p={p} />
+        ))}
+      </>
+    ))}
+  </>
+)

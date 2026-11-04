@@ -18,7 +18,7 @@ type SkillSection = { emoji: string; title: string; rows: SkillRow[] }
 
 const SKILL_SECTIONS: SkillSection[] = [
   {
-    emoji: '🖥️🖥️',
+    emoji: '🖥️',
     title: 'Core Development',
     rows: [
       {
@@ -138,7 +138,7 @@ const SKILL_SECTIONS: SkillSection[] = [
     ],
   },
   {
-    emoji: '🧪🧪',
+    emoji: '🧪',
     title: 'Testing',
     rows: [
       {
@@ -200,7 +200,7 @@ const SKILL_SECTIONS: SkillSection[] = [
     ],
   },
   {
-    emoji: '🛠️🛠️',
+    emoji: '🛠️',
     title: 'Tools',
     rows: [
       {
@@ -269,7 +269,7 @@ const SKILL_SECTIONS: SkillSection[] = [
     ],
   },
   {
-    emoji: '📝📝',
+    emoji: '📝',
     title: 'Other Languages',
     rows: [
       {
