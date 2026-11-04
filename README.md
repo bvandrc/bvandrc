@@ -30,7 +30,7 @@
   </em>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react" height="12" alt="React" title="React" />
   <br />
   My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
   <br />
@@ -39,7 +39,7 @@
   </a>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react" height="12" alt="React" title="React" />
   <br />
   Interactive map of years of my GPS bike ride data.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
   <br />
@@ -48,7 +48,7 @@
   </a>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react" height="12" alt="React" title="React" />
   <br />
   My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
   <br />
@@ -57,7 +57,7 @@
   </a>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react" height="12" alt="React" title="React" />
   <br />
   CMS-driven storefront with custom React components, built for a friend.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
   <br />
@@ -67,7 +67,7 @@
 </p>
 <h3 id="testing-ci-tooling">🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
   Run Lighthouse audits with threshold checks, readable recommendations, report output, and a Playwright fixture.
 </p>
@@ -82,7 +82,7 @@
   GitHub Action that polls a URL to detect when a deploy has gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
   Auto-title Vitest and Jest suites from the React component's name.
 </p>
@@ -92,45 +92,45 @@
   GitHub Action that enforces shared package.json lint rules across repos.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
   Rule-based ordering of nested glob results for test configs.
 </p>
 <h3 id="other-packages">📦📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦📦</h3>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
   JSX + Tailwind to page-exact PDF, with a live-preview dev server.
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/persistent-logger">persistent-logger</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/persistent-logger">persistent-logger</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
   Crash-resilient, localStorage-backed browser diagnostics logging, with optional React hooks.
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/@bvandrc/react-toolkit">react-toolkit</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/@bvandrc/react-toolkit">react-toolkit</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
   <br />
   Generic React hooks and helpers for browser UI behavior.
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python" height="12" alt="Python" title="Python" />
   <br />
   Python tools for reading and modifying Serato DJ's tracks, hot cues, waveforms, metadata, crates, and library database.&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python" height="12" alt="Python" title="Python" />
   <br />
   Fast, deduplicated USB export tool for Serato DJ.
 </p>
 <h3 id="other-projects">💡💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡💡</h3>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python" height="12" alt="Python" title="Python" />
   <br />
   Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs. 
   <em>(private repo)</em>
 </p>
 <p>
-  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino/8B949E" height="12" alt="Arduino" title="Arduino" />
+  <img src="./assets/spacer.png" width="12" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino" height="12" alt="Arduino" title="Arduino" />
   <br />
   Firmware for my LED festival totem, controlled by dials, buttons, and an accelerometer.
 </p>

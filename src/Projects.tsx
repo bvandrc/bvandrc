@@ -1,7 +1,7 @@
 import { kebabCase } from 'es-toolkit'
 import type { ComponentChildren } from 'preact'
 
-import { ICON_GRAY, type ProjectType, TYPE_ICONS } from './constants'
+import { type ProjectType, TYPE_ICONS } from './constants'
 import { SectionTitle } from './SectionHeadings'
 
 type Project = {
@@ -281,7 +281,8 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       </strong>
       &nbsp;&nbsp;&nbsp;
       <img
-        src={`https://cdn.simpleicons.org/${icon.slug}/${ICON_GRAY}`}
+        // simpleicons serves the brand color when the URL names no color
+        src={`https://cdn.simpleicons.org/${icon.slug}${icon.color ? `/${icon.color}` : ''}`}
         height={TYPE_ICON_SIZE}
         alt={icon.title}
         title={icon.title}
