@@ -43,12 +43,10 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         repo: 'TaskRankr',
         blurb: (
           <>
-            My most substantial project: I tried over 30 to-do apps and none
-            managed tasks the way I wanted, so I built one. Advanced ranking,
-            filtering, customization, nested subtasks with per-level rules, and
-            cross-task dependencies. Fully offline-capable, with server sync
-            across devices. Shipped across 250+ PRs, each carefully reviewed and
-            refactored.
+            My flagship project: after trying 30+ to-do apps, I built my own. An
+            offline-first, cross-device-synced task manager with advanced
+            ranking, nesting, dependencies, customization, and rules. 600+ PRs,
+            each reviewed and refined.
             <RepoLink repo="TaskRankr" />
           </>
         ),

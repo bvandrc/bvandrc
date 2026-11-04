@@ -17,9 +17,10 @@ ${render(
   <p>
     <Lines
       lines={[
-        'Software test engineer, React developer, TypeScript connoisseur.',
-        '9 years writing code, 8 in test, 5 in software QA, 4 building React.',
-        'I build React apps, publish testing and CI packages to npm, and write Python tools for my music library.',
+        'SDET, React developer, TypeScript purist.',
+        '9 years writing code and tests, from hardware to web apps.',
+        'I build React apps, testing and CI npm packages, and Python DJ tools.',
+        "These days AI agents draft most of my PRs, then I refine them through review comments until the code is exactly how I'd write it myself.",
         "Most of what's here started as something I needed and couldn't find.",
       ]}
     />
@@ -28,8 +29,8 @@ ${render(
    * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
    * but here for version control:
    *
-   * Software test engineer, React developer, TypeScript connoisseur. I build React apps,
-   * write Python tools, and publish npm packages for testing and CI.
+   * SDET, React developer, TypeScript purist. 9 years writing code and tests.
+   * I build React apps, Python DJ tools, and npm packages for testing and CI.
    */
 )}
 
