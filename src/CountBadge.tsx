@@ -58,7 +58,10 @@ export const CountBadge = ({ repo }: CountBadgeProps) => {
   return (
     <img
       src={badgeSrc({
-        items: `git-commit:${counts.commits},git-pull-request:${counts.prs}`,
+        items: [
+          { icon: 'git-commit', value: `${counts.commits}` },
+          { icon: 'git-pull-request', value: `${counts.prs}` },
+        ],
         color: BADGE_FG,
       })}
       height={BADGE_HEIGHT}

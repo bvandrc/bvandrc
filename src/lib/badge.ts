@@ -9,9 +9,14 @@ const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
  */
 export const BADGE_HEIGHT = 12
 
+type BadgeItem = {
+  /** simpleicons or octicon slug drawn beside the value; omitted for text alone */
+  icon?: string
+  value: string
+}
+
 type BadgeParams = {
-  /** comma-separated `icon:value` pairs */
-  items: string
+  items: BadgeItem[]
   /** icon and text fill, hex without the leading '#' */
   color: string
   /** draws each icon after its own value rather than before it */
@@ -20,6 +25,8 @@ type BadgeParams = {
   height?: number
   /** draws the icons smaller against their values; 1 fills the height */
   iconScale?: number
+  bold?: boolean
+  underline?: boolean
 }
 
 /**
@@ -35,7 +42,20 @@ export const badgeSrc = ({
   iconRight,
   height = BADGE_HEIGHT,
   iconScale,
-}: BadgeParams) =>
-  `${WORKER_ORIGIN}/?items=${items}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=0${
+  bold,
+  underline,
+}: BadgeParams) => {
+  // the separators are the syntax, so only the values are escaped — a project
+  // name carries spaces where a count or a slug never does
+  const query = items
+    .map(({ icon, value }) => {
+      const escaped = encodeURIComponent(value)
+      return icon === undefined ? escaped : `${icon}:${escaped}`
+    })
+    .join(',')
+  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=0${
     iconRight ? '&iconSide=right' : ''
-  }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}`
+  }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
+    bold ? '&bold=true' : ''
+  }${underline ? '&underline=true' : ''}`
+}

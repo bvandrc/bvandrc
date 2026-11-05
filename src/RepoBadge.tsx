@@ -1,15 +1,5 @@
+import { LINK_BLUE } from './constants'
 import { badgeSrc } from './lib/badge'
-
-/**
- * Text and icon fill: blue enough to read as a link, muted so it does not
- * compete with the project title above it.
- *
- * GitHub's own link blues are picked per theme, which a badge cannot do, and
- * both are more saturated than this. Desaturating costs nothing here — at
- * 4.5:1 on white and 4.2:1 on GitHub's dark surface it still carries the
- * contrast it has to, having no background of its own to sit on.
- */
-const LINK_BLUE = '4d79b2'
 
 /**
  * What the badge reads.
@@ -25,7 +15,7 @@ const LINK_BLUE = '4d79b2'
  *
  * It leads the word, as the icons on the counts badge lead their own values.
  */
-const ITEMS = 'file-directory:repo'
+const ITEMS = [{ icon: 'file-directory', value: 'repo' }]
 
 /**
  * Height of this badge, a pixel over the counts badge beside it.
