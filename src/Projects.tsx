@@ -1,19 +1,19 @@
 import { kebabCase, mapValues } from 'es-toolkit'
 
-import { CountBadge, countBadgeWidth } from './CountBadge'
+import { CountBadge, countBadgeWidth } from './components/CountBadge'
+import { REPO_BADGE_WIDTH, RepoBadge } from './components/RepoBadge'
+import {
+  SectionIconLink,
+  SectionTitle,
+  sectionIconGap,
+} from './components/SectionHeadings'
+import { TITLE_BADGE_PAD, TitleBadge } from './components/TitleBadge'
+import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './components/TypeIcon'
 import { repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
 import { PROJECTS } from './content/projects'
 import { badgeGap, NBSP_WIDTH } from './lib/badge'
-import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
-import {
-  SectionIconLink,
-  SectionTitle,
-  sectionIconGap,
-} from './SectionHeadings'
-import { TITLE_BADGE_PAD, TitleBadge } from './TitleBadge'
-import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './TypeIcon'
 
 /** `&nbsp;` the title sat between back when it was text. */
 const TEXT_TITLE_GAP = { before: 3, after: 4 }

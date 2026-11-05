@@ -1,11 +1,11 @@
 import type { VNode } from 'preact'
 import { render as renderBase } from 'preact-render-to-string/jsx'
 
+import { Lines } from './components/Lines'
+import { SectionHeader } from './components/SectionHeadings'
 import { BEYOND_CODE, INTRO_LINES } from './content/about'
 import { SECTIONS } from './content/sections'
-import { Lines } from './Lines'
 import { Projects } from './Projects'
-import { SectionHeader } from './SectionHeadings'
 import { SkillsTable } from './SkillsTable'
 
 const render = (node: VNode) =>

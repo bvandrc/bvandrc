@@ -1,5 +1,5 @@
-import { REPO_COUNTS } from './generated/repo-counts'
-import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
+import { REPO_COUNTS } from '../generated/repo-counts'
+import { BADGE_HEIGHT, badgeSrc } from '../lib/badge'
 
 /**
  * Size the digits and their icons are drawn at, inside `BADGE_HEIGHT`.

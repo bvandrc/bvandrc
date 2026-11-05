@@ -1,7 +1,7 @@
-import { ICON_GRAY } from './constants'
-import type { ProjectType } from './content/project-types'
-import { TYPE_ICONS } from './content/project-types'
-import { BADGE_HEIGHT, badgePad, badgeSrc } from './lib/badge'
+import { ICON_GRAY } from '../constants'
+import type { ProjectType } from '../content/project-types'
+import { TYPE_ICONS } from '../content/project-types'
+import { BADGE_HEIGHT, badgePad, badgeSrc } from '../lib/badge'
 
 /**
  * Size the mark itself is drawn at, inside `BADGE_HEIGHT`.

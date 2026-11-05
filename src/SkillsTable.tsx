@@ -1,7 +1,7 @@
+import { Lines } from './components/Lines'
+import { HeadingBadge } from './components/SectionHeadings'
 import type { SkillBadge } from './content/skills'
 import { SKILLS } from './content/skills'
-import { Lines } from './Lines'
-import { HeadingBadge } from './SectionHeadings'
 
 const Shield = ({ b }: { b: SkillBadge }) => (
   <img
