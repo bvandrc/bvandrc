@@ -146,7 +146,7 @@
 <table>
   <tr>
     <td colspan="2" align="center">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Core%20Development%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=A3ACB9&amp;textColor=A3ACB9&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Core%20Development%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Core%20Development%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=B1BAC4&amp;textColor=B1BAC4&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Core%20Development%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture>
     </td>
   </tr>
   <tr>
@@ -195,7 +195,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%C2%A0%C2%A0%C2%A0%C2%A0Testing%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%A7%AA&amp;color=none&amp;iconColor=A3ACB9&amp;textColor=A3ACB9&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%C2%A0%C2%A0%C2%A0%C2%A0Testing%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%A7%AA&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%C2%A0%C2%A0%C2%A0%C2%A0Testing%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%A7%AA&amp;color=none&amp;iconColor=B1BAC4&amp;textColor=B1BAC4&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%C2%A0%C2%A0%C2%A0%C2%A0Testing%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%A7%AA&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture>
     </td>
   </tr>
   <tr>
@@ -221,7 +221,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Tools%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=A3ACB9&amp;textColor=A3ACB9&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Tools%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Tools%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=B1BAC4&amp;textColor=B1BAC4&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Tools%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture>
     </td>
   </tr>
   <tr>
@@ -256,7 +256,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=A3ACB9&amp;textColor=A3ACB9&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=B1BAC4&amp;textColor=B1BAC4&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture>
     </td>
   </tr>
   <tr>

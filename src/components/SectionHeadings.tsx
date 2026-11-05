@@ -10,10 +10,11 @@ import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
  * GitHub is painting, so this variant can land on a white page. Near-white
  * there is 1.09:1 — invisible — so the dark branch is chosen for how it reads
  * on its own canvas first, and only held back from near-white far enough to
- * survive the wrong one: 8.25:1 on the dark canvas against 2.29:1 on white.
- * That is under what even a heading would want on white, and deliberate —
- * that canvas is the one this has to survive, not the one it is for. Lighter
- * and it slides back toward the ghost it was.
+ * survive the wrong one: 9.63:1 on the dark canvas against 1.96:1 on white.
+ * That is well under what even a heading would want on white, and deliberate
+ * — that canvas is the one this has to survive, not the one it is for. It is
+ * close to the floor, though: near-white was 1.09:1 there, so there is not
+ * much room left before the mismatch reads as the ghost it was.
  *
  * Its own constant rather than the grey the type icons use: those are a plain
  * `<img>` with one colour for both canvases, so they cannot spend contrast on
@@ -24,7 +25,7 @@ import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
  * arrangement of a media query strands one of the two mismatches, and this is
  * the one chosen to strand.
  */
-const FG = { LIGHT: '1f2328', DARK: 'A3ACB9' }
+const FG = { LIGHT: '1f2328', DARK: 'B1BAC4' }
 
 /**
  * Box a section title is drawn in, and the size of the text inside it.
