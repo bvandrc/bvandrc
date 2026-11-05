@@ -39,10 +39,10 @@ const REPO_BADGE_HEIGHT = 13
  * How large the folder is against the word, as a fraction of the height.
  *
  * At 1 an icon fills the height the contents are given, which leaves it
- * taller than the text it sits beside. This brings it to about the weight of
- * the counts badge's own icons.
+ * taller than the text it sits beside. This brings it under the word's own
+ * size, so the folder reads as a mark on the label rather than beside it.
  */
-const REPO_ICON_SCALE = 0.8
+const REPO_ICON_SCALE = 0.6
 
 /**
  * Width the renderer lays this badge out at, in px.
@@ -51,7 +51,7 @@ const REPO_ICON_SCALE = 0.8
  * the same text and icon, so they are all this wide. It moves with
  * `REPO_BADGE_HEIGHT`, which everything in the badge scales from.
  */
-export const REPO_BADGE_WIDTH = 48.26
+export const REPO_BADGE_WIDTH = 45.66
 
 /**
  * A badge reading "repo", matching the counts badge beside it.
