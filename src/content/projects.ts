@@ -154,7 +154,7 @@ export const PROJECTS: ProjectSection[] = [
         type: 'worker',
         repo: 'badgesmith',
         blurb:
-          'Cloudflare Worker that renders several icons and values as one SVG badge, which shields.io cannot. It draws the badges on this page.',
+          'Cloudflare Worker that renders several icons and values as one SVG badge, which shields.io cannot. Advanced formatting (padding, icon side and scale, bold, underline, rounded corners, transparent backgrounds), any of 400+ Octicons, and live GitHub commit and PR counts. It draws the badges on this page.',
       },
       {
         name: 'spotify-organizer',

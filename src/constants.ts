@@ -25,7 +25,7 @@ type ProjectTypeIcon = {
 
 export const TYPE_ICONS = {
   react: { slug: 'react', title: 'React', published: false },
-  npm: { slug: 'npm', title: 'npm (Typescript)', published: true },
+  npm: { slug: 'npm', title: 'npm', published: true },
   github: { slug: 'github', title: 'GitHub Action', published: true },
   worker: {
     slug: 'cloudflareworkers',
