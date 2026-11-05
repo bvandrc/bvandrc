@@ -17,14 +17,14 @@
 ## 💎&nbsp; Projects &nbsp;💎
 
 <p>
-  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="16" alt="⚛️" />&nbsp;React Websites</a>
+  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="16" alt />&nbsp;React Websites</a>
    · 
   <a href="#testing-ci-tooling">🧪&nbsp;Testing &amp; CI Tooling</a> · 
   <a href="#other-packages">📦&nbsp;Other Packages</a> · 
   <a href="#other-projects">💡&nbsp;Other Projects</a>
 </p>
 <h3 id="react-websites">
-  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>
+  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt /></a>&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt /></a>
 </h3>
 <p>
   <em>

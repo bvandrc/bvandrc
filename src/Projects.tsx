@@ -125,7 +125,7 @@ export const Projects = () => (
         <>
           {i > 0 && ' · '}
           <a href={`#${kebabCase(s.title)}`}>
-            <SectionMark emoji={s.emoji} logo={s.logo} />
+            <SectionMark emoji={s.emoji} />
             &nbsp;{s.title}
           </a>
         </>
@@ -134,12 +134,7 @@ export const Projects = () => (
     {PROJECTS.map((s) => (
       <>
         {/* GitHub doesn't add anchors to raw HTML headings, so the contents line targets this id */}
-        <SectionTitle
-          id={kebabCase(s.title)}
-          emoji={s.emoji}
-          logo={s.logo}
-          title={s.title}
-        />
+        <SectionTitle id={kebabCase(s.title)} emoji={s.emoji} title={s.title} />
         {s.intro && (
           <p>
             <em>

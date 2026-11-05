@@ -33,9 +33,8 @@ export type SectionLogo = {
 }
 
 export type ProjectSection = {
-  emoji: string
-  /** Shown in place of the emoji where an image can render, as in the README. */
-  logo?: SectionLogo
+  /** The section's mark: an emoji, or a logo where no emoji fits. */
+  emoji: string | SectionLogo
   title: string
   intro?: string
   projects: Project[]
