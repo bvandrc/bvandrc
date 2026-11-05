@@ -100,6 +100,12 @@ export const SKILLS: SkillSection[] = [
               logoColor: 'white',
             },
             {
+              alt: 'shadcn/ui',
+              path: 'shadcn%2Fui-000000',
+              logo: 'shadcnui',
+              logoColor: 'white',
+            },
+            {
               alt: 'JQuery',
               path: 'jquery-%230769AD.svg',
               logo: 'jquery',
