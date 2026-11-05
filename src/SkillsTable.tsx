@@ -19,6 +19,7 @@ export const SkillsTable = () => (
             <SectionTitle
               icon={s.icon}
               title={<HeadingBadge title={s.title} />}
+              heading={false}
             />
           </td>
         </tr>

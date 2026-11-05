@@ -47,26 +47,35 @@ export const SectionIcon = ({
     />
   )
 
-/** An `<h3>` subsection title, flanked by its icon on each side. */
+/**
+ * A subsection title, flanked by its icon on each side.
+ *
+ * `heading` wraps it in an `<h3>`, which is what gives a plain-text title its
+ * size and an emoji flank the same. A title that carries its own size has no
+ * use for one, and inside a table cell the heading's margins are not wanted.
+ */
 export const SectionTitle = ({
   id,
   icon,
   title,
+  heading = true,
 }: {
   id?: string
   icon: string | SectionLogo
   title: ComponentChildren
+  heading?: boolean
 }) => {
   const mark = <SectionIcon icon={icon} height={TITLE_LOGO_HEIGHT} />
   // GitHub links an unwrapped README image to its own camo URL, so a logo
   // links back to this heading instead.
   const flank =
     typeof icon === 'string' ? mark : <a href={id && `#${id}`}>{mark}</a>
-  return (
-    <h3 id={id}>
+  const line = (
+    <>
       {flank}&nbsp;&nbsp;&nbsp;&nbsp;{title}&nbsp;&nbsp;&nbsp;&nbsp;{flank}
-    </h3>
+    </>
   )
+  return heading ? <h3 id={id}>{line}</h3> : line
 }
 
 /**
