@@ -30,7 +30,7 @@
   </em>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/TaskRankr"><img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" /></a>
+  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt /><img src="./assets/spacer.png" width="103" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/TaskRankr"><img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/TaskRankr"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:665,git-pull-request:654&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="665 commits, 654 PRs" title="665 commits, 654 PRs" /></a>
   <br />
   My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
   <br />
@@ -124,7 +124,7 @@
 </p>
 <h3 id="other-projects">💡💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡💡</h3>
 <p>
-  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/SD"><img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/SD"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:547,git-pull-request:0&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="547 commits, 0 PRs" title="547 commits, 0 PRs" /></a>
+  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/SD"><img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/SD"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:545,git-pull-request:1&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="545 commits, 1 PRs" title="545 commits, 1 PRs" /></a>
   <br />
   Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs. 
   <em>(private repo)</em>

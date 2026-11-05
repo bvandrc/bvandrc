@@ -9,7 +9,8 @@ type RepoCounts = { commits: number; prs: number }
  * has never read — a private one before its token is configured — has no entry.
  */
 export const REPO_COUNTS: Record<string, RepoCounts | undefined> = {
-  'SD': { commits: 547, prs: 0 },
+  'SD': { commits: 545, prs: 1 },
+  'TaskRankr': { commits: 665, prs: 654 },
   'arduino-totem': { commits: 36, prs: 7 },
   'bike-ride-mapper': { commits: 87, prs: 44 },
   'detect-deploy': { commits: 17, prs: 25 },
