@@ -1,6 +1,6 @@
 // Badges link: https://github.com/Ileriayo/markdown-badges
 // Badge paths are the shields.io static-badge path + params (https://img.shields.io/badge/<path>)
-import type { SkillSection } from '../SkillsTable'
+import type { SkillSection } from './types'
 
 export const SKILLS: SkillSection[] = [
   {
@@ -228,13 +228,7 @@ export const SKILLS: SkillSection[] = [
         ],
       },
       {
-        label: (
-          <>
-            Project
-            <br />
-            Mgmt.
-          </>
-        ),
+        label: 'Project\nMgmt.',
         lines: [
           [
             {

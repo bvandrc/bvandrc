@@ -1,19 +1,7 @@
-import type { ComponentChildren } from 'preact'
-
 import { SKILLS } from './content/skills'
+import type { SkillBadge } from './content/types'
 import { Lines } from './Lines'
 import { SectionTitle } from './SectionHeadings'
-
-type SkillBadge = {
-  alt: string
-  path: string
-  logo: string
-  logoColor: string
-}
-
-type SkillRow = { label: ComponentChildren; lines: SkillBadge[][] }
-
-export type SkillSection = { emoji: string; title: string; rows: SkillRow[] }
 
 const Shield = ({ b }: { b: SkillBadge }) => (
   <img
@@ -34,7 +22,9 @@ export const SkillsTable = () => (
         {s.rows.map((row) => (
           <tr>
             <td align="right">
-              <em>{row.label}</em>
+              <em>
+                <Lines lines={row.label.split('\n')} />
+              </em>
             </td>
             <td align="center">
               <Lines

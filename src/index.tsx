@@ -1,6 +1,7 @@
 import type { VNode } from 'preact'
 import { render as renderBase } from 'preact-render-to-string/jsx'
 
+import { BEYOND_CODE, INTRO_LINES } from './content/about'
 import { Lines } from './Lines'
 import { Projects } from './Projects'
 import { SectionHeader } from './SectionHeadings'
@@ -15,15 +16,7 @@ export const readmeContent = `<div align="center">
 ${render(
   // INTRO
   <p>
-    <Lines
-      lines={[
-        'SDET, React developer, TypeScript purist.',
-        '9 years writing code and tests, from hardware to web apps.',
-        'I build React apps, testing and CI npm packages, and Python DJ tools.',
-        "These days I build with AI agents, reviewing and refining every PR until it's code I understand and would write.",
-        "Most of what's here started as something I needed and couldn't find.",
-      ]}
-    />
+    <Lines lines={INTRO_LINES} />
   </p>
   /**
    * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
@@ -66,18 +59,9 @@ ${SectionHeader('🎉', 'Beyond Code')}
 ${render(
   // BEYOND CODE
   <>
-    <p>When I'm not coding, you'll find me:</p>
+    <p>{BEYOND_CODE.intro}</p>
     <p>
-      <Lines
-        lines={[
-          '🎧 DJing 🎧',
-          '🚴 Bike Riding to explore Denver 🚴',
-          '⛷️ Hitting the slopes with friends ⛷️',
-          '✈️ Exploring my neighborhood, Colorado, and the world! ✈️',
-          '🎬 Checking out good movies 🎬',
-          '🎵 Catching live music 🎵',
-        ]}
-      />
+      <Lines lines={BEYOND_CODE.lines} />
     </p>
   </>
 )}
