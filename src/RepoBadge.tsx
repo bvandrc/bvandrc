@@ -11,8 +11,8 @@ import { badgeSrc } from './lib/badge'
  */
 const LINK_BLUE = '4d79b2'
 
-/** What the badge reads, with the icon drawn after it. */
-const ITEMS = 'link-external:repo'
+/** What the badge reads: the word alone, no icon. */
+const ITEMS = 'repo'
 
 /**
  * Height of this badge, a pixel over the counts badge beside it.
@@ -29,7 +29,7 @@ const REPO_BADGE_HEIGHT = 13
  * the same text and icon, so they are all this wide. It moves with
  * `REPO_BADGE_HEIGHT`, which everything in the badge scales from.
  */
-export const REPO_BADGE_WIDTH = 50.86
+export const REPO_BADGE_WIDTH = 34.14
 
 /**
  * A badge reading "repo", matching the counts badge beside it.
@@ -42,7 +42,6 @@ export const RepoBadge = () => (
     src={badgeSrc({
       items: ITEMS,
       color: LINK_BLUE,
-      iconRight: true,
       height: REPO_BADGE_HEIGHT,
     })}
     height={REPO_BADGE_HEIGHT}
