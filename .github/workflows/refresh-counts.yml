@@ -36,9 +36,10 @@ jobs:
         # that into a red run rather than losing it.
         continue-on-error: true
         env:
-          # the built-in token reads every public repo; the PAT additionally
-          # reaches the private ones, and is absent until one is configured
-          GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN || secrets.GITHUB_TOKEN }}
+          # a PAT that can read the repos a project names, private ones
+          # included, which the built-in token cannot. Falling back to it
+          # keeps the public counts refreshing until the PAT is configured.
+          GITHUB_TOKEN: ${{ secrets.REPO_READ_TOKEN || secrets.GITHUB_TOKEN }}
         run: pnpm gen:counts
 
       - name: Build README
