@@ -24,8 +24,18 @@ export type Project = {
   screenshot?: string
 }
 
+/** A simpleicons.org logo, drawn in its brand colour. */
+export type SectionLogo = {
+  /** simpleicons.org slug */
+  slug: string
+  /** hex colour, without the `#` */
+  color: string
+}
+
 export type ProjectSection = {
   emoji: string
+  /** Shown in place of the emoji where an image can render, as in the README. */
+  logo?: SectionLogo
   title: string
   intro?: string
   projects: Project[]

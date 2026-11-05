@@ -18,6 +18,9 @@ const output = md
   // spaces — join nbsp separator lines and <strong> tags to their content so
   // title lines render with main's exact spacing
   .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
+  // and nbsp the printer set at the start or end of a line, beside an image
+  .replace(/\n\s*((?:&nbsp;)+)(?=\S)/g, '$1')
+  .replace(/((?:&nbsp;)+)\n\s*(?=<a )/g, '$1')
   .replace(/<strong>\n\s*/g, '<strong>')
   .replace(/\n\s*<\/strong>/g, '</strong>')
   // the badge group's anchor has to hug its contents: whitespace inside it
@@ -38,5 +41,8 @@ const output = md
           .replace(/>\s+&/g, '>&')
       : anchor
   )
+  // a jump link that the printer wrapped onto lines of its own would underline
+  // the space its newlines render as, so it hugs its contents too
+  .replace(/(<a href="#[^"]*">)\s+([\s\S]*?)\s+<\/a>/g, '$1$2</a>')
 writeFileSync(join(root, 'README.md'), output)
 console.log('README.md generated')

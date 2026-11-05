@@ -3,6 +3,7 @@ import type { ProjectSection } from './types'
 export const PROJECTS: ProjectSection[] = [
   {
     emoji: '⚛️',
+    logo: { slug: 'react', color: '61DAFB' },
     title: 'React Websites',
     intro:
       'Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.',
