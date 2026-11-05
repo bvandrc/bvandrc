@@ -1,4 +1,4 @@
-import { MUTED_GRAY } from '../constants'
+import { ICON_GRAY } from '../constants'
 import type { ProjectType } from '../content/project-types'
 import { TYPE_ICONS } from '../content/project-types'
 import { BADGE_HEIGHT, badgePad, badgeSrc } from '../lib/badge'
@@ -43,7 +43,7 @@ export const TypeIcon = ({ type }: { type: ProjectType }) => {
     <img
       src={badgeSrc({
         items: [{ icon: slug }],
-        color: MUTED_GRAY,
+        color: ICON_GRAY,
         contentHeight: TYPE_ICON_SIZE,
       })}
       height={BADGE_HEIGHT}
