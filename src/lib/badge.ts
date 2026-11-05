@@ -18,6 +18,8 @@ type BadgeParams = {
   iconRight?: boolean
   /** overrides the shared height, and with it the size of the contents */
   height?: number
+  /** draws the icons smaller against their values; 1 fills the height */
+  iconScale?: number
 }
 
 /**
@@ -32,7 +34,8 @@ export const badgeSrc = ({
   color,
   iconRight,
   height = BADGE_HEIGHT,
+  iconScale,
 }: BadgeParams) =>
   `${WORKER_ORIGIN}/?items=${items}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=0${
     iconRight ? '&iconSide=right' : ''
-  }`
+  }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}`
