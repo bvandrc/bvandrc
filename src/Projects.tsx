@@ -1,7 +1,7 @@
 import { kebabCase } from 'es-toolkit'
 import type { ComponentChildren } from 'preact'
 
-import { CountBadge, type CountBadgeProps, spacerWidth } from './CountBadge'
+import { CountBadge, type CountBadgeProps, countBadgeWidth } from './CountBadge'
 import {
   ICON_GRAY,
   type ProjectType,
@@ -9,6 +9,7 @@ import {
   TYPE_ICON_HEIGHT,
   TYPE_ICONS,
 } from './constants'
+import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
 import { SectionTitle } from './SectionHeadings'
 
 type Project = CountBadgeProps & {
@@ -26,12 +27,6 @@ type ProjectSection = {
   intro?: ComponentChildren
   projects: Project[]
 }
-
-const RepoLink = ({ repo }: { repo: string }) => (
-  <>
-    &nbsp;<a href={repoUrl(repo)}>[repo]</a>
-  </>
-)
 
 const PROJECT_SECTIONS: ProjectSection[] = [
   {
@@ -51,7 +46,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             offline-first, cross-device-synced task manager with advanced
             ranking, nesting, dependencies, customization, and rules. 600+ PRs,
             each reviewed and refined.
-            <RepoLink repo="TaskRankr" />
           </>
         ),
         screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
@@ -61,12 +55,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         href: 'https://bvandrc.github.io/bike-ride-mapper/',
         type: 'react',
         repo: 'bike-ride-mapper',
-        blurb: (
-          <>
-            Interactive map of years of my GPS bike ride data.
-            <RepoLink repo="bike-ride-mapper" />
-          </>
-        ),
+        blurb: <>Interactive map of years of my GPS bike ride data.</>,
         screenshot:
           './project-screenshots/resized/screenshot-bike-ride-mapper.png',
       },
@@ -79,7 +68,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             My side hobby. All custom React components, using the SoundCloud
             API.
-            <RepoLink repo="specialingredientbass.com" />
           </>
         ),
         screenshot:
@@ -94,7 +82,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             CMS-driven storefront with custom React components, built for a
             friend.
-            <RepoLink repo="womanhoodofwubz.com" />
           </>
         ),
         screenshot:
@@ -261,6 +248,36 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
+/** Width of one `&nbsp;` in GitHub's README body font, in px. */
+const NBSP = 4.5
+
+/** `&nbsp;` between the project title and its type icon. */
+const TITLE_GAP = 4 * NBSP
+
+/**
+ * `&nbsp;` between one badge and the next.
+ *
+ * One, against three elsewhere on the line: both badges carry their own end
+ * padding, so the gap a reader sees is about 5px wider than the markup says.
+ */
+const BADGE_GAP = 1 * NBSP
+
+/**
+ * Width of the blank image that counterweights a project's badges.
+ *
+ * Balancing the title means matching everything to its right, where the type
+ * icon and the gap before the badges cancel against the left, leaving the
+ * badges themselves and the gap that opens before the icon. Each width is
+ * known at build time, so this is exact per project rather than one estimate
+ * for all of them — which centres every title instead of an average one.
+ */
+const spacerWidth = (repo: string) => {
+  const counts = countBadgeWidth(repo)
+  const badges =
+    counts > 0 ? counts + BADGE_GAP + REPO_BADGE_WIDTH : REPO_BADGE_WIDTH
+  return Math.round(TITLE_GAP + badges)
+}
+
 /** Every repo a project names, which `scripts/fetch-counts.ts` reads. */
 export const PROJECT_REPOS = PROJECT_SECTIONS.flatMap(({ projects }) =>
   projects.map(({ repo }) => repo).filter((repo) => repo !== undefined)
@@ -281,40 +298,58 @@ const ProjectEntry = ({ p }: { p: Project }) => {
   )
   return (
     <p>
-      {/* a fully transparent copy of the icon balances it, so the title centers on its own text */}
-      <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
-      {/* the count badge has no transparent twin to mirror it, so a blank
-          spacer carries its weight instead, sized to that project's own badge */}
-      {spacer > 0 && (
+      {/* a fully transparent copy of the icon balances it, so the title
+          centers on its own text, and a blank spacer carries the badges'
+          weight, which have no twin to mirror them. Both are invisible but
+          an unwrapped README image still links to its own camo URL, so they
+          go where the title goes. One anchor holds the pair, which is what
+          keeps them touching — a space between would widen this side. */}
+      <a href={p.href} target="_blank" rel="noopener">
+        <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
         <img
           src="./assets/spacer.png"
           width={spacer}
           height={TYPE_ICON_HEIGHT}
           alt=""
         />
-      )}
+      </a>
       &nbsp;&nbsp;&nbsp;
       <strong>
-        <a href={p.href}>{p.name}</a>
+        <a href={p.href} target="_blank" rel="noopener">
+          {p.name}
+        </a>
       </strong>
       {/* one more than the gap after the icon, which the badge's own left
           padding widens by about 6px, so the icon sits evenly between the two */}
       &nbsp;&nbsp;&nbsp;&nbsp;
-      {/* linked to the repo like the badge, so the whole right-hand group
-          goes to one place rather than to GitHub's own camo URL */}
-      <a href={repoUrl(p.repo)}>{typeIcon}</a>
-      {spacer > 0 && (
+      {/* every image here is wrapped, because GitHub links an unwrapped README
+          image to its own camo URL — an asset rather than anywhere useful.
+          One anchor each, never one around the group: the spacing between
+          them would sit inside it as link text and draw its underline. */}
+      <a
+        href={icon.published ? p.href : repoUrl(p.repo)}
+        target="_blank"
+        rel="noopener">
+        {typeIcon}
+      </a>
+      &nbsp;&nbsp;&nbsp;
+      {countBadgeWidth(p.repo) > 0 && (
         <>
-          &nbsp;&nbsp;&nbsp;
-          <CountBadge repo={p.repo} />
+          <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
+            <CountBadge repo={p.repo} />
+          </a>
+          &nbsp;
         </>
       )}
+      <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
+        <RepoBadge />
+      </a>
       <br />
       {p.blurb}
       {p.screenshot && (
         <>
           <br />
-          <a href={p.href}>
+          <a href={p.href} target="_blank" rel="noopener">
             <img
               src={p.screenshot}
               width="385"
