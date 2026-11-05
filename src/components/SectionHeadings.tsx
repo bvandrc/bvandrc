@@ -1,4 +1,4 @@
-import { BOTH_THEME_GRAY } from '../constants'
+import { MUTED_GRAY } from '../constants'
 import type { SectionLogo } from '../content/projects'
 import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
 
@@ -9,15 +9,16 @@ import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
  * read as. `DARK` is not its counterpart: a `<picture>` matches on
  * `prefers-color-scheme`, which follows the reader's OS rather than the theme
  * GitHub is painting, so this variant can land on a white page. Near-white
- * there is 1.09:1 — invisible — so the dark branch takes the grey that clears
- * both canvases instead, and gives up contrast on its own theme to do it.
+ * there is 1.09:1 — invisible — so the dark branch is chosen for how it reads
+ * on its own canvas first, and only held back from near-white far enough to
+ * survive the wrong one: 6.15:1 on the dark canvas, 3.08:1 on white.
  *
  * The light branch keeps true black, which leaves one combination short: a
  * reader who pins GitHub to dark while their system says light. Every
  * arrangement of a media query strands one of the two mismatches, and this is
  * the one chosen to strand.
  */
-const FG = { LIGHT: '1f2328', DARK: BOTH_THEME_GRAY }
+const FG = { LIGHT: '1f2328', DARK: MUTED_GRAY }
 
 /**
  * Box a section title is drawn in, and the size of the text inside it.

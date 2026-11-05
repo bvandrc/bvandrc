@@ -1,20 +1,16 @@
 /** One of my repos on GitHub. */
 export const repoUrl = (repo: string) => `https://github.com/bvandrc/${repo}`
 
-export const ICON_GRAY = '8B949E'
-
 /**
- * Fill for a mark that has to read on whichever canvas it lands on.
+ * Fill for a mark pitched at the dark canvas that may still land on white.
  *
- * A badge carries no background, so it supplies its own contrast — and some
- * of them cannot know which background that is. GitHub themes a page with its
- * own attributes while `<picture>` matches on `prefers-color-scheme`, which
- * follows the reader's OS, so the two disagree for anyone who pins GitHub's
- * theme against their system. A variant that could land on either canvas has
- * to clear both: 4.59:1 on white and 4.12:1 on the dark canvas, where the
- * lighter grey the project icons use would wash out against white.
+ * GitHub's own muted foreground there, so it reads as a deliberate step down
+ * from the text beside it rather than a washed-out version of it: 6.15:1 on
+ * the dark canvas. It is the weaker of the two on white, at 3.08:1, which
+ * still clears the bar for a mark or for text at a heading's size — the
+ * counts badge, whose digits are far smaller, takes a darker grey instead.
  */
-export const BOTH_THEME_GRAY = '6E7681'
+export const MUTED_GRAY = '8B949E'
 
 /**
  * Fill for a badge standing in for a link: GitHub's own accent, per theme.
