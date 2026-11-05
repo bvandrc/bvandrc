@@ -1,7 +1,7 @@
 import { kebabCase } from 'es-toolkit'
 import type { ComponentChildren } from 'preact'
 
-import { CountBadge, type CountBadgeProps, spacerWidth } from './CountBadge'
+import { CountBadge, type CountBadgeProps, countBadgeWidth } from './CountBadge'
 import {
   ICON_GRAY,
   type ProjectType,
@@ -9,6 +9,7 @@ import {
   TYPE_ICON_HEIGHT,
   TYPE_ICONS,
 } from './constants'
+import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
 import { SectionTitle } from './SectionHeadings'
 
 type Project = CountBadgeProps & {
@@ -261,6 +262,31 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
+/** Width of one `&nbsp;` in GitHub's README body font, in px. */
+const NBSP = 4.5
+
+/** `&nbsp;` between the project title and its type icon. */
+const TITLE_GAP = 4 * NBSP
+
+/** `&nbsp;` between one badge and the next. */
+const BADGE_GAP = 2 * NBSP
+
+/**
+ * Width of the blank image that counterweights a project's badges.
+ *
+ * Balancing the title means matching everything to its right, where the type
+ * icon and the gap before the badges cancel against the left, leaving the
+ * badges themselves and the gap that opens before the icon. Each width is
+ * known at build time, so this is exact per project rather than one estimate
+ * for all of them — which centres every title instead of an average one.
+ */
+const spacerWidth = (repo: string) => {
+  const counts = countBadgeWidth(repo)
+  const badges =
+    counts > 0 ? counts + BADGE_GAP + REPO_BADGE_WIDTH : REPO_BADGE_WIDTH
+  return Math.round(TITLE_GAP + badges)
+}
+
 /** Every repo a project names, which `scripts/fetch-counts.ts` reads. */
 export const PROJECT_REPOS = PROJECT_SECTIONS.flatMap(({ projects }) =>
   projects.map(({ repo }) => repo).filter((repo) => repo !== undefined)
@@ -283,16 +309,14 @@ const ProjectEntry = ({ p }: { p: Project }) => {
     <p>
       {/* a fully transparent copy of the icon balances it, so the title centers on its own text */}
       <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
-      {/* the count badge has no transparent twin to mirror it, so a blank
-          spacer carries its weight instead, sized to that project's own badge */}
-      {spacer > 0 && (
-        <img
-          src="./assets/spacer.png"
-          width={spacer}
-          height={TYPE_ICON_HEIGHT}
-          alt=""
-        />
-      )}
+      {/* the badges have no transparent twin to mirror them, so a blank
+          spacer carries their weight instead, sized to this project's own */}
+      <img
+        src="./assets/spacer.png"
+        width={spacer}
+        height={TYPE_ICON_HEIGHT}
+        alt=""
+      />
       &nbsp;&nbsp;&nbsp;
       <strong>
         <a href={p.href}>{p.name}</a>
@@ -303,12 +327,14 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       {/* linked to the repo like the badge, so the whole right-hand group
           goes to one place rather than to GitHub's own camo URL */}
       <a href={repoUrl(p.repo)}>{typeIcon}</a>
-      {spacer > 0 && (
+      {countBadgeWidth(p.repo) > 0 && (
         <>
           &nbsp;&nbsp;&nbsp;
           <CountBadge repo={p.repo} />
         </>
       )}
+      &nbsp;&nbsp;
+      <RepoBadge repo={p.repo} />
       <br />
       {p.blurb}
       {p.screenshot && (
