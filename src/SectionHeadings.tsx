@@ -1,5 +1,3 @@
-import type { ComponentChildren } from 'preact'
-
 import type { SectionLogo } from './content/projects'
 import { badgeSrc } from './lib/badge'
 
@@ -47,56 +45,65 @@ export const SectionIcon = ({
     />
   )
 
-/**
- * A subsection title, flanked by its icon on each side.
- *
- * `heading` wraps it in an `<h3>`, which is what gives a plain-text title its
- * size and an emoji flank the same. A title that carries its own size has no
- * use for one, and inside a table cell the heading's margins are not wanted.
- */
+/** An `<h3>` subsection title, flanked by its icon on each side. */
 export const SectionTitle = ({
   id,
   icon,
   title,
-  heading = true,
 }: {
   id?: string
   icon: string | SectionLogo
-  title: ComponentChildren
-  heading?: boolean
+  title: string
 }) => {
   const mark = <SectionIcon icon={icon} height={TITLE_LOGO_HEIGHT} />
   // GitHub links an unwrapped README image to its own camo URL, so a logo
   // links back to this heading instead.
   const flank =
     typeof icon === 'string' ? mark : <a href={id && `#${id}`}>{mark}</a>
-  const line = (
-    <>
+  return (
+    <h3 id={id}>
       {flank}&nbsp;&nbsp;&nbsp;&nbsp;{title}&nbsp;&nbsp;&nbsp;&nbsp;{flank}
-    </>
+    </h3>
   )
-  return heading ? <h3 id={id}>{line}</h3> : line
 }
 
 /**
- * A section title drawn as a badge rather than set as heading text.
+ * Gap between a section's emoji and its title, inside the badge.
+ *
+ * Four spaces come to 22.2px at this size. The emoji used to sit outside the
+ * badge, where it was separated by `&nbsp;` runs *and* the badge's own end
+ * padding; in here only the spaces are left to do it.
+ *
+ * The worker takes 32 characters in a value, and the longest of these headings
+ * reaches 30 with this gap — a longer title or a wider gap needs that raised.
+ */
+const HEADING_GAP = '    '
+
+/**
+ * A section title drawn as a badge, emoji and all.
+ *
+ * Holding the emoji inside the badge is what keeps the two on one line. Drawn
+ * beside it they could not be: an image aligns by its bottom edge while a
+ * badge centres its text in its box, so the two sat 6px apart however they
+ * were sized. In here the emoji is text like the rest, laid out by the same
+ * renderer, and it takes the title's size rather than the size of whatever
+ * element happens to surround it.
  *
  * Heading text is near-black on one theme and near-white on the other, which
  * one image cannot be — so it ships both and lets the reader's browser pick,
- * which GitHub's sanitizer allows for exactly this.
- *
- * `<sub>` drops it onto the emoji's line. An image aligns by its bottom edge,
- * which puts it on the baseline, while a badge centres its text in its box —
- * so a 24px badge sets its text 12px above the baseline against the emoji's
- * 6px, and the two sit 6px apart. The box cannot be made shorter, since 24 is
- * the least that holds 20px text without the edges cutting its descenders,
- * and the emoji cannot be made larger without the heading this no longer has.
- * Lowering the badge is what is left, and it closes the gap to under 2px.
+ * which GitHub's sanitizer allows for exactly this. The emoji is unaffected:
+ * a reader's emoji font draws it in its own colours either way.
  */
-export const HeadingBadge = ({ title }: { title: string }) => {
+export const HeadingBadge = ({
+  icon,
+  title,
+}: {
+  icon: string
+  title: string
+}) => {
   const src = (color: string) =>
     badgeSrc({
-      items: [{ value: title }],
+      items: [{ value: `${icon}${HEADING_GAP}${title}${HEADING_GAP}${icon}` }],
       color,
       height: HEADING_BADGE_HEIGHT,
       bold: true,
@@ -104,11 +111,10 @@ export const HeadingBadge = ({ title }: { title: string }) => {
       fontSize: HEADING_FONT_SIZE,
     })
   return (
-    <sub>
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
-        <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
-      </picture>
-    </sub>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
+      {/* the emoji is decorative; the title is the heading */}
+      <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
+    </picture>
   )
 }

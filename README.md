@@ -67,9 +67,7 @@
     <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="385" alt="Retail Website — screenshot preview" />
   </a>
 </p>
-<h3 id="testing-ci-tooling">
-  🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪
-</h3>
+<h3 id="testing-ci-tooling">🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪</h3>
 <p>
   <a href="https://www.npmjs.com/package/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/00000000" height="14" alt /><img src="./assets/spacer.png" width="144" height="14" alt /></a>&nbsp;<a href="https://www.npmjs.com/package/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=lighthouse-audit-utils&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=24&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" height="24" alt="lighthouse-audit-utils" title="lighthouse-audit-utils" /></a>&nbsp;&nbsp;<a href="https://www.npmjs.com/package/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/8B949E" height="14" alt="npm" title="npm" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:25,git-pull-request:31&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=24&amp;padY=6" height="24" alt="25 commits, 31 PRs" title="25 commits, 31 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=24&amp;padY=5.5&amp;iconScale=0.8" height="24" alt="GitHub repository" title="GitHub repository" /></a>
   <br />
@@ -100,9 +98,7 @@
   <br />
   Rule-based ordering of nested glob results for test configs.
 </p>
-<h3 id="other-packages">
-  📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦
-</h3>
+<h3 id="other-packages">📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦</h3>
 <p>
   <a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/00000000" height="14" alt /><img src="./assets/spacer.png" width="144" height="14" alt /></a>&nbsp;<a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=tsx-to-pdf&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=24&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" height="24" alt="tsx-to-pdf" title="tsx-to-pdf" /></a>&nbsp;&nbsp;<a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/8B949E" height="14" alt="npm" title="npm" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:40,git-pull-request:51&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=24&amp;padY=6" height="24" alt="40 commits, 51 PRs" title="40 commits, 51 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=24&amp;padY=5.5&amp;iconScale=0.8" height="24" alt="GitHub repository" title="GitHub repository" /></a>
   <br />
@@ -128,9 +124,7 @@
   <br />
   Fast, deduplicated USB export tool for Serato DJ.
 </p>
-<h3 id="other-projects">
-  💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡
-</h3>
+<h3 id="other-projects">💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡</h3>
 <p>
   <a href="https://badgesmith.bvandrc.workers.dev/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/cloudflareworkers/00000000" height="14" alt /><img src="./assets/spacer.png" width="144" height="14" alt /></a>&nbsp;<a href="https://badgesmith.bvandrc.workers.dev/" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=badgesmith&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=24&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" height="24" alt="badgesmith" title="badgesmith" /></a>&nbsp;&nbsp;<a href="https://badgesmith.bvandrc.workers.dev/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/cloudflareworkers/8B949E" height="14" alt="Cloudflare Worker" title="Cloudflare Worker" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/badgesmith" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:18,git-pull-request:18&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=24&amp;padY=6" height="24" alt="18 commits, 18 PRs" title="18 commits, 18 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/badgesmith" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=24&amp;padY=5.5&amp;iconScale=0.8" height="24" alt="GitHub repository" title="GitHub repository" /></a>
   <br />
@@ -152,7 +146,7 @@
 <table>
   <tr>
     <td colspan="2" align="center">
-      🖥️&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Core%20Development&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Core%20Development&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;🖥️
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%20%20%20%20Core%20Development%20%20%20%20%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%20%20%20%20Core%20Development%20%20%20%20%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture>
     </td>
   </tr>
   <tr>
@@ -201,7 +195,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      🧪&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Testing&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Testing&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;🧪
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%20%20%20%20Testing%20%20%20%20%F0%9F%A7%AA&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%20%20%20%20Testing%20%20%20%20%F0%9F%A7%AA&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture>
     </td>
   </tr>
   <tr>
@@ -227,7 +221,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      🛠️&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Tools&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Tools&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;🛠️
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%20%20%20%20Tools%20%20%20%20%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%20%20%20%20Tools%20%20%20%20%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture>
     </td>
   </tr>
   <tr>
@@ -262,7 +256,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      📝&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Other%20Languages&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Other%20Languages&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;📝
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%20%20%20%20Other%20Languages%20%20%20%20%F0%9F%93%9D&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%20%20%20%20Other%20Languages%20%20%20%20%F0%9F%93%9D&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture>
     </td>
   </tr>
   <tr>

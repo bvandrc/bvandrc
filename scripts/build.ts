@@ -41,14 +41,11 @@ const output = md
           .replace(/>\s+&/g, '>&')
       : anchor
   )
-  // a <picture>, and a <sub> holding nothing but one, render the text nodes
-  // between their children — so the newlines the printer leaves around them
-  // would come out as spaces beside the image. Both hug their contents.
-  .replace(/<(picture|sub)>[\s\S]*?<\/\1>/g, (wrapper, tag: string) =>
-    tag === 'picture' ||
-    /^<sub>\s*<picture>[\s\S]*<\/picture>\s*<\/sub>$/.test(wrapper)
-      ? wrapper.replace(/>\s+</g, '><')
-      : wrapper
+  // a <picture> renders the text nodes between its children, so the newlines
+  // the printer puts around <source> and <img> would come out as spaces
+  // beside the image. Nothing else belongs in one, so it hugs its contents.
+  .replace(/<picture>[\s\S]*?<\/picture>/g, (picture) =>
+    picture.replace(/>\s+</g, '><')
   )
   // a jump link that the printer wrapped onto lines of its own would underline
   // the space its newlines render as, so it hugs its contents too
