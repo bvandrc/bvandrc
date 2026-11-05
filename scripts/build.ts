@@ -25,11 +25,11 @@ const output = md
   // against and underline the gaps on hover. Only anchors holding nothing but
   // images and nbsp are touched, which leaves the screenshots' alone — theirs
   // sit on their own lines where the space does not show.
-  .replace(/<a href="[^"]*">[\s\S]*?<\/a>/g, (anchor) =>
+  .replace(/<a href="[^"]*"[^>]*>[\s\S]*?<\/a>/g, (anchor) =>
     // only anchors holding nothing but these images and nbsp, which leaves
     // the screenshots' alone: theirs sit on their own lines, where the space
     // does not show
-    /^<a href="[^"]*">(?:\s|&nbsp;|<img src="(?:https:\/\/(?:multi-icon-badge|cdn\.simpleicons\.org)|\.\/assets\/spacer\.png)[^>]*\/>)+<\/a>$/.test(
+    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/(?:multi-icon-badge|cdn\.simpleicons\.org)|\.\/assets\/spacer\.png)[^>]*\/>)+<\/a>$/.test(
       anchor
     )
       ? anchor

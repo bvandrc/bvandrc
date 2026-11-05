@@ -304,7 +304,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           an unwrapped README image still links to its own camo URL, so they
           go where the title goes. One anchor holds the pair, which is what
           keeps them touching — a space between would widen this side. */}
-      <a href={p.href}>
+      <a href={p.href} target="_blank" rel="noopener">
         <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
         <img
           src="./assets/spacer.png"
@@ -315,7 +315,9 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       </a>
       &nbsp;&nbsp;&nbsp;
       <strong>
-        <a href={p.href}>{p.name}</a>
+        <a href={p.href} target="_blank" rel="noopener">
+          {p.name}
+        </a>
       </strong>
       {/* one more than the gap after the icon, which the badge's own left
           padding widens by about 6px, so the icon sits evenly between the two */}
@@ -324,17 +326,22 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           image to its own camo URL — an asset rather than anywhere useful.
           One anchor each, never one around the group: the spacing between
           them would sit inside it as link text and draw its underline. */}
-      <a href={icon.published ? p.href : repoUrl(p.repo)}>{typeIcon}</a>
+      <a
+        href={icon.published ? p.href : repoUrl(p.repo)}
+        target="_blank"
+        rel="noopener">
+        {typeIcon}
+      </a>
       &nbsp;&nbsp;&nbsp;
       {countBadgeWidth(p.repo) > 0 && (
         <>
-          <a href={repoUrl(p.repo)}>
+          <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
             <CountBadge repo={p.repo} />
           </a>
           &nbsp;
         </>
       )}
-      <a href={repoUrl(p.repo)}>
+      <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
         <RepoBadge />
       </a>
       <br />
@@ -342,7 +349,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       {p.screenshot && (
         <>
           <br />
-          <a href={p.href}>
+          <a href={p.href} target="_blank" rel="noopener">
             <img
               src={p.screenshot}
               width="385"
