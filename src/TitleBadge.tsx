@@ -34,7 +34,7 @@ const TITLE_FONT = 'arial'
  *
  * Under the 20 a section heading uses, so the two still read as a hierarchy.
  */
-const TITLE_FONT_SIZE = 19
+const TITLE_FONT_SIZE = 18
 
 /**
  * Horizontal padding the renderer leaves on each end of a title, in px.
