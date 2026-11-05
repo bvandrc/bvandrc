@@ -1,7 +1,8 @@
 import { kebabCase } from 'es-toolkit'
 
 import { CountBadge, countBadgeWidth } from './CountBadge'
-import { ICON_GRAY, repoUrl, TYPE_ICON_HEIGHT, TYPE_ICONS } from './constants'
+import { ICON_GRAY, repoUrl, TYPE_ICON_HEIGHT } from './constants'
+import { TYPE_ICONS } from './content/project-types'
 import { PROJECTS } from './content/projects'
 import type { Project } from './content/types'
 import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
