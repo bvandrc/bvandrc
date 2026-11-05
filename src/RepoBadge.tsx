@@ -22,11 +22,10 @@ const LINK_BLUE = '4d79b2'
  *
  * Three strokes, which is what survives at `BADGE_HEIGHT` — a `code-square`
  * or a `package` fills in at this size.
+ *
+ * It leads the word, as the icons on the counts badge lead their own values.
  */
 const ITEMS = 'file-directory:repo'
-
-/** Draws the icon after the word, matching the badge beside it. */
-const ICON_RIGHT = true
 
 /**
  * Height of this badge, a pixel over the counts badge beside it.
@@ -56,7 +55,6 @@ export const RepoBadge = () => (
     src={badgeSrc({
       items: ITEMS,
       color: LINK_BLUE,
-      iconRight: ICON_RIGHT,
       height: REPO_BADGE_HEIGHT,
     })}
     height={REPO_BADGE_HEIGHT}
