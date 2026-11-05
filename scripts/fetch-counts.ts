@@ -2,7 +2,7 @@ import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-import { PROJECT_REPOS } from '../src/Projects'
+import { PROJECT_REPOS } from '../src/content/projects'
 
 /**
  * Rewrites `src/generated/repo-counts.ts` from the GitHub API.
