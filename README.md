@@ -146,7 +146,7 @@
 <table>
   <tr>
     <td colspan="2" align="center">
-      <h3>🖥️&nbsp;&nbsp;&nbsp;&nbsp;Core Development&nbsp;&nbsp;&nbsp;&nbsp;🖥️</h3>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Core%20Development%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%96%A5%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Core%20Development%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%96%A5%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture>
     </td>
   </tr>
   <tr>
@@ -195,7 +195,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing&nbsp;&nbsp;&nbsp;&nbsp;🧪</h3>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%C2%A0%C2%A0%C2%A0%C2%A0Testing%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%A7%AA&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%A7%AA%C2%A0%C2%A0%C2%A0%C2%A0Testing%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%A7%AA&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture>
     </td>
   </tr>
   <tr>
@@ -203,8 +203,8 @@
       <em>E2E</em>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&amp;logo=cypress&amp;logoColor=058a5e" alt="Cypress" />
       <img src="https://img.shields.io/badge/-Playwright-%232EAD33?style=for-the-badge&amp;logo=playwright&amp;logoColor=white" alt="Playwright" />
+      <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&amp;logo=cypress&amp;logoColor=058a5e" alt="Cypress" />
       <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&amp;logo=selenium&amp;logoColor=white" alt="Selenium" />
       <img src="https://img.shields.io/badge/Puppeteer-%2340B5A4.svg?style=for-the-badge&amp;logo=Puppeteer&amp;logoColor=black" alt="Puppeteer" />
     </td>
@@ -221,7 +221,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>🛠️&nbsp;&nbsp;&nbsp;&nbsp;Tools&nbsp;&nbsp;&nbsp;&nbsp;🛠️</h3>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Tools%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%9B%A0%EF%B8%8F%C2%A0%C2%A0%C2%A0%C2%A0Tools%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%9B%A0%EF%B8%8F&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture>
     </td>
   </tr>
   <tr>
@@ -256,7 +256,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>📝&nbsp;&nbsp;&nbsp;&nbsp;Other Languages&nbsp;&nbsp;&nbsp;&nbsp;📝</h3>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture>
     </td>
   </tr>
   <tr>
