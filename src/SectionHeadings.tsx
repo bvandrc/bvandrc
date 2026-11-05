@@ -1,4 +1,4 @@
-import type { SectionLogo } from './content/types'
+import type { SectionLogo } from './content/projects'
 
 /** Height of a section logo in an `<h3>` title, matching an emoji's. */
 const TITLE_LOGO_HEIGHT = 20

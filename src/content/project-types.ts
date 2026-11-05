@@ -1,5 +1,3 @@
-import type { ProjectType } from './types'
-
 export type ProjectTypeIcon = {
   /** simpleicons.org slug */
   slug: string
@@ -26,4 +24,7 @@ export const TYPE_ICONS = {
   },
   python: { slug: 'python', title: 'Python', published: true },
   arduino: { slug: 'arduino', title: 'Arduino', published: false },
-} satisfies Record<ProjectType, ProjectTypeIcon>
+} satisfies Record<string, ProjectTypeIcon>
+
+/** Every kind of project, one per entry in `TYPE_ICONS`. */
+export type ProjectType = keyof typeof TYPE_ICONS

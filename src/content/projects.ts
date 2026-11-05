@@ -1,4 +1,31 @@
-import type { ProjectSection } from './types'
+import type { ProjectType } from './project-types'
+
+export type Project = {
+  name: string
+  href: string
+  type: ProjectType
+  /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
+  repo: string
+  blurb: string
+  /** screenshot path; its alt text is derived from the project name */
+  screenshot?: string
+}
+
+/** A simpleicons.org logo, drawn in its brand colour. */
+export type SectionLogo = {
+  /** simpleicons.org slug */
+  slug: string
+  /** hex colour, without the `#` */
+  color: string
+}
+
+export type ProjectSection = {
+  /** An emoji, or a logo where no emoji fits. */
+  icon: string | SectionLogo
+  title: string
+  intro?: string
+  projects: Project[]
+}
 
 export const PROJECTS: ProjectSection[] = [
   {
