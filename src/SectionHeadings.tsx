@@ -42,16 +42,19 @@ export const SectionTitle = ({
   logo?: SectionLogo
   title: string
 }) => {
+  // GitHub links an unwrapped README image to its own camo URL, so each logo
+  // links back to this heading instead. One anchor apiece, never one around
+  // the pair: the space between would sit inside it and draw its underline.
   const mark = (
-    <SectionMark emoji={emoji} logo={logo} height={TITLE_LOGO_HEIGHT} />
-  )
-  // GitHub links an unwrapped README image to its own camo URL, so a logo
-  // pair links back to this heading instead. A space keeps the pair apart,
-  // where two emoji carry their own side bearing.
-  const pair = logo ? (
     <a href={id && `#${id}`}>
-      {mark}&nbsp;{mark}
+      <SectionMark emoji={emoji} logo={logo} height={TITLE_LOGO_HEIGHT} />
     </a>
+  )
+  // A space keeps the pair apart, where two emoji carry their own side bearing.
+  const pair = logo ? (
+    <>
+      {mark}&nbsp;{mark}
+    </>
   ) : (
     // one string, since the pretty-printer would break two text nodes apart
     emoji.repeat(2)

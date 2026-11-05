@@ -24,7 +24,7 @@
   <a href="#other-projects">💡&nbsp;Other Projects</a>
 </p>
 <h3 id="react-websites">
-  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" />&nbsp;<img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" />&nbsp;<img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>
+  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt="⚛️" /></a>
 </h3>
 <p>
   <em>
