@@ -29,7 +29,7 @@ const output = md
     // only anchors holding nothing but these images and nbsp, which leaves
     // the screenshots' alone: theirs sit on their own lines, where the space
     // does not show
-    /^<a href="[^"]*">(?:\s|&nbsp;|<img src="https:\/\/(?:multi-icon-badge|cdn\.simpleicons\.org)[^>]*\/>)+<\/a>$/.test(
+    /^<a href="[^"]*">(?:\s|&nbsp;|<img src="(?:https:\/\/(?:multi-icon-badge|cdn\.simpleicons\.org)|\.\/assets\/spacer\.png)[^>]*\/>)+<\/a>$/.test(
       anchor
     )
       ? anchor
@@ -38,8 +38,5 @@ const output = md
           .replace(/>\s+&/g, '>&')
       : anchor
   )
-  // the two counterweights must touch for the same reason: a space between
-  // them would widen the left side and pull the title off centre
-  .replace(/\n\s*(?=<img src="\.\/assets\/spacer\.png")/g, '')
 writeFileSync(join(root, 'README.md'), output)
 console.log('README.md generated')

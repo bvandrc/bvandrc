@@ -298,16 +298,21 @@ const ProjectEntry = ({ p }: { p: Project }) => {
   )
   return (
     <p>
-      {/* a fully transparent copy of the icon balances it, so the title centers on its own text */}
-      <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
-      {/* the badges have no transparent twin to mirror them, so a blank
-          spacer carries their weight instead, sized to this project's own */}
-      <img
-        src="./assets/spacer.png"
-        width={spacer}
-        height={TYPE_ICON_HEIGHT}
-        alt=""
-      />
+      {/* a fully transparent copy of the icon balances it, so the title
+          centers on its own text, and a blank spacer carries the badges'
+          weight, which have no twin to mirror them. Both are invisible but
+          an unwrapped README image still links to its own camo URL, so they
+          go where the title goes. One anchor holds the pair, which is what
+          keeps them touching — a space between would widen this side. */}
+      <a href={p.href}>
+        <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
+        <img
+          src="./assets/spacer.png"
+          width={spacer}
+          height={TYPE_ICON_HEIGHT}
+          alt=""
+        />
+      </a>
       &nbsp;&nbsp;&nbsp;
       <strong>
         <a href={p.href}>{p.name}</a>
