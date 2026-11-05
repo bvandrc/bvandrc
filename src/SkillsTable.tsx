@@ -1,5 +1,5 @@
+import type { SkillBadge } from './content/skills'
 import { SKILLS } from './content/skills'
-import type { SkillBadge } from './content/types'
 import { Lines } from './Lines'
 import { SectionTitle } from './SectionHeadings'
 
