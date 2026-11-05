@@ -1,7 +1,7 @@
 import type { SkillBadge } from './content/skills'
 import { SKILLS } from './content/skills'
 import { Lines } from './Lines'
-import { HeadingBadge } from './SectionHeadings'
+import { SectionTitle } from './SectionHeadings'
 
 const Shield = ({ b }: { b: SkillBadge }) => (
   <img
@@ -16,7 +16,7 @@ export const SkillsTable = () => (
       <>
         <tr>
           <td colspan={2} align="center">
-            <HeadingBadge icon={s.icon} title={s.title} />
+            <SectionTitle icon={s.icon} title={s.title} />
           </td>
         </tr>
         {s.rows.map((row) => (

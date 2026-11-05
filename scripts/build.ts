@@ -41,12 +41,6 @@ const output = md
           .replace(/>\s+&/g, '>&')
       : anchor
   )
-  // a <picture> renders the text nodes between its children, so the newlines
-  // the printer puts around <source> and <img> would come out as spaces
-  // beside the image. Nothing else belongs in one, so it hugs its contents.
-  .replace(/<picture>[\s\S]*?<\/picture>/g, (picture) =>
-    picture.replace(/>\s+</g, '><')
-  )
   // a jump link that the printer wrapped onto lines of its own would underline
   // the space its newlines render as, so it hugs its contents too
   .replace(/(<a href="#[^"]*">)\s+([\s\S]*?)\s+<\/a>/g, '$1$2</a>')

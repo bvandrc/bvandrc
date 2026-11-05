@@ -32,13 +32,6 @@ type BadgeParams = {
    * of it; the rest becomes padding above and below
    */
   contentHeight?: number
-  /**
-   * The badge's own box, for one that does not sit on a project's title line.
-   *
-   * Everything on that line shares `BADGE_HEIGHT` so the badges centre
-   * together; a heading has no such neighbours and sets its own.
-   */
-  height?: number
   /** draws the icons smaller against their values; 1 fills the height */
   iconScale?: number
   bold?: boolean
@@ -73,8 +66,7 @@ export const badgeSrc = ({
   items,
   color,
   iconRight,
-  height = BADGE_HEIGHT,
-  contentHeight = height,
+  contentHeight = BADGE_HEIGHT,
   iconScale,
   bold,
   underline,
@@ -89,8 +81,8 @@ export const badgeSrc = ({
       return icon === undefined ? escaped : `${icon}:${escaped}`
     })
     .join(',')
-  const padY = (height - contentHeight) / 2
-  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=${padY}${
+  const padY = (BADGE_HEIGHT - contentHeight) / 2
+  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${BADGE_HEIGHT}&padY=${padY}${
     iconRight ? '&iconSide=right' : ''
   }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
     bold ? '&bold=true' : ''
