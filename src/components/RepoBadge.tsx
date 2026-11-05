@@ -1,5 +1,6 @@
 import { LINK_BLUE } from '../constants'
 import { BADGE_HEIGHT, badgeSrc } from '../lib/badge'
+import { ThemedBadge } from './ThemedBadge'
 
 /**
  * What the badge reads.
@@ -51,18 +52,23 @@ export const REPO_BADGE_WIDTH = 48.26
  * Carries no link of its own: the title line wraps this and everything
  * beside it in one anchor to the repository.
  */
-export const RepoBadge = () => (
-  <img
-    src={badgeSrc({
+export const RepoBadge = () => {
+  const src = (color: string) =>
+    badgeSrc({
       items: ITEMS,
-      color: LINK_BLUE,
+      color,
       contentHeight: REPO_CONTENT_HEIGHT,
       iconScale: REPO_ICON_SCALE,
-    })}
-    height={BADGE_HEIGHT}
-    // the SVG's own aria-label is not exposed through an <img>, so this is
-    // the badge's accessible name — the worker needs no say in it
-    alt="GitHub Repository"
-    title="GitHub Repository"
-  />
-)
+    })
+  return (
+    <ThemedBadge
+      src={src(LINK_BLUE.DARK)}
+      light={src(LINK_BLUE.LIGHT)}
+      height={BADGE_HEIGHT}
+      // the SVG's own aria-label is not exposed through an <img>, so this is
+      // the badge's accessible name — the worker needs no say in it
+      alt="GitHub Repository"
+      title="GitHub Repository"
+    />
+  )
+}
