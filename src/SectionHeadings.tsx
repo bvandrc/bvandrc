@@ -68,16 +68,30 @@ export const SectionTitle = ({
 }
 
 /**
+ * Longest value the worker will render, which is what bounds the gap below.
+ *
+ * Its own limit, not ours: asking for more is a 400 rather than a narrower
+ * badge. An emoji spends up to three of these, since the count is of code
+ * units and one may carry a variation selector on top of its surrogate pair.
+ */
+const MAX_VALUE_LENGTH = 32
+
+/**
  * Gap between a section's emoji and its title, inside the badge.
  *
- * Four spaces come to 22.2px at this size. The emoji used to sit outside the
- * badge, where it was separated by `&nbsp;` runs *and* the badge's own end
- * padding; in here only the spaces are left to do it.
+ * As wide as the longest heading can pay for, since the emoji sits inside the
+ * badge now: outside it, the `&nbsp;` runs and the badge's own end padding
+ * separated the two, and in here only these spaces are left to do it.
  *
- * The worker takes 32 characters in a value, and the longest of these headings
- * reaches 30 with this gap — a longer title or a wider gap needs that raised.
+ * Derived rather than written down, so a longer title narrows the gap for
+ * every heading instead of overrunning the limit and rendering nothing.
  */
-const HEADING_GAP = '    '
+const headingGap = (headings: readonly { icon: string; title: string }[]) => {
+  const longest = Math.max(
+    ...headings.map(({ icon, title }) => icon.length * 2 + title.length)
+  )
+  return ' '.repeat(Math.max(0, Math.floor((MAX_VALUE_LENGTH - longest) / 2)))
+}
 
 /**
  * A section title drawn as a badge, emoji and all.
@@ -89,6 +103,9 @@ const HEADING_GAP = '    '
  * renderer, and it takes the title's size rather than the size of whatever
  * element happens to surround it.
  *
+ * The gap either side of the title is as wide as the longest of `siblings`
+ * can afford, so every heading in a set is spaced alike.
+ *
  * Heading text is near-black on one theme and near-white on the other, which
  * one image cannot be — so it ships both and lets the reader's browser pick,
  * which GitHub's sanitizer allows for exactly this. The emoji is unaffected:
@@ -97,13 +114,17 @@ const HEADING_GAP = '    '
 export const HeadingBadge = ({
   icon,
   title,
+  siblings,
 }: {
   icon: string
   title: string
+  /** every heading drawn alongside this one, which together set the gap */
+  siblings: readonly { icon: string; title: string }[]
 }) => {
+  const gap = headingGap(siblings)
   const src = (color: string) =>
     badgeSrc({
-      items: [{ value: `${icon}${HEADING_GAP}${title}${HEADING_GAP}${icon}` }],
+      items: [{ value: `${icon}${gap}${title}${gap}${icon}` }],
       color,
       height: HEADING_BADGE_HEIGHT,
       bold: true,

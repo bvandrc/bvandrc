@@ -16,7 +16,7 @@ export const SkillsTable = () => (
       <>
         <tr>
           <td colspan={2} align="center">
-            <HeadingBadge icon={s.icon} title={s.title} />
+            <HeadingBadge icon={s.icon} title={s.title} siblings={SKILLS} />
           </td>
         </tr>
         {s.rows.map((row) => (
