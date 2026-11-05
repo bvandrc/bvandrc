@@ -100,6 +100,12 @@ export const SKILLS: SkillSection[] = [
               logoColor: 'white',
             },
             {
+              alt: 'shadcn/ui',
+              path: 'shadcn%2Fui-000000',
+              logo: 'shadcnui',
+              logoColor: 'white',
+            },
+            {
               alt: 'JQuery',
               path: 'jquery-%230769AD.svg',
               logo: 'jquery',
@@ -194,8 +200,8 @@ export const SKILLS: SkillSection[] = [
         lines: [
           [
             {
-              alt: 'Claude',
-              path: 'Claude-D97757',
+              alt: 'Claude Code',
+              path: 'Claude_Code-D97757',
               logo: 'claude',
               logoColor: 'white',
             },
@@ -203,12 +209,6 @@ export const SKILLS: SkillSection[] = [
               alt: 'GitHub Copilot',
               path: 'github_copilot-8957E5',
               logo: 'github-copilot',
-              logoColor: 'white',
-            },
-            {
-              alt: 'Cursor',
-              path: 'Cursor-%23000000',
-              logo: 'Cursor',
               logoColor: 'white',
             },
           ],

@@ -175,6 +175,7 @@
     <td align="center">
       <img src="https://img.shields.io/badge/zod-%233068b7.svg?style=for-the-badge&amp;logo=zod&amp;logoColor=white" alt="Zod" />
       <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&amp;logo=tailwind-css&amp;logoColor=white" alt="TailwindCSS" />
+      <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&amp;logo=shadcnui&amp;logoColor=white" alt="shadcn/ui" />
       <img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&amp;logo=jquery&amp;logoColor=white" alt="JQuery" />
     </td>
   </tr>
@@ -222,9 +223,8 @@
       <em>AI</em>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&amp;logo=claude&amp;logoColor=white" alt="Claude" />
+      <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&amp;logo=claude&amp;logoColor=white" alt="Claude Code" />
       <img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&amp;logo=github-copilot&amp;logoColor=white" alt="GitHub Copilot" />
-      <img src="https://img.shields.io/badge/Cursor-%23000000?style=for-the-badge&amp;logo=Cursor&amp;logoColor=white" alt="Cursor" />
     </td>
   </tr>
   <tr>
