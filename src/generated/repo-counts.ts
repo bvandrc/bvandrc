@@ -9,6 +9,7 @@ type RepoCounts = { commits: number; prs: number }
  * has never read — a private one before its token is configured — has no entry.
  */
 export const REPO_COUNTS: Record<string, RepoCounts | undefined> = {
+  'SD': { commits: 547, prs: 0 },
   'arduino-totem': { commits: 36, prs: 7 },
   'bike-ride-mapper': { commits: 87, prs: 44 },
   'detect-deploy': { commits: 17, prs: 25 },
@@ -21,7 +22,6 @@ export const REPO_COUNTS: Record<string, RepoCounts | undefined> = {
   'react-toolkit': { commits: 19, prs: 16 },
   'serato-tools': { commits: 343, prs: 59 },
   'specialingredientbass.com': { commits: 93, prs: 55 },
-  'spotify-organizer': { commits: 547, prs: 0 },
   'tsx-to-pdf': { commits: 40, prs: 51 },
   'womanhoodofwubz.com': { commits: 49, prs: 44 },
 }

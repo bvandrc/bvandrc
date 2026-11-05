@@ -20,6 +20,13 @@ const output = md
   .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
   .replace(/<strong>\n\s*/g, '<strong>')
   .replace(/\n\s*<\/strong>/g, '</strong>')
+  // the badge's link has to hug it: whitespace inside an inline anchor
+  // renders as a space, which would underline a gap beside the badge and
+  // widen the right side the title is centred against
+  .replace(
+    /<a href="([^"]*)">\s*(<img src="https:\/\/multi-icon-badge[^>]*\/>)\s*<\/a>/g,
+    '<a href="$1">$2</a>'
+  )
   // the two counterweights must touch for the same reason: a space between
   // them would widen the left side and pull the title off centre
   .replace(/\n\s*(?=<img src="\.\/assets\/spacer\.png")/g, '')

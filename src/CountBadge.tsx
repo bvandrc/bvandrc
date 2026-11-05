@@ -87,11 +87,13 @@ export const CountBadge = ({ repo }: CountBadgeProps) => {
   }
   const label = `${counts.commits} commits, ${counts.prs} PRs`
   return (
-    <img
-      src={`${WORKER_ORIGIN}/?items=git-commit:${counts.commits},git-pull-request:${counts.prs}&${STYLE}`}
-      height={BADGE_HEIGHT}
-      alt={label}
-      title={label}
-    />
+    <a href={`https://github.com/bvandrc/${repo}`}>
+      <img
+        src={`${WORKER_ORIGIN}/?items=git-commit:${counts.commits},git-pull-request:${counts.prs}&${STYLE}`}
+        height={BADGE_HEIGHT}
+        alt={label}
+        title={label}
+      />
+    </a>
   )
 }

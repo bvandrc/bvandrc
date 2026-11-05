@@ -239,7 +239,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'spotify-organizer',
         href: 'https://github.com/bvandrc/SD',
         type: 'python',
-        repo: 'spotify-organizer',
+        repo: 'SD',
         blurb: (
           <>
             Python automation for my 11k+ track DJ library utilizing the Spotify
