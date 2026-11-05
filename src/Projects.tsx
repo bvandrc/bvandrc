@@ -1,13 +1,14 @@
 import { kebabCase, mapValues } from 'es-toolkit'
 
 import { CountBadge, countBadgeWidth } from './CountBadge'
-import { ICON_GRAY, repoUrl, TYPE_ICON_HEIGHT } from './constants'
+import { repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
 import { PROJECTS } from './content/projects'
 import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
 import { SectionIcon, SectionTitle } from './SectionHeadings'
 import { TITLE_BADGE_PAD, TitleBadge } from './TitleBadge'
+import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './TypeIcon'
 
 /** Width of one `&nbsp;` in GitHub's README body font, in px. */
 const NBSP = 4.5
@@ -28,8 +29,27 @@ const TITLE_GAP = mapValues(TEXT_TITLE_GAP, (count) =>
   Math.max(0, Math.round((count * NBSP - TITLE_BADGE_PAD) / NBSP))
 )
 
-/** `&nbsp;` between the type icon and the badges after it. */
-const ICON_GAP = 3
+/**
+ * Height of the blank counterweight, which only its width matters for.
+ *
+ * Kept under the badges' own so it cannot be what sets the line's height,
+ * and it carries no mark to be sized against anything.
+ */
+const SPACER_HEIGHT = 14
+
+/** `&nbsp;` the type icon sat between back when it was a bare image. */
+const TEXT_ICON_GAP = 3
+
+/**
+ * `&nbsp;` between the type icon and the badges after it.
+ *
+ * Fewer than when the icon was an image, for the same reason the title's are:
+ * it is a badge now and carries `TYPE_ICON_PAD` at each end.
+ */
+const ICON_GAP = Math.max(
+  0,
+  Math.round((TEXT_ICON_GAP * NBSP - TYPE_ICON_PAD) / NBSP)
+)
 
 /**
  * `&nbsp;` between one badge and the next.
@@ -46,48 +66,39 @@ const Gap = ({ n }: { n: number }) => <>{'\u00a0'.repeat(n)}</>
  * Width of the blank image that counterweights a project's badges.
  *
  * Balancing the title means matching everything to its right against
- * everything to its left, where the type icon cancels against its transparent
- * twin and the title's own padding cancels against itself, leaving the badges,
- * the gap before the icon, and whatever the title's two gaps differ by. Each
+ * everything to its left, where only the title's own padding cancels, being
+ * the same at both of its ends. What is left is the type icon, the badges,
+ * the gap between them, and whatever the title's two gaps differ by. Each
  * width is known at build time, so this is exact per project rather than one
  * estimate for all of them — which centres every title instead of an average
  * one.
+ *
+ * The icon used to be mirrored by a transparent copy of itself on this side.
+ * It is a badge now, of a width the same for every type, so the spacer can
+ * carry it like everything else rather than the line carrying a second image.
  */
 const spacerWidth = (repo: string) => {
   const counts = countBadgeWidth(repo)
   const badges =
     counts > 0 ? counts + BADGE_GAP * NBSP + REPO_BADGE_WIDTH : REPO_BADGE_WIDTH
   const gaps = TITLE_GAP.after - TITLE_GAP.before + ICON_GAP
-  return Math.round(gaps * NBSP + badges)
+  return Math.round(gaps * NBSP + TYPE_ICON_WIDTH + badges)
 }
 
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
-  const iconUrl = (color: string) =>
-    `https://cdn.simpleicons.org/${icon.slug}/${color}`
   const spacer = spacerWidth(p.repo)
-  const typeIcon = (
-    <img
-      src={iconUrl(ICON_GRAY)}
-      height={TYPE_ICON_HEIGHT}
-      alt={icon.title}
-      title={icon.title}
-    />
-  )
   return (
     <p>
-      {/* a fully transparent copy of the icon balances it, so the title
-          centers on its own text, and a blank spacer carries the badges'
-          weight, which have no twin to mirror them. Both are invisible but
-          an unwrapped README image still links to its own camo URL, so they
-          go where the title goes. One anchor holds the pair, which is what
-          keeps them touching — a space between would widen this side. */}
+      {/* a blank spacer carries the weight of everything right of the title,
+          so the title centers on its own text. It is invisible, but an
+          unwrapped README image still links to its own camo URL, so it goes
+          where the title goes. */}
       <a href={p.href} target="_blank" rel="noopener">
-        <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
         <img
           src="./assets/spacer.png"
           width={spacer}
-          height={TYPE_ICON_HEIGHT}
+          height={SPACER_HEIGHT}
           alt=""
         />
       </a>
@@ -108,7 +119,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
         href={icon.published ? p.href : repoUrl(p.repo)}
         target="_blank"
         rel="noopener">
-        {typeIcon}
+        <TypeIcon type={p.type} />
       </a>
       <Gap n={ICON_GAP} />
       {countBadgeWidth(p.repo) > 0 && (

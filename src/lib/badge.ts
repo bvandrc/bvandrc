@@ -15,11 +15,16 @@ const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
  */
 export const BADGE_HEIGHT = 24
 
-type BadgeItem = {
-  /** simpleicons or octicon slug drawn beside the value; omitted for text alone */
-  icon?: string
-  value: string
-}
+/**
+ * One thing a badge holds: an icon and its value, or either on its own.
+ *
+ * The slug is a simple-icons or octicon one. An icon with no value is how a
+ * badge stands in for a bare image, which is what centres it with the badges
+ * beside it.
+ */
+type BadgeItem =
+  | { icon: string; value?: string }
+  | { icon?: string; value: string }
 
 type BadgeParams = {
   items: BadgeItem[]
@@ -82,10 +87,11 @@ export const badgeSrc = ({
   fontSize,
 }: BadgeParams) => {
   // the separators are the syntax, so only the values are escaped — a project
-  // name carries spaces where a count or a slug never does
+  // name carries spaces where a count or a slug never does. An icon with no
+  // value keeps its colon, which is how the worker reads that form back
   const query = items
     .map(({ icon, value }) => {
-      const escaped = encodeURIComponent(value)
+      const escaped = value === undefined ? '' : encodeURIComponent(value)
       return icon === undefined ? escaped : `${icon}:${escaped}`
     })
     .join(',')
