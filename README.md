@@ -222,9 +222,8 @@
       <em>AI</em>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/Claude-D97757?style=for-the-badge&amp;logo=claude&amp;logoColor=white" alt="Claude" />
+      <img src="https://img.shields.io/badge/Claude_Code-D97757?style=for-the-badge&amp;logo=claude&amp;logoColor=white" alt="Claude Code" />
       <img src="https://img.shields.io/badge/github_copilot-8957E5?style=for-the-badge&amp;logo=github-copilot&amp;logoColor=white" alt="GitHub Copilot" />
-      <img src="https://img.shields.io/badge/Cursor-%23000000?style=for-the-badge&amp;logo=Cursor&amp;logoColor=white" alt="Cursor" />
     </td>
   </tr>
   <tr>
