@@ -3,8 +3,6 @@ import { REPO_COUNTS } from './generated/repo-counts'
 /** The deployed worker that renders the badges. */
 const WORKER_ORIGIN = 'https://multi-icon-badge.bvandrc.workers.dev'
 
-
-
 export type CountBadgeProps = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo?: string
