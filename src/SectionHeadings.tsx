@@ -30,7 +30,7 @@ export const SectionMark = ({
     emoji
   )
 
-/** An `<h3>` subsection title, flanked by its emoji (or logo) doubled on each side. */
+/** An `<h3>` subsection title, flanked by its emoji (or logo) on each side. */
 export const SectionTitle = ({
   id,
   emoji,
@@ -42,26 +42,15 @@ export const SectionTitle = ({
   logo?: SectionLogo
   title: string
 }) => {
-  // GitHub links an unwrapped README image to its own camo URL, so each logo
-  // links back to this heading instead. One anchor apiece, never one around
-  // the pair: the space between would sit inside it and draw its underline.
   const mark = (
-    <a href={id && `#${id}`}>
-      <SectionMark emoji={emoji} logo={logo} height={TITLE_LOGO_HEIGHT} />
-    </a>
+    <SectionMark emoji={emoji} logo={logo} height={TITLE_LOGO_HEIGHT} />
   )
-  // A space keeps the pair apart, where two emoji carry their own side bearing.
-  const pair = logo ? (
-    <>
-      {mark}&nbsp;{mark}
-    </>
-  ) : (
-    // one string, since the pretty-printer would break two text nodes apart
-    emoji.repeat(2)
-  )
+  // GitHub links an unwrapped README image to its own camo URL, so a logo
+  // links back to this heading instead.
+  const flank = logo ? <a href={id && `#${id}`}>{mark}</a> : mark
   return (
     <h3 id={id}>
-      {pair}&nbsp;&nbsp;&nbsp;&nbsp;{title}&nbsp;&nbsp;&nbsp;&nbsp;{pair}
+      {flank}&nbsp;&nbsp;&nbsp;&nbsp;{title}&nbsp;&nbsp;&nbsp;&nbsp;{flank}
     </h3>
   )
 }
