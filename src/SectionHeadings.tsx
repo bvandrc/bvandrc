@@ -9,13 +9,11 @@ const FG_DARK = 'f0f6fc'
  * Box a section title is drawn in, and the size of the text inside it.
  *
  * The box is what the badge is measured and aligned by; the text size is set
- * apart from it, so the title can read larger than the box would otherwise
- * allow. A heading has no neighbours to align with, so the box is sized from
- * the text instead of the other way round: 26 is the least that holds 20px of
- * Verdana, whose ink runs deeper than the 24 an Arial heading needed, and
- * anything tighter the renderer refuses rather than clip the descenders.
+ * apart from it, so the title can read larger than a 24px box would otherwise
+ * allow. 20 is just under what that box can hold before the edges would cut
+ * the descenders, which the renderer refuses outright.
  */
-const HEADING_BADGE_HEIGHT = 26
+const HEADING_BADGE_HEIGHT = 24
 const HEADING_FONT_SIZE = 20
 
 /** Height of a section logo in an `<h3>` title, matching an emoji's. */
@@ -117,6 +115,7 @@ export const HeadingBadge = ({
       color,
       height: HEADING_BADGE_HEIGHT,
       bold: true,
+      font: 'arial',
       fontSize: HEADING_FONT_SIZE,
     })
   return (
