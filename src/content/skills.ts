@@ -4,7 +4,7 @@ import type { SkillSection } from './types'
 
 export const SKILLS: SkillSection[] = [
   {
-    emoji: '🖥️',
+    icon: '🖥️',
     title: 'Core Development',
     rows: [
       {
@@ -130,7 +130,7 @@ export const SKILLS: SkillSection[] = [
     ],
   },
   {
-    emoji: '🧪',
+    icon: '🧪',
     title: 'Testing',
     rows: [
       {
@@ -192,7 +192,7 @@ export const SKILLS: SkillSection[] = [
     ],
   },
   {
-    emoji: '🛠️',
+    icon: '🛠️',
     title: 'Tools',
     rows: [
       {
@@ -249,7 +249,7 @@ export const SKILLS: SkillSection[] = [
     ],
   },
   {
-    emoji: '📝',
+    icon: '📝',
     title: 'Other Languages',
     rows: [
       {

@@ -33,8 +33,8 @@ export type SectionLogo = {
 }
 
 export type ProjectSection = {
-  /** The section's mark: an emoji, or a logo where no emoji fits. */
-  emoji: string | SectionLogo
+  /** An emoji, or a logo where no emoji fits. */
+  icon: string | SectionLogo
   title: string
   intro?: string
   projects: Project[]
@@ -53,4 +53,4 @@ export type SkillRow = {
   lines: SkillBadge[][]
 }
 
-export type SkillSection = { emoji: string; title: string; rows: SkillRow[] }
+export type SkillSection = { icon: string; title: string; rows: SkillRow[] }
