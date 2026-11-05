@@ -152,7 +152,7 @@
 <table>
   <tr>
     <td colspan="2" align="center">
-      🖥️&nbsp;&nbsp;&nbsp;&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Core%20Development&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Core%20Development&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture>&nbsp;&nbsp;&nbsp;&nbsp;🖥️
+      🖥️&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Core%20Development&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Core%20Development&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Core Development" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;🖥️
     </td>
   </tr>
   <tr>
@@ -201,7 +201,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      🧪&nbsp;&nbsp;&nbsp;&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Testing&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Testing&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture>&nbsp;&nbsp;&nbsp;&nbsp;🧪
+      🧪&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Testing&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Testing&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Testing" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;🧪
     </td>
   </tr>
   <tr>
@@ -227,7 +227,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      🛠️&nbsp;&nbsp;&nbsp;&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Tools&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Tools&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture>&nbsp;&nbsp;&nbsp;&nbsp;🛠️
+      🛠️&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Tools&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Tools&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Tools" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;🛠️
     </td>
   </tr>
   <tr>
@@ -262,7 +262,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      📝&nbsp;&nbsp;&nbsp;&nbsp;<picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Other%20Languages&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Other%20Languages&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture>&nbsp;&nbsp;&nbsp;&nbsp;📝
+      📝&nbsp;&nbsp;&nbsp;&nbsp;<sub><picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=Other%20Languages&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=Other%20Languages&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture></sub>&nbsp;&nbsp;&nbsp;&nbsp;📝
     </td>
   </tr>
   <tr>

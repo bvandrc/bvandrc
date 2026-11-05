@@ -83,8 +83,15 @@ export const SectionTitle = ({
  *
  * Heading text is near-black on one theme and near-white on the other, which
  * one image cannot be — so it ships both and lets the reader's browser pick,
- * which GitHub's sanitizer allows for exactly this. The heading element stays
- * around it, so the emoji beside it keeps the size the heading gives it.
+ * which GitHub's sanitizer allows for exactly this.
+ *
+ * `<sub>` drops it onto the emoji's line. An image aligns by its bottom edge,
+ * which puts it on the baseline, while a badge centres its text in its box —
+ * so a 24px badge sets its text 12px above the baseline against the emoji's
+ * 6px, and the two sit 6px apart. The box cannot be made shorter, since 24 is
+ * the least that holds 20px text without the edges cutting its descenders,
+ * and the emoji cannot be made larger without the heading this no longer has.
+ * Lowering the badge is what is left, and it closes the gap to under 2px.
  */
 export const HeadingBadge = ({ title }: { title: string }) => {
   const src = (color: string) =>
@@ -97,9 +104,11 @@ export const HeadingBadge = ({ title }: { title: string }) => {
       fontSize: HEADING_FONT_SIZE,
     })
   return (
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
-      <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
-    </picture>
+    <sub>
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
+        <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
+      </picture>
+    </sub>
   )
 }
