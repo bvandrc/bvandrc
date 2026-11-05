@@ -1,5 +1,5 @@
 /** The deployed worker that renders every badge on a project's title line. */
-const WORKER_ORIGIN = 'https://multi-icon-badge.bvandrc.workers.dev'
+const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
 
 /**
  * Height of every badge, its padding trimmed to nothing.
