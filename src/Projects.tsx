@@ -317,17 +317,19 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       &nbsp;&nbsp;&nbsp;&nbsp;
       {/* every image here is wrapped, because GitHub links an unwrapped README
           image to its own camo URL — an asset rather than anywhere useful.
-          The icon goes to its type's home and the badges to the repository,
-          so they cannot share one anchor. */}
+          One anchor each, never one around the group: the spacing between
+          them would sit inside it as link text and draw its underline. */}
       <a href={icon.published ? p.href : repoUrl(p.repo)}>{typeIcon}</a>
       &nbsp;&nbsp;&nbsp;
-      <a href={repoUrl(p.repo)}>
-        {countBadgeWidth(p.repo) > 0 && (
-          <>
+      {countBadgeWidth(p.repo) > 0 && (
+        <>
+          <a href={repoUrl(p.repo)}>
             <CountBadge repo={p.repo} />
-            &nbsp;
-          </>
-        )}
+          </a>
+          &nbsp;
+        </>
+      )}
+      <a href={repoUrl(p.repo)}>
         <RepoBadge />
       </a>
       <br />
