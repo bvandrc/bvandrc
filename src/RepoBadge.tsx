@@ -1,15 +1,5 @@
+import { LINK_BLUE } from './constants'
 import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
-
-/**
- * Text and icon fill: blue enough to read as a link, muted so it does not
- * compete with the project title above it.
- *
- * Not the title's blue, which is GitHub's own: this badge is the small print
- * at the end of the line, and the two reading alike would have them trade
- * places. At 4.5:1 on white and 4.2:1 on GitHub's dark surface it still
- * carries the contrast it has to, having no background of its own to sit on.
- */
-const LINK_BLUE = '4d79b2'
 
 /**
  * What the badge reads.

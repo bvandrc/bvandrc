@@ -1,16 +1,5 @@
+import { LINK_BLUE } from './constants'
 import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
-
-/**
- * Text fill: a GitHub link blue, so the title reads as the link it is.
- *
- * GitHub picks one per theme and a badge cannot, so this is its dark-theme
- * blue, which is the theme to get right — 5.05:1 on GitHub's dark surface
- * against 3.75:1 on white. Sitting between the two blues would read as a
- * mistake where either of GitHub's own does not, so it leans to one rather
- * than splitting the difference. The repo badge keeps the muted blue, which
- * clears 4.5:1 both ways by giving up on matching either.
- */
-const TITLE_BLUE = '2f81f7'
 
 /**
  * Face a title is drawn in.
@@ -59,7 +48,7 @@ export const TitleBadge = ({ name }: { name: string }) => (
   <img
     src={badgeSrc({
       items: [{ value: name }],
-      color: TITLE_BLUE,
+      color: LINK_BLUE,
       bold: true,
       underline: true,
       font: TITLE_FONT,
