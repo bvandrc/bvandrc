@@ -33,8 +33,8 @@ export type SkillBadge = {
 }
 
 export type SkillRow = {
-  /** One line, or several shown one per line. */
-  label: string | string[]
+  /** The row's label; a `\n` marks where it breaks onto a new line. */
+  label: string
   lines: SkillBadge[][]
 }
 

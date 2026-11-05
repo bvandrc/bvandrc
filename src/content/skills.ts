@@ -228,7 +228,7 @@ export const SKILLS: SkillSection[] = [
         ],
       },
       {
-        label: ['Project', 'Mgmt.'],
+        label: 'Project\nMgmt.',
         lines: [
           [
             {

@@ -23,7 +23,7 @@ export const SkillsTable = () => (
           <tr>
             <td align="right">
               <em>
-                <Lines lines={[row.label].flat()} />
+                <Lines lines={row.label.split('\n')} />
               </em>
             </td>
             <td align="center">
