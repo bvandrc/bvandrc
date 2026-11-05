@@ -2,30 +2,23 @@ import type { SectionLogo } from '../content/projects'
 import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
 
 /**
- * Heading fills, by the theme each is meant for.
+ * Heading fills: GitHub's own body text colour for each theme.
  *
- * `LIGHT` is GitHub's own body text colour, which is what a heading should
- * read as. `DARK` is not its counterpart: a `<picture>` matches on
- * `prefers-color-scheme`, which follows the reader's OS rather than the theme
- * GitHub is painting, so this variant can land on a white page. Near-white
- * there is 1.09:1 — invisible — so the dark branch is chosen for how it reads
- * on its own canvas first, and only held back from near-white far enough to
- * survive the wrong one: 9.63:1 on the dark canvas against 1.96:1 on white.
- * That is well under what even a heading would want on white, and deliberate
- * — that canvas is the one this has to survive, not the one it is for. It is
- * close to the floor, though: near-white was 1.09:1 there, so there is not
- * much room left before the mismatch reads as the ghost it was.
+ * A `<picture>` matches on `prefers-color-scheme`, which follows the reader's
+ * OS, while GitHub themes its page with `data-color-mode` attributes and CSS
+ * variables. The two are independent, so a reader who pins GitHub's theme
+ * against their system is served the wrong variant — `DARK` on a white page
+ * is 1.09:1, a ghost.
  *
- * Its own constant rather than the grey the type icons use: those are a plain
- * `<img>` with one colour for both canvases, so they cannot spend contrast on
- * white the way a variant that only lands there by accident can.
- *
- * The light branch keeps true black, which leaves one combination short: a
- * reader who pins GitHub to dark while their system says light. Every
- * arrangement of a media query strands one of the two mismatches, and this is
- * the one chosen to strand.
+ * That is accepted rather than fixed. Nothing on GitHub's default `auto`
+ * setting produces the mismatch, and no arrangement of a media query escapes
+ * it: whichever variant it picks for one mismatch, the opposite mismatch gets
+ * the other. Hedging to a grey legible on both costs every reader of the
+ * theme the heading is drawn for, and only pays off above about 3:1 on the
+ * wrong canvas — which is a long way from near-white, and most of the way to
+ * a heading that reads as faded on its own theme.
  */
-const FG = { LIGHT: '1f2328', DARK: 'B1BAC4' }
+const FG = { LIGHT: '1f2328', DARK: 'f0f6fc' }
 
 /**
  * Box a section title is drawn in, and the size of the text inside it.
