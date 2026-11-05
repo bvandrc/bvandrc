@@ -35,6 +35,14 @@ type BadgeParams = {
   iconScale?: number
   bold?: boolean
   underline?: boolean
+  /**
+   * Face the values are drawn in.
+   *
+   * Only the faces that are not the worker's own default, so leaving it off
+   * is what asks for Verdana — and the badges that want Verdana keep the URLs
+   * they already had.
+   */
+  font?: 'arial' | 'times' | 'courier'
 }
 
 /**
@@ -54,6 +62,7 @@ export const badgeSrc = ({
   iconScale,
   bold,
   underline,
+  font,
 }: BadgeParams) => {
   // the separators are the syntax, so only the values are escaped — a project
   // name carries spaces where a count or a slug never does
@@ -68,5 +77,5 @@ export const badgeSrc = ({
     iconRight ? '&iconSide=right' : ''
   }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
     bold ? '&bold=true' : ''
-  }${underline ? '&underline=true' : ''}`
+  }${underline ? '&underline=true' : ''}${font ? `&font=${font}` : ''}`
 }

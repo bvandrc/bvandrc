@@ -13,6 +13,19 @@ import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
 const TITLE_BLUE = '2f81f7'
 
 /**
+ * Face a title is drawn in.
+ *
+ * The nearest thing to what GitHub sets the README in: its stack falls to
+ * Helvetica and then Arial once the three system faces miss, so this is the
+ * same place a reader without any of them already lands. The system faces
+ * themselves are not on offer — they differ per platform, so no single table
+ * could size the badge for all of them.
+ *
+ * Narrower than Verdana at the same size, which tightens the titles.
+ */
+const TITLE_FONT = 'arial'
+
+/**
  * Horizontal padding the renderer leaves on each end of a title, in px.
  *
  * Six at the renderer's base proportions, scaled by the size the contents are
@@ -38,6 +51,7 @@ export const TitleBadge = ({ name }: { name: string }) => (
       color: TITLE_BLUE,
       bold: true,
       underline: true,
+      font: TITLE_FONT,
     })}
     height={BADGE_HEIGHT}
     // the SVG's own aria-label is not exposed through an <img>, so the name
