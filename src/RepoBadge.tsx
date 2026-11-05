@@ -12,16 +12,20 @@ import { badgeSrc } from './lib/badge'
 const LINK_BLUE = '4d79b2'
 
 /**
- * What the badge reads, the mark leading the word.
+ * What the badge reads.
  *
- * GitHub's own, because the type icon beside this one points at npm, PyPI or
- * the Actions marketplace — so the row holds two destinations and the mark is
- * what tells them apart. A glyph meaning "leaves the page" would not: every
- * link here does.
+ * A folder, for the thing a repository is and a registry page is not — the
+ * type icon beside this one points at npm, PyPI or the Actions marketplace,
+ * so the two want telling apart. Not a glyph meaning "leaves the page": since
+ * every link on the line opens in a new tab, marking one of them would say
+ * the others do not.
+ *
+ * Three strokes, which is what survives at `BADGE_HEIGHT` — a `code-square`
+ * or a `package` fills in at this size.
  */
-const ITEMS = 'mark-github:repo'
+const ITEMS = 'file-directory:repo'
 
-/** Draws the mark after the word, matching the badge beside it. */
+/** Draws the icon after the word, matching the badge beside it. */
 const ICON_RIGHT = true
 
 /**
