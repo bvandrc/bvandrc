@@ -1,16 +1,16 @@
 import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
 
 /**
- * Text fill: GitHub's own link blue, so the title reads as the link it is.
+ * Text fill: a GitHub link blue, so the title reads as the link it is.
  *
- * GitHub picks a blue per theme and a badge cannot, so this is the light
- * one — 5.19:1 on white, and 3.64:1 on GitHub's dark surface, which is under
- * the 4.5:1 a muted blue would hold on both. The title is the one place on
- * the line worth spending that on: it is what a reader is looking for, and a
- * blue that is nearly GitHub's reads as a mistake where GitHub's own does
- * not. The repo badge keeps the muted blue for exactly the opposite reason.
+ * GitHub picks one per theme and a badge cannot, so this is its dark-theme
+ * blue, which is the theme to get right — 5.05:1 on GitHub's dark surface
+ * against 3.75:1 on white. Sitting between the two blues would read as a
+ * mistake where either of GitHub's own does not, so it leans to one rather
+ * than splitting the difference. The repo badge keeps the muted blue, which
+ * clears 4.5:1 both ways by giving up on matching either.
  */
-const TITLE_BLUE = '0969da'
+const TITLE_BLUE = '2f81f7'
 
 /**
  * Horizontal padding the renderer leaves on each end of a title, in px.

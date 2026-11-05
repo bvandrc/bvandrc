@@ -12,7 +12,7 @@ const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
  * Raising this grows the title, which fills it, and only pads the badges that
  * pin a `contentHeight` — so the row grows without the small print changing.
  */
-export const BADGE_HEIGHT = 18
+export const BADGE_HEIGHT = 20
 
 type BadgeItem = {
   /** simpleicons or octicon slug drawn beside the value; omitted for text alone */
