@@ -1,3 +1,4 @@
+import { repoUrl } from './constants'
 import { REPO_COUNTS } from './generated/repo-counts'
 
 /** The deployed worker that renders the badges. */
@@ -5,7 +6,7 @@ const WORKER_ORIGIN = 'https://multi-icon-badge.bvandrc.workers.dev'
 
 export type CountBadgeProps = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
-  repo?: string
+  repo: string
 }
 
 /**
@@ -35,8 +36,8 @@ const TITLE_GAP = 4 * 4.5
  * project rather than estimated once — which centres every title instead of
  * only a project whose counts happen to be average.
  */
-export const spacerWidth = (repo?: string) => {
-  const counts = repo ? REPO_COUNTS[repo] : undefined
+export const spacerWidth = (repo: string) => {
+  const counts = REPO_COUNTS[repo]
   if (!counts) {
     return 0
   }
@@ -81,13 +82,13 @@ const STYLE = `color=none&iconColor=${BADGE_FG}&textColor=${BADGE_FG}&height=${B
  * read the repo to render it.
  */
 export const CountBadge = ({ repo }: CountBadgeProps) => {
-  const counts = repo ? REPO_COUNTS[repo] : undefined
+  const counts = REPO_COUNTS[repo]
   if (!counts) {
     return null
   }
   const label = `${counts.commits} commits, ${counts.prs} PRs`
   return (
-    <a href={`https://github.com/bvandrc/${repo}`}>
+    <a href={repoUrl(repo)}>
       <img
         src={`${WORKER_ORIGIN}/?items=git-commit:${counts.commits},git-pull-request:${counts.prs}&${STYLE}`}
         height={BADGE_HEIGHT}

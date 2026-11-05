@@ -5,6 +5,7 @@ import { CountBadge, type CountBadgeProps, spacerWidth } from './CountBadge'
 import {
   ICON_GRAY,
   type ProjectType,
+  repoUrl,
   TYPE_ICON_HEIGHT,
   TYPE_ICONS,
 } from './constants'
@@ -28,7 +29,7 @@ type ProjectSection = {
 
 const RepoLink = ({ repo }: { repo: string }) => (
   <>
-    &nbsp;<a href={`https://github.com/bvandrc/${repo}`}>[repo]</a>
+    &nbsp;<a href={repoUrl(repo)}>[repo]</a>
   </>
 )
 
@@ -227,6 +228,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'serato-usb-export',
         href: 'https://pypi.org/project/serato-usb-export/',
         type: 'python',
+        repo: 'serato-usb-export',
         blurb: <>Fast, deduplicated USB export tool for Serato DJ.</>,
       },
     ],
@@ -273,6 +275,14 @@ const ProjectEntry = ({ p }: { p: Project }) => {
   const iconUrl = (color: string) =>
     `https://cdn.simpleicons.org/${icon.slug}/${color}`
   const spacer = spacerWidth(p.repo)
+  const typeIcon = (
+    <img
+      src={iconUrl(ICON_GRAY)}
+      height={TYPE_ICON_HEIGHT}
+      alt={icon.title}
+      title={icon.title}
+    />
+  )
   return (
     <p>
       {/* a fully transparent copy of the icon balances it, so the title centers on its own text */}
@@ -294,12 +304,9 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       {/* one more than the gap after the icon, which the badge's own left
           padding widens by about 6px, so the icon sits evenly between the two */}
       &nbsp;&nbsp;&nbsp;&nbsp;
-      <img
-        src={iconUrl(ICON_GRAY)}
-        height={TYPE_ICON_HEIGHT}
-        alt={icon.title}
-        title={icon.title}
-      />
+      {/* linked to the repo like the badge, so the whole right-hand group
+          goes to one place rather than to GitHub's own camo URL */}
+      <a href={repoUrl(p.repo)}>{typeIcon}</a>
       {spacer > 0 && (
         <>
           &nbsp;&nbsp;&nbsp;

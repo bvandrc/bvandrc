@@ -21,6 +21,7 @@ export const REPO_COUNTS: Record<string, RepoCounts | undefined> = {
   'react-component-test-suite': { commits: 22, prs: 23 },
   'react-toolkit': { commits: 19, prs: 16 },
   'serato-tools': { commits: 343, prs: 59 },
+  'serato-usb-export': { commits: 7, prs: 3 },
   'specialingredientbass.com': { commits: 93, prs: 55 },
   'tsx-to-pdf': { commits: 40, prs: 51 },
   'womanhoodofwubz.com': { commits: 49, prs: 44 },
