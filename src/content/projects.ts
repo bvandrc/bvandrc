@@ -149,6 +149,14 @@ export const PROJECTS: ProjectSection[] = [
     title: 'Other Projects',
     projects: [
       {
+        name: 'badgesmith',
+        href: 'https://badgesmith.bvandrc.workers.dev/',
+        type: 'worker',
+        repo: 'badgesmith',
+        blurb:
+          'Cloudflare Worker that renders several icons and values as one SVG badge, which shields.io cannot. It draws the badges on this page.',
+      },
+      {
         name: 'spotify-organizer',
         href: 'https://github.com/bvandrc/SD',
         type: 'python',

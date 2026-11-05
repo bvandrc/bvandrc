@@ -27,6 +27,11 @@ export const TYPE_ICONS = {
   react: { slug: 'react', title: 'React', published: false },
   npm: { slug: 'npm', title: 'npm (Typescript)', published: true },
   github: { slug: 'github', title: 'GitHub Action', published: true },
+  worker: {
+    slug: 'cloudflareworkers',
+    title: 'Cloudflare Worker',
+    published: true,
+  },
   python: { slug: 'python', title: 'Python', published: true },
   arduino: { slug: 'arduino', title: 'Arduino', published: false },
 } satisfies Record<ProjectType, ProjectTypeIcon>
