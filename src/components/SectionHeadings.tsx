@@ -1,5 +1,5 @@
-import type { SectionLogo } from './content/projects'
-import { badgeGap, badgePad, badgeSrc } from './lib/badge'
+import type { SectionLogo } from '../content/projects'
+import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
 
 /** GitHub's own body text colours, which a heading is set in. */
 const FG_LIGHT = '1f2328'

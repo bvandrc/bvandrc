@@ -1,5 +1,5 @@
-import { LINK_BLUE } from './constants'
-import { BADGE_HEIGHT, badgePad, badgeSrc } from './lib/badge'
+import { LINK_BLUE } from '../constants'
+import { BADGE_HEIGHT, badgePad, badgeSrc } from '../lib/badge'
 
 /**
  * Face a title is drawn in.

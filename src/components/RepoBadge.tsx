@@ -1,5 +1,5 @@
-import { LINK_BLUE } from './constants'
-import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
+import { LINK_BLUE } from '../constants'
+import { BADGE_HEIGHT, badgeSrc } from '../lib/badge'
 
 /**
  * What the badge reads.
