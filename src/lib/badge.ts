@@ -12,8 +12,13 @@ const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
  * The title sets its own text size, so this is no longer what makes a title
  * large — it is the room that text has to fit in, and the badges that pin a
  * `contentHeight` just take more padding as it grows.
+ *
+ * Which leaves the largest of those needs as the whole of it: 22 is the least
+ * that holds the title's 18px of Arial, and the renderer refuses anything
+ * tighter rather than let the edges cut the descenders. So a larger title is
+ * what this has to grow for — nothing else on the line is near it.
  */
-export const BADGE_HEIGHT = 24
+export const BADGE_HEIGHT = 22
 
 /** Width of one `&nbsp;` in GitHub's README body font, in px. */
 export const NBSP_WIDTH = 4.5
