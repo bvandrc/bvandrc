@@ -203,8 +203,8 @@
       <em>E2E</em>
     </td>
     <td align="center">
-      <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&amp;logo=cypress&amp;logoColor=058a5e" alt="Cypress" />
       <img src="https://img.shields.io/badge/-Playwright-%232EAD33?style=for-the-badge&amp;logo=playwright&amp;logoColor=white" alt="Playwright" />
+      <img src="https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&amp;logo=cypress&amp;logoColor=058a5e" alt="Cypress" />
       <img src="https://img.shields.io/badge/-selenium-%43B02A?style=for-the-badge&amp;logo=selenium&amp;logoColor=white" alt="Selenium" />
       <img src="https://img.shields.io/badge/Puppeteer-%2340B5A4.svg?style=for-the-badge&amp;logo=Puppeteer&amp;logoColor=black" alt="Puppeteer" />
     </td>
