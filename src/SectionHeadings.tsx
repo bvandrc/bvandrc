@@ -70,11 +70,17 @@ export const SectionTitle = ({
 /**
  * Gap between a section's emoji and its title, inside the badge.
  *
- * Five spaces come to 27.8px at this size, which is about what separated the
+ * Five of them come to 27.8px at this size, which is about what separated the
  * two before the emoji moved inside: out there the `&nbsp;` runs and the
  * badge's own end padding both did it, and in here only these are left to.
+ *
+ * Non-breaking, because SVG collapses a run of ordinary spaces to one when it
+ * draws — and nothing in the badge can stop that, since `xml:space` is ignored
+ * for an SVG embedded in a page and the CSS that works is an inline style,
+ * which the proxy serving these forbids. The renderer measures them as spaces,
+ * which is what they advance as.
  */
-const HEADING_GAP = '     '
+const HEADING_GAP = '\u00a0'.repeat(5)
 
 /**
  * A section title drawn as a badge, emoji and all.
