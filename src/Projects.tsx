@@ -127,7 +127,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             GitHub Action for accurate PR diff line counts via cloc, split by
             source, tests, docs, and config.
-            <RepoLink repo="pr-diff-line-count" />
           </>
         ),
       },
@@ -140,7 +139,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             GitHub Action that polls a URL to detect when a deploy has gone
             live.
-            <RepoLink repo="detect-deploy" />
           </>
         ),
       },
@@ -164,7 +162,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             GitHub Action that enforces shared package.json lint rules across
             repos.
-            <RepoLink repo="lint-package-json" />
           </>
         ),
       },
@@ -220,7 +217,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             Python tools for reading and modifying Serato DJ's tracks, hot cues,
             waveforms, metadata, crates, and library database.
-            <RepoLink repo="serato-tools" />
           </>
         ),
       },

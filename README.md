@@ -74,12 +74,12 @@
 <p>
   <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/pr-diff-line-count">pr-diff-line-count</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count"><img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:30,git-pull-request:39&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="30 commits, 39 PRs" title="30 commits, 39 PRs" /></a>
   <br />
-  GitHub Action for accurate PR diff line counts via cloc, split by source, tests, docs, and config.&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count">[repo]</a>
+  GitHub Action for accurate PR diff line counts via cloc, split by source, tests, docs, and config.
 </p>
 <p>
   <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/detect-deploy"><img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/detect-deploy"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:17,git-pull-request:25&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="17 commits, 25 PRs" title="17 commits, 25 PRs" /></a>
   <br />
-  GitHub Action that polls a URL to detect when a deploy has gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
+  GitHub Action that polls a URL to detect when a deploy has gone live.
 </p>
 <p>
   <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/react-component-test-suite"><img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/react-component-test-suite"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:22,git-pull-request:23&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="22 commits, 23 PRs" title="22 commits, 23 PRs" /></a>
@@ -89,7 +89,7 @@
 <p>
   <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt /><img src="./assets/spacer.png" width="79" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/lint-package-json"><img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/lint-package-json"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:7,git-pull-request:3&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="7 commits, 3 PRs" title="7 commits, 3 PRs" /></a>
   <br />
-  GitHub Action that enforces shared package.json lint rules across repos.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
+  GitHub Action that enforces shared package.json lint rules across repos.
 </p>
 <p>
   <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/glob-sort"><img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/glob-sort"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:26,git-pull-request:25&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="26 commits, 25 PRs" title="26 commits, 25 PRs" /></a>
@@ -115,7 +115,7 @@
 <p>
   <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt /><img src="./assets/spacer.png" width="97" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-tools"><img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-tools"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:343,git-pull-request:59&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="343 commits, 59 PRs" title="343 commits, 59 PRs" /></a>
   <br />
-  Python tools for reading and modifying Serato DJ's tracks, hot cues, waveforms, metadata, crates, and library database.&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
+  Python tools for reading and modifying Serato DJ's tracks, hot cues, waveforms, metadata, crates, and library database.
 </p>
 <p>
   <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt /><img src="./assets/spacer.png" width="79" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-usb-export"><img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/serato-usb-export"><img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:7,git-pull-request:3&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="7 commits, 3 PRs" title="7 commits, 3 PRs" /></a>
