@@ -26,6 +26,17 @@ const TITLE_BLUE = '2f81f7'
 const TITLE_FONT = 'arial'
 
 /**
+ * Size a title's text is drawn at.
+ *
+ * Set apart from `BADGE_HEIGHT`, which only has to leave room for it: the box
+ * is what the badges on the line are measured and aligned by, and tying the
+ * text to it would mean a larger title could only come from a larger box.
+ *
+ * Under the 20 a section heading uses, so the two still read as a hierarchy.
+ */
+const TITLE_FONT_SIZE = 19
+
+/**
  * Horizontal padding the renderer leaves on each end of a title, in px.
  *
  * Six at the renderer's base proportions, scaled by the size the contents are
@@ -52,6 +63,7 @@ export const TitleBadge = ({ name }: { name: string }) => (
       bold: true,
       underline: true,
       font: TITLE_FONT,
+      fontSize: TITLE_FONT_SIZE,
     })}
     height={BADGE_HEIGHT}
     // the SVG's own aria-label is not exposed through an <img>, so the name

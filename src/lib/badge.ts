@@ -9,10 +9,11 @@ const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
  * badge's contents on the same centre. What each one draws at is then its
  * `contentHeight`, not its height.
  *
- * Raising this grows the title, which fills it, and only pads the badges that
- * pin a `contentHeight` — so the row grows without the small print changing.
+ * The title sets its own text size, so this is no longer what makes a title
+ * large — it is the room that text has to fit in, and the badges that pin a
+ * `contentHeight` just take more padding as it grows.
  */
-export const BADGE_HEIGHT = 20
+export const BADGE_HEIGHT = 24
 
 type BadgeItem = {
   /** simpleicons or octicon slug drawn beside the value; omitted for text alone */
