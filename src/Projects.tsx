@@ -1,33 +1,11 @@
 import { kebabCase } from 'es-toolkit'
-import type { ComponentChildren } from 'preact'
 
-import { CountBadge, type CountBadgeProps, countBadgeWidth } from './CountBadge'
-import {
-  ICON_GRAY,
-  type ProjectType,
-  repoUrl,
-  TYPE_ICON_HEIGHT,
-  TYPE_ICONS,
-} from './constants'
+import { CountBadge, countBadgeWidth } from './CountBadge'
+import { ICON_GRAY, repoUrl, TYPE_ICON_HEIGHT, TYPE_ICONS } from './constants'
 import { PROJECTS } from './content/projects'
+import type { Project } from './content/types'
 import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
 import { SectionTitle } from './SectionHeadings'
-
-type Project = CountBadgeProps & {
-  name: string
-  href: string
-  type: ProjectType
-  blurb: ComponentChildren
-  /** screenshot path; its alt text is derived from the project name */
-  screenshot?: string
-}
-
-export type ProjectSection = {
-  emoji: string
-  title: string
-  intro?: ComponentChildren
-  projects: Project[]
-}
 
 /** Width of one `&nbsp;` in GitHub's README body font, in px. */
 const NBSP = 4.5
@@ -122,6 +100,12 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       </a>
       <br />
       {p.blurb}
+      {p.private && (
+        <>
+          {' '}
+          <em>(private repo)</em>
+        </>
+      )}
       {p.screenshot && (
         <>
           <br />

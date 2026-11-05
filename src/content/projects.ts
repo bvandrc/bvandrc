@@ -1,4 +1,4 @@
-import type { ProjectSection } from '../Projects'
+import type { ProjectSection } from './types'
 
 export const PROJECTS: ProjectSection[] = [
   {
@@ -153,12 +153,9 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://github.com/bvandrc/SD',
         type: 'python',
         repo: 'SD',
-        blurb: (
-          <>
-            Python automation for my 11k+ track DJ library utilizing the Spotify
-            and SoundCloud APIs. <em>(private repo)</em>
-          </>
-        ),
+        blurb:
+          'Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs.',
+        private: true,
       },
       {
         name: 'arduino-totem',
