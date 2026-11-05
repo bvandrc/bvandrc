@@ -1,9 +1,23 @@
+import { BOTH_THEME_GRAY } from '../constants'
 import type { SectionLogo } from '../content/projects'
 import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
 
-/** GitHub's own body text colours, which a heading is set in. */
-const FG_LIGHT = '1f2328'
-const FG_DARK = 'f0f6fc'
+/**
+ * Heading fills, by the theme each is meant for.
+ *
+ * `LIGHT` is GitHub's own body text colour, which is what a heading should
+ * read as. `DARK` is not its counterpart: a `<picture>` matches on
+ * `prefers-color-scheme`, which follows the reader's OS rather than the theme
+ * GitHub is painting, so this variant can land on a white page. Near-white
+ * there is 1.09:1 — invisible — so the dark branch takes the grey that clears
+ * both canvases instead, and gives up contrast on its own theme to do it.
+ *
+ * The light branch keeps true black, which leaves one combination short: a
+ * reader who pins GitHub to dark while their system says light. Every
+ * arrangement of a media query strands one of the two mismatches, and this is
+ * the one chosen to strand.
+ */
+const FG = { LIGHT: '1f2328', DARK: BOTH_THEME_GRAY }
 
 /**
  * Box a section title is drawn in, and the size of the text inside it.
@@ -179,9 +193,9 @@ export const HeadingBadge = ({
     })
   return (
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
+      <source media="(prefers-color-scheme: dark)" srcset={src(FG.DARK)} />
       {/* the emoji is decorative; the title is the heading */}
-      <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
+      <img src={src(FG.LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
     </picture>
   )
 }

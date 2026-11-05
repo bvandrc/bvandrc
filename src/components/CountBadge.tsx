@@ -1,3 +1,4 @@
+import { BOTH_THEME_GRAY } from '../constants'
 import { REPO_COUNTS } from '../generated/repo-counts'
 import { BADGE_HEIGHT, badgeSrc } from '../lib/badge'
 
@@ -43,15 +44,6 @@ export const countBadgeWidth = (repo: string) => {
 }
 
 /**
- * Icon and text fill.
- *
- * A badge carries no background, so this has to supply its own contrast: a
- * mid grey reads on GitHub's light and dark themes alike, where the lighter
- * grey the project icons use would wash out against white.
- */
-const BADGE_FG = '6E7681'
-
-/**
  * A project's commit and pull request totals, as one transparent badge.
  *
  * The numbers live in the URL rather than being looked up when the image
@@ -72,7 +64,7 @@ export const CountBadge = ({ repo }: CountBadgeProps) => {
           { icon: 'git-commit', value: `${counts.commits}` },
           { icon: 'git-pull-request', value: `${counts.prs}` },
         ],
-        color: BADGE_FG,
+        color: BOTH_THEME_GRAY,
         contentHeight: COUNT_CONTENT_HEIGHT,
       })}
       height={BADGE_HEIGHT}
