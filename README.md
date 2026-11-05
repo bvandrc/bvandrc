@@ -14,7 +14,7 @@
   Most of what's here started as something I needed and couldn't find.
 </p>
 
-## 💎&nbsp; Projects &nbsp;💎
+## 🏗️&nbsp; Projects &nbsp;🏗️
 
 <p>
   <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="16" alt />&nbsp;React Websites</a>
@@ -141,7 +141,7 @@
   Firmware for my LED festival totem, controlled by dials, buttons, and an accelerometer.
 </p>
 
-## 🌟&nbsp; Skills &nbsp;🌟
+## ⚡&nbsp; Skills &nbsp;⚡
 
 <table>
   <tr>

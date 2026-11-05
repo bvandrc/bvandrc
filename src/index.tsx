@@ -2,6 +2,7 @@ import type { VNode } from 'preact'
 import { render as renderBase } from 'preact-render-to-string/jsx'
 
 import { BEYOND_CODE, INTRO_LINES } from './content/about'
+import { SECTIONS } from './content/sections'
 import { Lines } from './Lines'
 import { Projects } from './Projects'
 import { SectionHeader } from './SectionHeadings'
@@ -27,15 +28,15 @@ ${render(
    */
 )}
 
-${SectionHeader('💎', 'Projects')}
+${SectionHeader(SECTIONS.PROJECTS.icon, SECTIONS.PROJECTS.title)}
 
 ${render(<Projects />)}
 
-${SectionHeader('🌟', 'Skills')}
+${SectionHeader(SECTIONS.SKILLS.icon, SECTIONS.SKILLS.title)}
 
 ${render(<SkillsTable />)}
 
-${SectionHeader('📈', 'Stats')}
+${SectionHeader(SECTIONS.STATS.icon, SECTIONS.STATS.title)}
 
 <!-- https://github.com/anuraghazra/github-readme-stats -->
 <img src="./github-overall-stats.svg" alt="Overall Stats"><br/>
@@ -54,7 +55,7 @@ ${SectionHeader('📈', 'Stats')}
 
 <!-- [![StackOverflow Stats](https://github-readme-stackoverflow.vercel.app/?userID=11149305&layout=compact&theme=dark)](https://stackoverflow.com/users/11149305/bvandercar) -->
 
-${SectionHeader('🎉', 'Beyond Code')}
+${SectionHeader(SECTIONS.BEYOND_CODE.icon, SECTIONS.BEYOND_CODE.title)}
 
 ${render(
   // BEYOND CODE
