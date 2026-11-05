@@ -64,7 +64,7 @@ export const PROJECTS: ProjectSection[] = [
       },
       {
         name: 'Retail Website',
-        href: 'https://womanhoodofwubz.neocities.org/',
+        href: 'https://womanhoodofwubz.pages.dev/',
         type: 'react',
         repo: 'womanhoodofwubz.com',
         blurb:
