@@ -36,13 +36,22 @@ const ITEMS = 'file-directory:repo'
 const REPO_BADGE_HEIGHT = 13
 
 /**
+ * How large the folder is against the word, as a fraction of the height.
+ *
+ * At 1 an icon fills the height the contents are given, which leaves it
+ * taller than the text it sits beside. This brings it to about the weight of
+ * the counts badge's own icons.
+ */
+const REPO_ICON_SCALE = 0.8
+
+/**
  * Width the renderer lays this badge out at, in px.
  *
  * One constant rather than a measurement per project: every repo badge holds
  * the same text and icon, so they are all this wide. It moves with
  * `REPO_BADGE_HEIGHT`, which everything in the badge scales from.
  */
-export const REPO_BADGE_WIDTH = 50.86
+export const REPO_BADGE_WIDTH = 48.26
 
 /**
  * A badge reading "repo", matching the counts badge beside it.
@@ -56,6 +65,7 @@ export const RepoBadge = () => (
       items: ITEMS,
       color: LINK_BLUE,
       height: REPO_BADGE_HEIGHT,
+      iconScale: REPO_ICON_SCALE,
     })}
     height={REPO_BADGE_HEIGHT}
     // the SVG's own aria-label is not exposed through an <img>, so this is
