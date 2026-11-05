@@ -52,7 +52,7 @@ export const PROJECTS: ProjectSection[] = [
         blurb:
           'My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.',
         screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
-        embed: { scale: 0.65 },
+        embed: { scale: 0.75 },
       },
       {
         name: 'Bike Ride Tracker',
