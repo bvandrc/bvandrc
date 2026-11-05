@@ -17,14 +17,14 @@
 ## 🌟&nbsp; Projects &nbsp;🌟
 
 <p>
-  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="15" alt />&nbsp;React Websites</a>
+  <a href="#react-websites"><img src="https://badgesmith.bvandrc.workers.dev/?items=react:&amp;color=none&amp;iconColor=61DAFB&amp;textColor=61DAFB&amp;height=15&amp;padY=0" height="15" alt /></a><a href="#react-websites">React Websites</a>
    · 
-  <a href="#testing-ci-tooling">🧪&nbsp;Testing &amp; CI Tooling</a> · 
-  <a href="#other-packages">📦&nbsp;Other Packages</a> · 
-  <a href="#other-projects">💡&nbsp;Other Projects</a>
+  🧪&nbsp;<a href="#testing-ci-tooling">Testing &amp; CI Tooling</a> · 
+  📦&nbsp;<a href="#other-packages">Other Packages</a> · 
+  💡&nbsp;<a href="#other-projects">Other Projects</a>
 </p>
 <h3 id="react-websites">
-  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt /></a>&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt /></a>
+  <a href="#react-websites"><img src="https://badgesmith.bvandrc.workers.dev/?items=react:&amp;color=none&amp;iconColor=61DAFB&amp;textColor=61DAFB&amp;height=20&amp;padY=0" height="20" alt /></a>&nbsp;&nbsp;React Websites&nbsp;&nbsp;<a href="#react-websites"><img src="https://badgesmith.bvandrc.workers.dev/?items=react:&amp;color=none&amp;iconColor=61DAFB&amp;textColor=61DAFB&amp;height=20&amp;padY=0" height="20" alt /></a>
 </h3>
 <p>
   <em>

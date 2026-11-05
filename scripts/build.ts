@@ -32,7 +32,7 @@ const output = md
     // only anchors holding nothing but these images and nbsp, which leaves
     // the screenshots' alone: theirs sit on their own lines, where the space
     // does not show
-    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/(?:badgesmith|cdn\.simpleicons\.org)|\.\/assets\/spacer\.png)[^>]*\/>)+<\/a>$/.test(
+    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/>)+<\/a>$/.test(
       anchor
     )
       ? anchor
@@ -50,5 +50,10 @@ const output = md
   // a jump link that the printer wrapped onto lines of its own would underline
   // the space its newlines render as, so it hugs its contents too
   .replace(/(<a href="#[^"]*">)\s+([\s\S]*?)\s+<\/a>/g, '$1$2</a>')
+  // a contents-line logo links to the same place as the name beside it, and
+  // the badge's own end padding is the whole gap between them. The printer
+  // leaves a newline and a blank line there, which would render as a space on
+  // top of that padding — and a blank line inside a <p> ends the HTML block.
+  .replace(/(<a href="(#[^"]*)"><img[^>]*\/><\/a>)\s+(?=<a href="\2">)/g, '$1')
 writeFileSync(join(root, 'README.md'), output)
 console.log('README.md generated')

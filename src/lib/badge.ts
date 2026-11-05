@@ -15,6 +15,29 @@ const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
  */
 export const BADGE_HEIGHT = 24
 
+/** Width of one `&nbsp;` in GitHub's README body font, in px. */
+export const NBSP_WIDTH = 4.5
+
+/**
+ * Horizontal padding a badge leaves on each end of its contents, in px.
+ *
+ * Six at the renderer's base proportions, scaled by the size the contents are
+ * drawn at, against the 14px an icon fills at that base. Derived rather than
+ * measured so it follows whatever height a caller asks for.
+ */
+export const badgePad = (contentHeight: number) => (6 * contentHeight) / 14
+
+/**
+ * The `&nbsp;` that leave the gap `count` of them did around a bare image.
+ *
+ * A badge pads itself where an image did not, so the run beside one only has
+ * to make up the difference — and a reader sees the gap the line always had.
+ * Rounded to whole spaces, since a `&nbsp;` is the smallest gap the README can
+ * express; `pad` alone can exceed the gap, which is what the floor is for.
+ */
+export const badgeGap = (count: number, pad: number) =>
+  Math.max(0, Math.round((count * NBSP_WIDTH - pad) / NBSP_WIDTH))
+
 /**
  * One thing a badge holds: an icon and its value, or either on its own.
  *

@@ -5,13 +5,15 @@ import { repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
 import { PROJECTS } from './content/projects'
+import { badgeGap, NBSP_WIDTH } from './lib/badge'
 import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
-import { SectionIcon, SectionTitle } from './SectionHeadings'
+import {
+  SectionIconLink,
+  SectionTitle,
+  sectionIconGap,
+} from './SectionHeadings'
 import { TITLE_BADGE_PAD, TitleBadge } from './TitleBadge'
 import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './TypeIcon'
-
-/** Width of one `&nbsp;` in GitHub's README body font, in px. */
-const NBSP = 4.5
 
 /** `&nbsp;` the title sat between back when it was text. */
 const TEXT_TITLE_GAP = { before: 3, after: 4 }
@@ -26,7 +28,7 @@ const TEXT_TITLE_GAP = { before: 3, after: 4 }
  * which is the dial this whole substitution exists to offer.
  */
 const TITLE_GAP = mapValues(TEXT_TITLE_GAP, (count) =>
-  Math.max(0, Math.round((count * NBSP - TITLE_BADGE_PAD) / NBSP))
+  badgeGap(count, TITLE_BADGE_PAD)
 )
 
 /**
@@ -46,10 +48,7 @@ const TEXT_ICON_GAP = 3
  * Fewer than when the icon was an image, for the same reason the title's are:
  * it is a badge now and carries `TYPE_ICON_PAD` at each end.
  */
-const ICON_GAP = Math.max(
-  0,
-  Math.round((TEXT_ICON_GAP * NBSP - TYPE_ICON_PAD) / NBSP)
-)
+const ICON_GAP = badgeGap(TEXT_ICON_GAP, TYPE_ICON_PAD)
 
 /**
  * `&nbsp;` between one badge and the next.
@@ -80,9 +79,11 @@ const Gap = ({ n }: { n: number }) => <>{'\u00a0'.repeat(n)}</>
 const spacerWidth = (repo: string) => {
   const counts = countBadgeWidth(repo)
   const badges =
-    counts > 0 ? counts + BADGE_GAP * NBSP + REPO_BADGE_WIDTH : REPO_BADGE_WIDTH
+    counts > 0
+      ? counts + BADGE_GAP * NBSP_WIDTH + REPO_BADGE_WIDTH
+      : REPO_BADGE_WIDTH
   const gaps = TITLE_GAP.after - TITLE_GAP.before + ICON_GAP
-  return Math.round(gaps * NBSP + TYPE_ICON_WIDTH + badges)
+  return Math.round(gaps * NBSP_WIDTH + TYPE_ICON_WIDTH + badges)
 }
 
 const ProjectEntry = ({ p }: { p: Project }) => {
@@ -156,15 +157,19 @@ export const Projects = () => (
   <>
     {/* contents line: jump links to each section's anchor */}
     <p>
-      {PROJECTS.map((s, i) => (
-        <>
-          {i > 0 && ' · '}
-          <a href={`#${kebabCase(s.title)}`}>
-            <SectionIcon icon={s.icon} />
-            &nbsp;{s.title}
-          </a>
-        </>
-      ))}
+      {PROJECTS.map((s, i) => {
+        const href = `#${kebabCase(s.title)}`
+        // the icon is left out of the link that follows it, so the underline
+        // covers the section's name and nothing else
+        return (
+          <>
+            {i > 0 && ' · '}
+            <SectionIconLink icon={s.icon} href={href} />
+            {sectionIconGap(s.icon)}
+            <a href={href}>{s.title}</a>
+          </>
+        )
+      })}
     </p>
     {PROJECTS.map((s) => (
       <>

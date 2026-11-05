@@ -1,7 +1,7 @@
 import { ICON_GRAY } from './constants'
 import type { ProjectType } from './content/project-types'
 import { TYPE_ICONS } from './content/project-types'
-import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
+import { BADGE_HEIGHT, badgePad, badgeSrc } from './lib/badge'
 
 /**
  * Size the mark itself is drawn at, inside `BADGE_HEIGHT`.
@@ -16,12 +16,11 @@ const TYPE_ICON_SIZE = 14
 /**
  * Horizontal padding the renderer leaves at each end of the badge, in px.
  *
- * Six at its base proportions, scaled by the size the contents are drawn at
- * against the 14px an icon fills there — which is to say six, while the mark
- * is that size. The gaps either side subtract it, so a reader sees the gap
- * the markup asks for rather than that plus this.
+ * Which is to say six, while the mark is drawn at the size an icon fills at
+ * the renderer's base proportions. The gaps either side subtract it, so a
+ * reader sees the gap the markup asks for rather than that plus this.
  */
-export const TYPE_ICON_PAD = (6 * TYPE_ICON_SIZE) / 14
+export const TYPE_ICON_PAD = badgePad(TYPE_ICON_SIZE)
 
 /**
  * Width the renderer lays one of these out at, in px.

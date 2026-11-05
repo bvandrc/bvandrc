@@ -1,5 +1,5 @@
 import { LINK_BLUE } from './constants'
-import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
+import { BADGE_HEIGHT, badgePad, badgeSrc } from './lib/badge'
 
 /**
  * Face a title is drawn in.
@@ -28,12 +28,10 @@ const TITLE_FONT_SIZE = 18
 /**
  * Horizontal padding the renderer leaves on each end of a title, in px.
  *
- * Six at the renderer's base proportions, scaled by the size the contents are
- * drawn at — which for a title is the whole badge, against the 14px an icon
- * fills at that base. Derived rather than measured so it follows
- * `BADGE_HEIGHT` wherever that is set.
+ * A title's contents are the whole badge, so the pad follows `BADGE_HEIGHT`
+ * wherever that is set.
  */
-export const TITLE_BADGE_PAD = (6 * BADGE_HEIGHT) / 14
+export const TITLE_BADGE_PAD = badgePad(BADGE_HEIGHT)
 
 /**
  * A project's name, drawn as a badge rather than set as text.
