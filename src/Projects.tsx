@@ -5,7 +5,7 @@ import { ICON_GRAY, repoUrl, TYPE_ICON_HEIGHT, TYPE_ICONS } from './constants'
 import { PROJECTS } from './content/projects'
 import type { Project } from './content/types'
 import { REPO_BADGE_WIDTH, RepoBadge } from './RepoBadge'
-import { SectionTitle } from './SectionHeadings'
+import { SectionIcon, SectionTitle } from './SectionHeadings'
 
 /** Width of one `&nbsp;` in GitHub's README body font, in px. */
 const NBSP = 4.5
@@ -125,7 +125,8 @@ export const Projects = () => (
         <>
           {i > 0 && ' · '}
           <a href={`#${kebabCase(s.title)}`}>
-            {s.emoji}&nbsp;{s.title}
+            <SectionIcon icon={s.icon} />
+            &nbsp;{s.title}
           </a>
         </>
       ))}
@@ -133,7 +134,7 @@ export const Projects = () => (
     {PROJECTS.map((s) => (
       <>
         {/* GitHub doesn't add anchors to raw HTML headings, so the contents line targets this id */}
-        <SectionTitle id={kebabCase(s.title)} emoji={s.emoji} title={s.title} />
+        <SectionTitle id={kebabCase(s.title)} icon={s.icon} title={s.title} />
         {s.intro && (
           <p>
             <em>

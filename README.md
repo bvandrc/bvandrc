@@ -17,13 +17,15 @@
 ## 💎&nbsp; Projects &nbsp;💎
 
 <p>
-  <a href="#react-websites">⚛️&nbsp;React Websites</a>
+  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="16" alt />&nbsp;React Websites</a>
    · 
   <a href="#testing-ci-tooling">🧪&nbsp;Testing &amp; CI Tooling</a> · 
   <a href="#other-packages">📦&nbsp;Other Packages</a> · 
   <a href="#other-projects">💡&nbsp;Other Projects</a>
 </p>
-<h3 id="react-websites">⚛️⚛️&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;⚛️⚛️</h3>
+<h3 id="react-websites">
+  <a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt /></a>&nbsp;&nbsp;&nbsp;&nbsp;React Websites&nbsp;&nbsp;&nbsp;&nbsp;<a href="#react-websites"><img src="https://cdn.simpleicons.org/react/61DAFB" height="20" alt /></a>
+</h3>
 <p>
   <em>
     <strong>Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.</strong>
@@ -65,7 +67,7 @@
     <img src="./project-screenshots/resized/screenshot-womanhoodofwubz.png" width="385" alt="Retail Website — screenshot preview" />
   </a>
 </p>
-<h3 id="testing-ci-tooling">🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
+<h3 id="testing-ci-tooling">🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪</h3>
 <p>
   <a href="https://www.npmjs.com/package/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="144" height="12" alt /></a>&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils" target="_blank" rel="noopener">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.npmjs.com/package/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm" title="npm" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:25,git-pull-request:31&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="25 commits, 31 PRs" title="25 commits, 31 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/lighthouse-audit-utils" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=4d79b2&amp;textColor=4d79b2&amp;height=13&amp;padY=0&amp;iconScale=0.8" height="13" alt="GitHub repository" title="GitHub repository" /></a>
   <br />
@@ -96,7 +98,7 @@
   <br />
   Rule-based ordering of nested glob results for test configs.
 </p>
-<h3 id="other-packages">📦📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦📦</h3>
+<h3 id="other-packages">📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦</h3>
 <p>
   <a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="144" height="12" alt /></a>&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm" title="npm" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:40,git-pull-request:51&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="40 commits, 51 PRs" title="40 commits, 51 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=4d79b2&amp;textColor=4d79b2&amp;height=13&amp;padY=0&amp;iconScale=0.8" height="13" alt="GitHub repository" title="GitHub repository" /></a>
   <br />
@@ -122,7 +124,7 @@
   <br />
   Fast, deduplicated USB export tool for Serato DJ.
 </p>
-<h3 id="other-projects">💡💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡💡</h3>
+<h3 id="other-projects">💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡</h3>
 <p>
   <a href="https://badgesmith.bvandrc.workers.dev/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/cloudflareworkers/00000000" height="12" alt /><img src="./assets/spacer.png" width="144" height="12" alt /></a>&nbsp;&nbsp;&nbsp;<strong><a href="https://badgesmith.bvandrc.workers.dev/" target="_blank" rel="noopener">badgesmith</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://badgesmith.bvandrc.workers.dev/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/cloudflareworkers/8B949E" height="12" alt="Cloudflare Worker" title="Cloudflare Worker" /></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/bvandrc/badgesmith" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:18,git-pull-request:18&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="18 commits, 18 PRs" title="18 commits, 18 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/badgesmith" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=4d79b2&amp;textColor=4d79b2&amp;height=13&amp;padY=0&amp;iconScale=0.8" height="13" alt="GitHub repository" title="GitHub repository" /></a>
   <br />
@@ -144,7 +146,7 @@
 <table>
   <tr>
     <td colspan="2" align="center">
-      <h3>🖥️🖥️&nbsp;&nbsp;&nbsp;&nbsp;Core Development&nbsp;&nbsp;&nbsp;&nbsp;🖥️🖥️</h3>
+      <h3>🖥️&nbsp;&nbsp;&nbsp;&nbsp;Core Development&nbsp;&nbsp;&nbsp;&nbsp;🖥️</h3>
     </td>
   </tr>
   <tr>
@@ -193,7 +195,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
+      <h3>🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing&nbsp;&nbsp;&nbsp;&nbsp;🧪</h3>
     </td>
   </tr>
   <tr>
@@ -219,7 +221,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>🛠️🛠️&nbsp;&nbsp;&nbsp;&nbsp;Tools&nbsp;&nbsp;&nbsp;&nbsp;🛠️🛠️</h3>
+      <h3>🛠️&nbsp;&nbsp;&nbsp;&nbsp;Tools&nbsp;&nbsp;&nbsp;&nbsp;🛠️</h3>
     </td>
   </tr>
   <tr>
@@ -254,7 +256,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <h3>📝📝&nbsp;&nbsp;&nbsp;&nbsp;Other Languages&nbsp;&nbsp;&nbsp;&nbsp;📝📝</h3>
+      <h3>📝&nbsp;&nbsp;&nbsp;&nbsp;Other Languages&nbsp;&nbsp;&nbsp;&nbsp;📝</h3>
     </td>
   </tr>
   <tr>

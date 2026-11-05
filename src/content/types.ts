@@ -24,8 +24,17 @@ export type Project = {
   screenshot?: string
 }
 
+/** A simpleicons.org logo, drawn in its brand colour. */
+export type SectionLogo = {
+  /** simpleicons.org slug */
+  slug: string
+  /** hex colour, without the `#` */
+  color: string
+}
+
 export type ProjectSection = {
-  emoji: string
+  /** An emoji, or a logo where no emoji fits. */
+  icon: string | SectionLogo
   title: string
   intro?: string
   projects: Project[]
@@ -44,4 +53,4 @@ export type SkillRow = {
   lines: SkillBadge[][]
 }
 
-export type SkillSection = { emoji: string; title: string; rows: SkillRow[] }
+export type SkillSection = { icon: string; title: string; rows: SkillRow[] }

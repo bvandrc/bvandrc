@@ -16,7 +16,7 @@ export const SkillsTable = () => (
       <>
         <tr>
           <td colspan={2} align="center">
-            <SectionTitle emoji={s.emoji} title={s.title} />
+            <SectionTitle icon={s.icon} title={s.title} />
           </td>
         </tr>
         {s.rows.map((row) => (

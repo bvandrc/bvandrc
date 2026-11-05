@@ -2,7 +2,7 @@ import type { ProjectSection } from './types'
 
 export const PROJECTS: ProjectSection[] = [
   {
-    emoji: '⚛️',
+    icon: { slug: 'react', color: '61DAFB' },
     title: 'React Websites',
     intro:
       'Each runs E2E, accessibility, and Lighthouse tests in CI on every PR.',
@@ -48,7 +48,7 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    emoji: '🧪',
+    icon: '🧪',
     title: 'Testing & CI Tooling',
     projects: [
       {
@@ -101,7 +101,7 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    emoji: '📦',
+    icon: '📦',
     title: 'Other Packages',
     projects: [
       {
@@ -145,7 +145,7 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    emoji: '💡',
+    icon: '💡',
     title: 'Other Projects',
     projects: [
       {
