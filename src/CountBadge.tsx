@@ -1,5 +1,26 @@
-import { BADGE_FG, BADGE_HEIGHT, WORKER_ORIGIN } from './constants'
 import { REPO_COUNTS } from './generated/repo-counts'
+
+/** The deployed worker that renders the badges. */
+const WORKER_ORIGIN = 'https://multi-icon-badge.bvandrc.workers.dev'
+
+/**
+ * Icon and text fill.
+ *
+ * A badge carries no background, so this has to supply its own contrast: a
+ * mid grey reads on GitHub's light and dark themes alike, where the lighter
+ * grey the project icons use would wash out against white.
+ */
+const BADGE_FG = '6E7681'
+
+/**
+ * Badge height, its padding trimmed to nothing.
+ *
+ * The contents fill it rather than sitting inside it, so this is also the
+ * icon height, and the text comes out a little under it — 9.43px here. 14
+ * would give the renderer's full 11px, which is as large as the text gets
+ * before the icons, always the taller of the two, make the badge grow.
+ */
+const BADGE_HEIGHT = 12
 
 export type CountBadgeProps = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
