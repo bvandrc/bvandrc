@@ -84,7 +84,7 @@ export const PROJECTS: ProjectSection[] = [
           'CMS-driven storefront with custom React components, built for a friend.',
         screenshot:
           './project-screenshots/resized/screenshot-womanhoodofwubz.png',
-        embed: { scale: 0.5 },
+        embed: { scale: 0.75 },
       },
     ],
   },
