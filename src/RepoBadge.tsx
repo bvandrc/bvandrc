@@ -1,15 +1,15 @@
-import { repoUrl } from './constants'
 import { badgeSrc } from './lib/badge'
 
 /**
- * Text fill, a blue that reads as a link.
+ * Text and icon fill: blue enough to read as a link, muted so it does not
+ * compete with the project title above it.
  *
- * GitHub's own link blues are picked per theme, which a badge cannot do, so
- * this is the one between them: 4.6:1 on white and 4.1:1 on GitHub's dark
- * surface, where the light theme's `0969da` thins out on dark and the dark
- * theme's `58a6ff` washes out on white.
+ * GitHub's own link blues are picked per theme, which a badge cannot do, and
+ * both are more saturated than this. Desaturating costs nothing here — at
+ * 4.5:1 on white and 4.2:1 on GitHub's dark surface it still carries the
+ * contrast it has to, having no background of its own to sit on.
  */
-const LINK_BLUE = '1f6feb'
+const LINK_BLUE = '4d79b2'
 
 /** What the badge reads, with the icon drawn after it. */
 const ITEMS = 'link-external:repo'
@@ -31,19 +31,22 @@ const REPO_BADGE_HEIGHT = 13
  */
 export const REPO_BADGE_WIDTH = 50.86
 
-/** A link to the project's repo, as a badge matching the counts beside it. */
-export const RepoBadge = ({ repo }: { repo: string }) => (
-  <a href={repoUrl(repo)}>
-    <img
-      src={badgeSrc({
-        items: ITEMS,
-        color: LINK_BLUE,
-        iconRight: true,
-        height: REPO_BADGE_HEIGHT,
-      })}
-      height={REPO_BADGE_HEIGHT}
-      alt="repo"
-      title="repo"
-    />
-  </a>
+/**
+ * A badge reading "repo", matching the counts badge beside it.
+ *
+ * Carries no link of its own: the title line wraps this and everything
+ * beside it in one anchor to the repository.
+ */
+export const RepoBadge = () => (
+  <img
+    src={badgeSrc({
+      items: ITEMS,
+      color: LINK_BLUE,
+      iconRight: true,
+      height: REPO_BADGE_HEIGHT,
+    })}
+    height={REPO_BADGE_HEIGHT}
+    alt="repo"
+    title="repo"
+  />
 )

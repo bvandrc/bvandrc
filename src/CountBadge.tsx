@@ -1,4 +1,3 @@
-import { repoUrl } from './constants'
 import { REPO_COUNTS } from './generated/repo-counts'
 import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
 
@@ -57,16 +56,14 @@ export const CountBadge = ({ repo }: CountBadgeProps) => {
   }
   const label = `${counts.commits} commits, ${counts.prs} PRs`
   return (
-    <a href={repoUrl(repo)}>
-      <img
-        src={badgeSrc({
-          items: `git-commit:${counts.commits},git-pull-request:${counts.prs}`,
-          color: BADGE_FG,
-        })}
-        height={BADGE_HEIGHT}
-        alt={label}
-        title={label}
-      />
-    </a>
+    <img
+      src={badgeSrc({
+        items: `git-commit:${counts.commits},git-pull-request:${counts.prs}`,
+        color: BADGE_FG,
+      })}
+      height={BADGE_HEIGHT}
+      alt={label}
+      title={label}
+    />
   )
 }

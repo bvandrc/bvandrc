@@ -20,13 +20,23 @@ const output = md
   .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
   .replace(/<strong>\n\s*/g, '<strong>')
   .replace(/\n\s*<\/strong>/g, '</strong>')
-  // an inline image's link has to hug it: whitespace inside an anchor
-  // renders as a space, which would underline a gap beside the image and
-  // widen the right side the title is centred against. Only these two, since
-  // the screenshots' anchors sit on their own lines where it does not show.
-  .replace(
-    /<a href="([^"]*)">\s*(<img src="https:\/\/(?:multi-icon-badge|cdn\.simpleicons\.org)[^>]*\/>)\s*<\/a>/g,
-    '<a href="$1">$2</a>'
+  // the badge group's anchor has to hug its contents: whitespace inside it
+  // renders as spaces, which would widen the right side the title is centred
+  // against and underline the gaps on hover. Only anchors holding nothing but
+  // images and nbsp are touched, which leaves the screenshots' alone — theirs
+  // sit on their own lines where the space does not show.
+  .replace(/<a href="[^"]*">[\s\S]*?<\/a>/g, (anchor) =>
+    // only anchors holding nothing but these images and nbsp, which leaves
+    // the screenshots' alone: theirs sit on their own lines, where the space
+    // does not show
+    /^<a href="[^"]*">(?:\s|&nbsp;|<img src="https:\/\/(?:multi-icon-badge|cdn\.simpleicons\.org)[^>]*\/>)+<\/a>$/.test(
+      anchor
+    )
+      ? anchor
+          .replace(/>\s+</g, '><')
+          .replace(/;\s+</g, ';<')
+          .replace(/>\s+&/g, '>&')
+      : anchor
   )
   // the two counterweights must touch for the same reason: a space between
   // them would widen the left side and pull the title off centre
