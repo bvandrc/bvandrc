@@ -21,6 +21,9 @@ const LINK_BLUE = '4d79b2'
  */
 const ITEMS = 'mark-github:repo'
 
+/** Draws the mark after the word, matching the badge beside it. */
+const ICON_RIGHT = true
+
 /**
  * Height of this badge, a pixel over the counts badge beside it.
  *
@@ -49,6 +52,7 @@ export const RepoBadge = () => (
     src={badgeSrc({
       items: ITEMS,
       color: LINK_BLUE,
+      iconRight: ICON_RIGHT,
       height: REPO_BADGE_HEIGHT,
     })}
     height={REPO_BADGE_HEIGHT}
