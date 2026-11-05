@@ -152,16 +152,16 @@ export const SKILLS: SkillSection[] = [
         lines: [
           [
             {
-              alt: 'Cypress',
-              path: '-cypress-%23E5E5E5',
-              logo: 'cypress',
-              logoColor: '058a5e',
-            },
-            {
               alt: 'Playwright',
               path: '-Playwright-%232EAD33',
               logo: 'playwright',
               logoColor: 'white',
+            },
+            {
+              alt: 'Cypress',
+              path: '-cypress-%23E5E5E5',
+              logo: 'cypress',
+              logoColor: '058a5e',
             },
             {
               alt: 'Selenium',

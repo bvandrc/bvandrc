@@ -20,6 +20,17 @@ type BadgeParams = {
   height?: number
   /** draws the icons smaller against their values; 1 fills the height */
   iconScale?: number
+  /** draws every value in the bold face, measured against its own metrics */
+  bold?: boolean
+  /** the face to draw in; the worker's own default is Verdana */
+  font?: 'arial' | 'times' | 'courier'
+  /**
+   * Text size in px, independent of the badge's height.
+   *
+   * Without it the text is sized from the box, which ties how large it reads
+   * to how tall the badge is — and the height is what badges align by.
+   */
+  fontSize?: number
 }
 
 /**
@@ -35,7 +46,14 @@ export const badgeSrc = ({
   iconRight,
   height = BADGE_HEIGHT,
   iconScale,
+  bold,
+  font,
+  fontSize,
 }: BadgeParams) =>
   `${WORKER_ORIGIN}/?items=${items}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=0${
     iconRight ? '&iconSide=right' : ''
-  }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}`
+  }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
+    bold ? '&bold=true' : ''
+  }${font ? `&font=${font}` : ''}${
+    fontSize === undefined ? '' : `&fontSize=${fontSize}`
+  }`
