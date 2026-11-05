@@ -21,6 +21,7 @@
   "scripts": {
     "__c0": "====================[ Build & Development ]======================",
     "build": "tsx scripts/build.ts",
+    "gen:counts": "tsx scripts/fetch-counts.ts",
     "__c1": "====================[ Linting & Type Checking ]==================",
     "check": "biome check . && pnpm ts:check",
     "format": "biome check . --fix",
@@ -31,7 +32,7 @@
     "@types/node": "^26",
     "es-toolkit": "^1",
     "preact": "^10",
-    "preact-render-to-string": "^6.7",
+    "preact-render-to-string": "^6",
     "tsx": "^4",
     "typescript": "^7"
   }

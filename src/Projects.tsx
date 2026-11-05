@@ -1,17 +1,20 @@
 import { kebabCase } from 'es-toolkit'
 import type { ComponentChildren } from 'preact'
 
-import { ICON_GRAY, type ProjectType, TYPE_ICONS } from './constants'
+import { CountBadge, type CountBadgeProps, spacerWidth } from './CountBadge'
+import {
+  ICON_GRAY,
+  type ProjectType,
+  repoUrl,
+  TYPE_ICON_HEIGHT,
+  TYPE_ICONS,
+} from './constants'
 import { SectionTitle } from './SectionHeadings'
 
-type Project = {
+type Project = CountBadgeProps & {
   name: string
   href: string
   type: ProjectType
-  /** GitHub repo name under bvandrc — enables live commit/PR count badges */
-  repo?: string
-  /** static counts for repos the GitHub API can't see (private) */
-  counts?: { commits: number; prs: number }
   blurb: ComponentChildren
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
@@ -26,7 +29,7 @@ type ProjectSection = {
 
 const RepoLink = ({ repo }: { repo: string }) => (
   <>
-    &nbsp;<a href={`https://github.com/bvandrc/${repo}`}>[repo]</a>
+    &nbsp;<a href={repoUrl(repo)}>[repo]</a>
   </>
 )
 
@@ -124,7 +127,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             GitHub Action for accurate PR diff line counts via cloc, split by
             source, tests, docs, and config.
-            <RepoLink repo="pr-diff-line-count" />
           </>
         ),
       },
@@ -137,7 +139,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             GitHub Action that polls a URL to detect when a deploy has gone
             live.
-            <RepoLink repo="detect-deploy" />
           </>
         ),
       },
@@ -161,7 +162,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             GitHub Action that enforces shared package.json lint rules across
             repos.
-            <RepoLink repo="lint-package-json" />
           </>
         ),
       },
@@ -217,7 +217,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             Python tools for reading and modifying Serato DJ's tracks, hot cues,
             waveforms, metadata, crates, and library database.
-            <RepoLink repo="serato-tools" />
           </>
         ),
       },
@@ -225,6 +224,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'serato-usb-export',
         href: 'https://pypi.org/project/serato-usb-export/',
         type: 'python',
+        repo: 'serato-usb-export',
         blurb: <>Fast, deduplicated USB export tool for Serato DJ.</>,
       },
     ],
@@ -237,7 +237,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'spotify-organizer',
         href: 'https://github.com/bvandrc/SD',
         type: 'python',
-        counts: { commits: 547, prs: 0 },
+        repo: 'SD',
         blurb: (
           <>
             Python automation for my 11k+ track DJ library utilizing the Spotify
@@ -261,28 +261,54 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
-/** Height of the type icon after each project name. */
-const TYPE_ICON_SIZE = 12
+/** Every repo a project names, which `scripts/fetch-counts.ts` reads. */
+export const PROJECT_REPOS = PROJECT_SECTIONS.flatMap(({ projects }) =>
+  projects.map(({ repo }) => repo).filter((repo) => repo !== undefined)
+)
 
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
   const iconUrl = (color: string) =>
     `https://cdn.simpleicons.org/${icon.slug}/${color}`
+  const spacer = spacerWidth(p.repo)
+  const typeIcon = (
+    <img
+      src={iconUrl(ICON_GRAY)}
+      height={TYPE_ICON_HEIGHT}
+      alt={icon.title}
+      title={icon.title}
+    />
+  )
   return (
     <p>
       {/* a fully transparent copy of the icon balances it, so the title centers on its own text */}
-      <img src={iconUrl('00000000')} height={TYPE_ICON_SIZE} alt="" />
+      <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
+      {/* the count badge has no transparent twin to mirror it, so a blank
+          spacer carries its weight instead, sized to that project's own badge */}
+      {spacer > 0 && (
+        <img
+          src="./assets/spacer.png"
+          width={spacer}
+          height={TYPE_ICON_HEIGHT}
+          alt=""
+        />
+      )}
       &nbsp;&nbsp;&nbsp;
       <strong>
         <a href={p.href}>{p.name}</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;
-      <img
-        src={iconUrl(ICON_GRAY)}
-        height={TYPE_ICON_SIZE}
-        alt={icon.title}
-        title={icon.title}
-      />
+      {/* one more than the gap after the icon, which the badge's own left
+          padding widens by about 6px, so the icon sits evenly between the two */}
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      {/* linked to the repo like the badge, so the whole right-hand group
+          goes to one place rather than to GitHub's own camo URL */}
+      <a href={repoUrl(p.repo)}>{typeIcon}</a>
+      {spacer > 0 && (
+        <>
+          &nbsp;&nbsp;&nbsp;
+          <CountBadge repo={p.repo} />
+        </>
+      )}
       <br />
       {p.blurb}
       {p.screenshot && (
