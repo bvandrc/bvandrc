@@ -28,12 +28,6 @@ type ProjectSection = {
   projects: Project[]
 }
 
-const RepoLink = ({ repo }: { repo: string }) => (
-  <>
-    &nbsp;<a href={repoUrl(repo)}>[repo]</a>
-  </>
-)
-
 const PROJECT_SECTIONS: ProjectSection[] = [
   {
     emoji: '⚛️',
@@ -52,7 +46,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
             offline-first, cross-device-synced task manager with advanced
             ranking, nesting, dependencies, customization, and rules. 600+ PRs,
             each reviewed and refined.
-            <RepoLink repo="TaskRankr" />
           </>
         ),
         screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
@@ -62,12 +55,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         href: 'https://bvandrc.github.io/bike-ride-mapper/',
         type: 'react',
         repo: 'bike-ride-mapper',
-        blurb: (
-          <>
-            Interactive map of years of my GPS bike ride data.
-            <RepoLink repo="bike-ride-mapper" />
-          </>
-        ),
+        blurb: <>Interactive map of years of my GPS bike ride data.</>,
         screenshot:
           './project-screenshots/resized/screenshot-bike-ride-mapper.png',
       },
@@ -80,7 +68,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             My side hobby. All custom React components, using the SoundCloud
             API.
-            <RepoLink repo="specialingredientbass.com" />
           </>
         ),
         screenshot:
@@ -95,7 +82,6 @@ const PROJECT_SECTIONS: ProjectSection[] = [
           <>
             CMS-driven storefront with custom React components, built for a
             friend.
-            <RepoLink repo="womanhoodofwubz.com" />
           </>
         ),
         screenshot:
@@ -268,8 +254,13 @@ const NBSP = 4.5
 /** `&nbsp;` between the project title and its type icon. */
 const TITLE_GAP = 4 * NBSP
 
-/** `&nbsp;` between one badge and the next. */
-const BADGE_GAP = 2 * NBSP
+/**
+ * `&nbsp;` between one badge and the next.
+ *
+ * One, against three elsewhere on the line: both badges carry their own end
+ * padding, so the gap a reader sees is about 5px wider than the markup says.
+ */
+const BADGE_GAP = 1 * NBSP
 
 /**
  * Width of the blank image that counterweights a project's badges.
@@ -333,7 +324,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           <CountBadge repo={p.repo} />
         </>
       )}
-      &nbsp;&nbsp;
+      &nbsp;
       <RepoBadge repo={p.repo} />
       <br />
       {p.blurb}

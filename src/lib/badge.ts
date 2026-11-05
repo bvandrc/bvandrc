@@ -16,6 +16,8 @@ type BadgeParams = {
   color: string
   /** draws each icon after its own value rather than before it */
   iconRight?: boolean
+  /** overrides the shared height, and with it the size of the contents */
+  height?: number
 }
 
 /**
@@ -25,7 +27,12 @@ type BadgeParams = {
  * contrast against both GitHub themes, and `padY=0` trims the padding so the
  * text keeps its size in a box this short.
  */
-export const badgeSrc = ({ items, color, iconRight }: BadgeParams) =>
-  `${WORKER_ORIGIN}/?items=${items}&color=none&iconColor=${color}&textColor=${color}&height=${BADGE_HEIGHT}&padY=0${
+export const badgeSrc = ({
+  items,
+  color,
+  iconRight,
+  height = BADGE_HEIGHT,
+}: BadgeParams) =>
+  `${WORKER_ORIGIN}/?items=${items}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=0${
     iconRight ? '&iconSide=right' : ''
   }`

@@ -1,5 +1,5 @@
 import { repoUrl } from './constants'
-import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
+import { badgeSrc } from './lib/badge'
 
 /**
  * Text fill, a blue that reads as a link.
@@ -15,20 +15,33 @@ const LINK_BLUE = '1f6feb'
 const ITEMS = 'link-external:repo'
 
 /**
+ * Height of this badge, a pixel over the counts badge beside it.
+ *
+ * Its contents scale from the height, so the extra pixel is what makes the
+ * word read a little larger than the digits: 10.21px against their 9.43px.
+ */
+const REPO_BADGE_HEIGHT = 13
+
+/**
  * Width the renderer lays this badge out at, in px.
  *
  * One constant rather than a measurement per project: every repo badge holds
  * the same text and icon, so they are all this wide. It moves with
- * `BADGE_HEIGHT`, which everything in the badge scales from.
+ * `REPO_BADGE_HEIGHT`, which everything in the badge scales from.
  */
-export const REPO_BADGE_WIDTH = 46.95
+export const REPO_BADGE_WIDTH = 50.86
 
 /** A link to the project's repo, as a badge matching the counts beside it. */
 export const RepoBadge = ({ repo }: { repo: string }) => (
   <a href={repoUrl(repo)}>
     <img
-      src={badgeSrc({ items: ITEMS, color: LINK_BLUE, iconRight: true })}
-      height={BADGE_HEIGHT}
+      src={badgeSrc({
+        items: ITEMS,
+        color: LINK_BLUE,
+        iconRight: true,
+        height: REPO_BADGE_HEIGHT,
+      })}
+      height={REPO_BADGE_HEIGHT}
       alt="repo"
       title="repo"
     />
