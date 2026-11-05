@@ -1,15 +1,5 @@
-import { badgeSrc } from './lib/badge'
-
-/**
- * Text and icon fill: blue enough to read as a link, muted so it does not
- * compete with the project title above it.
- *
- * GitHub's own link blues are picked per theme, which a badge cannot do, and
- * both are more saturated than this. Desaturating costs nothing here — at
- * 4.5:1 on white and 4.2:1 on GitHub's dark surface it still carries the
- * contrast it has to, having no background of its own to sit on.
- */
-const LINK_BLUE = '4d79b2'
+import { LINK_BLUE } from './constants'
+import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
 
 /**
  * What the badge reads.
@@ -20,20 +10,21 @@ const LINK_BLUE = '4d79b2'
  * every link on the line opens in a new tab, marking one of them would say
  * the others do not.
  *
- * Three strokes, which is what survives at `BADGE_HEIGHT` — a `code-square`
+ * Three strokes, which is what survives at `REPO_CONTENT_HEIGHT` — a `code-square`
  * or a `package` fills in at this size.
  *
  * It leads the word, as the icons on the counts badge lead their own values.
  */
-const ITEMS = 'file-directory:repo'
+const ITEMS = [{ icon: 'file-directory', value: 'repo' }]
 
 /**
- * Height of this badge, a pixel over the counts badge beside it.
+ * Size the word and its folder are drawn at, inside `BADGE_HEIGHT`.
  *
- * Its contents scale from the height, so the extra pixel is what makes the
- * word read a little larger than the digits: 10.21px against their 9.43px.
+ * A pixel over the counts badge beside it, which is what makes the word read
+ * a little larger than the digits: 10.21px against their 9.43px. The rest of
+ * the box is padding, so the two still centre on the same line.
  */
-const REPO_BADGE_HEIGHT = 13
+const REPO_CONTENT_HEIGHT = 13
 
 /**
  * How large the folder is against the word, as a fraction of the height.
@@ -49,7 +40,8 @@ const REPO_ICON_SCALE = 0.8
  *
  * One constant rather than a measurement per project: every repo badge holds
  * the same text and icon, so they are all this wide. It moves with
- * `REPO_BADGE_HEIGHT`, which everything in the badge scales from.
+ * `REPO_CONTENT_HEIGHT`, which the contents scale from — the padding around
+ * them adds height, never width.
  */
 export const REPO_BADGE_WIDTH = 48.26
 
@@ -64,13 +56,13 @@ export const RepoBadge = () => (
     src={badgeSrc({
       items: ITEMS,
       color: LINK_BLUE,
-      height: REPO_BADGE_HEIGHT,
+      contentHeight: REPO_CONTENT_HEIGHT,
       iconScale: REPO_ICON_SCALE,
     })}
-    height={REPO_BADGE_HEIGHT}
+    height={BADGE_HEIGHT}
     // the SVG's own aria-label is not exposed through an <img>, so this is
     // the badge's accessible name — the worker needs no say in it
-    alt="GitHub repository"
-    title="GitHub repository"
+    alt="GitHub Repository"
+    title="GitHub Repository"
   />
 )

@@ -1,5 +1,5 @@
 import type { SectionLogo } from './content/projects'
-import { badgeSrc } from './lib/badge'
+import { badgeGap, badgePad, badgeSrc } from './lib/badge'
 
 /** GitHub's own body text colours, which a heading is set in. */
 const FG_LIGHT = '1f2328'
@@ -19,14 +19,30 @@ const HEADING_FONT_SIZE = 20
 /** Height of a section logo in an `<h3>` title, matching an emoji's. */
 const TITLE_LOGO_HEIGHT = 20
 
-/** Height of a section logo on the contents line, matching body text. */
-const CONTENTS_LOGO_HEIGHT = 16
+/** `&nbsp;` a section logo sat between back when it was a bare image. */
+const TEXT_LOGO_GAP = { contents: 1, title: 4 }
+
+/**
+ * Height of a section logo on the contents line.
+ *
+ * A pixel under body text, which a logo would otherwise overshoot: it fills
+ * its box to the edges where a letter leaves room above and below.
+ */
+const CONTENTS_LOGO_HEIGHT = 15
 
 /** A markdown `##` section heading with the emoji + nbsp spacing applied. */
 export const SectionHeader = (emoji: string, title: string) =>
   `## ${emoji}&nbsp; ${title} &nbsp;${emoji}`
 
-/** A section's emoji, or its logo in its brand colour. */
+/**
+ * A section's emoji, or its logo in its brand colour.
+ *
+ * The logo comes from the same renderer as every other mark in here rather
+ * than from a second host, which is one fewer place for the README's images
+ * to come from and one registry that decides what a slug means. Nothing is
+ * padded into it: a bare `<img>` sat on the baseline, and a badge whose
+ * contents fill it sits exactly where that did.
+ */
 export const SectionIcon = ({
   icon,
   height = CONTENTS_LOGO_HEIGHT,
@@ -39,11 +55,54 @@ export const SectionIcon = ({
   ) : (
     // decorative: the section's title always sits beside it
     <img
-      src={`https://cdn.simpleicons.org/${icon.slug}/${icon.color}`}
+      src={badgeSrc({
+        items: [{ icon: icon.slug }],
+        color: icon.color,
+        height,
+      })}
       height={height}
       alt=""
     />
   )
+
+/**
+ * The `&nbsp;` run between a section's icon and the title beside it.
+ *
+ * An emoji is text and takes the gap as written. A logo is a badge that pads
+ * itself, so its run is shortened by that padding — which at the contents
+ * line's size already exceeds the one space there, leaving none to write.
+ */
+const iconGap = (icon: string | SectionLogo, count: number, height: number) =>
+  '\u00a0'.repeat(
+    typeof icon === 'string' ? count : badgeGap(count, badgePad(height))
+  )
+
+/**
+ * A contents-line icon, carrying a link only where it has to.
+ *
+ * GitHub links an unwrapped README image to its own camo URL, so a logo takes
+ * an anchor back to its section. An emoji is text and needs none — and reads
+ * better without one, since the link's underline then starts at the words
+ * instead of running under the mark and the gap before them.
+ */
+export const SectionIconLink = ({
+  icon,
+  href,
+}: {
+  icon: string | SectionLogo
+  href: string
+}) =>
+  typeof icon === 'string' ? (
+    <SectionIcon icon={icon} />
+  ) : (
+    <a href={href}>
+      <SectionIcon icon={icon} />
+    </a>
+  )
+
+/** The gap after a section's icon on the contents line. */
+export const sectionIconGap = (icon: string | SectionLogo) =>
+  iconGap(icon, TEXT_LOGO_GAP.contents, CONTENTS_LOGO_HEIGHT)
 
 /** An `<h3>` subsection title, flanked by its icon on each side. */
 export const SectionTitle = ({
@@ -60,9 +119,14 @@ export const SectionTitle = ({
   // links back to this heading instead.
   const flank =
     typeof icon === 'string' ? mark : <a href={id && `#${id}`}>{mark}</a>
+  const gap = iconGap(icon, TEXT_LOGO_GAP.title, TITLE_LOGO_HEIGHT)
   return (
     <h3 id={id}>
-      {flank}&nbsp;&nbsp;&nbsp;&nbsp;{title}&nbsp;&nbsp;&nbsp;&nbsp;{flank}
+      {flank}
+      {gap}
+      {title}
+      {gap}
+      {flank}
     </h3>
   )
 }
@@ -106,11 +170,7 @@ export const HeadingBadge = ({
 }) => {
   const src = (color: string) =>
     badgeSrc({
-      // escaped here because this badgeSrc takes the items string as written:
-      // the gap is non-breaking spaces and the mark is an emoji
-      items: encodeURIComponent(
-        `${icon}${HEADING_GAP}${title}${HEADING_GAP}${icon}`
-      ),
+      items: [{ value: `${icon}${HEADING_GAP}${title}${HEADING_GAP}${icon}` }],
       color,
       height: HEADING_BADGE_HEIGHT,
       bold: true,
