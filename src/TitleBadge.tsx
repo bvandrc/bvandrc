@@ -1,43 +1,45 @@
-import { LINK_BLUE } from './constants'
-import { badgeSrc } from './lib/badge'
+import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
 
 /**
- * Height of a project title, which its text fills.
+ * Text fill: GitHub's own link blue, so the title reads as the link it is.
  *
- * GitHub renders README body text at 16px and offers no way to ask for more,
- * so a title drawn as a badge is the only way to size one: at 20 the word
- * comes out at 15.71px, a hair under the bold text it replaces, and the
- * height is the dial for making it larger.
+ * GitHub picks a blue per theme and a badge cannot, so this is the light
+ * one — 5.19:1 on white, and 3.64:1 on GitHub's dark surface, which is under
+ * the 4.5:1 a muted blue would hold on both. The title is the one place on
+ * the line worth spending that on: it is what a reader is looking for, and a
+ * blue that is nearly GitHub's reads as a mistake where GitHub's own does
+ * not. The repo badge keeps the muted blue for exactly the opposite reason.
  */
-export const TITLE_BADGE_HEIGHT = 20
+const TITLE_BLUE = '0969da'
 
 /**
  * Horizontal padding the renderer leaves on each end of a title, in px.
  *
  * Six at the renderer's base proportions, scaled by the size the contents are
- * drawn at — which with the padding trimmed is the whole height, against the
- * 14px an icon fills at that base. Derived rather than measured so it follows
- * `TITLE_BADGE_HEIGHT` wherever that is set.
+ * drawn at — which for a title is the whole badge, against the 14px an icon
+ * fills at that base. Derived rather than measured so it follows
+ * `BADGE_HEIGHT` wherever that is set.
  */
-export const TITLE_BADGE_PAD = (6 * TITLE_BADGE_HEIGHT) / 14
+export const TITLE_BADGE_PAD = (6 * BADGE_HEIGHT) / 14
 
 /**
  * A project's name, drawn as a badge rather than set as text.
  *
  * Bold and underlined to match what GitHub makes of a link in bold body text
  * — the point of the substitution being the size, which real README text
- * cannot change. Carries no link of its own: the title line wraps it.
+ * cannot change. It fills `BADGE_HEIGHT` rather than padding into it, so that
+ * constant is the dial for how large a title reads. Carries no link of its
+ * own: the title line wraps it.
  */
 export const TitleBadge = ({ name }: { name: string }) => (
   <img
     src={badgeSrc({
       items: [{ value: name }],
-      color: LINK_BLUE,
-      height: TITLE_BADGE_HEIGHT,
+      color: TITLE_BLUE,
       bold: true,
       underline: true,
     })}
-    height={TITLE_BADGE_HEIGHT}
+    height={BADGE_HEIGHT}
     // the SVG's own aria-label is not exposed through an <img>, so the name
     // has to be repeated here to survive as text
     alt={name}

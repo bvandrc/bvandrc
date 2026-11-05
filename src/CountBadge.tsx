@@ -1,17 +1,27 @@
 import { REPO_COUNTS } from './generated/repo-counts'
 import { BADGE_HEIGHT, badgeSrc } from './lib/badge'
 
+/**
+ * Size the digits and their icons are drawn at, inside `BADGE_HEIGHT`.
+ *
+ * The rest of the box is padding, which is what keeps the counts the size
+ * they have always been while the badge grew to match the title beside it.
+ */
+const COUNT_CONTENT_HEIGHT = 12
+
 export type CountBadgeProps = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo: string
 }
 
 /**
- * How the renderer lays a badge out, in px, measured at `BADGE_HEIGHT`.
+ * How the renderer lays a badge out, in px, measured at
+ * `COUNT_CONTENT_HEIGHT`.
  *
  * Its width is this base plus one `digit` per character of the counts, which
  * holds exactly: the digits are fixed-width and nothing else in the badge
- * varies. Both move with `BADGE_HEIGHT`, which everything scales from.
+ * varies. Both move with `COUNT_CONTENT_HEIGHT`, which the contents scale
+ * from — the padding around them adds height, never width.
  */
 const BADGE_WIDTH = { base: 48.86, digit: 5.99 }
 
@@ -63,6 +73,7 @@ export const CountBadge = ({ repo }: CountBadgeProps) => {
           { icon: 'git-pull-request', value: `${counts.prs}` },
         ],
         color: BADGE_FG,
+        contentHeight: COUNT_CONTENT_HEIGHT,
       })}
       height={BADGE_HEIGHT}
       alt={label}

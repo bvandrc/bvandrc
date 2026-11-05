@@ -2,12 +2,17 @@
 const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
 
 /**
- * Height of every badge, its padding trimmed to nothing.
+ * Height of every badge on a project's title line.
  *
- * The contents fill it rather than sitting inside it, so this is also the
- * icon height, and the text comes out a little under it — 9.43px here.
+ * One height for all of them is what aligns them: an `<img>` sits on the
+ * line's baseline, and a badge centres its contents, so equal boxes put every
+ * badge's contents on the same centre. What each one draws at is then its
+ * `contentHeight`, not its height.
+ *
+ * Raising this grows the title, which fills it, and only pads the badges that
+ * pin a `contentHeight` — so the row grows without the small print changing.
  */
-export const BADGE_HEIGHT = 12
+export const BADGE_HEIGHT = 18
 
 type BadgeItem = {
   /** simpleicons or octicon slug drawn beside the value; omitted for text alone */
@@ -21,8 +26,11 @@ type BadgeParams = {
   color: string
   /** draws each icon after its own value rather than before it */
   iconRight?: boolean
-  /** overrides the shared height, and with it the size of the contents */
-  height?: number
+  /**
+   * size the contents are drawn at within the badge, defaulting to the whole
+   * of it; the rest becomes padding above and below
+   */
+  contentHeight?: number
   /** draws the icons smaller against their values; 1 fills the height */
   iconScale?: number
   bold?: boolean
@@ -33,14 +41,16 @@ type BadgeParams = {
  * The URL of a badge, sized and styled like every other on the title line.
  *
  * `color=none` leaves it with no background, so `color` has to carry its own
- * contrast against both GitHub themes, and `padY=0` trims the padding so the
- * text keeps its size in a box this short.
+ * contrast against both GitHub themes. `padY` is always sent, even at zero:
+ * the renderer sizes the contents against the icon box when it is given and
+ * against the badge's full height when it is not, and only the first of those
+ * makes `contentHeight` mean what it says.
  */
 export const badgeSrc = ({
   items,
   color,
   iconRight,
-  height = BADGE_HEIGHT,
+  contentHeight = BADGE_HEIGHT,
   iconScale,
   bold,
   underline,
@@ -53,7 +63,8 @@ export const badgeSrc = ({
       return icon === undefined ? escaped : `${icon}:${escaped}`
     })
     .join(',')
-  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=0${
+  const padY = (BADGE_HEIGHT - contentHeight) / 2
+  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${BADGE_HEIGHT}&padY=${padY}${
     iconRight ? '&iconSide=right' : ''
   }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
     bold ? '&bold=true' : ''
