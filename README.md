@@ -30,7 +30,7 @@
   </em>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://taskrankr.com/guest">TaskRankr</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
   <br />
   My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.&nbsp;<a href="https://github.com/bvandrc/TaskRankr">[repo]</a>
   <br />
@@ -39,7 +39,7 @@
   </a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://bvandrc.github.io/bike-ride-mapper/">Bike Ride Tracker</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:87,git-pull-request:44&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="87 commits, 44 PRs" title="87 commits, 44 PRs" />
   <br />
   Interactive map of years of my GPS bike ride data.&nbsp;<a href="https://github.com/bvandrc/bike-ride-mapper">[repo]</a>
   <br />
@@ -48,7 +48,7 @@
   </a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://specialingredientbass.com/">DJ Website</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:93,git-pull-request:55&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="93 commits, 55 PRs" title="93 commits, 55 PRs" />
   <br />
   My side hobby. All custom React components, using the SoundCloud API.&nbsp;<a href="https://github.com/bvandrc/specialingredientbass.com">[repo]</a>
   <br />
@@ -57,7 +57,7 @@
   </a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />
+  <img src="https://cdn.simpleicons.org/react/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://womanhoodofwubz.neocities.org/">Retail Website</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/react/8B949E" height="12" alt="React" title="React" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:49,git-pull-request:44&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="49 commits, 44 PRs" title="49 commits, 44 PRs" />
   <br />
   CMS-driven storefront with custom React components, built for a friend.&nbsp;<a href="https://github.com/bvandrc/womanhoodofwubz.com">[repo]</a>
   <br />
@@ -67,70 +67,70 @@
 </p>
 <h3 id="testing-ci-tooling">🧪🧪&nbsp;&nbsp;&nbsp;&nbsp;Testing &amp; CI Tooling&nbsp;&nbsp;&nbsp;&nbsp;🧪🧪</h3>
 <p>
-  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/lighthouse-audit-utils">lighthouse-audit-utils</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:25,git-pull-request:31&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="25 commits, 31 PRs" title="25 commits, 31 PRs" />
   <br />
   Run Lighthouse audits with threshold checks, readable recommendations, report output, and a Playwright fixture.
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/pr-diff-line-count">pr-diff-line-count</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" />
+  <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/pr-diff-line-count">pr-diff-line-count</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:30,git-pull-request:39&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="30 commits, 39 PRs" title="30 commits, 39 PRs" />
   <br />
   GitHub Action for accurate PR diff line counts via cloc, split by source, tests, docs, and config.&nbsp;<a href="https://github.com/bvandrc/pr-diff-line-count">[repo]</a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" />
+  <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/detect-deploy">detect-deploy</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:17,git-pull-request:25&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="17 commits, 25 PRs" title="17 commits, 25 PRs" />
   <br />
   GitHub Action that polls a URL to detect when a deploy has gone live.&nbsp;<a href="https://github.com/bvandrc/detect-deploy">[repo]</a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/react-component-test-suite">react-component-test-suite</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:22,git-pull-request:23&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="22 commits, 23 PRs" title="22 commits, 23 PRs" />
   <br />
   Auto-title Vitest and Jest suites from the React component's name.
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" />
+  <img src="https://cdn.simpleicons.org/github/00000000" height="12" alt /><img src="./assets/spacer.png" width="79" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/marketplace/actions/package-json-lint">lint-package-json</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/github/8B949E" height="12" alt="GitHub Action" title="GitHub Action" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:7,git-pull-request:3&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="7 commits, 3 PRs" title="7 commits, 3 PRs" />
   <br />
   GitHub Action that enforces shared package.json lint rules across repos.&nbsp;<a href="https://github.com/bvandrc/lint-package-json">[repo]</a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/glob-sort">glob-sort</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:26,git-pull-request:25&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="26 commits, 25 PRs" title="26 commits, 25 PRs" />
   <br />
   Rule-based ordering of nested glob results for test configs.
 </p>
 <h3 id="other-packages">📦📦&nbsp;&nbsp;&nbsp;&nbsp;Other Packages&nbsp;&nbsp;&nbsp;&nbsp;📦📦</h3>
 <p>
-  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/tsx-to-pdf">tsx-to-pdf</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:40,git-pull-request:51&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="40 commits, 51 PRs" title="40 commits, 51 PRs" />
   <br />
   JSX + Tailwind to page-exact PDF, with a live-preview dev server.
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/persistent-logger">persistent-logger</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/persistent-logger">persistent-logger</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:19,git-pull-request:20&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="19 commits, 20 PRs" title="19 commits, 20 PRs" />
   <br />
   Crash-resilient, localStorage-backed browser diagnostics logging, with optional React hooks.
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/@bvandrc/react-toolkit">react-toolkit</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />
+  <img src="https://cdn.simpleicons.org/npm/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://www.npmjs.com/package/@bvandrc/react-toolkit">react-toolkit</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/npm/8B949E" height="12" alt="npm (Typescript)" title="npm (Typescript)" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:19,git-pull-request:16&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="19 commits, 16 PRs" title="19 commits, 16 PRs" />
   <br />
   Generic React hooks and helpers for browser UI behavior.
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
+  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt /><img src="./assets/spacer.png" width="97" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-tools/">serato-tools</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:343,git-pull-request:59&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="343 commits, 59 PRs" title="343 commits, 59 PRs" />
   <br />
   Python tools for reading and modifying Serato DJ's tracks, hot cues, waveforms, metadata, crates, and library database.&nbsp;<a href="https://github.com/bvandrc/serato-tools">[repo]</a>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
+  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://pypi.org/project/serato-usb-export/">serato-usb-export</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
   <br />
   Fast, deduplicated USB export tool for Serato DJ.
 </p>
 <h3 id="other-projects">💡💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡💡</h3>
 <p>
-  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />
+  <img src="https://cdn.simpleicons.org/python/00000000" height="12" alt /><img src="./assets/spacer.png" width="91" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/SD">spotify-organizer</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/python/8B949E" height="12" alt="Python" title="Python" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:547,git-pull-request:0&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="547 commits, 0 PRs" title="547 commits, 0 PRs" />
   <br />
   Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs. 
   <em>(private repo)</em>
 </p>
 <p>
-  <img src="https://cdn.simpleicons.org/arduino/00000000" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino/8B949E" height="12" alt="Arduino" title="Arduino" />
+  <img src="https://cdn.simpleicons.org/arduino/00000000" height="12" alt /><img src="./assets/spacer.png" width="85" height="12" alt />&nbsp;&nbsp;&nbsp;<strong><a href="https://github.com/bvandrc/arduino-totem">arduino-totem</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://cdn.simpleicons.org/arduino/8B949E" height="12" alt="Arduino" title="Arduino" />&nbsp;&nbsp;&nbsp;<img src="https://multi-icon-badge.bvandrc.workers.dev/?items=git-commit:36,git-pull-request:7&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=12&amp;padY=0" height="12" alt="36 commits, 7 PRs" title="36 commits, 7 PRs" />
   <br />
   Firmware for my LED festival totem, controlled by dials, buttons, and an accelerometer.
 </p>

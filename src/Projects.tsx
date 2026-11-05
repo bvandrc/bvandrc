@@ -1,17 +1,19 @@
 import { kebabCase } from 'es-toolkit'
 import type { ComponentChildren } from 'preact'
 
-import { ICON_GRAY, type ProjectType, TYPE_ICONS } from './constants'
+import { CountBadge, type CountBadgeProps, spacerWidth } from './CountBadge'
+import {
+  ICON_GRAY,
+  type ProjectType,
+  TYPE_ICON_HEIGHT,
+  TYPE_ICONS,
+} from './constants'
 import { SectionTitle } from './SectionHeadings'
 
-type Project = {
+type Project = CountBadgeProps & {
   name: string
   href: string
   type: ProjectType
-  /** GitHub repo name under bvandrc — enables live commit/PR count badges */
-  repo?: string
-  /** static counts for repos the GitHub API can't see (private) */
-  counts?: { commits: number; prs: number }
   blurb: ComponentChildren
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
@@ -237,7 +239,7 @@ const PROJECT_SECTIONS: ProjectSection[] = [
         name: 'spotify-organizer',
         href: 'https://github.com/bvandrc/SD',
         type: 'python',
-        counts: { commits: 547, prs: 0 },
+        repo: 'spotify-organizer',
         blurb: (
           <>
             Python automation for my 11k+ track DJ library utilizing the Spotify
@@ -261,28 +263,49 @@ const PROJECT_SECTIONS: ProjectSection[] = [
   },
 ]
 
-/** Height of the type icon after each project name. */
-const TYPE_ICON_SIZE = 12
+/** Every repo a project names, which `scripts/fetch-counts.ts` reads. */
+export const PROJECT_REPOS = PROJECT_SECTIONS.flatMap(({ projects }) =>
+  projects.map(({ repo }) => repo).filter((repo) => repo !== undefined)
+)
 
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
   const iconUrl = (color: string) =>
     `https://cdn.simpleicons.org/${icon.slug}/${color}`
+  const spacer = spacerWidth(p.repo)
   return (
     <p>
       {/* a fully transparent copy of the icon balances it, so the title centers on its own text */}
-      <img src={iconUrl('00000000')} height={TYPE_ICON_SIZE} alt="" />
+      <img src={iconUrl('00000000')} height={TYPE_ICON_HEIGHT} alt="" />
+      {/* the count badge has no transparent twin to mirror it, so a blank
+          spacer carries its weight instead, sized to that project's own badge */}
+      {spacer > 0 && (
+        <img
+          src="./assets/spacer.png"
+          width={spacer}
+          height={TYPE_ICON_HEIGHT}
+          alt=""
+        />
+      )}
       &nbsp;&nbsp;&nbsp;
       <strong>
         <a href={p.href}>{p.name}</a>
       </strong>
-      &nbsp;&nbsp;&nbsp;
+      {/* one more than the gap after the icon, which the badge's own left
+          padding widens by about 6px, so the icon sits evenly between the two */}
+      &nbsp;&nbsp;&nbsp;&nbsp;
       <img
         src={iconUrl(ICON_GRAY)}
-        height={TYPE_ICON_SIZE}
+        height={TYPE_ICON_HEIGHT}
         alt={icon.title}
         title={icon.title}
       />
+      {spacer > 0 && (
+        <>
+          &nbsp;&nbsp;&nbsp;
+          <CountBadge repo={p.repo} />
+        </>
+      )}
       <br />
       {p.blurb}
       {p.screenshot && (

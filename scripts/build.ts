@@ -20,5 +20,8 @@ const output = md
   .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
   .replace(/<strong>\n\s*/g, '<strong>')
   .replace(/\n\s*<\/strong>/g, '</strong>')
+  // the two counterweights must touch for the same reason: a space between
+  // them would widen the left side and pull the title off centre
+  .replace(/\n\s*(?=<img src="\.\/assets\/spacer\.png")/g, '')
 writeFileSync(join(root, 'README.md'), output)
 console.log('README.md generated')

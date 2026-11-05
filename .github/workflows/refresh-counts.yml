@@ -1,0 +1,63 @@
+name: Refresh counts
+
+# The numbers come from the GitHub API rather than from source, so refreshing
+# them cannot live in CI: `pnpm build` has to render the same README from the
+# same commit for CI to diff it. This fetches, rebuilds, and commits both, so
+# the build stays reproducible from what is committed.
+on:
+  schedule:
+    # Mondays at 07:23 UTC, off the hour because minute 0 is congested
+    - cron: '23 7 * * 1'
+  workflow_dispatch: # Allows manual triggering
+
+concurrency:
+  group: refresh-counts
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    name: Refresh repo counts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v7
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Fetch counts
+        id: fetch
+        # a repo that cannot be read keeps the count already committed, so the
+        # rest of the refresh is still worth committing. The last step turns
+        # that into a red run rather than losing it.
+        continue-on-error: true
+        env:
+          # the built-in token reads every public repo; the PAT additionally
+          # reaches the private ones, and is absent until one is configured
+          GITHUB_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN || secrets.GITHUB_TOKEN }}
+        run: pnpm gen:counts
+
+      - name: Build README
+        run: pnpm build
+
+      - name: Commit any change
+        run: |
+          if git diff --quiet; then
+            echo "counts unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/generated/repo-counts.ts README.md
+          git commit -m "chore: refresh repo counts"
+          git push
+
+      - name: Report repos that could not be read
+        if: steps.fetch.outcome == 'failure'
+        run: |
+          echo "::error::Some repos could not be read — their counts are the ones already committed. See the warnings above."
+          exit 1
