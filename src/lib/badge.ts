@@ -31,6 +31,13 @@ type BadgeParams = {
    * of it; the rest becomes padding above and below
    */
   contentHeight?: number
+  /**
+   * The badge's own box, for one that does not sit on a project's title line.
+   *
+   * Everything on that line shares `BADGE_HEIGHT` so the badges centre
+   * together; a heading has no such neighbours and sets its own.
+   */
+  height?: number
   /** draws the icons smaller against their values; 1 fills the height */
   iconScale?: number
   bold?: boolean
@@ -43,6 +50,13 @@ type BadgeParams = {
    * they already had.
    */
   font?: 'arial' | 'times' | 'courier'
+  /**
+   * Text size in px, independent of the badge's height.
+   *
+   * Without it the text is sized from the box, which ties how large it reads
+   * to how tall the badge is — and the height is what badges align by.
+   */
+  fontSize?: number
 }
 
 /**
@@ -58,11 +72,13 @@ export const badgeSrc = ({
   items,
   color,
   iconRight,
-  contentHeight = BADGE_HEIGHT,
+  height = BADGE_HEIGHT,
+  contentHeight = height,
   iconScale,
   bold,
   underline,
   font,
+  fontSize,
 }: BadgeParams) => {
   // the separators are the syntax, so only the values are escaped — a project
   // name carries spaces where a count or a slug never does
@@ -72,10 +88,12 @@ export const badgeSrc = ({
       return icon === undefined ? escaped : `${icon}:${escaped}`
     })
     .join(',')
-  const padY = (BADGE_HEIGHT - contentHeight) / 2
-  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${BADGE_HEIGHT}&padY=${padY}${
+  const padY = (height - contentHeight) / 2
+  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=${padY}${
     iconRight ? '&iconSide=right' : ''
   }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
     bold ? '&bold=true' : ''
-  }${underline ? '&underline=true' : ''}${font ? `&font=${font}` : ''}`
+  }${underline ? '&underline=true' : ''}${font ? `&font=${font}` : ''}${
+    fontSize === undefined ? '' : `&fontSize=${fontSize}`
+  }`
 }

@@ -1,4 +1,22 @@
+import type { ComponentChildren } from 'preact'
+
 import type { SectionLogo } from './content/projects'
+import { badgeSrc } from './lib/badge'
+
+/** GitHub's own body text colours, which a heading is set in. */
+const FG_LIGHT = '1f2328'
+const FG_DARK = 'f0f6fc'
+
+/**
+ * Box a section title is drawn in, and the size of the text inside it.
+ *
+ * The box is what the badge is measured and aligned by; the text size is set
+ * apart from it, so the title can read larger than a 24px box would otherwise
+ * allow. 20 is just under what that box can hold before the edges would cut
+ * the descenders, which the renderer refuses outright.
+ */
+const HEADING_BADGE_HEIGHT = 24
+const HEADING_FONT_SIZE = 20
 
 /** Height of a section logo in an `<h3>` title, matching an emoji's. */
 const TITLE_LOGO_HEIGHT = 20
@@ -37,7 +55,7 @@ export const SectionTitle = ({
 }: {
   id?: string
   icon: string | SectionLogo
-  title: string
+  title: ComponentChildren
 }) => {
   const mark = <SectionIcon icon={icon} height={TITLE_LOGO_HEIGHT} />
   // GitHub links an unwrapped README image to its own camo URL, so a logo
@@ -48,5 +66,31 @@ export const SectionTitle = ({
     <h3 id={id}>
       {flank}&nbsp;&nbsp;&nbsp;&nbsp;{title}&nbsp;&nbsp;&nbsp;&nbsp;{flank}
     </h3>
+  )
+}
+
+/**
+ * A section title drawn as a badge rather than set as heading text.
+ *
+ * Heading text is near-black on one theme and near-white on the other, which
+ * one image cannot be — so it ships both and lets the reader's browser pick,
+ * which GitHub's sanitizer allows for exactly this. The heading element stays
+ * around it, so the emoji beside it keeps the size the heading gives it.
+ */
+export const HeadingBadge = ({ title }: { title: string }) => {
+  const src = (color: string) =>
+    badgeSrc({
+      items: [{ value: title }],
+      color,
+      height: HEADING_BADGE_HEIGHT,
+      bold: true,
+      font: 'arial',
+      fontSize: HEADING_FONT_SIZE,
+    })
+  return (
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
+      <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
+    </picture>
   )
 }
