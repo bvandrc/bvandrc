@@ -14,8 +14,6 @@ export type Project = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo: string
   blurb: string
-  /** Marks a private repo, which renderers note after the blurb. */
-  private?: boolean
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
 }

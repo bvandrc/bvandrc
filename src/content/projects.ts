@@ -155,7 +155,6 @@ export const PROJECTS: ProjectSection[] = [
         repo: 'SD',
         blurb:
           'Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs.',
-        private: true,
       },
       {
         name: 'arduino-totem',

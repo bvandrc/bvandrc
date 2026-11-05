@@ -100,12 +100,6 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       </a>
       <br />
       {p.blurb}
-      {p.private && (
-        <>
-          {' '}
-          <em>(private repo)</em>
-        </>
-      )}
       {p.screenshot && (
         <>
           <br />
