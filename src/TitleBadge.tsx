@@ -42,9 +42,9 @@ export const TITLE_BADGE_PAD = (6 * BADGE_HEIGHT) / 14
  * — the point of the substitution being the size, which real README text
  * cannot change. It fills `BADGE_HEIGHT` rather than padding into it, so that
  * constant is the dial for how large a title reads. Carries no link of its
- * own: the title line wraps it.
+ * own: the title line wraps it, and takes `href` only to name it on hover.
  */
-export const TitleBadge = ({ name }: { name: string }) => (
+export const TitleBadge = ({ name, href }: { name: string; href: string }) => (
   <img
     src={badgeSrc({
       items: [{ value: name }],
@@ -58,6 +58,9 @@ export const TitleBadge = ({ name }: { name: string }) => (
     // the SVG's own aria-label is not exposed through an <img>, so the name
     // has to be repeated here to survive as text
     alt={name}
-    title={name}
+    // a badge is an image, so a browser shows no status-bar preview of where
+    // the link around it goes — the tooltip is the only place the destination
+    // can appear, and it says more than the name the badge already draws
+    title={href}
   />
 )

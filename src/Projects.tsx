@@ -108,7 +108,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           whatever size we ask for. Bold and underlined is what GitHub makes of
           a link in bold body text, so it reads as the link it is wrapped in. */}
       <a href={p.href} target="_blank" rel="noopener">
-        <TitleBadge name={p.name} />
+        <TitleBadge name={p.name} href={p.href} />
       </a>
       <Gap n={TITLE_GAP.after} />
       {/* every image here is wrapped, because GitHub links an unwrapped README
