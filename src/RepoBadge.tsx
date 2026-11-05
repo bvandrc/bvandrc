@@ -62,7 +62,7 @@ export const RepoBadge = () => (
     height={BADGE_HEIGHT}
     // the SVG's own aria-label is not exposed through an <img>, so this is
     // the badge's accessible name — the worker needs no say in it
-    alt="GitHub repository"
-    title="GitHub repository"
+    alt="GitHub Repository"
+    title="GitHub Repository"
   />
 )
