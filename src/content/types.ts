@@ -5,7 +5,13 @@
  * `src/content/` and type-check it as plain TypeScript.
  */
 
-export type ProjectType = 'react' | 'npm' | 'github' | 'python' | 'arduino'
+export type ProjectType =
+  | 'react'
+  | 'npm'
+  | 'github'
+  | 'worker'
+  | 'python'
+  | 'arduino'
 
 export type Project = {
   name: string
