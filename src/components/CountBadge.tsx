@@ -1,5 +1,10 @@
 import { REPO_COUNTS } from '../generated/repo-counts'
-import { BADGE_HEIGHT, badgeSrc } from '../lib/badge'
+import {
+  BADGE_HEIGHT,
+  type BadgeParams,
+  badgeSrc,
+  badgeWidth,
+} from '../lib/badge'
 
 /**
  * Size the digits and their icons are drawn at, inside `BADGE_HEIGHT`.
@@ -15,34 +20,6 @@ export type CountBadgeProps = {
 }
 
 /**
- * How the renderer lays a badge out, in px, measured at
- * `COUNT_CONTENT_HEIGHT`.
- *
- * Its width is this base plus one `digit` per character of the counts, which
- * holds exactly: the digits are fixed-width and nothing else in the badge
- * varies. Both move with `COUNT_CONTENT_HEIGHT`, which the contents scale
- * from — the padding around them adds height, never width.
- */
-const BADGE_WIDTH = { base: 48.86, digit: 5.99 }
-
-/**
- * Width the renderer lays `repo`'s badge out at, in px, or 0 for a repo that
- * renders none.
- *
- * Its width is the base plus one `digit` per character of the counts, which
- * holds exactly: the digits are fixed-width and nothing else in the badge
- * varies.
- */
-export const countBadgeWidth = (repo: string) => {
-  const counts = REPO_COUNTS[repo]
-  if (!counts) {
-    return 0
-  }
-  const digits = `${counts.commits}${counts.prs}`.length
-  return BADGE_WIDTH.base + BADGE_WIDTH.digit * digits
-}
-
-/**
  * Icon and text fill.
  *
  * A badge carries no background, so this has to supply its own contrast: a
@@ -52,29 +29,64 @@ export const countBadgeWidth = (repo: string) => {
 const BADGE_FG = '6E7681'
 
 /**
- * A project's commit and pull request totals, as one transparent badge.
+ * A count as the badge shows it: in full below 1000, and to one decimal of a
+ * thousand or million above (`70.3K`), leaving the exact number to its label.
+ */
+const formatCount = new Intl.NumberFormat(
+  // fixed rather than the machine's, so every build writes the same README
+  'en',
+  { notation: 'compact', maximumFractionDigits: 1 }
+).format
+
+/**
+ * What `repo`'s badge is drawn from: its commits and PRs, then its downloads
+ * where it publishes a package, or nothing for a repo that renders no badge.
+ */
+const countBadgeParams = (repo: string): BadgeParams | undefined => {
+  const counts = REPO_COUNTS[repo]
+  if (!counts) {
+    return undefined
+  }
+  const items = [
+    { icon: 'git-commit', value: formatCount(counts.commits) },
+    { icon: 'git-pull-request', value: formatCount(counts.prs) },
+  ]
+  if (counts.downloads !== undefined) {
+    items.push({ icon: 'download', value: formatCount(counts.downloads) })
+  }
+  return { items, color: BADGE_FG, contentHeight: COUNT_CONTENT_HEIGHT }
+}
+
+/**
+ * Width the renderer lays `repo`'s badge out at, in px, or 0 for a repo that
+ * renders none.
+ */
+export const countBadgeWidth = (repo: string) => {
+  const params = countBadgeParams(repo)
+  return params ? badgeWidth(params) : 0
+}
+
+/**
+ * A project's commit and pull request totals, and its downloads where it
+ * publishes a package, as one transparent badge.
  *
  * The numbers live in the URL rather than being looked up when the image
  * loads, which is what keeps `pnpm build` reproducible and the badge
  * identical for every reader — private repos included, since nothing has to
- * read the repo to render it.
+ * read the repo to render it. Its alt and hover text give each count in full.
  */
 export const CountBadge = ({ repo }: CountBadgeProps) => {
   const counts = REPO_COUNTS[repo]
-  if (!counts) {
+  const params = countBadgeParams(repo)
+  if (!(counts && params)) {
     return null
   }
-  const label = `${counts.commits} commits, ${counts.prs} PRs`
+  const label = `${counts.commits} commits, ${counts.prs} PRs${
+    counts.downloads === undefined ? '' : `, ${counts.downloads} downloads`
+  }`
   return (
     <img
-      src={badgeSrc({
-        items: [
-          { icon: 'git-commit', value: `${counts.commits}` },
-          { icon: 'git-pull-request', value: `${counts.prs}` },
-        ],
-        color: BADGE_FG,
-        contentHeight: COUNT_CONTENT_HEIGHT,
-      })}
+      src={badgeSrc(params)}
       height={BADGE_HEIGHT}
       alt={label}
       title={label}
