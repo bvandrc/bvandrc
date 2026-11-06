@@ -11,7 +11,7 @@ export const ICON_GRAY = '8B949E'
  * widths where its sidebar returns, both of which leave a README too narrow
  * for a title line plus its counterweight.
  */
-export const NARROW_VIEWPORT = '(max-width: 899px)'
+export const NARROW_VIEWPORT = '(max-width: 999px)'
 
 /**
  * Width an image asks for to fill exactly one line, in px.
