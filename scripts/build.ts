@@ -47,6 +47,12 @@ const output = md
           .replace(/>\s+&/g, '>&')
       : anchor
   )
+  // a <nobr> renders the newlines the printer puts inside it as spaces, so it
+  // hugs its contents too, and the nbsp run before it joins it
+  .replace(/((?:&nbsp;)+)\n\s*(?=<nobr>)/g, '$1')
+  .replace(/<nobr>[\s\S]*?<\/nobr>/g, (nobr) =>
+    nobr.replace(/>\s+</g, '><').replace(/;\s+</g, ';<').replace(/>\s+&/g, '>&')
+  )
   // a jump link that the printer wrapped onto lines of its own would underline
   // the space its newlines render as, so it hugs its contents too
   .replace(/(<a href="#[^"]*">)\s+([\s\S]*?)\s+<\/a>/g, '$1$2</a>')

@@ -11,5 +11,12 @@ declare module 'preact' {
       /** Deprecated HTML margin attribute — the only way to space images in a GitHub README. */
       vspace?: number | string
     }
+    interface IntrinsicElements {
+      /**
+       * Deprecated no-wrap element — with CSS stripped, the only way to keep a
+       * README line from wrapping between two images, which `&nbsp;` cannot.
+       */
+      nobr: HTMLAttributes<HTMLElement>
+    }
   }
 }
