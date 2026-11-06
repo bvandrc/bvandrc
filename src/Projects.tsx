@@ -48,14 +48,6 @@ const SPACER_HEIGHT = 14
  */
 const NARROW_VIEWPORT = '(max-width: 767px)'
 
-/**
- * Width that a narrow viewport's line break asks for, in px.
- *
- * Wider than any README column, so GitHub's `max-width: 100%` on images
- * clamps it to exactly one line, which leaves it nothing to share a line with.
- */
-const LINE_BREAK_WIDTH = 2000
-
 /** `&nbsp;` the type icon sat between back when it was a bare image. */
 const TEXT_ICON_GAP = 3
 
@@ -149,20 +141,6 @@ const ProjectEntry = ({ p }: { p: Project }) => {
         <TypeIcon type={p.type} />
       </a>
       <Gap n={ICON_GAP} />
-      {/* on a narrow viewport the badges start a line of their own: an image
-          as wide as the line, and no height, has to sit on one alone. It is
-          nothing at all elsewhere. */}
-      <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-        <picture>
-          <source
-            media={NARROW_VIEWPORT}
-            srcset="./assets/spacer.png"
-            width={LINE_BREAK_WIDTH}
-            height={0}
-          />
-          <img src="./assets/spacer.png" width={0} height={0} alt="" />
-        </picture>
-      </a>
       {countBadgeWidth(p.repo) > 0 && (
         <>
           <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
