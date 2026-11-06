@@ -1,4 +1,5 @@
 import type { ProjectType } from './project-types'
+import type { GroupGlyph } from './sections'
 
 export type Project = {
   name: string
@@ -9,6 +10,16 @@ export type Project = {
   blurb: string
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
+  /**
+   * bvandercar.dev shows the live site at `href` in an iframe, in place of the
+   * screenshot; the README ignores it. Leave it off a site that refuses framing.
+   */
+  embed?: ProjectEmbed
+}
+
+export type ProjectEmbed = {
+  /** How far to shrink the framed page, so more of its layout fits (0.5 = 50%). Defaults to 1. */
+  scale?: number
 }
 
 /** A simpleicons.org logo, drawn in its brand colour. */
@@ -19,9 +30,18 @@ export type SectionLogo = {
   color: string
 }
 
-export type ProjectSection = {
-  /** An emoji, or a logo where no emoji fits. */
-  icon: string | SectionLogo
+export type ProjectSection = (
+  | {
+      /** A logo where no emoji fits, which the site draws as-is. */
+      icon: SectionLogo
+      glyph?: never
+    }
+  | {
+      icon: string
+      /** The site's glyph for the heading, drawn in place of the emoji. */
+      glyph: GroupGlyph
+    }
+) & {
   title: string
   intro?: string
   projects: Project[]
@@ -42,6 +62,7 @@ export const PROJECTS: ProjectSection[] = [
         blurb:
           'My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.',
         screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
+        embed: { scale: 0.75 },
       },
       {
         name: 'Bike Ride Tracker',
@@ -51,6 +72,7 @@ export const PROJECTS: ProjectSection[] = [
         blurb: 'Interactive map of years of my GPS bike ride data.',
         screenshot:
           './project-screenshots/resized/screenshot-bike-ride-mapper.png',
+        embed: { scale: 0.9 },
       },
       {
         name: 'DJ Website',
@@ -61,6 +83,7 @@ export const PROJECTS: ProjectSection[] = [
           'My side hobby. All custom React components, using the SoundCloud API.',
         screenshot:
           './project-screenshots/resized/screenshot-specialingredientbass.png',
+        embed: { scale: 0.5 },
       },
       {
         name: 'Retail Website',
@@ -71,11 +94,13 @@ export const PROJECTS: ProjectSection[] = [
           'CMS-driven storefront with custom React components, built for a friend.',
         screenshot:
           './project-screenshots/resized/screenshot-womanhoodofwubz.png',
+        embed: { scale: 0.6 },
       },
     ],
   },
   {
     icon: '🧪',
+    glyph: { name: 'test-tube-diagonal', color: '05DF72' },
     title: 'Testing & CI Tooling',
     projects: [
       {
@@ -129,6 +154,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '📦',
+    glyph: { name: 'package', color: 'A7723D' },
     title: 'Other Packages',
     projects: [
       {
@@ -173,6 +199,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '💡',
+    glyph: { name: 'lightbulb', color: 'FFDF20' },
     title: 'Other Projects',
     projects: [
       {
