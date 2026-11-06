@@ -1,6 +1,6 @@
 name: Refresh counts
 
-# The numbers come from the GitHub API rather than from source, so refreshing
+# The numbers come from the GitHub and npm APIs rather than from source, so refreshing
 # them cannot live in CI: `pnpm build` has to render the same README from the
 # same commit for CI to diff it. This fetches, rebuilds, and commits both, so
 # the build stays reproducible from what is committed.
