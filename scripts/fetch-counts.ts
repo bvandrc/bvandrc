@@ -2,10 +2,11 @@ import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import type { Project } from '../src/content/projects'
 import { PROJECT_REPOS, PROJECTS } from '../src/content/projects'
 
 /**
- * Rewrites `src/generated/repo-counts.ts` from the GitHub and npm APIs.
+ * Rewrites `src/generated/repo-counts.ts` from the GitHub, npm, and pepy.tech APIs.
  *
  * Deliberately not part of `pnpm build`: the build has to render the same
  * README from the same source for CI to diff it, while these numbers change
@@ -14,7 +15,9 @@ import { PROJECT_REPOS, PROJECTS } from '../src/content/projects'
  *
  * Reads `GITHUB_TOKEN`. Any token raises the rate limit and reaches public
  * repos; private ones additionally need that token to be granted them. npm's
- * download counts need no token.
+ * download counts need no token; PyPI's come from pepy.tech, which reads
+ * `PEPY_API_KEY`. Without that key, PyPI downloads keep their committed
+ * numbers rather than failing the run.
  *
  * Exits non-zero if any repo could not be read, having first written every
  * count it did get. A repo that fails keeps the numbers already committed,
@@ -57,8 +60,8 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const isoDate = (time: number) => new Date(time).toISOString().slice(0, 10)
 
 /** A JSON response from `url`, throwing on any non-2xx status. */
-const fetchJson = async <T>(url: string) => {
-  const res = await fetch(url)
+const fetchJson = async <T>(url: string, init?: RequestInit) => {
+  const res = await fetch(url, init)
   if (!res.ok) {
     throw new Error(`${res.status} for ${url}`)
   }
@@ -66,7 +69,7 @@ const fetchJson = async <T>(url: string) => {
 }
 
 /** An npm package's downloads from its first publish through today. */
-const fetchDownloads = async (pkg: string) => {
+const fetchNpmDownloads = async (pkg: string) => {
   // a scoped name's slash would otherwise read as a path segment
   const name = pkg.replace('/', '%2F')
   const { time } = await fetchJson<{ time: { created: string } }>(
@@ -91,15 +94,42 @@ const fetchDownloads = async (pkg: string) => {
   return downloads
 }
 
-const fetchCounts = async (
-  repo: string,
-  npmPackage: string | undefined
-): Promise<RepoCounts> => {
-  const base = `https://api.github.com/repos/${OWNER}/${repo}`
+// Actions passes an unset secret as an empty string
+const pepyKey = process.env.PEPY_API_KEY || undefined
+
+/** A PyPI package's all-time downloads, as pepy.tech counts them. */
+const fetchPypiDownloads = async (pkg: string, key: string) =>
+  (
+    await fetchJson<{ total_downloads: number }>(
+      `https://api.pepy.tech/api/v2/projects/${pkg}`,
+      { headers: { 'X-Api-Key': key } }
+    )
+  ).total_downloads
+
+/**
+ * A project's all-time downloads from whichever registry it publishes to.
+ *
+ * Undefined for a project that publishes to neither, and the committed number
+ * for a PyPI one while `PEPY_API_KEY` is unset.
+ */
+const fetchDownloads = ({ repo, npmPackage, pypiPackage }: Project) => {
+  if (npmPackage !== undefined) {
+    return fetchNpmDownloads(npmPackage)
+  }
+  if (pypiPackage === undefined) {
+    return undefined
+  }
+  return pepyKey === undefined
+    ? previous[repo]?.downloads
+    : fetchPypiDownloads(pypiPackage, pepyKey)
+}
+
+const fetchCounts = async (project: Project): Promise<RepoCounts> => {
+  const base = `https://api.github.com/repos/${OWNER}/${project.repo}`
   const [commits, prs, downloads] = await Promise.all([
     total(`${base}/commits?per_page=1`),
     total(`${base}/pulls?state=all&per_page=1`),
-    npmPackage === undefined ? undefined : fetchDownloads(npmPackage),
+    fetchDownloads(project),
   ])
   return downloads === undefined
     ? { commits, prs }
@@ -115,11 +145,10 @@ const previous: Record<string, RepoCounts | undefined> = await import(
 const counts: Record<string, RepoCounts> = {}
 const failed: string[] = []
 
-for (const { repo, npmPackage } of PROJECTS.flatMap(
-  ({ projects }) => projects
-)) {
+for (const project of PROJECTS.flatMap(({ projects }) => projects)) {
+  const { repo } = project
   try {
-    counts[repo] = await fetchCounts(repo, npmPackage)
+    counts[repo] = await fetchCounts(project)
   } catch (error) {
     const kept = previous[repo]
     failed.push(`${repo}: ${error instanceof Error ? error.message : error}`)
@@ -149,13 +178,13 @@ writeFileSync(
 type RepoCounts = {
   commits: number
   prs: number
-  /** All-time npm downloads, for a project published there */
+  /** All-time npm or PyPI downloads, for a project published to either */
   downloads?: number
 }
 
 /**
- * Each project repo's total commits and pull requests, and its npm package's
- * all-time downloads where it has one, refreshed weekly.
+ * Each project repo's total commits and pull requests, and its npm or PyPI
+ * package's all-time downloads where it has one, refreshed weekly.
  *
  * Typed as possibly absent because a lookup can miss: a repo \`pnpm gen:counts\`
  * has never read — a private one before its token is configured — has no entry.
@@ -166,6 +195,17 @@ ${entries}
 `
 )
 console.log(`wrote counts for ${Object.keys(counts).length} repos`)
+
+if (
+  pepyKey === undefined &&
+  PROJECTS.some(({ projects }) =>
+    projects.some(({ pypiPackage }) => pypiPackage !== undefined)
+  )
+) {
+  console.warn(
+    '::warning::PEPY_API_KEY is not set, so PyPI downloads keep their committed numbers'
+  )
+}
 
 const missing = PROJECT_REPOS.filter((repo) => !counts[repo])
 for (const line of failed) {
