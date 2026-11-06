@@ -7,6 +7,8 @@ export type Project = {
   type: ProjectType
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo: string
+  /** Name the project is published under on npm, whose all-time downloads `pnpm gen:counts` committed */
+  npmPackage?: string
   blurb: string
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
@@ -108,6 +110,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/lighthouse-audit-utils',
         type: 'npm',
         repo: 'lighthouse-audit-utils',
+        npmPackage: 'lighthouse-audit-utils',
         blurb:
           'Run Lighthouse audits with threshold checks, readable recommendations, report output, and a Playwright fixture.',
       },
@@ -132,6 +135,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/react-component-test-suite',
         type: 'npm',
         repo: 'react-component-test-suite',
+        npmPackage: 'react-component-test-suite',
         blurb:
           "Auto-title Vitest and Jest suites from the React component's name.",
       },
@@ -148,6 +152,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/glob-sort',
         type: 'npm',
         repo: 'glob-sort',
+        npmPackage: 'glob-sort',
         blurb: 'Rule-based ordering of nested glob results for test configs.',
       },
     ],
@@ -162,6 +167,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/tsx-to-pdf',
         type: 'npm',
         repo: 'tsx-to-pdf',
+        npmPackage: 'tsx-to-pdf',
         blurb:
           'JSX + Tailwind to page-exact PDF, with a live-preview dev server.',
       },
@@ -170,6 +176,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/persistent-logger',
         type: 'npm',
         repo: 'persistent-logger',
+        npmPackage: 'persistent-logger',
         blurb:
           'Crash-resilient, localStorage-backed browser diagnostics logging, with optional React hooks.',
       },
@@ -178,6 +185,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://www.npmjs.com/package/@bvandrc/react-toolkit',
         type: 'npm',
         repo: 'react-toolkit',
+        npmPackage: '@bvandrc/react-toolkit',
         blurb: 'Generic React hooks and helpers for browser UI behavior.',
       },
       {
