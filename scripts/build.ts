@@ -38,7 +38,7 @@ const output = md
     // only anchors holding nothing but these images and nbsp, which leaves
     // the screenshots' alone: theirs sit on their own lines, where the space
     // does not show
-    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/>|<picture><source[^>]*\/><img src="https:\/\/badgesmith[^>]*\/><\/picture>)+<\/a>$/.test(
+    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/>|<picture>(?:<source[^>]*\/>)+<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/><\/picture>)+<\/a>$/.test(
       anchor
     )
       ? anchor
@@ -46,6 +46,13 @@ const output = md
           .replace(/;\s+</g, ';<')
           .replace(/>\s+&/g, '>&')
       : anchor
+  )
+  // the title's anchor ends in the gap after it, drawn as an image, so the
+  // newline the printer leaves before the next anchor would render as a
+  // second gap beside it
+  .replace(
+    /(<img src="\.\/assets\/spacer\.png"[^>]*\/><\/picture><\/a>)\s+(?=<a )/g,
+    '$1'
   )
   // a jump link that the printer wrapped onto lines of its own would underline
   // the space its newlines render as, so it hugs its contents too

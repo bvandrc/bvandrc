@@ -27,6 +27,14 @@ const TITLE_FONT = 'arial'
 const TITLE_FONT_SIZE = 18
 
 /**
+ * Width a title asks for on a narrow viewport, to fill exactly one line, in px.
+ *
+ * Wider than any README column, so GitHub's `max-width: 100%` on images
+ * clamps it to the line, which leaves it nothing to share a line with.
+ */
+const FULL_LINE_WIDTH = 2000
+
+/**
  * Horizontal padding the renderer leaves on each end of a title, in px.
  *
  * A title's contents are the whole badge, so the pad follows `BADGE_HEIGHT`
@@ -58,6 +66,10 @@ export const TitleBadge = ({ name, href }: { name: string; href: string }) => {
       src={src(LINK_BLUE.DARK)}
       light={src(LINK_BLUE.LIGHT)}
       height={BADGE_HEIGHT}
+      // a narrow viewport gives the title a line to itself, with the rest of
+      // its line wrapping beneath it. The SVG keeps its proportions in the
+      // wider box, so the name stays its size and centres in the line
+      narrowWidth={FULL_LINE_WIDTH}
       // the SVG's own aria-label is not exposed through an <img>, so the name
       // has to be repeated here to survive as text
       alt={name}

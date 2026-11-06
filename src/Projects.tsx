@@ -1,4 +1,4 @@
-import { kebabCase, mapValues } from 'es-toolkit'
+import { kebabCase } from 'es-toolkit'
 
 import { CountBadge, countBadgeWidth } from './components/CountBadge'
 import { REPO_BADGE_WIDTH, RepoBadge } from './components/RepoBadge'
@@ -9,26 +9,27 @@ import {
 } from './components/SectionHeadings'
 import { TITLE_BADGE_PAD, TitleBadge } from './components/TitleBadge'
 import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './components/TypeIcon'
-import { repoUrl } from './constants'
+import { NARROW_VIEWPORT, repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
 import { PROJECTS } from './content/projects'
 import { badgeGap, NBSP_WIDTH } from './lib/badge'
 
-/** `&nbsp;` the title sat between back when it was text. */
-const TEXT_TITLE_GAP = { before: 3, after: 4 }
+/** `&nbsp;` after the title back when it was text. */
+const TEXT_TITLE_GAP = 4
 
 /**
- * `&nbsp;` on each side of the project title.
+ * Gap between the title and the type icon after it, in px.
  *
- * Fewer than when the title was text: it is a badge now, and carries
- * `TITLE_BADGE_PAD` of its own at both ends, so these only make up the
- * difference and a reader sees the gaps the line has always had. Derived
+ * Narrower than when the title was text: it is a badge now, and carries
+ * `TITLE_BADGE_PAD` of its own at both ends, so this only makes up the
+ * difference and a reader sees the gap the line has always had. Derived
  * rather than written down because that padding moves with the title's size,
- * which is the dial this whole substitution exists to offer.
+ * which is the dial this whole substitution exists to offer. Drawn as an image
+ * rather than `&nbsp;`, so a narrow viewport can close it.
  */
-const TITLE_GAP = mapValues(TEXT_TITLE_GAP, (count) =>
-  badgeGap(count, TITLE_BADGE_PAD)
+const TITLE_GAP = Math.round(
+  badgeGap(TEXT_TITLE_GAP, TITLE_BADGE_PAD) * NBSP_WIDTH
 )
 
 /**
@@ -62,15 +63,37 @@ const BADGE_GAP = 1
 const Gap = ({ n }: { n: number }) => <>{'\u00a0'.repeat(n)}</>
 
 /**
+ * A blank image `width` wide, which a narrow viewport shrinks to nothing.
+ *
+ * A `<source>`'s own width beats the `<img>`'s where it matches, which is the
+ * one way to size anything by viewport once GitHub has stripped the CSS.
+ */
+const Spacer = ({ width }: { width: number }) => (
+  <picture>
+    <source
+      media={NARROW_VIEWPORT}
+      srcset="./assets/spacer.png"
+      width={0}
+      height={SPACER_HEIGHT}
+    />
+    <img
+      src="./assets/spacer.png"
+      width={width}
+      height={SPACER_HEIGHT}
+      alt=""
+    />
+  </picture>
+)
+
+/**
  * Width of the blank image that counterweights a project's badges.
  *
  * Balancing the title means matching everything to its right against
  * everything to its left, where only the title's own padding cancels, being
- * the same at both of its ends. What is left is the type icon, the badges,
- * the gap between them, and whatever the title's two gaps differ by. Each
- * width is known at build time, so this is exact per project rather than one
- * estimate for all of them — which centres every title instead of an average
- * one.
+ * the same at both of its ends. What is left is the gap after the title, the
+ * type icon, the badges, and the gaps between them. Each width is known at
+ * build time, so this is exact per project rather than one estimate for all
+ * of them — which centres every title instead of an average one.
  *
  * The icon used to be mirrored by a transparent copy of itself on this side.
  * It is a badge now, of a width the same for every type, so the spacer can
@@ -82,36 +105,34 @@ const spacerWidth = (repo: string) => {
     counts > 0
       ? counts + BADGE_GAP * NBSP_WIDTH + REPO_BADGE_WIDTH
       : REPO_BADGE_WIDTH
-  const gaps = TITLE_GAP.after - TITLE_GAP.before + ICON_GAP
-  return Math.round(gaps * NBSP_WIDTH + TYPE_ICON_WIDTH + badges)
+  return Math.round(
+    TITLE_GAP + ICON_GAP * NBSP_WIDTH + TYPE_ICON_WIDTH + badges
+  )
 }
 
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
-  const spacer = spacerWidth(p.repo)
   return (
     <p>
       {/* a blank spacer carries the weight of everything right of the title,
-          so the title centers on its own text. It is invisible, but an
-          unwrapped README image still links to its own camo URL, so it goes
+          so the title centers on its own text, and a second one is the gap
+          after it. The title is a badge rather than bold text: README body
+          text is 16px and nothing in the markup can change that, while a badge
+          is drawn at whatever size we ask for. Bold and underlined is what
+          GitHub makes of a link in bold body text, so it reads as the link it
+          is wrapped in.
+
+          On a narrow viewport the title fills the line and the spacers close,
+          so it sits alone with the rest of its line wrapped beneath it. That
+          is why the gaps are images rather than `&nbsp;`, which would be left
+          stranded on a line of their own. The spacers are invisible, but an
+          unwrapped README image still links to its own camo URL, so they go
           where the title goes. */}
       <a href={p.href} target="_blank" rel="noopener">
-        <img
-          src="./assets/spacer.png"
-          width={spacer}
-          height={SPACER_HEIGHT}
-          alt=""
-        />
-      </a>
-      <Gap n={TITLE_GAP.before} />
-      {/* the title is a badge rather than bold text: README body text is 16px
-          and nothing in the markup can change that, while a badge is drawn at
-          whatever size we ask for. Bold and underlined is what GitHub makes of
-          a link in bold body text, so it reads as the link it is wrapped in. */}
-      <a href={p.href} target="_blank" rel="noopener">
+        <Spacer width={spacerWidth(p.repo)} />
         <TitleBadge name={p.name} href={p.href} />
+        <Spacer width={TITLE_GAP} />
       </a>
-      <Gap n={TITLE_GAP.after} />
       {/* every image here is wrapped, because GitHub links an unwrapped README
           image to its own camo URL — an asset rather than anywhere useful.
           One anchor each, never one around the group: the spacing between
