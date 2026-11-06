@@ -18,28 +18,48 @@ export type CountBadgeProps = {
  * How the renderer lays a badge out, in px, measured at
  * `COUNT_CONTENT_HEIGHT`.
  *
- * Its width is this base plus one `digit` per character of the counts, which
- * holds exactly: the digits are fixed-width and nothing else in the badge
- * varies. Both move with `COUNT_CONTENT_HEIGHT`, which the contents scale
- * from — the padding around them adds height, never width.
+ * Its width is this base, plus one `item` per icon and its value, plus one
+ * `digit` per character of the counts, which holds to within 0.01px: the
+ * digits are fixed-width and nothing else in the badge varies. All three move
+ * with `COUNT_CONTENT_HEIGHT`, which the contents scale from — the padding
+ * around them adds height, never width.
  */
-const BADGE_WIDTH = { base: 48.86, digit: 5.99 }
+const BADGE_WIDTH = { base: 2.56, item: 23.15, digit: 5.99 }
+
+/**
+ * What `repo`'s badge holds: its commits and PRs, then its downloads where it
+ * publishes a package, or nothing for a repo that renders no badge.
+ */
+const countItems = (repo: string) => {
+  const counts = REPO_COUNTS[repo]
+  if (!counts) {
+    return []
+  }
+  const items = [
+    { icon: 'git-commit', value: `${counts.commits}` },
+    { icon: 'git-pull-request', value: `${counts.prs}` },
+  ]
+  if (counts.downloads !== undefined) {
+    items.push({ icon: 'download', value: `${counts.downloads}` })
+  }
+  return items
+}
 
 /**
  * Width the renderer lays `repo`'s badge out at, in px, or 0 for a repo that
  * renders none.
- *
- * Its width is the base plus one `digit` per character of the counts, which
- * holds exactly: the digits are fixed-width and nothing else in the badge
- * varies.
  */
 export const countBadgeWidth = (repo: string) => {
-  const counts = REPO_COUNTS[repo]
-  if (!counts) {
+  const items = countItems(repo)
+  if (items.length === 0) {
     return 0
   }
-  const digits = `${counts.commits}${counts.prs}`.length
-  return BADGE_WIDTH.base + BADGE_WIDTH.digit * digits
+  const digits = items.map(({ value }) => value).join('').length
+  return (
+    BADGE_WIDTH.base +
+    BADGE_WIDTH.item * items.length +
+    BADGE_WIDTH.digit * digits
+  )
 }
 
 /**
@@ -52,7 +72,8 @@ export const countBadgeWidth = (repo: string) => {
 const BADGE_FG = '6E7681'
 
 /**
- * A project's commit and pull request totals, as one transparent badge.
+ * A project's commit and pull request totals, and its downloads where it
+ * publishes a package, as one transparent badge.
  *
  * The numbers live in the URL rather than being looked up when the image
  * loads, which is what keeps `pnpm build` reproducible and the badge
@@ -64,14 +85,13 @@ export const CountBadge = ({ repo }: CountBadgeProps) => {
   if (!counts) {
     return null
   }
-  const label = `${counts.commits} commits, ${counts.prs} PRs`
+  const label = `${counts.commits} commits, ${counts.prs} PRs${
+    counts.downloads === undefined ? '' : `, ${counts.downloads} downloads`
+  }`
   return (
     <img
       src={badgeSrc({
-        items: [
-          { icon: 'git-commit', value: `${counts.commits}` },
-          { icon: 'git-pull-request', value: `${counts.prs}` },
-        ],
+        items: countItems(repo),
         color: BADGE_FG,
         contentHeight: COUNT_CONTENT_HEIGHT,
       })}
