@@ -9,7 +9,9 @@ export const ICON_GRAY = '8B949E'
  *
  * Phones, which GitHub stacks into a single column, and the widths where its
  * sidebar leaves the README column narrower than the widest title line plus
- * its counterweight.
+ * its counterweight. That line, react-component-test-suite's, first wraps
+ * at about 1150px; 1200 leaves a little margin over it, so a slightly longer
+ * name doesn't wrap on its own while the rest stay on one line.
  */
 export const NARROW_VIEWPORT = '(max-width: 1199px)'
 
