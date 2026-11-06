@@ -141,21 +141,17 @@ const ProjectEntry = ({ p }: { p: Project }) => {
         <TypeIcon type={p.type} />
       </a>
       <Gap n={ICON_GAP} />
-      {/* the counts and the repo badge wrap as one: a browser may break beside
-          any image, even across an `&nbsp;`, and they read as one unit. */}
-      <nobr>
-        {countBadgeWidth(p.repo) > 0 && (
-          <>
-            <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-              <CountBadge repo={p.repo} />
-            </a>
-            <Gap n={BADGE_GAP} />
-          </>
-        )}
-        <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-          <RepoBadge />
-        </a>
-      </nobr>
+      {countBadgeWidth(p.repo) > 0 && (
+        <>
+          <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
+            <CountBadge repo={p.repo} />
+          </a>
+          <Gap n={BADGE_GAP} />
+        </>
+      )}
+      <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
+        <RepoBadge />
+      </a>
       <br />
       {p.blurb}
       {p.screenshot && (
