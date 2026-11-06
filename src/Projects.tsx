@@ -39,6 +39,15 @@ const TITLE_GAP = mapValues(TEXT_TITLE_GAP, (count) =>
  */
 const SPACER_HEIGHT = 14
 
+/**
+ * Viewports that drop the spacer, where centring the title costs more room
+ * than the line has.
+ *
+ * Below 768px GitHub stacks its profile into a single column, which leaves a
+ * README too narrow for a title line plus its counterweight.
+ */
+const NARROW_VIEWPORT = '(max-width: 767px)'
+
 /** `&nbsp;` the type icon sat between back when it was a bare image. */
 const TEXT_ICON_GAP = 3
 
@@ -94,14 +103,23 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       {/* a blank spacer carries the weight of everything right of the title,
           so the title centers on its own text. It is invisible, but an
           unwrapped README image still links to its own camo URL, so it goes
-          where the title goes. */}
+          where the title goes. On a narrow viewport it takes no width at all,
+          since a `<source>`'s own width beats the `<img>`'s there. */}
       <a href={p.href} target="_blank" rel="noopener">
-        <img
-          src="./assets/spacer.png"
-          width={spacer}
-          height={SPACER_HEIGHT}
-          alt=""
-        />
+        <picture>
+          <source
+            media={NARROW_VIEWPORT}
+            srcset="./assets/spacer.png"
+            width={0}
+            height={SPACER_HEIGHT}
+          />
+          <img
+            src="./assets/spacer.png"
+            width={spacer}
+            height={SPACER_HEIGHT}
+            alt=""
+          />
+        </picture>
       </a>
       <Gap n={TITLE_GAP.before} />
       {/* the title is a badge rather than bold text: README body text is 16px

@@ -38,7 +38,7 @@ const output = md
     // only anchors holding nothing but these images and nbsp, which leaves
     // the screenshots' alone: theirs sit on their own lines, where the space
     // does not show
-    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/>|<picture><source[^>]*\/><img src="https:\/\/badgesmith[^>]*\/><\/picture>)+<\/a>$/.test(
+    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/>|<picture><source[^>]*\/><img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/><\/picture>)+<\/a>$/.test(
       anchor
     )
       ? anchor
