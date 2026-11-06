@@ -18,8 +18,8 @@ export type SkillRow = {
 
 export type SkillSection = {
   icon: string
-  /** The site's glyph for the heading; without one, it draws `icon`. */
-  glyph?: GroupGlyph
+  /** The site's glyph for the heading, drawn in place of the emoji. */
+  glyph: GroupGlyph
   title: string
   rows: SkillRow[]
 }

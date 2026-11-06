@@ -30,11 +30,18 @@ export type SectionLogo = {
   color: string
 }
 
-export type ProjectSection = {
-  /** An emoji, or a logo where no emoji fits. */
-  icon: string | SectionLogo
-  /** The site's glyph for the heading; without one, it draws `icon`. */
-  glyph?: GroupGlyph
+export type ProjectSection = (
+  | {
+      /** A logo where no emoji fits, which the site draws as-is. */
+      icon: SectionLogo
+      glyph?: never
+    }
+  | {
+      icon: string
+      /** The site's glyph for the heading, drawn in place of the emoji. */
+      glyph: GroupGlyph
+    }
+) & {
   title: string
   intro?: string
   projects: Project[]
