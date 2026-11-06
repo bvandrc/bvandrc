@@ -1,5 +1,4 @@
-import type { BadgeItem, BadgeOptions } from 'badgesmith'
-import { renderBadge } from 'badgesmith'
+import { type BadgeItem, type BadgeOptions, renderBadge } from 'badgesmith'
 
 /** The deployed worker that renders every badge on a project's title line. */
 const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'

@@ -1,6 +1,10 @@
 import { REPO_COUNTS } from '../generated/repo-counts'
-import type { BadgeParams } from '../lib/badge'
-import { BADGE_HEIGHT, badgeSrc, badgeWidth } from '../lib/badge'
+import {
+  BADGE_HEIGHT,
+  type BadgeParams,
+  badgeSrc,
+  badgeWidth,
+} from '../lib/badge'
 
 /**
  * Size the digits and their icons are drawn at, inside `BADGE_HEIGHT`.
