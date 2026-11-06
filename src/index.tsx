@@ -5,6 +5,7 @@ import { Lines } from './components/Lines'
 import { SectionHeader } from './components/SectionHeadings'
 import { BEYOND_CODE, INTRO_LINES } from './content/about'
 import { SECTIONS } from './content/sections'
+import { badgeSrc } from './lib/badge'
 import { Projects } from './Projects'
 import { SkillsTable } from './SkillsTable'
 
@@ -12,7 +13,36 @@ const render = (node: VNode) =>
   renderBase(node, {}, { pretty: '  ', jsx: false })
 
 /** The README's markdown, with each component rendered to HTML. */
+/**
+ * TEMPORARY: whether GitHub keeps a viewport `media` query, and a `<source>`'s
+ * own size, through its sanitizer. Remove before merging.
+ */
+const probe = (label: string) =>
+  badgeSrc({ items: [{ value: label }], color: '6E7681' })
+
 export const readmeContent = `<div align="center">
+
+${render(
+  <p>
+    <picture>
+      <source media="(max-width: 767px)" srcset={probe('A: narrow')} />
+      <img src={probe('A: wide')} alt="probe A" />
+    </picture>
+    <picture>
+      <source
+        media="(max-width: 767px)"
+        srcset={probe('B: narrow')}
+        width={40}
+        height={22}
+      />
+      <img src={probe('B: wide')} alt="probe B" width={160} height={22} />
+    </picture>
+    <picture>
+      <source media="(pointer: coarse)" srcset={probe('C: touch')} />
+      <img src={probe('C: mouse')} alt="probe C" />
+    </picture>
+  </p>
+)}
 
 ${render(
   // INTRO

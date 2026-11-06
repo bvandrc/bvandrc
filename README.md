@@ -3,6 +3,12 @@
 <div align="center">
 
 <p>
+  <picture><source media="(max-width: 767px)" srcset="https://badgesmith.bvandrc.workers.dev/?items=A%3A%20narrow&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=0" /><img src="https://badgesmith.bvandrc.workers.dev/?items=A%3A%20wide&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=0" alt="probe A" /></picture>
+  <picture><source media="(max-width: 767px)" srcset="https://badgesmith.bvandrc.workers.dev/?items=B%3A%20narrow&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=0" width="40" height="22" /><img src="https://badgesmith.bvandrc.workers.dev/?items=B%3A%20wide&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=0" alt="probe B" width="160" height="22" /></picture>
+  <picture><source media="(pointer: coarse)" srcset="https://badgesmith.bvandrc.workers.dev/?items=C%3A%20touch&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=0" /><img src="https://badgesmith.bvandrc.workers.dev/?items=C%3A%20mouse&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=0" alt="probe C" /></picture>
+</p>
+
+<p>
   SDET, React developer, TypeScript purist.
   <br />
   9 years writing code and tests, from hardware to web apps.
