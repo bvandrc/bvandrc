@@ -1,3 +1,4 @@
+import { COUNT_KINDS } from '../content/counts'
 import { REPO_COUNTS } from '../generated/repo-counts'
 import {
   BADGE_HEIGHT,
@@ -39,22 +40,33 @@ const formatCount = new Intl.NumberFormat(
 ).format
 
 /**
- * What `repo`'s badge is drawn from: its commits and PRs, then its downloads
- * where it publishes a package, or nothing for a repo that renders no badge.
+ * `repo`'s counts in `COUNT_KINDS` order, each with its icon and noun: its
+ * commits and PRs, then its downloads where it publishes a package.
+ *
+ * Empty for a repo that renders no badge.
  */
-const countBadgeParams = (repo: string): BadgeParams | undefined => {
+const shownCounts = (repo: string) => {
   const counts = REPO_COUNTS[repo]
-  if (!counts) {
+  return COUNT_KINDS.flatMap(({ key, icon, noun }) => {
+    const count = counts?.[key]
+    return count === undefined ? [] : [{ icon, noun, count }]
+  })
+}
+
+/** What `repo`'s badge is drawn from, or nothing for a repo that renders none. */
+const countBadgeParams = (repo: string): BadgeParams | undefined => {
+  const shown = shownCounts(repo)
+  if (shown.length === 0) {
     return undefined
   }
-  const items = [
-    { icon: 'git-commit', value: formatCount(counts.commits) },
-    { icon: 'git-pull-request', value: formatCount(counts.prs) },
-  ]
-  if (counts.downloads !== undefined) {
-    items.push({ icon: 'download', value: formatCount(counts.downloads) })
+  return {
+    items: shown.map(({ icon, count }) => ({
+      icon,
+      value: formatCount(count),
+    })),
+    color: BADGE_FG,
+    contentHeight: COUNT_CONTENT_HEIGHT,
   }
-  return { items, color: BADGE_FG, contentHeight: COUNT_CONTENT_HEIGHT }
 }
 
 /**
@@ -76,14 +88,13 @@ export const countBadgeWidth = (repo: string) => {
  * read the repo to render it. Its alt and hover text give each count in full.
  */
 export const CountBadge = ({ repo }: CountBadgeProps) => {
-  const counts = REPO_COUNTS[repo]
   const params = countBadgeParams(repo)
-  if (!(counts && params)) {
+  if (!params) {
     return null
   }
-  const label = `${counts.commits} commits, ${counts.prs} PRs${
-    counts.downloads === undefined ? '' : `, ${counts.downloads} downloads`
-  }`
+  const label = shownCounts(repo)
+    .map(({ count, noun }) => `${count} ${count === 1 ? noun : `${noun}s`}`)
+    .join(', ')
   return (
     <img
       src={badgeSrc(params)}
