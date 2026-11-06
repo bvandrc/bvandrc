@@ -49,9 +49,6 @@ const total = async (url: string) => {
   return last ? Number(last[1]) : ((await res.json()) as unknown[]).length
 }
 
-/** The first day npm's download counts cover. */
-const NPM_STATS_START = '2015-01-10'
-
 /** Days per downloads query, inside the 18 months the API answers at once. */
 const NPM_WINDOW_DAYS = 365
 
@@ -79,7 +76,7 @@ const fetchDownloads = async (pkg: string) => {
   let downloads = 0
   // the API caps each query's range, so an older package takes several
   for (
-    let start = Math.max(Date.parse(time.created), Date.parse(NPM_STATS_START));
+    let start = Date.parse(time.created);
     start <= today;
     start += NPM_WINDOW_DAYS * DAY_MS
   ) {
