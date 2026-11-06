@@ -1,3 +1,6 @@
+import type { BadgeItem, BadgeOptions } from 'badgesmith'
+import { renderBadge } from 'badgesmith'
+
 /** The deployed worker that renders every badge on a project's title line. */
 const WORKER_ORIGIN = 'https://badgesmith.bvandrc.workers.dev'
 
@@ -43,18 +46,7 @@ export const badgePad = (contentHeight: number) => (6 * contentHeight) / 14
 export const badgeGap = (count: number, pad: number) =>
   Math.max(0, Math.round((count * NBSP_WIDTH - pad) / NBSP_WIDTH))
 
-/**
- * One thing a badge holds: an icon and its value, or either on its own.
- *
- * The slug is a simple-icons or octicon one. An icon with no value is how a
- * badge stands in for a bare image, which is what centres it with the badges
- * beside it.
- */
-type BadgeItem =
-  | { icon: string; value?: string }
-  | { icon?: string; value: string }
-
-type BadgeParams = {
+export type BadgeParams = {
   items: BadgeItem[]
   /** icon and text fill, hex without the leading '#' */
   color: string
@@ -94,7 +86,8 @@ type BadgeParams = {
 }
 
 /**
- * The URL of a badge, sized and styled like every other on the title line.
+ * The renderer's options for a badge, which its URL and its measured width
+ * are both built from.
  *
  * `color=none` leaves it with no background, so `color` has to carry its own
  * contrast against both GitHub themes. `padY` is always sent, even at zero:
@@ -102,7 +95,7 @@ type BadgeParams = {
  * against the badge's full height when it is not, and only the first of those
  * makes `contentHeight` mean what it says.
  */
-export const badgeSrc = ({
+const badgeOptions = ({
   items,
   color,
   iconRight,
@@ -113,7 +106,25 @@ export const badgeSrc = ({
   underline,
   font,
   fontSize,
-}: BadgeParams) => {
+}: BadgeParams) =>
+  ({
+    items,
+    color: 'none',
+    iconColor: color,
+    textColor: color,
+    height,
+    padY: (height - contentHeight) / 2,
+    iconSide: iconRight ? 'right' : undefined,
+    iconScale,
+    bold,
+    underline,
+    font,
+    fontSize,
+  }) satisfies BadgeOptions
+
+/** The URL of a badge, sized and styled like every other on the title line. */
+export const badgeSrc = (params: BadgeParams) => {
+  const { items, ...style } = badgeOptions(params)
   // the separators are the syntax, so only the values are escaped — a project
   // name carries spaces where a count or a slug never does. An icon with no
   // value keeps its colon, which is how the worker reads that form back
@@ -123,12 +134,27 @@ export const badgeSrc = ({
       return icon === undefined ? escaped : `${icon}:${escaped}`
     })
     .join(',')
-  const padY = (height - contentHeight) / 2
-  return `${WORKER_ORIGIN}/?items=${query}&color=none&iconColor=${color}&textColor=${color}&height=${height}&padY=${padY}${
-    iconRight ? '&iconSide=right' : ''
-  }${iconScale === undefined ? '' : `&iconScale=${iconScale}`}${
-    bold ? '&bold=true' : ''
-  }${underline ? '&underline=true' : ''}${font ? `&font=${font}` : ''}${
-    fontSize === undefined ? '' : `&fontSize=${fontSize}`
-  }`
+  // an unset option, or a flag left off, is the worker's default already
+  const rest = Object.entries(style)
+    .filter(([, value]) => value !== undefined && value !== false)
+    .map(([key, value]) => `&${key}=${value}`)
+    .join('')
+  return `${WORKER_ORIGIN}/?items=${query}${rest}`
+}
+
+/**
+ * Width a badge is drawn at, in px, as badgesmith's own renderer lays it out.
+ *
+ * Measured rather than modelled, so it holds whatever characters the values
+ * use. It reads the npm package, which ships the worker's renderer, so a
+ * width the worker changes reaches here when that package is bumped.
+ */
+export const badgeWidth = (params: BadgeParams) => {
+  const width = renderBadge(badgeOptions(params)).match(
+    /<svg[^>]*\swidth="([\d.]+)"/
+  )?.[1]
+  if (width === undefined) {
+    throw new Error('badgesmith drew a badge with no width')
+  }
+  return Number(width)
 }

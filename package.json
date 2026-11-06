@@ -30,6 +30,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.6",
     "@types/node": "^26",
+    "badgesmith": "^1",
     "es-toolkit": "^1",
     "preact": "^10",
     "preact-render-to-string": "^6",
