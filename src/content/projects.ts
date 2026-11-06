@@ -9,6 +9,8 @@ export type Project = {
   repo: string
   /** Name the project is published under on npm, whose all-time downloads `pnpm gen:counts` committed */
   npmPackage?: string
+  /** Name the project is published under on PyPI, whose all-time downloads `pnpm gen:counts` committed */
+  pypiPackage?: string
   blurb: string
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
@@ -193,6 +195,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://pypi.org/project/serato-tools/',
         type: 'python',
         repo: 'serato-tools',
+        pypiPackage: 'serato-tools',
         blurb:
           "Python tools for reading and modifying Serato DJ's tracks, hot cues, waveforms, metadata, crates, and library database.",
       },
@@ -201,6 +204,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://pypi.org/project/serato-usb-export/',
         type: 'python',
         repo: 'serato-usb-export',
+        pypiPackage: 'serato-usb-export',
         blurb: 'Fast, deduplicated USB export tool for Serato DJ.',
       },
     ],
