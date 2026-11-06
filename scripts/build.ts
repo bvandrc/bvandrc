@@ -47,6 +47,13 @@ const output = md
           .replace(/>\s+&/g, '>&')
       : anchor
   )
+  // a narrow viewport's line break is zero-sized everywhere else, so the
+  // newline the printer leaves after it would render as a stray space before
+  // the badges
+  .replace(
+    /(<img src="\.\/assets\/spacer\.png" width="0" height="0" alt \/><\/picture><\/a>)\s+/g,
+    '$1'
+  )
   // a jump link that the printer wrapped onto lines of its own would underline
   // the space its newlines render as, so it hugs its contents too
   .replace(/(<a href="#[^"]*">)\s+([\s\S]*?)\s+<\/a>/g, '$1$2</a>')
