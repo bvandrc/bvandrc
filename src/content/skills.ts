@@ -1,3 +1,5 @@
+import type { GroupGlyph } from './sections'
+
 // Badges link: https://github.com/Ileriayo/markdown-badges
 // Badge paths are the shields.io static-badge path + params (https://img.shields.io/badge/<path>)
 
@@ -14,11 +16,18 @@ export type SkillRow = {
   lines: SkillBadge[][]
 }
 
-export type SkillSection = { icon: string; title: string; rows: SkillRow[] }
+export type SkillSection = {
+  icon: string
+  /** The site's glyph for the heading; without one, it draws `icon`. */
+  glyph?: GroupGlyph
+  title: string
+  rows: SkillRow[]
+}
 
 export const SKILLS: SkillSection[] = [
   {
     icon: '🖥️',
+    glyph: { name: 'code-xml', color: 'sky' },
     title: 'Core Development',
     rows: [
       {
@@ -145,6 +154,7 @@ export const SKILLS: SkillSection[] = [
   },
   {
     icon: '🧪',
+    glyph: { name: 'test-tube-diagonal', color: 'green' },
     title: 'Testing',
     rows: [
       {
@@ -207,6 +217,7 @@ export const SKILLS: SkillSection[] = [
   },
   {
     icon: '🛠️',
+    glyph: { name: 'hammer', color: 'amber' },
     title: 'Tools',
     rows: [
       {
@@ -264,6 +275,7 @@ export const SKILLS: SkillSection[] = [
   },
   {
     icon: '📝',
+    glyph: { name: 'braces', color: 'violet' },
     title: 'Other Languages',
     rows: [
       {

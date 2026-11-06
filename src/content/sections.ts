@@ -7,6 +7,22 @@
  */
 export type SectionHeading = { icon: string; glyph?: string; title: string }
 
+/** A group glyph's color on bvandercar.dev, by name; the site maps each to its own shade. */
+export type GlyphColor =
+  | 'amber'
+  | 'brown'
+  | 'green'
+  | 'sky'
+  | 'violet'
+  | 'yellow'
+
+/**
+ * The icon bvandercar.dev draws in place of a group heading's emoji.
+ *
+ * `name` is an Iconify name, as for `SectionHeading['glyph']`.
+ */
+export type GroupGlyph = { name: string; color: GlyphColor }
+
 /** The README's top-level sections, in page order. */
 export const SECTIONS = {
   PROJECTS: {

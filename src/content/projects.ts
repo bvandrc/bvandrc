@@ -1,4 +1,5 @@
 import type { ProjectType } from './project-types'
+import type { GroupGlyph } from './sections'
 
 export type Project = {
   name: string
@@ -32,6 +33,8 @@ export type SectionLogo = {
 export type ProjectSection = {
   /** An emoji, or a logo where no emoji fits. */
   icon: string | SectionLogo
+  /** The site's glyph for the heading; without one, it draws `icon`. */
+  glyph?: GroupGlyph
   title: string
   intro?: string
   projects: Project[]
@@ -90,6 +93,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '🧪',
+    glyph: { name: 'test-tube-diagonal', color: 'green' },
     title: 'Testing & CI Tooling',
     projects: [
       {
@@ -143,6 +147,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '📦',
+    glyph: { name: 'package', color: 'brown' },
     title: 'Other Packages',
     projects: [
       {
@@ -187,6 +192,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '💡',
+    glyph: { name: 'lightbulb', color: 'yellow' },
     title: 'Other Projects',
     projects: [
       {
