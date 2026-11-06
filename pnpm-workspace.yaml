@@ -2,3 +2,9 @@ allowBuilds:
   # deny esbuild's postinstall — its binary comes from platform optional deps;
   # without an entry here, pnpm 11 fails install with ERR_PNPM_IGNORED_BUILDS
   esbuild: false
+
+# our own package, published from bvandrc/badgesmith with provenance, so pnpm's
+# one-day hold on new releases protects nothing here and would only stall CI
+# for a day after each bump
+minimumReleaseAgeExclude:
+  - badgesmith
