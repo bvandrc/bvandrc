@@ -8,50 +8,59 @@ const md = `<!-- GENERATED FILE — do not edit directly. Edit src/ and run \`pn
 
 ${readmeContent}`
 
-const root = join(dirname(fileURLToPath(import.meta.url)), '..')
-// the renderer emits raw U+00A0 for JSX &nbsp; entities — write them back as
-// explicit entities so the spacing is visible in source and immune to
-// whitespace-normalizing tools
+/** A newline and the indent the pretty-printer starts the next line with. */
+const NEWLINE = String.raw`\n\s*`
+
+/** A run of `&nbsp;`, which is all the spacing a README line can express. */
+const NBSP_RUN = '(?:&nbsp;)+'
+
+/** The blank image that spaces a title line where `&nbsp;` cannot. */
+const SPACER_SRC = String.raw`\.\/assets\/spacer\.png`
+
+/** An image on a title line: a badge, or a spacer. */
+const LINE_IMG = String.raw`<img src="(?:https:\/\/badgesmith|${SPACER_SRC})[^>]*\/>`
+
+/** A global regex from source fragments, so the patterns above can be shared. */
+const re = (source: string) => new RegExp(source, 'g')
+
+/**
+ * Drops the whitespace between tags, and between a tag and an `&nbsp;`, which
+ * would otherwise render as spaces beside the images either side of it.
+ */
+const hug = (html: string) => html.replace(/([>;])\s+(?=[<&])/g, '$1')
+
 const output = md
-  .replaceAll('\u00A0', '&nbsp;')
+  // the renderer emits raw U+00A0 for JSX &nbsp; entities — write them back as
+  // explicit entities so the spacing is visible in source and immune to
+  // whitespace-normalizing tools
+  .replaceAll(' ', '&nbsp;')
   // the pretty-printer's newlines around inline content render as extra
-  // spaces — join nbsp separator lines and <strong> tags to their content so
-  // title lines render with main's exact spacing
-  .replace(/\n\s*((?:&nbsp;)+)\n\s*/g, '$1')
-  // and nbsp the printer set at the start or end of a line, beside an image
-  .replace(/\n\s*((?:&nbsp;)+)(?=\S)/g, '$1')
-  .replace(/((?:&nbsp;)+)\n\s*(?=<a )/g, '$1')
-  .replace(/<strong>\n\s*/g, '<strong>')
-  .replace(/\n\s*<\/strong>/g, '</strong>')
+  // spaces — join nbsp runs to whatever the printer set them beside, and
+  // <strong> tags to their content, so title lines render with exact spacing
+  .replace(re(`${NEWLINE}(${NBSP_RUN})(?:${NEWLINE})?(?=\\S)`), '$1')
+  .replace(re(`(${NBSP_RUN})${NEWLINE}(?=<a )`), '$1')
+  .replace(re(`(<strong>)${NEWLINE}|${NEWLINE}(<\\/strong>)`), '$1$2')
   // a <picture> renders the text nodes between its children, so the newlines
   // the printer puts around <source> and <img> would come out as spaces
   // beside the image. Nothing else belongs in one, so it hugs its contents.
-  .replace(/<picture>[\s\S]*?<\/picture>/g, (picture) =>
-    picture.replace(/>\s+</g, '><')
-  )
-  // the badge group's anchor has to hug its contents: whitespace inside it
-  // renders as spaces, which would widen the right side the title is centred
-  // against and underline the gaps on hover. Only anchors holding nothing but
-  // images and nbsp are touched, which leaves the screenshots' alone — theirs
-  // sit on their own lines where the space does not show.
+  .replace(/<picture>[\s\S]*?<\/picture>/g, hug)
+  // an anchor holding nothing but a title line's images and nbsp has to hug
+  // its contents: whitespace inside it renders as spaces, which would widen
+  // the side the title is centred against and underline the gaps on hover.
+  // That leaves the screenshots' anchors alone, since theirs sit on their own
+  // lines, where the space does not show.
   .replace(/<a href="[^"]*"[^>]*>[\s\S]*?<\/a>/g, (anchor) =>
-    // only anchors holding nothing but these images and nbsp, which leaves
-    // the screenshots' alone: theirs sit on their own lines, where the space
-    // does not show
-    /^<a href="[^"]*"[^>]*>(?:\s|&nbsp;|<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/>|<picture>(?:<source[^>]*\/>)+<img src="(?:https:\/\/badgesmith|\.\/assets\/spacer\.png)[^>]*\/><\/picture>)+<\/a>$/.test(
-      anchor
-    )
-      ? anchor
-          .replace(/>\s+</g, '><')
-          .replace(/;\s+</g, ';<')
-          .replace(/>\s+&/g, '>&')
+    new RegExp(
+      `^<a href="[^"]*"[^>]*>(?:\\s|&nbsp;|${LINE_IMG}|<picture>(?:<source[^>]*\\/>)+${LINE_IMG}<\\/picture>)+<\\/a>$`
+    ).test(anchor)
+      ? hug(anchor)
       : anchor
   )
   // the title's anchor ends in the gap after it, drawn as an image, so the
   // newline the printer leaves before the next anchor would render as a
   // second gap beside it
   .replace(
-    /(<img src="\.\/assets\/spacer\.png"[^>]*\/><\/picture><\/a>)\s+(?=<a )/g,
+    re(`(<img src="${SPACER_SRC}"[^>]*\\/><\\/picture><\\/a>)\\s+(?=<a )`),
     '$1'
   )
   // a jump link that the printer wrapped onto lines of its own would underline
@@ -62,5 +71,7 @@ const output = md
   // leaves a newline and a blank line there, which would render as a space on
   // top of that padding — and a blank line inside a <p> ends the HTML block.
   .replace(/(<a href="(#[^"]*)"><img[^>]*\/><\/a>)\s+(?=<a href="\2">)/g, '$1')
+
+const root = join(dirname(fileURLToPath(import.meta.url)), '..')
 writeFileSync(join(root, 'README.md'), output)
 console.log('README.md generated')
