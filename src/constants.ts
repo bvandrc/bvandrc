@@ -7,10 +7,11 @@ export const ICON_GRAY = '8B949E'
  * Viewports that get the narrow layout: a title on a line of its own, and no
  * counterweight to centre it.
  *
- * Below 768px GitHub stacks its profile into a single column, which leaves a
- * README too narrow for a title line plus its counterweight.
+ * Phones, which GitHub stacks into a single column, and the narrowest of the
+ * widths where its sidebar returns, both of which leave a README too narrow
+ * for a title line plus its counterweight.
  */
-export const NARROW_VIEWPORT = '(max-width: 767px)'
+export const NARROW_VIEWPORT = '(max-width: 899px)'
 
 /**
  * Width an image asks for to fill exactly one line, in px.
