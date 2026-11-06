@@ -16,14 +16,6 @@ export const ICON_GRAY = '8B949E'
 export const NARROW_VIEWPORT = '(max-width: 1199px)'
 
 /**
- * Width an image asks for to fill exactly one line, in px.
- *
- * Wider than any README column, so GitHub's `max-width: 100%` on images
- * clamps it to the line, which leaves it nothing to share a line with.
- */
-export const FULL_LINE_WIDTH = 2000
-
-/**
  * Fill for a badge standing in for a link: GitHub's own accent, per theme.
  *
  * GitHub picks one of these per theme and a plain `<img>` cannot, so a badge

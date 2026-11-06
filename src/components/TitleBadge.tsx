@@ -1,4 +1,4 @@
-import { FULL_LINE_WIDTH, LINK_BLUE } from '../constants'
+import { LINK_BLUE } from '../constants'
 import { BADGE_HEIGHT, badgePad, badgeSrc } from '../lib/badge'
 import { ThemedBadge } from './ThemedBadge'
 
@@ -25,6 +25,14 @@ const TITLE_FONT = 'arial'
  * Under the 20 a section heading uses, so the two still read as a hierarchy.
  */
 const TITLE_FONT_SIZE = 18
+
+/**
+ * Width a title asks for on a narrow viewport, to fill exactly one line, in px.
+ *
+ * Wider than any README column, so GitHub's `max-width: 100%` on images
+ * clamps it to the line, which leaves it nothing to share a line with.
+ */
+const FULL_LINE_WIDTH = 2000
 
 /**
  * Horizontal padding the renderer leaves on each end of a title, in px.
