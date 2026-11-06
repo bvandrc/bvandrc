@@ -27,7 +27,7 @@ export type SkillSection = {
 export const SKILLS: SkillSection[] = [
   {
     icon: '🖥️',
-    glyph: { name: 'code-xml', color: 'sky' },
+    glyph: { name: 'code-xml', color: '00BCFF' },
     title: 'Core Development',
     rows: [
       {
@@ -154,7 +154,7 @@ export const SKILLS: SkillSection[] = [
   },
   {
     icon: '🧪',
-    glyph: { name: 'test-tube-diagonal', color: 'green' },
+    glyph: { name: 'test-tube-diagonal', color: '05DF72' },
     title: 'Testing',
     rows: [
       {
@@ -217,7 +217,7 @@ export const SKILLS: SkillSection[] = [
   },
   {
     icon: '🛠️',
-    glyph: { name: 'hammer', color: 'amber' },
+    glyph: { name: 'hammer', color: 'FFB900' },
     title: 'Tools',
     rows: [
       {
@@ -275,7 +275,7 @@ export const SKILLS: SkillSection[] = [
   },
   {
     icon: '📝',
-    glyph: { name: 'braces', color: 'violet' },
+    glyph: { name: 'braces', color: 'C4B5FD' },
     title: 'Other Languages',
     rows: [
       {

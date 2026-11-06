@@ -93,7 +93,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '🧪',
-    glyph: { name: 'test-tube-diagonal', color: 'green' },
+    glyph: { name: 'test-tube-diagonal', color: '05DF72' },
     title: 'Testing & CI Tooling',
     projects: [
       {
@@ -147,7 +147,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '📦',
-    glyph: { name: 'package', color: 'brown' },
+    glyph: { name: 'package', color: 'A7723D' },
     title: 'Other Packages',
     projects: [
       {
@@ -192,7 +192,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '💡',
-    glyph: { name: 'lightbulb', color: 'yellow' },
+    glyph: { name: 'lightbulb', color: 'FFDF20' },
     title: 'Other Projects',
     projects: [
       {
