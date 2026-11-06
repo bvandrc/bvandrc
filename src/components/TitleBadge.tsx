@@ -1,5 +1,6 @@
 import { LINK_BLUE } from '../constants'
 import { BADGE_HEIGHT, badgePad, badgeSrc } from '../lib/badge'
+import { ThemedBadge } from './ThemedBadge'
 
 /**
  * Face a title is drawn in.
@@ -42,23 +43,28 @@ export const TITLE_BADGE_PAD = badgePad(BADGE_HEIGHT)
  * constant is the dial for how large a title reads. Carries no link of its
  * own: the title line wraps it, and takes `href` only to name it on hover.
  */
-export const TitleBadge = ({ name, href }: { name: string; href: string }) => (
-  <img
-    src={badgeSrc({
+export const TitleBadge = ({ name, href }: { name: string; href: string }) => {
+  const src = (color: string) =>
+    badgeSrc({
       items: [{ value: name }],
-      color: LINK_BLUE,
+      color,
       bold: true,
       underline: true,
       font: TITLE_FONT,
       fontSize: TITLE_FONT_SIZE,
-    })}
-    height={BADGE_HEIGHT}
-    // the SVG's own aria-label is not exposed through an <img>, so the name
-    // has to be repeated here to survive as text
-    alt={name}
-    // a badge is an image, so a browser shows no status-bar preview of where
-    // the link around it goes — the tooltip is the only place the destination
-    // can appear, and it says more than the name the badge already draws
-    title={href}
-  />
-)
+    })
+  return (
+    <ThemedBadge
+      src={src(LINK_BLUE.DARK)}
+      light={src(LINK_BLUE.LIGHT)}
+      height={BADGE_HEIGHT}
+      // the SVG's own aria-label is not exposed through an <img>, so the name
+      // has to be repeated here to survive as text
+      alt={name}
+      // a badge is an image, so a browser shows no status-bar preview of where
+      // the link around it goes — the tooltip is the only place the
+      // destination can appear, and it says more than the name it draws
+      title={href}
+    />
+  )
+}

@@ -1,9 +1,24 @@
 import type { SectionLogo } from '../content/projects'
 import { badgeGap, badgePad, badgeSrc } from '../lib/badge'
 
-/** GitHub's own body text colours, which a heading is set in. */
-const FG_LIGHT = '1f2328'
-const FG_DARK = 'f0f6fc'
+/**
+ * Heading fills: GitHub's own body text colour for each theme.
+ *
+ * A `<picture>` matches on `prefers-color-scheme`, which follows the reader's
+ * OS, while GitHub themes its page with `data-color-mode` attributes and CSS
+ * variables. The two are independent, so a reader who pins GitHub's theme
+ * against their system is served the wrong variant — `DARK` on a white page
+ * is 1.09:1, a ghost.
+ *
+ * That is accepted rather than fixed. Nothing on GitHub's default `auto`
+ * setting produces the mismatch, and no arrangement of a media query escapes
+ * it: whichever variant it picks for one mismatch, the opposite mismatch gets
+ * the other. Hedging to a grey legible on both costs every reader of the
+ * theme the heading is drawn for, and only pays off above about 3:1 on the
+ * wrong canvas — which is a long way from near-white, and most of the way to
+ * a heading that reads as faded on its own theme.
+ */
+const FG = { LIGHT: '1f2328', DARK: 'f0f6fc' }
 
 /**
  * Box a section title is drawn in, and the size of the text inside it.
@@ -179,9 +194,9 @@ export const HeadingBadge = ({
     })
   return (
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset={src(FG_DARK)} />
+      <source media="(prefers-color-scheme: dark)" srcset={src(FG.DARK)} />
       {/* the emoji is decorative; the title is the heading */}
-      <img src={src(FG_LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
+      <img src={src(FG.LIGHT)} height={HEADING_BADGE_HEIGHT} alt={title} />
     </picture>
   )
 }
