@@ -160,8 +160,8 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    icon: '🧰',
-    glyph: { name: 'toolbox', color: 'FF6467' },
+    icon: '🛠️',
+    glyph: { name: 'material-symbols:construction', color: 'FF6467' },
     title: 'Other Tools',
     projects: [
       {

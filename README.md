@@ -20,7 +20,7 @@
   <a href="#react-websites"><img src="https://badgesmith.bvandrc.workers.dev/?items=react:&amp;color=none&amp;iconColor=61DAFB&amp;textColor=61DAFB&amp;height=15&amp;padY=0" height="15" alt /></a><a href="#react-websites">React Websites</a>
    · 
   🧪&nbsp;<a href="#testing-ci-tooling">Testing &amp; CI Tooling</a> · 
-  🧰&nbsp;<a href="#other-tools">Other Tools</a> · 
+  🛠️&nbsp;<a href="#other-tools">Other Tools</a> · 
   🎧&nbsp;<a href="#dj-music">DJ / Music</a> · 
   🔌&nbsp;<a href="#hardware">Hardware</a>
 </p>
@@ -99,7 +99,7 @@
   <br />
   Rule-based ordering of nested glob results for test configs.
 </p>
-<h3 id="other-tools">🧰&nbsp;&nbsp;&nbsp;&nbsp;Other Tools&nbsp;&nbsp;&nbsp;&nbsp;🧰</h3>
+<h3 id="other-tools">🛠️&nbsp;&nbsp;&nbsp;&nbsp;Other Tools&nbsp;&nbsp;&nbsp;&nbsp;🛠️</h3>
 <p>
   <a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><picture><source media="(max-width: 1199px)" srcset="./assets/spacer.png" width="0" height="14" /><img src="./assets/spacer.png" width="215" height="14" alt /></picture><picture><source media="(max-width: 1199px)" srcset="https://badgesmith.bvandrc.workers.dev/?items=tsx-to-pdf&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=22&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" width="2000" height="22" /><source media="(prefers-color-scheme: light)" srcset="https://badgesmith.bvandrc.workers.dev/?items=tsx-to-pdf&amp;color=none&amp;iconColor=0969da&amp;textColor=0969da&amp;height=22&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" /><img src="https://badgesmith.bvandrc.workers.dev/?items=tsx-to-pdf&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=22&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" height="22" title="https://www.npmjs.com/package/tsx-to-pdf" alt="tsx-to-pdf" /></picture><picture><source media="(max-width: 1199px)" srcset="./assets/spacer.png" width="0" height="14" /><img src="./assets/spacer.png" width="9" height="14" alt /></picture></a><a href="https://www.npmjs.com/package/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=npm:&amp;color=none&amp;iconColor=8B949E&amp;textColor=8B949E&amp;height=22&amp;padY=4" height="22" alt="npm" title="npm" /></a>&nbsp;&nbsp;<a href="https://github.com/bvandrc/tsx-to-pdf" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:40,git-pull-request:51,download:2.4K&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=5" height="22" alt="40 commits, 51 PRs, 2391 downloads" title="40 commits, 51 PRs, 2391 downloads" /></a>&nbsp;<a href="https://github.com/bvandrc/tsx-to-pdf" target="_blank" rel="noopener"><picture><source media="(prefers-color-scheme: light)" srcset="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=0969da&amp;textColor=0969da&amp;height=22&amp;padY=4.5&amp;iconScale=0.8" /><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=22&amp;padY=4.5&amp;iconScale=0.8" height="22" title="GitHub Repository" alt="GitHub Repository" /></picture></a>
   <br />
