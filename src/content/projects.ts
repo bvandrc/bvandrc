@@ -242,7 +242,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '🔌',
-    glyph: { name: 'cpu', color: '00D5BE' },
+    glyph: { name: 'microchip', color: '00D5BE' },
     title: 'Hardware',
     projects: [
       {
