@@ -231,6 +231,15 @@ export const PROJECTS: ProjectSection[] = [
           'Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs.',
       },
       {
+        name: 'mik-automator',
+        href: 'https://pypi.org/project/mik-automator/',
+        type: 'python',
+        repo: 'mik-automator',
+        pypiPackage: 'mik-automator',
+        blurb:
+          'Windows automation for Mixed In Key: adds a folder of tracks and waits out the analysis, plus tools to edit its database directly.',
+      },
+      {
         name: 'arduino-totem',
         href: 'https://github.com/bvandrc/arduino-totem',
         type: 'arduino',
