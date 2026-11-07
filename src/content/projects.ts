@@ -213,8 +213,7 @@ export const PROJECTS: ProjectSection[] = [
         type: 'python',
         repo: 'mik-automator',
         pypiPackage: 'mik-automator',
-        blurb:
-          'Windows automation for Mixed In Key: adds a folder of tracks and waits out the analysis, plus tools to edit its database directly.',
+        blurb: 'Windows automation and database tools for Mixed In Key.',
       },
     ],
   },
