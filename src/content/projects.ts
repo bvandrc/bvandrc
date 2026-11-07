@@ -161,7 +161,7 @@ export const PROJECTS: ProjectSection[] = [
   },
   {
     icon: '🛠️',
-    glyph: { name: 'material-symbols:construction', color: 'FF6467' },
+    glyph: { name: 'material-symbols:construction', color: 'A7723D' },
     title: 'Other Tools',
     projects: [
       {
