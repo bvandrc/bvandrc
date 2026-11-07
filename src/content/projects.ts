@@ -160,8 +160,8 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    icon: '📦',
-    glyph: { name: 'package', color: 'A7723D' },
+    icon: '🧰',
+    glyph: { name: 'toolbox', color: 'FF6467' },
     title: 'Other Tools',
     projects: [
       {
@@ -241,8 +241,8 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    icon: '💡',
-    glyph: { name: 'lightbulb', color: 'FFDF20' },
+    icon: '🔌',
+    glyph: { name: 'cpu', color: '00D5BE' },
     title: 'Hardware',
     projects: [
       {
