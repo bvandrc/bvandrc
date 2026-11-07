@@ -22,7 +22,7 @@
   🧪&nbsp;<a href="#testing-ci-tooling">Testing &amp; CI Tooling</a> · 
   📦&nbsp;<a href="#other-tools">Other Tools</a> · 
   🎧&nbsp;<a href="#dj-music">DJ / Music</a> · 
-  💡&nbsp;<a href="#other-projects">Other Projects</a>
+  💡&nbsp;<a href="#hardware">Hardware</a>
 </p>
 <h3 id="react-websites">
   <a href="#react-websites"><img src="https://badgesmith.bvandrc.workers.dev/?items=react:&amp;color=none&amp;iconColor=61DAFB&amp;textColor=61DAFB&amp;height=20&amp;padY=0" height="20" alt /></a>&nbsp;&nbsp;React Websites&nbsp;&nbsp;<a href="#react-websites"><img src="https://badgesmith.bvandrc.workers.dev/?items=react:&amp;color=none&amp;iconColor=61DAFB&amp;textColor=61DAFB&amp;height=20&amp;padY=0" height="20" alt /></a>
@@ -141,7 +141,7 @@
   <br />
   Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs.
 </p>
-<h3 id="other-projects">💡&nbsp;&nbsp;&nbsp;&nbsp;Other Projects&nbsp;&nbsp;&nbsp;&nbsp;💡</h3>
+<h3 id="hardware">💡&nbsp;&nbsp;&nbsp;&nbsp;Hardware&nbsp;&nbsp;&nbsp;&nbsp;💡</h3>
 <p>
   <a href="https://github.com/bvandrc/arduino-totem" target="_blank" rel="noopener"><picture><source media="(max-width: 1199px)" srcset="./assets/spacer.png" width="0" height="14" /><img src="./assets/spacer.png" width="164" height="14" alt /></picture><picture><source media="(max-width: 1199px)" srcset="https://badgesmith.bvandrc.workers.dev/?items=arduino-totem&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=22&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" width="2000" height="22" /><source media="(prefers-color-scheme: light)" srcset="https://badgesmith.bvandrc.workers.dev/?items=arduino-totem&amp;color=none&amp;iconColor=0969da&amp;textColor=0969da&amp;height=22&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" /><img src="https://badgesmith.bvandrc.workers.dev/?items=arduino-totem&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=22&amp;padY=0&amp;bold=true&amp;underline=true&amp;font=arial&amp;fontSize=18" height="22" title="https://github.com/bvandrc/arduino-totem" alt="arduino-totem" /></picture><picture><source media="(max-width: 1199px)" srcset="./assets/spacer.png" width="0" height="14" /><img src="./assets/spacer.png" width="9" height="14" alt /></picture></a><a href="https://github.com/bvandrc/arduino-totem" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=arduino:&amp;color=none&amp;iconColor=8B949E&amp;textColor=8B949E&amp;height=22&amp;padY=4" height="22" alt="Arduino" title="Arduino" /></a>&nbsp;&nbsp;<a href="https://github.com/bvandrc/arduino-totem" target="_blank" rel="noopener"><img src="https://badgesmith.bvandrc.workers.dev/?items=git-commit:36,git-pull-request:7&amp;color=none&amp;iconColor=6E7681&amp;textColor=6E7681&amp;height=22&amp;padY=5" height="22" alt="36 commits, 7 PRs" title="36 commits, 7 PRs" /></a>&nbsp;<a href="https://github.com/bvandrc/arduino-totem" target="_blank" rel="noopener"><picture><source media="(prefers-color-scheme: light)" srcset="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=0969da&amp;textColor=0969da&amp;height=22&amp;padY=4.5&amp;iconScale=0.8" /><img src="https://badgesmith.bvandrc.workers.dev/?items=file-directory:repo&amp;color=none&amp;iconColor=2f81f7&amp;textColor=2f81f7&amp;height=22&amp;padY=4.5&amp;iconScale=0.8" height="22" title="GitHub Repository" alt="GitHub Repository" /></picture></a>
   <br />

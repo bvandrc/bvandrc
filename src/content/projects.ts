@@ -243,7 +243,7 @@ export const PROJECTS: ProjectSection[] = [
   {
     icon: '💡',
     glyph: { name: 'lightbulb', color: 'FFDF20' },
-    title: 'Other Projects',
+    title: 'Hardware',
     projects: [
       {
         name: 'arduino-totem',
