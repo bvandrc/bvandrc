@@ -160,9 +160,9 @@ export const PROJECTS: ProjectSection[] = [
     ],
   },
   {
-    icon: '📦',
-    glyph: { name: 'package', color: 'A7723D' },
-    title: 'Other Packages',
+    icon: '🛠️',
+    glyph: { name: 'material-symbols:construction', color: 'A7723D' },
+    title: 'Other Tools',
     projects: [
       {
         name: 'tsx-to-pdf',
@@ -191,6 +191,21 @@ export const PROJECTS: ProjectSection[] = [
         blurb: 'Generic React hooks and helpers for browser UI behavior.',
       },
       {
+        name: 'badgesmith',
+        href: 'https://badgesmith.bvandrc.workers.dev/',
+        type: 'worker',
+        repo: 'badgesmith',
+        blurb:
+          'Cloudflare Worker that renders several icons and values as one SVG badge, with advanced formatting and live GitHub counts. It draws the badges on this page.',
+      },
+    ],
+  },
+  {
+    icon: '🎧',
+    glyph: { name: 'headphones', color: 'FB64B6' },
+    title: 'DJ / Music',
+    projects: [
+      {
         name: 'serato-tools',
         href: 'https://pypi.org/project/serato-tools/',
         type: 'python',
@@ -215,21 +230,6 @@ export const PROJECTS: ProjectSection[] = [
         pypiPackage: 'mik-automator',
         blurb: 'Windows automation and database tools for Mixed In Key.',
       },
-    ],
-  },
-  {
-    icon: '💡',
-    glyph: { name: 'lightbulb', color: 'FFDF20' },
-    title: 'Other Projects',
-    projects: [
-      {
-        name: 'badgesmith',
-        href: 'https://badgesmith.bvandrc.workers.dev/',
-        type: 'worker',
-        repo: 'badgesmith',
-        blurb:
-          'Cloudflare Worker that renders several icons and values as one SVG badge, with advanced formatting and live GitHub counts. It draws the badges on this page.',
-      },
       {
         name: 'spotify-organizer',
         href: 'https://github.com/bvandrc/SD',
@@ -238,6 +238,13 @@ export const PROJECTS: ProjectSection[] = [
         blurb:
           'Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs.',
       },
+    ],
+  },
+  {
+    icon: '🔌',
+    glyph: { name: 'microchip', color: '00D5BE' },
+    title: 'Hardware',
+    projects: [
       {
         name: 'arduino-totem',
         href: 'https://github.com/bvandrc/arduino-totem',
