@@ -207,6 +207,14 @@ export const PROJECTS: ProjectSection[] = [
         pypiPackage: 'serato-usb-export',
         blurb: 'Fast, deduplicated USB export tool for Serato DJ.',
       },
+      {
+        name: 'mik-automator',
+        href: 'https://pypi.org/project/mik-automator/',
+        type: 'python',
+        repo: 'mik-automator',
+        pypiPackage: 'mik-automator',
+        blurb: 'Windows automation and database tools for Mixed In Key.',
+      },
     ],
   },
   {
