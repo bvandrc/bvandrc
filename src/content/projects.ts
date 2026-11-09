@@ -11,6 +11,7 @@ export type Project = {
   npmPackage?: string
   /** Name the project is published under on PyPI, whose all-time downloads `pnpm gen:counts` committed */
   pypiPackage?: string
+  /** Its description, where `{commits}`, `{prs}`, or `{downloads}` stands for that count, filled by `fillBlurb` */
   blurb: string
   /** screenshot path; its alt text is derived from the project name */
   screenshot?: string
@@ -51,6 +52,25 @@ export type ProjectSection = (
   projects: Project[]
 }
 
+/**
+ * A project's blurb, with each `{commits}`, `{prs}`, or `{downloads}` filled
+ * with that count rounded down to the ten, as "580" for 587.
+ *
+ * Throws on a placeholder with no count to fill it, rather than show the
+ * placeholder.
+ */
+export const fillBlurb = (
+  blurb: string,
+  counts: Partial<Record<string, number>> | undefined
+) =>
+  blurb.replaceAll(/\{(\w+)\}/g, (placeholder, key: string) => {
+    const count = counts?.[key]
+    if (count === undefined) {
+      throw new Error(`No count fills ${placeholder} in "${blurb}"`)
+    }
+    return (Math.floor(count / 10) * 10).toLocaleString('en-US')
+  })
+
 export const PROJECTS: ProjectSection[] = [
   {
     icon: { slug: 'react', color: '61DAFB' },
@@ -64,7 +84,7 @@ export const PROJECTS: ProjectSection[] = [
         type: 'react',
         repo: 'TaskRankr',
         blurb:
-          'My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. 600+ PRs, each reviewed and refined.',
+          'My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. {prs}+ PRs, each reviewed and refined.',
         screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
         embed: { scale: 0.75 },
       },

@@ -12,7 +12,8 @@ import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './components/TypeIcon'
 import { NARROW_VIEWPORT, repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
-import { PROJECTS } from './content/projects'
+import { fillBlurb, PROJECTS } from './content/projects'
+import { REPO_COUNTS } from './generated/repo-counts'
 import { badgeGap, NBSP_WIDTH } from './lib/badge'
 
 /** `&nbsp;` after the title back when it was text. */
@@ -156,7 +157,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
         <RepoBadge />
       </a>
       <br />
-      {p.blurb}
+      {fillBlurb(p.blurb, REPO_COUNTS[p.repo])}
       {p.screenshot && (
         <>
           <br />
