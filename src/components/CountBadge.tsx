@@ -1,4 +1,4 @@
-import { COUNT_KINDS } from '../content/counts'
+import { getShownCountKinds } from '../content/counts'
 import { REPO_COUNTS } from '../generated/repo-counts'
 import {
   BADGE_HEIGHT,
@@ -41,13 +41,14 @@ const formatCount = new Intl.NumberFormat(
 
 /**
  * `repo`'s counts in `COUNT_KINDS` order, each with its icon and noun: its
- * commits and PRs, then its downloads where it publishes a package.
+ * commits, its PRs where they show, then its downloads where it publishes a
+ * package.
  *
  * Empty for a repo that renders no badge.
  */
 const shownCounts = (repo: string) => {
   const counts = REPO_COUNTS[repo]
-  return COUNT_KINDS.flatMap(({ key, icon, noun }) => {
+  return getShownCountKinds(counts).flatMap(({ key, icon, noun }) => {
     const count = counts?.[key]
     return count === undefined ? [] : [{ icon, noun, count }]
   })
@@ -79,8 +80,8 @@ export const countBadgeWidth = (repo: string) => {
 }
 
 /**
- * A project's commit and pull request totals, and its downloads where it
- * publishes a package, as one transparent badge.
+ * A project's commit total, its pull requests' where they show, and its
+ * downloads where it publishes a package, as one transparent badge.
  *
  * The numbers live in the URL rather than being looked up when the image
  * loads, which is what keeps `pnpm build` reproducible and the badge
