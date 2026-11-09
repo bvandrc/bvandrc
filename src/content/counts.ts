@@ -1,5 +1,8 @@
+/** The counts a repo can have, each named as in `src/generated/repo-counts.ts`. */
+export type CountKey = 'commits' | 'prs' | 'downloads'
+
 /** A repo's counts, keyed by `CountKind`'s `key`. */
-type Counts = Partial<Record<string, number>>
+type Counts = Partial<Record<CountKey, number>>
 
 /**
  * One of the counts a project's badge shows, and bvandercar.dev's project cards.
@@ -10,7 +13,7 @@ type Counts = Partial<Record<string, number>>
  * decides from a repo's counts whether it shows this one.
  */
 export type CountKind = {
-  key: string
+  key: CountKey
   icon: string
   noun: string
   isShown?: (counts: Counts) => boolean
