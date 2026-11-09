@@ -17,7 +17,7 @@ GitHub profile README (the `bvandrc/bvandrc` special repo). `README.md` is **gen
   - **Inline**: rather than `align="right"`, since GitHub's markdown CSS pads every `img[align=right]` by 20px, so a floated badge can never sit flush.
   - **Colour**: it carries no background (`color=none`), so `BADGE_FG` has to supply its own contrast — a mid grey legible on GitHub's light and dark themes alike, which no pill colour could manage.
 - **Counts are generated, and fetched outside the build**: the numbers live in `src/generated/repo-counts.ts`, which is **generated — never edit it by hand**.
-  - **Fetch**: `pnpm gen:counts` rewrites it from the GitHub API, plus npm's or pepy.tech's for the all-time downloads of any project with an `npmPackage` or `pypiPackage`. `refresh-counts.yml` runs that weekly, rebuilds, and commits both.
+  - **Fetch**: `pnpm gen:counts` rewrites it from the GitHub API, plus npm's or pepy.tech's for the all-time downloads of any project with an `npmPackage` or `pypiPackage`. A PyPI count stops two days back, where bvandercar.dev's BigQuery count does, since its deploy fails on a count under the profile's. `refresh-counts.yml` runs that weekly, rebuilds, and commits both.
   - **Not in the build**: CI diffs the committed README against a fresh build, so the build has to render the same bytes from the same commit, while these numbers change on their own.
   - **Missing counts**: a repo with no entry renders no badge rather than a made-up number. A private repo has none until `REPO_READ_TOKEN` is configured, since the built-in Actions token reaches every public repo but no private one.
 - **Workflows**:

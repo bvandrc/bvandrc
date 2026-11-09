@@ -1,6 +1,7 @@
 import { writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { sum, sumBy } from 'es-toolkit'
 
 import type { Project } from '../src/content/projects'
 import { PROJECT_REPOS, PROJECTS } from '../src/content/projects'
@@ -119,14 +120,34 @@ const fetchNpmDownloads = async (pkg: string) => {
 // Actions passes an unset secret as an empty string
 const pepyKey = process.env.PEPY_API_KEY || undefined
 
-/** A PyPI package's all-time downloads, as pepy.tech counts them. */
-const fetchPypiDownloads = async (pkg: string, key: string) =>
-  (
-    await fetchJson<{ total_downloads: number }>(
-      `https://api.pepy.tech/api/v2/projects/${pkg}`,
-      { headers: { 'X-Api-Key': key } }
-    )
-  ).total_downloads
+/**
+ * How many days back a PyPI count stops, as bvandercar.dev's does: it counts
+ * BigQuery's downloads through two days ago, and fails its deploy on a count
+ * under this one.
+ */
+const PYPI_LAG_DAYS = 2
+
+/**
+ * A PyPI package's downloads, as pepy.tech counts them, from its first upload
+ * through `PYPI_LAG_DAYS` ago.
+ */
+const fetchPypiDownloads = async (pkg: string, key: string) => {
+  const { total_downloads, downloads } = await fetchJson<{
+    total_downloads: number
+    // Its latest few months of downloads, by day, then version.
+    downloads: Record<string, Record<string, number>>
+  }>(`https://api.pepy.tech/api/v2/projects/${pkg}`, {
+    headers: { 'X-Api-Key': key },
+  })
+  const lastDay = isoDate(Date.now() - PYPI_LAG_DAYS * DAY_MS)
+  // The total runs through pepy.tech's latest day, so the days after
+  // lastDay are taken back off it.
+  const sinceLastDay = sumBy(
+    Object.entries(downloads).filter(([day]) => day > lastDay),
+    ([, byVersion]) => sum(Object.values(byVersion))
+  )
+  return total_downloads - sinceLastDay
+}
 
 /**
  * A project's all-time downloads from whichever registry it publishes to.
