@@ -52,6 +52,28 @@ const total = async (url: string) => {
   return last ? Number(last[1]) : ((await res.json()) as unknown[]).length
 }
 
+/**
+ * How many of a repo's pull requests were merged, leaving out ones closed
+ * unmerged or still open.
+ *
+ * Walks the closed ones 100 at a time, since the list can't be filtered to
+ * merged ones, and the search API that can allows few requests without a token.
+ */
+const countMergedPrs = async (base: string) => {
+  let merged = 0
+  let url: string | undefined = `${base}/pulls?state=closed&per_page=100`
+  while (url) {
+    const res: Response = await fetch(url, { headers })
+    if (!res.ok) {
+      throw new Error(`GitHub API ${res.status} for ${url}`)
+    }
+    const pulls = (await res.json()) as { merged_at: string | null }[]
+    merged += pulls.filter(({ merged_at }) => merged_at !== null).length
+    url = res.headers.get('link')?.match(/<([^>]+)>; rel="next"/)?.[1]
+  }
+  return merged
+}
+
 /** Days per downloads query, inside the 18 months the API answers at once. */
 const NPM_WINDOW_DAYS = 365
 
@@ -128,7 +150,7 @@ const fetchCounts = async (project: Project): Promise<RepoCounts> => {
   const base = `https://api.github.com/repos/${OWNER}/${project.repo}`
   const [commits, prs, downloads] = await Promise.all([
     total(`${base}/commits?per_page=1`),
-    total(`${base}/pulls?state=all&per_page=1`),
+    countMergedPrs(base),
     fetchDownloads(project),
   ])
   return downloads === undefined
@@ -183,8 +205,8 @@ type RepoCounts = {
 }
 
 /**
- * Each project repo's total commits and pull requests, and its npm or PyPI
- * package's all-time downloads where it has one, refreshed weekly.
+ * Each project repo's total commits and merged pull requests, and its npm or
+ * PyPI package's all-time downloads where it has one, refreshed weekly.
  *
  * Typed as possibly absent because a lookup can miss: a repo \`pnpm gen:counts\`
  * has never read — a private one before its token is configured — has no entry.
