@@ -129,7 +129,7 @@ export const SKILLS: SkillSection[] = [
               logoColor: 'white',
             },
             {
-              alt: 'JQuery',
+              alt: 'jQuery',
               path: 'jquery-%230769AD.svg',
               logo: 'jquery',
               logoColor: 'white',
