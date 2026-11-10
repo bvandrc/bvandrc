@@ -25,6 +25,8 @@ export type Project = {
 export type ProjectEmbed = {
   /** How far to shrink the framed page, so more of its layout fits (0.5 = 50%). Defaults to 1. */
   scale?: number
+  /** How many px of the screenshot's top a phone shows across the preview's toggle, for one whose busy top crowds the label. Defaults to 64. */
+  posterHeight?: number
 }
 
 /** A simpleicons.org logo, drawn in its brand colour. */
@@ -107,7 +109,7 @@ export const PROJECTS: ProjectSection[] = [
           'My side hobby. All custom React components, using the SoundCloud API.',
         screenshot:
           './project-screenshots/resized/screenshot-specialingredientbass.png',
-        embed: { scale: 0.5 },
+        embed: { scale: 0.5, posterHeight: 48 },
       },
       {
         name: 'Retail Website',
@@ -118,7 +120,7 @@ export const PROJECTS: ProjectSection[] = [
           'CMS-driven storefront with custom React components, built for a friend.',
         screenshot:
           './project-screenshots/resized/screenshot-womanhoodofwubz.png',
-        embed: { scale: 0.6 },
+        embed: { scale: 0.6, posterHeight: 48 },
       },
     ],
   },
