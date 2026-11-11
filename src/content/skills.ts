@@ -55,6 +55,12 @@ export const SKILLS: SkillSection[] = [
           ],
           [
             {
+              alt: 'Python',
+              path: 'python-3670A0',
+              logo: 'python',
+              logoColor: 'ffdd54',
+            },
+            {
               alt: 'HTML5',
               path: 'html5-%23E34F26.svg',
               logo: 'html5',
@@ -65,12 +71,6 @@ export const SKILLS: SkillSection[] = [
               path: 'css-%23663399.svg',
               logo: 'css',
               logoColor: 'white',
-            },
-            {
-              alt: 'Python',
-              path: 'python-3670A0',
-              logo: 'python',
-              logoColor: 'ffdd54',
             },
           ],
         ],
