@@ -23,7 +23,7 @@ ${render(
    * GitHub Bio - Set manually at https://github.com/settings/profile (160 char limit),
    * but here for version control:
    *
-   * SDET, React developer, TypeScript purist. 9 years writing code and tests.
+   * SDET, React developer, type-safety stickler. 9 years writing code and tests.
    * I build React apps, Python DJ tools, and npm packages for testing and CI.
    */
 )}
