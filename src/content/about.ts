@@ -1,6 +1,6 @@
 /** The intro, one line each. */
 export const INTRO_LINES = [
-  'SDET, React developer, TypeScript purist.',
+  'SDET, React developer, type-safety stickler.',
   '9 years writing code and tests, from hardware to web apps.',
   'I build React apps, testing and CI npm packages, and Python DJ tools.',
   "These days I build with AI agents, reviewing and refining every PR until it's code I understand and would write.",

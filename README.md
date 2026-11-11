@@ -3,7 +3,7 @@
 <div align="center">
 
 <p>
-  SDET, React developer, TypeScript purist.
+  SDET, React developer, type-safety stickler.
   <br />
   9 years writing code and tests, from hardware to web apps.
   <br />
