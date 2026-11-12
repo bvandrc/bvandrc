@@ -51,6 +51,16 @@ export type ProjectSection = (
 ) & {
   title: string
   intro?: string
+  /**
+   * Whether bvandercar.dev keeps its chip in its reduced contents, the fewer
+   * chips it shows on a narrow screen, where they don't all fit. Defaults to
+   * true.
+   *
+   * Without one there, the chip before it stays lit while a reader scrolls
+   * through it, and the site's contents menu still lists it. The README's
+   * contents list every group either way.
+   */
+  inReducedContents?: boolean
   projects: Project[]
 }
 
@@ -226,6 +236,7 @@ export const PROJECTS: ProjectSection[] = [
     icon: '🎧',
     glyph: { name: 'headphones', color: 'FB64B6' },
     title: 'DJ / Music',
+    inReducedContents: false,
     projects: [
       {
         name: 'serato-tools',
@@ -266,6 +277,7 @@ export const PROJECTS: ProjectSection[] = [
     icon: '🔌',
     glyph: { name: 'microchip', color: '00D5BE' },
     title: 'Hardware',
+    inReducedContents: false,
     projects: [
       {
         name: 'arduino-totem',
