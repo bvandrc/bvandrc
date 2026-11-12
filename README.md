@@ -261,19 +261,6 @@
       <img src="https://img.shields.io/badge/confluence-%23172BF4.svg?style=for-the-badge&amp;logo=confluence&amp;logoColor=white" alt="Confluence" />
     </td>
   </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=f0f6fc&amp;textColor=f0f6fc&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" /><img src="https://badgesmith.bvandrc.workers.dev/?items=%F0%9F%93%9D%C2%A0%C2%A0%C2%A0%C2%A0Other%20Languages%C2%A0%C2%A0%C2%A0%C2%A0%F0%9F%93%9D&amp;color=none&amp;iconColor=1f2328&amp;textColor=1f2328&amp;height=24&amp;padY=0&amp;bold=true&amp;font=arial&amp;fontSize=20" height="24" alt="Other Languages" /></picture>
-    </td>
-  </tr>
-  <tr>
-    <td align="right">
-      <em>Hardware</em>
-    </td>
-    <td align="center">
-      <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&amp;logo=Arduino&amp;logoColor=white" alt="Arduino" />
-    </td>
-  </tr>
 </table>
 
 ## 📈&nbsp; Stats &nbsp;📈

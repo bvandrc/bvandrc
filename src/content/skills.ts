@@ -273,24 +273,4 @@ export const SKILLS: SkillSection[] = [
       },
     ],
   },
-  {
-    icon: '📝',
-    glyph: { name: 'braces', color: 'C4B5FD' },
-    title: 'Other Languages',
-    rows: [
-      {
-        label: 'Hardware',
-        lines: [
-          [
-            {
-              alt: 'Arduino',
-              path: '-Arduino-00979D',
-              logo: 'Arduino',
-              logoColor: 'white',
-            },
-          ],
-        ],
-      },
-    ],
-  },
 ]
