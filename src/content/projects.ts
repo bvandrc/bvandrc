@@ -51,6 +51,13 @@ export type ProjectSection = (
 ) & {
   title: string
   intro?: string
+  /**
+   * Whether bvandercar.dev gives it a chip in its contents. Defaults to true.
+   *
+   * Without one, the chip before it stays lit while a reader scrolls through
+   * it. The site's contents menu lists it either way; the README ignores it.
+   */
+  inContents?: boolean
   projects: Project[]
 }
 
@@ -226,6 +233,7 @@ export const PROJECTS: ProjectSection[] = [
     icon: '🎧',
     glyph: { name: 'headphones', color: 'FB64B6' },
     title: 'DJ / Music',
+    inContents: false,
     projects: [
       {
         name: 'serato-tools',
@@ -266,6 +274,7 @@ export const PROJECTS: ProjectSection[] = [
     icon: '🔌',
     glyph: { name: 'microchip', color: '00D5BE' },
     title: 'Hardware',
+    inContents: false,
     projects: [
       {
         name: 'arduino-totem',
