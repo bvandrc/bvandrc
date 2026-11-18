@@ -4,6 +4,15 @@ export const repoUrl = (repo: string) => `https://github.com/bvandrc/${repo}`
 export const ICON_GRAY = '8B949E'
 
 /**
+ * Fill for a badge with no background that is not a link.
+ *
+ * A badge carries no background, so this has to supply its own contrast: a
+ * mid grey reads on GitHub's light and dark themes alike, where `ICON_GRAY`
+ * would wash out against white.
+ */
+export const BADGE_FG = '6E7681'
+
+/**
  * Viewports that get the narrow layout: a title on a line of its own, and no
  * counterweight to centre it.
  *

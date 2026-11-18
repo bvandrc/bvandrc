@@ -153,9 +153,16 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           <Gap n={BADGE_GAP} />
         </>
       )}
-      <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-        <RepoBadge />
-      </a>
+      {p.privateRepo ? (
+        // biome-ignore lint/a11y/useValidAnchor: an anchor with nowhere to go, since GitHub links any README image outside one to its own camo URL, and the repo would 404
+        <a>
+          <RepoBadge isPrivate />
+        </a>
+      ) : (
+        <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
+          <RepoBadge />
+        </a>
+      )}
       <br />
       {fillBlurb(p.blurb, REPO_COUNTS[p.repo])}
       {p.screenshot && (
