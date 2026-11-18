@@ -9,7 +9,7 @@ import {
 } from './components/SectionHeadings'
 import { TITLE_BADGE_PAD, TitleBadge } from './components/TitleBadge'
 import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './components/TypeIcon'
-import { NARROW_VIEWPORT, repoUrl } from './constants'
+import { NARROW_VIEWPORT, PRIVATE_REPO_URL, repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
 import { fillBlurb, PROJECTS } from './content/projects'
@@ -111,8 +111,17 @@ const spacerWidth = (repo: string) => {
   )
 }
 
+/**
+ * Where a project's link to `url` goes: `url` itself, or the page saying the
+ * repo is private where `url` is a private repo, which would 404 for a visitor.
+ */
+const linkTo = (p: Project, url: string) =>
+  p.privateRepo && url === repoUrl(p.repo) ? PRIVATE_REPO_URL : url
+
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
+  const href = linkTo(p, p.href)
+  const repoHref = linkTo(p, repoUrl(p.repo))
   return (
     <p>
       {/* a blank spacer carries the weight of everything right of the title,
@@ -129,36 +138,28 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           stranded on a line of their own. The spacers are invisible, but an
           unwrapped README image still links to its own camo URL, so they go
           where the title goes. */}
-      <a href={p.href} target="_blank" rel="noopener">
+      <a href={href} target="_blank" rel="noopener">
         <Spacer width={spacerWidth(p.repo)} />
-        <TitleBadge name={p.name} href={p.href} />
+        <TitleBadge name={p.name} href={href} />
         <Spacer width={TITLE_GAP} />
       </a>
       {/* every image here is wrapped, because GitHub links an unwrapped README
           image to its own camo URL — an asset rather than anywhere useful.
           One anchor each, never one around the group: the spacing between
           them would sit inside it as link text and draw its underline. */}
-      <a
-        href={icon.published ? p.href : repoUrl(p.repo)}
-        target="_blank"
-        rel="noopener">
+      <a href={icon.published ? href : repoHref} target="_blank" rel="noopener">
         <TypeIcon type={p.type} />
       </a>
       <Gap n={ICON_GAP} />
       {countBadgeWidth(p.repo) > 0 && (
         <>
-          <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-            <CountBadge repo={p.repo} />
+          <a href={repoHref} target="_blank" rel="noopener">
+            <CountBadge repo={p.repo} isPrivate={p.privateRepo} />
           </a>
           <Gap n={BADGE_GAP} />
         </>
       )}
-      {/* a private repo would 404 for a visitor, so its crossed-out badge
-          goes where the title goes, as the spacers do */}
-      <a
-        href={p.privateRepo ? p.href : repoUrl(p.repo)}
-        target="_blank"
-        rel="noopener">
+      <a href={repoHref} target="_blank" rel="noopener">
         <RepoBadge isPrivate={p.privateRepo} />
       </a>
       <br />
@@ -166,7 +167,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       {p.screenshot && (
         <>
           <br />
-          <a href={p.href} target="_blank" rel="noopener">
+          <a href={href} target="_blank" rel="noopener">
             <img
               src={p.screenshot}
               width="385"
