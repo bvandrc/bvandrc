@@ -35,8 +35,8 @@ const element = (
 /** A self-closing tag as the renderer writes one, as a regex source. */
 const voidElement = (tag: string, attrs = '[^>]*') => `<${tag}${attrs}\\/>`
 
-/** An anchor's attributes, from its `href` on, or none for one going nowhere. */
-const LINK_ATTRS = '(?: href="[^"]*"[^>]*)?'
+/** An anchor's attributes, from its `href` on. */
+const LINK_ATTRS = ' href="[^"]*"[^>]*'
 
 /** An image on a title line: a badge, or a spacer. */
 const LINE_IMG = voidElement(

@@ -9,7 +9,7 @@ export type Project = {
   repo: string
   /**
    * Whether `repo` is private, so a visitor following a link to it would get
-   * a 404. The README crosses its repo badge out and links it nowhere.
+   * a 404. The README crosses its repo badge out and links it to `href`.
    */
   privateRepo?: boolean
   /** Name the project is published under on npm, whose all-time downloads `pnpm gen:counts` committed */

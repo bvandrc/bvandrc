@@ -50,7 +50,7 @@ export const REPO_BADGE_WIDTH = 48.26
 export type RepoBadgeProps = {
   /**
    * Draws the badge crossed out and grey, for a repository a visitor cannot
-   * open, which the title line then links nowhere.
+   * open, which the title line then links to the project's own page instead.
    */
   isPrivate?: boolean
 }
@@ -59,7 +59,7 @@ export type RepoBadgeProps = {
  * A badge reading "repo", matching the counts badge beside it.
  *
  * Carries no link of its own: the title line wraps it in an anchor to the
- * repository, or in one with no destination where that is private.
+ * repository, or to the project's own page where that is private.
  */
 export const RepoBadge = ({ isPrivate = false }: RepoBadgeProps) => {
   const src = (color: string) =>
@@ -70,8 +70,8 @@ export const RepoBadge = ({ isPrivate = false }: RepoBadgeProps) => {
       iconScale: REPO_ICON_SCALE,
       strikethrough: isPrivate,
     })
-  // grey rather than link blue, since nothing links it: one grey reads on
-  // both themes, so it needs no light variant
+  // grey rather than link blue, since it no longer stands for the link it
+  // sits in: one grey reads on both themes, so it needs no light variant
   if (isPrivate) {
     return (
       <img
