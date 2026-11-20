@@ -19,8 +19,6 @@ const COUNT_CONTENT_HEIGHT = 12
 export type CountBadgeProps = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo: string
-  /** Crosses the counts out, for a repo a visitor cannot open. */
-  isPrivate?: boolean
 }
 
 /**
@@ -82,20 +80,17 @@ export const countBadgeWidth = (repo: string) => {
  * identical for every reader — private repos included, since nothing has to
  * read the repo to render it. Its alt and hover text give each count in full.
  */
-export const CountBadge = ({ repo, isPrivate = false }: CountBadgeProps) => {
+export const CountBadge = ({ repo }: CountBadgeProps) => {
   const params = countBadgeParams(repo)
   if (!params) {
     return null
   }
-  const counts = shownCounts(repo)
+  const label = shownCounts(repo)
     .map(({ count, noun }) => `${count} ${count === 1 ? noun : `${noun}s`}`)
     .join(', ')
-  const label = isPrivate ? `${counts} (private repo)` : counts
   return (
     <img
-      // a line through the digits costs no width, so `countBadgeWidth`
-      // still measures this badge without being told
-      src={badgeSrc({ ...params, strikethrough: isPrivate })}
+      src={badgeSrc(params)}
       height={BADGE_HEIGHT}
       alt={label}
       title={label}

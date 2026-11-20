@@ -154,7 +154,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
       {countBadgeWidth(p.repo) > 0 && (
         <>
           <a href={repoHref} target="_blank" rel="noopener">
-            <CountBadge repo={p.repo} isPrivate={p.privateRepo} />
+            <CountBadge repo={p.repo} />
           </a>
           <Gap n={BADGE_GAP} />
         </>
