@@ -7,6 +7,12 @@ export type Project = {
   type: ProjectType
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo: string
+  /**
+   * Whether `repo` is private, so a visitor following a link to it would get
+   * a 404. The README shows it no repo badge, and links what would have gone
+   * there to the project's own page, or to one saying the repo is private.
+   */
+  privateRepo?: boolean
   /** Name the project is published under on npm, whose all-time downloads `pnpm gen:counts` committed */
   npmPackage?: string
   /** Name the project is published under on PyPI, whose all-time downloads `pnpm gen:counts` committed */
@@ -95,6 +101,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://taskrankr.com/guest',
         type: 'react',
         repo: 'TaskRankr',
+        privateRepo: true,
         blurb:
           'My flagship project: after trying 30+ to-do apps, I built my own. An offline-first, cross-device-synced task manager with advanced ranking, nesting, dependencies, customization, and rules. {prs}+ PRs, each reviewed and refined.',
         screenshot: './project-screenshots/resized/screenshot-taskrankr.png',
@@ -268,6 +275,7 @@ export const PROJECTS: ProjectSection[] = [
         href: 'https://github.com/bvandrc/SD',
         type: 'python',
         repo: 'SD',
+        privateRepo: true,
         blurb:
           'Python automation for my 11k+ track DJ library utilizing the Spotify and SoundCloud APIs.',
       },

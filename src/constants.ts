@@ -1,6 +1,9 @@
 /** One of my repos on GitHub. */
 export const repoUrl = (repo: string) => `https://github.com/bvandrc/${repo}`
 
+/** A page saying a project's repo is private, which its links go to rather than a 404. */
+export const PRIVATE_REPO_URL = `${repoUrl('bvandrc')}/blob/main/docs/private-repo.md`
+
 export const ICON_GRAY = '8B949E'
 
 /**

@@ -9,7 +9,7 @@ import {
 } from './components/SectionHeadings'
 import { TITLE_BADGE_PAD, TitleBadge } from './components/TitleBadge'
 import { TYPE_ICON_PAD, TYPE_ICON_WIDTH, TypeIcon } from './components/TypeIcon'
-import { NARROW_VIEWPORT, repoUrl } from './constants'
+import { NARROW_VIEWPORT, PRIVATE_REPO_URL, repoUrl } from './constants'
 import { TYPE_ICONS } from './content/project-types'
 import type { Project } from './content/projects'
 import { fillBlurb, PROJECTS } from './content/projects'
@@ -100,19 +100,37 @@ const Spacer = ({ width }: { width: number }) => (
  * It is a badge now, of a width the same for every type, so the spacer can
  * carry it like everything else rather than the line carrying a second image.
  */
-const spacerWidth = (repo: string) => {
-  const counts = countBadgeWidth(repo)
-  const badges =
-    counts > 0
-      ? counts + BADGE_GAP * NBSP_WIDTH + REPO_BADGE_WIDTH
-      : REPO_BADGE_WIDTH
+const spacerWidth = (p: Project) => {
+  const counts = countBadgeWidth(p.repo)
+  const repo = p.privateRepo ? 0 : REPO_BADGE_WIDTH
+  // the gap between the two only where both are drawn
+  const gap = counts > 0 && repo > 0 ? BADGE_GAP * NBSP_WIDTH : 0
+  const badges = counts + gap + repo
   return Math.round(
     TITLE_GAP + ICON_GAP * NBSP_WIDTH + TYPE_ICON_WIDTH + badges
   )
 }
 
+/**
+ * Where a project's link to its repo goes: the repo, or for a private one,
+ * which would 404 for a visitor, the project's own page.
+ *
+ * Where that page is the private repo too, it is the page saying the repo is
+ * private instead.
+ */
+const repoLink = (p: Project) => {
+  const repo = repoUrl(p.repo)
+  if (!p.privateRepo) {
+    return repo
+  }
+  return p.href === repo ? PRIVATE_REPO_URL : p.href
+}
+
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
+  const repoHref = repoLink(p)
+  const href = p.href === repoUrl(p.repo) ? repoHref : p.href
+  const hasCounts = countBadgeWidth(p.repo) > 0
   return (
     <p>
       {/* a blank spacer carries the weight of everything right of the title,
@@ -129,39 +147,39 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           stranded on a line of their own. The spacers are invisible, but an
           unwrapped README image still links to its own camo URL, so they go
           where the title goes. */}
-      <a href={p.href} target="_blank" rel="noopener">
-        <Spacer width={spacerWidth(p.repo)} />
-        <TitleBadge name={p.name} href={p.href} />
+      <a href={href} target="_blank" rel="noopener">
+        <Spacer width={spacerWidth(p)} />
+        <TitleBadge name={p.name} href={href} />
         <Spacer width={TITLE_GAP} />
       </a>
       {/* every image here is wrapped, because GitHub links an unwrapped README
           image to its own camo URL — an asset rather than anywhere useful.
           One anchor each, never one around the group: the spacing between
           them would sit inside it as link text and draw its underline. */}
-      <a
-        href={icon.published ? p.href : repoUrl(p.repo)}
-        target="_blank"
-        rel="noopener">
+      <a href={icon.published ? href : repoHref} target="_blank" rel="noopener">
         <TypeIcon type={p.type} />
       </a>
       <Gap n={ICON_GAP} />
-      {countBadgeWidth(p.repo) > 0 && (
+      {hasCounts && (
+        <a href={repoHref} target="_blank" rel="noopener">
+          <CountBadge repo={p.repo} />
+        </a>
+      )}
+      {/* a private repo has nothing a visitor could open, so it has no badge */}
+      {!p.privateRepo && (
         <>
-          <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-            <CountBadge repo={p.repo} />
+          {hasCounts && <Gap n={BADGE_GAP} />}
+          <a href={repoHref} target="_blank" rel="noopener">
+            <RepoBadge />
           </a>
-          <Gap n={BADGE_GAP} />
         </>
       )}
-      <a href={repoUrl(p.repo)} target="_blank" rel="noopener">
-        <RepoBadge />
-      </a>
       <br />
       {fillBlurb(p.blurb, REPO_COUNTS[p.repo])}
       {p.screenshot && (
         <>
           <br />
-          <a href={p.href} target="_blank" rel="noopener">
+          <a href={href} target="_blank" rel="noopener">
             <img
               src={p.screenshot}
               width="385"
