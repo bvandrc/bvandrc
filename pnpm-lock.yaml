@@ -15,8 +15,8 @@ importers:
         specifier: ^26
         version: 26.2.0
       badgesmith:
-        specifier: ^1.1
-        version: 1.1.0
+        specifier: ^1
+        version: 1.0.0
       es-toolkit:
         specifier: ^1
         version: 1.53.1
@@ -379,8 +379,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  badgesmith@1.1.0:
-    resolution: {integrity: sha512-19ytB+/rIPq6wlFIK2pdsd3qnYr3BKslVCDuFVFGr3m0Pw7wF5puXp/pIf9Co081KrMPx0+Scf5HoY3w+gByFQ==}
+  badgesmith@1.0.0:
+    resolution: {integrity: sha512-nD1uaQ4TdYUXK4fsXI6VOjsHYvYPAo3xVOA8HMe7wLBnEB6CWv7hM2Q48MkPyyDeyGbOnLrcsnqawvPD7adXGg==}
     engines: {node: '>=20'}
 
   es-toolkit@1.53.1:
@@ -609,7 +609,7 @@ snapshots:
   '@typescript/typescript-win32-x64@7.0.2':
     optional: true
 
-  badgesmith@1.1.0: {}
+  badgesmith@1.0.0: {}
 
   es-toolkit@1.53.1: {}
 

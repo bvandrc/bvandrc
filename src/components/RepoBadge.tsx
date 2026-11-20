@@ -1,4 +1,4 @@
-import { BADGE_FG, LINK_BLUE } from '../constants'
+import { LINK_BLUE } from '../constants'
 import { BADGE_HEIGHT, badgeSrc } from '../lib/badge'
 import { ThemedBadge } from './ThemedBadge'
 
@@ -40,48 +40,26 @@ const REPO_ICON_SCALE = 0.8
  * Width the renderer lays this badge out at, in px.
  *
  * One constant rather than a measurement per project: every repo badge holds
- * the same text and icon, so they are all this wide — a crossed-out one too,
- * since a line through the text does not change how far it advances. It moves with
+ * the same text and icon, so they are all this wide. It moves with
  * `REPO_CONTENT_HEIGHT`, which the contents scale from — the padding around
  * them adds height, never width.
  */
 export const REPO_BADGE_WIDTH = 48.26
 
-export type RepoBadgeProps = {
-  /**
-   * Draws the badge crossed out and grey, for a repository a visitor cannot
-   * open, which the title line then links to a page saying so instead.
-   */
-  isPrivate?: boolean
-}
-
 /**
  * A badge reading "repo", matching the counts badge beside it.
  *
- * Carries no link of its own: the title line wraps it in an anchor to the
- * repository, or to a page saying it is private where it is.
+ * Carries no link of its own: the title line wraps this and everything
+ * beside it in one anchor to the repository.
  */
-export const RepoBadge = ({ isPrivate = false }: RepoBadgeProps) => {
+export const RepoBadge = () => {
   const src = (color: string) =>
     badgeSrc({
       items: ITEMS,
       color,
       contentHeight: REPO_CONTENT_HEIGHT,
       iconScale: REPO_ICON_SCALE,
-      strikethrough: isPrivate,
     })
-  // grey rather than link blue, since it no longer stands for the link it
-  // sits in: one grey reads on both themes, so it needs no light variant
-  if (isPrivate) {
-    return (
-      <img
-        src={src(BADGE_FG)}
-        height={BADGE_HEIGHT}
-        alt="Private GitHub Repository"
-        title="Private GitHub Repository"
-      />
-    )
-  }
   return (
     <ThemedBadge
       src={src(LINK_BLUE.DARK)}

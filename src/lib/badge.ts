@@ -67,8 +67,6 @@ export type BadgeParams = {
   iconScale?: number
   bold?: boolean
   underline?: boolean
-  /** draws a line through every value, for one crossed out */
-  strikethrough?: boolean
   /**
    * Face the values are drawn in.
    *
@@ -105,7 +103,6 @@ const badgeOptions = ({
   iconScale,
   bold,
   underline,
-  strikethrough,
   font,
   fontSize,
 }: BadgeParams) =>
@@ -120,7 +117,6 @@ const badgeOptions = ({
     iconScale,
     bold,
     underline,
-    strikethrough,
     font,
     fontSize,
   }) satisfies BadgeOptions

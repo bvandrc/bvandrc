@@ -1,4 +1,3 @@
-import { BADGE_FG } from '../constants'
 import { getShownCountKinds } from '../content/counts'
 import { REPO_COUNTS } from '../generated/repo-counts'
 import {
@@ -20,6 +19,15 @@ export type CountBadgeProps = {
   /** GitHub repo name under bvandrc, whose counts `pnpm gen:counts` committed */
   repo: string
 }
+
+/**
+ * Icon and text fill.
+ *
+ * A badge carries no background, so this has to supply its own contrast: a
+ * mid grey reads on GitHub's light and dark themes alike, where the lighter
+ * grey the project icons use would wash out against white.
+ */
+const BADGE_FG = '6E7681'
 
 /**
  * A count as the badge shows it: in full below 1000, and to one decimal of a

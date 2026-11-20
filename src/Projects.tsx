@@ -100,28 +100,37 @@ const Spacer = ({ width }: { width: number }) => (
  * It is a badge now, of a width the same for every type, so the spacer can
  * carry it like everything else rather than the line carrying a second image.
  */
-const spacerWidth = (repo: string) => {
-  const counts = countBadgeWidth(repo)
-  const badges =
-    counts > 0
-      ? counts + BADGE_GAP * NBSP_WIDTH + REPO_BADGE_WIDTH
-      : REPO_BADGE_WIDTH
+const spacerWidth = (p: Project) => {
+  const counts = countBadgeWidth(p.repo)
+  const repo = p.privateRepo ? 0 : REPO_BADGE_WIDTH
+  // the gap between the two only where both are drawn
+  const gap = counts > 0 && repo > 0 ? BADGE_GAP * NBSP_WIDTH : 0
+  const badges = counts + gap + repo
   return Math.round(
     TITLE_GAP + ICON_GAP * NBSP_WIDTH + TYPE_ICON_WIDTH + badges
   )
 }
 
 /**
- * Where a project's link to `url` goes: `url` itself, or the page saying the
- * repo is private where `url` is a private repo, which would 404 for a visitor.
+ * Where a project's link to its repo goes: the repo, or for a private one,
+ * which would 404 for a visitor, the project's own page.
+ *
+ * Where that page is the private repo too, it is the page saying the repo is
+ * private instead.
  */
-const linkTo = (p: Project, url: string) =>
-  p.privateRepo && url === repoUrl(p.repo) ? PRIVATE_REPO_URL : url
+const repoLink = (p: Project) => {
+  const repo = repoUrl(p.repo)
+  if (!p.privateRepo) {
+    return repo
+  }
+  return p.href === repo ? PRIVATE_REPO_URL : p.href
+}
 
 const ProjectEntry = ({ p }: { p: Project }) => {
   const icon = TYPE_ICONS[p.type]
-  const href = linkTo(p, p.href)
-  const repoHref = linkTo(p, repoUrl(p.repo))
+  const repoHref = repoLink(p)
+  const href = p.href === repoUrl(p.repo) ? repoHref : p.href
+  const hasCounts = countBadgeWidth(p.repo) > 0
   return (
     <p>
       {/* a blank spacer carries the weight of everything right of the title,
@@ -139,7 +148,7 @@ const ProjectEntry = ({ p }: { p: Project }) => {
           unwrapped README image still links to its own camo URL, so they go
           where the title goes. */}
       <a href={href} target="_blank" rel="noopener">
-        <Spacer width={spacerWidth(p.repo)} />
+        <Spacer width={spacerWidth(p)} />
         <TitleBadge name={p.name} href={href} />
         <Spacer width={TITLE_GAP} />
       </a>
@@ -151,17 +160,20 @@ const ProjectEntry = ({ p }: { p: Project }) => {
         <TypeIcon type={p.type} />
       </a>
       <Gap n={ICON_GAP} />
-      {countBadgeWidth(p.repo) > 0 && (
+      {hasCounts && (
+        <a href={repoHref} target="_blank" rel="noopener">
+          <CountBadge repo={p.repo} />
+        </a>
+      )}
+      {/* a private repo has nothing a visitor could open, so it has no badge */}
+      {!p.privateRepo && (
         <>
+          {hasCounts && <Gap n={BADGE_GAP} />}
           <a href={repoHref} target="_blank" rel="noopener">
-            <CountBadge repo={p.repo} />
+            <RepoBadge />
           </a>
-          <Gap n={BADGE_GAP} />
         </>
       )}
-      <a href={repoHref} target="_blank" rel="noopener">
-        <RepoBadge isPrivate={p.privateRepo} />
-      </a>
       <br />
       {fillBlurb(p.blurb, REPO_COUNTS[p.repo])}
       {p.screenshot && (
